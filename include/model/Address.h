@@ -5,6 +5,7 @@
 #ifndef ZAJECIA_2_ADDRESS_H
 #define ZAJECIA_2_ADDRESS_H
 
+#include <string>
 
 class Address {
     std::string street;
