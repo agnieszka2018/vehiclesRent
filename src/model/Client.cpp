@@ -8,7 +8,11 @@
 
 
 Client::Client() {
-    std::cout << "konstruktor bezparametrowy" << std::endl;
+    // firstName = "Zofia";
+    // lastName = "Kochanowska";
+    // personalID = "111111111";
+
+    std::cout << "konstruktor bezparametrowy jest wywolany" << std::endl;
 }
 
 Client::Client(std::string firstName, std::string lastName, std::string personalID) {
@@ -16,13 +20,13 @@ Client::Client(std::string firstName, std::string lastName, std::string personal
     this->lastName = lastName;
     this->personalID = personalID;
 
-    std::cout << "konstruktor prametrowy" << std::endl;
+    std::cout << "konstruktor prametrowy jest wywolany" << std::endl;
 }
 
 Client::~Client() {
-    std::cout << "destruktor" << std::endl;
+    std::cout << "destruktor jest wywolany" << std::endl;
 }
 
 std::string Client::clientInfo() {
-    return firstName + " " + lastName + " " + personalID;
+    return firstName + "_" + lastName + "_" + personalID + ".";
 }

@@ -12,5 +12,4 @@ class Address {
     std::string number;
 };
 
-
 #endif //ZAJECIA_2_ADDRESS_H
