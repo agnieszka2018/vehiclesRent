@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pobi/CLionProjects/zajecia_2
+CMAKE_SOURCE_DIR = /home/pobi/pobiz01
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pobi/CLionProjects/zajecia_2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/pobi/pobiz01/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/zajecia_2/cmake-build-debug/CMakeFiles /home/pobi/CLionProjects/zajecia_2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles /home/pobi/pobiz01/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/zajecia_2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named zajecia_2
+# Target rules for targets named pobiz01
 
 # Build rule for target.
-zajecia_2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 zajecia_2
-.PHONY : zajecia_2
+pobiz01: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pobiz01
+.PHONY : pobiz01
 
 # fast build rule for target.
-zajecia_2/fast:
-	$(MAKE) -f CMakeFiles/zajecia_2.dir/build.make CMakeFiles/zajecia_2.dir/build
-.PHONY : zajecia_2/fast
+pobiz01/fast:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/build
+.PHONY : pobiz01/fast
 
-program.o: program.cpp.o
+main.o: main.cpp.o
 
-.PHONY : program.o
+.PHONY : main.o
 
 # target to build an object file
-program.cpp.o:
-	$(MAKE) -f CMakeFiles/zajecia_2.dir/build.make CMakeFiles/zajecia_2.dir/program.cpp.o
-.PHONY : program.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-program.i: program.cpp.i
+main.i: main.cpp.i
 
-.PHONY : program.i
+.PHONY : main.i
 
 # target to preprocess a source file
-program.cpp.i:
-	$(MAKE) -f CMakeFiles/zajecia_2.dir/build.make CMakeFiles/zajecia_2.dir/program.cpp.i
-.PHONY : program.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-program.s: program.cpp.s
+main.s: main.cpp.s
 
-.PHONY : program.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-program.cpp.s:
-	$(MAKE) -f CMakeFiles/zajecia_2.dir/build.make CMakeFiles/zajecia_2.dir/program.cpp.s
-.PHONY : program.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 src/model/Client.o: src/model/Client.cpp.o
 
@@ -156,7 +156,7 @@ src/model/Client.o: src/model/Client.cpp.o
 
 # target to build an object file
 src/model/Client.cpp.o:
-	$(MAKE) -f CMakeFiles/zajecia_2.dir/build.make CMakeFiles/zajecia_2.dir/src/model/Client.cpp.o
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Client.cpp.o
 .PHONY : src/model/Client.cpp.o
 
 src/model/Client.i: src/model/Client.cpp.i
@@ -165,7 +165,7 @@ src/model/Client.i: src/model/Client.cpp.i
 
 # target to preprocess a source file
 src/model/Client.cpp.i:
-	$(MAKE) -f CMakeFiles/zajecia_2.dir/build.make CMakeFiles/zajecia_2.dir/src/model/Client.cpp.i
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Client.cpp.i
 .PHONY : src/model/Client.cpp.i
 
 src/model/Client.s: src/model/Client.cpp.s
@@ -174,7 +174,7 @@ src/model/Client.s: src/model/Client.cpp.s
 
 # target to generate assembly for a file
 src/model/Client.cpp.s:
-	$(MAKE) -f CMakeFiles/zajecia_2.dir/build.make CMakeFiles/zajecia_2.dir/src/model/Client.cpp.s
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Client.cpp.s
 .PHONY : src/model/Client.cpp.s
 
 # Help Target
@@ -184,11 +184,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... zajecia_2"
+	@echo "... pobiz01"
 	@echo "... edit_cache"
-	@echo "... program.o"
-	@echo "... program.i"
-	@echo "... program.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... src/model/Client.o"
 	@echo "... src/model/Client.i"
 	@echo "... src/model/Client.s"

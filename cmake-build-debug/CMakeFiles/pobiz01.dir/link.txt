@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/pobiz01.dir/src/model/Client.cpp.o CMakeFiles/pobiz01.dir/main.cpp.o  -o pobiz01 

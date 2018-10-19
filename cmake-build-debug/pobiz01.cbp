@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="zajecia_2"/>
+		<Option title="pobiz01"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -27,13 +27,15 @@
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="zajecia_2">
-				<Option output="/home/pobi/pobiz01/cmake-build-debug/zajecia_2" prefix_auto="0" extension_auto="0"/>
+			<Target title="pobiz01">
+				<Option output="/home/pobi/pobiz01/cmake-build-debug/pobiz01" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/pobi/pobiz01/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/pobi/pobiz01/include"/>
+					<Add directory="/home/pobi/pobiz01/include/model"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -44,19 +46,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 zajecia_2"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 pobiz01"/>
 					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="zajecia_2/fast">
-				<Option output="/home/pobi/pobiz01/cmake-build-debug/zajecia_2" prefix_auto="0" extension_auto="0"/>
+			<Target title="pobiz01/fast">
+				<Option output="/home/pobi/pobiz01/cmake-build-debug/pobiz01" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/pobi/pobiz01/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/pobi/pobiz01/include"/>
+					<Add directory="/home/pobi/pobiz01/include/model"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -67,7 +71,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 zajecia_2/fast"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 pobiz01/fast"/>
 					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -84,6 +88,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/pobi/pobiz01/include/model/Address.h">
+			<Option target="pobiz01"/>
+		</Unit>
+		<Unit filename="/home/pobi/pobiz01/include/model/Client.h">
+			<Option target="pobiz01"/>
+		</Unit>
+		<Unit filename="/home/pobi/pobiz01/main.cpp">
+			<Option target="pobiz01"/>
+		</Unit>
+		<Unit filename="/home/pobi/pobiz01/src/model/Client.cpp">
+			<Option target="pobiz01"/>
+		</Unit>
 		<Unit filename="/home/pobi/pobiz01/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

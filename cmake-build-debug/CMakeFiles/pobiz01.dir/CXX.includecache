@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pobi/pobiz01/./include/model/Address.h
+string
+-
+
+/home/pobi/pobiz01/./include/model/Client.h
+string
+-
+../../include/model/Address.h
+/home/pobi/pobiz01/./include/model/Address.h
+
+/home/pobi/pobiz01/include/model/Address.h
+string
+-
+
+/home/pobi/pobiz01/include/model/Client.h
+string
+-
+../../include/model/Address.h
+/home/pobi/pobiz01/include/model/Address.h
+
+/home/pobi/pobiz01/main.cpp
+iostream
+-
+./include/model/Client.h
+/home/pobi/pobiz01/./include/model/Client.h
+
+/home/pobi/pobiz01/src/model/Client.cpp
+iostream
+-
+string
+-
+../../include/model/Client.h
+/home/pobi/pobiz01/include/model/Client.h
+../../include/model/Address.h
+/home/pobi/pobiz01/include/model/Address.h
+

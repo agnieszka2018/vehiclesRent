@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pobi/CLionProjects/zajecia_2
+CMAKE_SOURCE_DIR = /home/pobi/pobiz01
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pobi/CLionProjects/zajecia_2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/pobi/pobiz01/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/zajecia_2.dir
+# Target rules for target CMakeFiles/pobiz01.dir
 
 # All Build rule for target.
-CMakeFiles/zajecia_2.dir/all:
-	$(MAKE) -f CMakeFiles/zajecia_2.dir/build.make CMakeFiles/zajecia_2.dir/depend
-	$(MAKE) -f CMakeFiles/zajecia_2.dir/build.make CMakeFiles/zajecia_2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/zajecia_2/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target zajecia_2"
-.PHONY : CMakeFiles/zajecia_2.dir/all
+CMakeFiles/pobiz01.dir/all:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/depend
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target pobiz01"
+.PHONY : CMakeFiles/pobiz01.dir/all
 
 # Include target in all.
-all: CMakeFiles/zajecia_2.dir/all
+all: CMakeFiles/pobiz01.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/zajecia_2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/zajecia_2/cmake-build-debug/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/zajecia_2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/zajecia_2/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/zajecia_2.dir/rule
+CMakeFiles/pobiz01.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pobiz01.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/pobiz01.dir/rule
 
 # Convenience name for target.
-zajecia_2: CMakeFiles/zajecia_2.dir/rule
+pobiz01: CMakeFiles/pobiz01.dir/rule
 
-.PHONY : zajecia_2
-
-# clean rule for target.
-CMakeFiles/zajecia_2.dir/clean:
-	$(MAKE) -f CMakeFiles/zajecia_2.dir/build.make CMakeFiles/zajecia_2.dir/clean
-.PHONY : CMakeFiles/zajecia_2.dir/clean
+.PHONY : pobiz01
 
 # clean rule for target.
-clean: CMakeFiles/zajecia_2.dir/clean
+CMakeFiles/pobiz01.dir/clean:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/clean
+.PHONY : CMakeFiles/pobiz01.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/pobiz01.dir/clean
 
 .PHONY : clean
 

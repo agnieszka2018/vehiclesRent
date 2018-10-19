@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/zajecia_2.dir/src/model/Client.cpp.o CMakeFiles/zajecia_2.dir/program.cpp.o  -o zajecia_2 

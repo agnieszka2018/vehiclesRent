@@ -13,16 +13,16 @@ class Address;
 class Client {
 
 private:
-    std::string firstName;
+    const std::string firstName;
     std::string lastName;
-    std::string personalID;
+    const std::string personalID;
     Address registeredAddress;
     Address address;
 
 public:
     std::string clientInfo();
 
-    Client();
+    //Client();
 
     Client(std::string firstName, std::string lastName, std::string personalID);
 

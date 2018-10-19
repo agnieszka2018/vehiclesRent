@@ -7,18 +7,20 @@
 #include "../../include/model/Address.h"
 
 
-Client::Client() {
-    // firstName = "Zofia";
-    // lastName = "Kochanowska";
-    // personalID = "111111111";
+/*Client::Client() {
+    //firstName = "Imię";
+    //lastName = "Nazwisko";
+    //personalID = "111111111";
 
     std::cout << "konstruktor bezparametrowy jest wywolany" << std::endl;
-}
+}*/
 
-Client::Client(std::string firstName, std::string lastName, std::string personalID) {
-    this->firstName = firstName;
-    this->lastName = lastName;
-    this->personalID = personalID;
+Client::Client(std::string firstName, std::string lastName, std::string personalID) : firstName{firstName},
+                                                                                      lastName{lastName},
+                                                                                      personalID{personalID} {
+    //this->firstName = firstName;
+    //this->lastName = lastName;
+    //this->personalID = personalID;
 
     std::cout << "konstruktor prametrowy jest wywolany" << std::endl;
 }
