@@ -31,6 +31,16 @@ iostream
 -
 ./include/model/Client.h
 /home/pobi/pobiz01/./include/model/Client.h
+./include/model/Address.h
+/home/pobi/pobiz01/./include/model/Address.h
+
+/home/pobi/pobiz01/src/model/Address.cpp
+iostream
+-
+string
+-
+../../include/model/Address.h
+/home/pobi/pobiz01/include/model/Address.h
 
 /home/pobi/pobiz01/src/model/Client.cpp
 iostream

@@ -16,15 +16,16 @@ private:
     const std::string firstName;
     std::string lastName;
     const std::string personalID;
-    Address registeredAddress;
-    Address address;
+    Address *address = nullptr;
+    Address *registeredAddress = nullptr;
 
 public:
     std::string clientInfo();
 
     //Client();
 
-    Client(std::string firstName, std::string lastName, std::string personalID);
+    Client(std::string firstName, std::string lastName, std::string personalID, Address *address = nullptr,
+           Address *registeredAddress = nullptr);
 
     ~Client();
 };

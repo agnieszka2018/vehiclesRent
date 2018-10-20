@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/model/Address.o: src/model/Address.cpp.o
+
+.PHONY : src/model/Address.o
+
+# target to build an object file
+src/model/Address.cpp.o:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Address.cpp.o
+.PHONY : src/model/Address.cpp.o
+
+src/model/Address.i: src/model/Address.cpp.i
+
+.PHONY : src/model/Address.i
+
+# target to preprocess a source file
+src/model/Address.cpp.i:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Address.cpp.i
+.PHONY : src/model/Address.cpp.i
+
+src/model/Address.s: src/model/Address.cpp.s
+
+.PHONY : src/model/Address.s
+
+# target to generate assembly for a file
+src/model/Address.cpp.s:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Address.cpp.s
+.PHONY : src/model/Address.cpp.s
+
 src/model/Client.o: src/model/Client.cpp.o
 
 .PHONY : src/model/Client.o
@@ -189,6 +216,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/model/Address.o"
+	@echo "... src/model/Address.i"
+	@echo "... src/model/Address.s"
 	@echo "... src/model/Client.o"
 	@echo "... src/model/Client.i"
 	@echo "... src/model/Client.s"

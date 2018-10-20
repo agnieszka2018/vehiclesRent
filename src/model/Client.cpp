@@ -15,20 +15,36 @@
     std::cout << "konstruktor bezparametrowy jest wywolany" << std::endl;
 }*/
 
-Client::Client(std::string firstName, std::string lastName, std::string personalID) : firstName{firstName},
-                                                                                      lastName{lastName},
-                                                                                      personalID{personalID} {
+using namespace std;
+
+Client::Client(std::string firstName, std::string lastName, std::string personalID, Address *address,
+               Address *registeredAddress) : firstName{firstName},
+                                             lastName{lastName},
+                                             personalID{personalID}, address{address},
+                                             registeredAddress{registeredAddress} {
+
     //this->firstName = firstName;
     //this->lastName = lastName;
     //this->personalID = personalID;
-
-    std::cout << "konstruktor prametrowy jest wywolany" << std::endl;
+    static int i = 0;
+    cout << "konstruktor parametrowy nr: " << ++i << " jest wywolany" << endl;
 }
+
 
 Client::~Client() {
-    std::cout << "destruktor jest wywolany" << std::endl;
+    cout << "destruktor jest wywolany" << endl;
 }
 
+
 std::string Client::clientInfo() {
-    return firstName + "_" + lastName + "_" + personalID + ".";
+
+    std::string print = firstName + " " + lastName + " " + personalID;
+
+    if (address != nullptr)
+        print += ", adres zamieszkania: " + address->street + " " + address->number;
+    else if (registeredAddress != nullptr)
+        print += ", adres zameldowania: " + registeredAddress->street + " " + registeredAddress->number;
+
+    return print;
+    //return firstName + "_" + lastName + "_" + personalID + ".";
 }

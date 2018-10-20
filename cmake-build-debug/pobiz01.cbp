@@ -97,6 +97,9 @@
 		<Unit filename="/home/pobi/pobiz01/main.cpp">
 			<Option target="pobiz01"/>
 		</Unit>
+		<Unit filename="/home/pobi/pobiz01/src/model/Address.cpp">
+			<Option target="pobiz01"/>
+		</Unit>
 		<Unit filename="/home/pobi/pobiz01/src/model/Client.cpp">
 			<Option target="pobiz01"/>
 		</Unit>
