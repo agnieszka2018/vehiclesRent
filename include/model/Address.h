@@ -8,12 +8,13 @@
 #include <string>
 
 class Address {
-public:
-    //czy da się zrobić z private?
     std::string street;
     std::string number;
-
+public:
     Address(std::string street, std::string number);
+    void changeInfo(std::string ulica);
+    std::string displayInfo();
 };
 
 #endif //ZAJECIA_2_ADDRESS_H
+

@@ -41,10 +41,12 @@ std::string Client::clientInfo() {
     std::string print = firstName + " " + lastName + " " + personalID;
 
     if (address != nullptr)
-        print += ", adres zamieszkania: " + address->street + " " + address->number;
+        //address = &obiekt;
+        print += ", adres zamieszkania: " + address->displayInfo();
     else if (registeredAddress != nullptr)
-        print += ", adres zameldowania: " + registeredAddress->street + " " + registeredAddress->number;
+        print += ", adres zameldowania: " + address->displayInfo();
 
     return print;
     //return firstName + "_" + lastName + "_" + personalID + ".";
 }
+
