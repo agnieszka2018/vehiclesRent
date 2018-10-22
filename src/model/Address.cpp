@@ -11,9 +11,9 @@ Address::Address(std::string street, std::string number) {
     this->number = number;
 }
 
-void Address::changeInfo(std::string ulica) {
+void Address::changeInfo(std::string ulica, std::string numer) {
     street = ulica;
-    number = "numer";
+    number = numer;
 }
 
 std::string Address::displayInfo()
