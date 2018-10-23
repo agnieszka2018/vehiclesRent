@@ -16,11 +16,10 @@ void Address::changeInfo(std::string ulica, std::string numer) {
     number = numer;
 }
 
-std::string Address::displayInfo()
-{
+std::string Address::displayInfo() {
     std::string print;
 
-    print += street +" "+ number;
+    print += street + " " + number;
 
     return print;
 }

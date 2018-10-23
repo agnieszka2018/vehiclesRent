@@ -13,7 +13,9 @@ private:
     std::string number;
 public:
     Address(std::string street, std::string number);
+
     void changeInfo(std::string ulica, std::string numer);
+
     std::string displayInfo();
 };
 

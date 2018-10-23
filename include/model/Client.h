@@ -16,8 +16,8 @@ private:
     const std::string firstName;
     std::string lastName;
     const std::string personalID;
-    Address* address = nullptr;
-    Address* registeredAddress = nullptr;
+    Address *address = nullptr;
+    Address *registeredAddress = nullptr;
 
 public:
     std::string clientInfo();
