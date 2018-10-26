@@ -22,4 +22,6 @@ int main() {
     aktualny_zam->changeInfo("Promienna", "5");
     cout << "\nAdres  zamieszkania po zmianie: " << klient_1.clientInfo();
     cout << "\nAdres  zamieszkania po zmianie: " << klient_2.clientInfo() << endl;
+
+    delete aktualny_zam;
 }
