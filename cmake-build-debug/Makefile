@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pobi/CLionProjects/pobiz01
+CMAKE_SOURCE_DIR = /home/pobi/pobiz01
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pobi/CLionProjects/pobiz01/cmake-build-debug
+CMAKE_BINARY_DIR = /home/pobi/pobiz01/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles /home/pobi/pobiz01/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -204,6 +204,33 @@ src/model/Client.cpp.s:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Client.cpp.s
 .PHONY : src/model/Client.cpp.s
 
+src/model/rent.o: src/model/rent.cpp.o
+
+.PHONY : src/model/rent.o
+
+# target to build an object file
+src/model/rent.cpp.o:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/rent.cpp.o
+.PHONY : src/model/rent.cpp.o
+
+src/model/rent.i: src/model/rent.cpp.i
+
+.PHONY : src/model/rent.i
+
+# target to preprocess a source file
+src/model/rent.cpp.i:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/rent.cpp.i
+.PHONY : src/model/rent.cpp.i
+
+src/model/rent.s: src/model/rent.cpp.s
+
+.PHONY : src/model/rent.s
+
+# target to generate assembly for a file
+src/model/rent.cpp.s:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/rent.cpp.s
+.PHONY : src/model/rent.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... src/model/Client.o"
 	@echo "... src/model/Client.i"
 	@echo "... src/model/Client.s"
+	@echo "... src/model/rent.o"
+	@echo "... src/model/rent.i"
+	@echo "... src/model/rent.s"
 .PHONY : help
 
 

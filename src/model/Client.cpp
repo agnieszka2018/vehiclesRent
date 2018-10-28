@@ -27,7 +27,7 @@ Client::Client(std::string firstName, std::string lastName, std::string personal
     //this->lastName = lastName;
     //this->personalID = personalID;
     static int i = 0;
-    cout << "konstruktor parametrowy nr: " << ++i << " jest wywolany" << endl;
+    cout << "konstruktor parametrowy nr: " << ++i << " jest wywolany" << endl << endl; 
 }
 
 

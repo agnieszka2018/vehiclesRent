@@ -10,18 +10,18 @@
 using namespace std;
 
 int main() {
-    Address *aktualny_zam = new Address("Mickiewicza", "7");
-    Client klient_1("Jan", "Kowalski", "123456789", aktualny_zam);
-    Client klient_2("Kamil", "Nowak", "987654321", aktualny_zam);
+    Address *actuall_address = new Address("Mickiewicza", "7");
+    Client klient_1("Jan", "Kowalski", "123456789", actuall_address);
+    Client klient_2("Kamil", "Nowak", "987654321", actuall_address);
 
     cout << klient_1.clientInfo() << endl;
     cout << klient_2.clientInfo();
 
     //cout << "Adres  zamieszkania przed zmianą: " << klient_1.clientInfo();
 
-    aktualny_zam->changeInfo("Promienna", "5");
+    actuall_address->changeInfo("Promienna", "5");
     cout << "\nAdres  zamieszkania po zmianie: " << klient_1.clientInfo();
     cout << "\nAdres  zamieszkania po zmianie: " << klient_2.clientInfo() << endl;
 
-    delete aktualny_zam;
+    delete actuall_address;
 }

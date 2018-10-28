@@ -13,3 +13,6 @@ CMakeFiles/pobiz01.dir/src/model/Client.cpp.o: ../include/model/Address.h
 CMakeFiles/pobiz01.dir/src/model/Client.cpp.o: ../include/model/Client.h
 CMakeFiles/pobiz01.dir/src/model/Client.cpp.o: ../src/model/Client.cpp
 
+CMakeFiles/pobiz01.dir/src/model/rent.cpp.o: ../include/model/rent.h
+CMakeFiles/pobiz01.dir/src/model/rent.cpp.o: ../src/model/rent.cpp
+
