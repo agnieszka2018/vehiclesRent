@@ -10,4 +10,4 @@ add_executable(pobiz01
         include/model/Address.h
         include/model/Client.h
         src/model/Client.cpp
-        main.cpp src/model/Address.cpp src/model/rent.cpp include/model/rent.h)
+        main.cpp src/model/Address.cpp src/model/Rent.cpp include/model/Rent.h)

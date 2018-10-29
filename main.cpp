@@ -5,7 +5,7 @@
 #include <iostream>
 #include "./include/model/Client.h"
 #include "./include/model/Address.h"
-
+#include "Rent.h"
 
 using namespace std;
 
