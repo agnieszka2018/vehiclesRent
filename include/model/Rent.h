@@ -11,6 +11,7 @@
 #include "boost/date_time/local_time/local_time.hpp"
 
 class Client;
+class Vehicle;
 
 class Rent{
 private:
@@ -19,12 +20,12 @@ private:
     boost::local_time::time_zone_ptr startZone;
     boost::local_time::local_date_time endTime;
     boost::local_time::time_zone_ptr endZone;
-    //okres wypozyczenia jest obliczany przez local_time_period z boost
     float cost;
-    //pojazd
+    Vehicle *vehicle=nullptr;
     Client *client= nullptr;
 
 public:
+        Rent(Client *client, Vehicle *vehicle);
         int rentDuration();
         ~Rent();
         void returnVehicle();

@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+../include/model/Address.h
+string
+-
+
+../include/model/Client.h
+string
+-
+../../include/model/Address.h
+../include/model/Address.h
+
 ../include/model/Rent.h
 boost/date_time/local_time/local_time.hpp
 -
@@ -77,6 +87,10 @@ iostream
 -
 string
 -
+Vehicle.h
+/home/pobi/CLionProjects/pobiz01/src/model/Vehicle.h
+Client.h
+/home/pobi/CLionProjects/pobiz01/src/model/Client.h
 Rent.h
 /home/pobi/CLionProjects/pobiz01/src/model/Rent.h
 boost/uuid/uuid.hpp

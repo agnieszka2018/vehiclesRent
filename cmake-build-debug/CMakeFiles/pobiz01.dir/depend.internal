@@ -16,7 +16,10 @@ CMakeFiles/pobiz01.dir/src/model/Client.cpp.o
  /home/pobi/CLionProjects/pobiz01/include/model/Client.h
  /home/pobi/CLionProjects/pobiz01/src/model/Client.cpp
 CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o
+ ../include/model/Address.h
+ ../include/model/Client.h
  ../include/model/Rent.h
+ ../include/model/Vehicle.h
  /home/pobi/CLionProjects/pobiz01/src/model/Rent.cpp
 CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o
  ../include/model/Vehicle.h
