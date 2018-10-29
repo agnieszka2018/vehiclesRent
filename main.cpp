@@ -30,7 +30,7 @@ int main() {
 
     Vehicle pojazd("cw12312");
     cout<<pojazd.vehicleInfo();
-    
+
 
     delete actuall_address;
 }
