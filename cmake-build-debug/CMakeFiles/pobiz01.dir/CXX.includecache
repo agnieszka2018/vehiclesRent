@@ -17,8 +17,6 @@ string
 ../include/model/Address.h
 
 ../include/model/Rent.h
-boost/date_time/local_time/local_time.hpp
--
 boost/uuid/random_generator.hpp
 -
 string
@@ -99,6 +97,8 @@ boost/uuid/uuid_generators.hpp
 -
 boost/uuid/uuid_io.hpp
 -
+boost/date_time/local_time/local_time.hpp
+/home/pobi/CLionProjects/pobiz01/src/model/boost/date_time/local_time/local_time.hpp
 
 /home/pobi/CLionProjects/pobiz01/src/model/Vehicle.cpp
 ../../include/model/Vehicle.h

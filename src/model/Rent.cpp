@@ -9,10 +9,9 @@
 #include <boost/uuid/uuid.hpp>
 #include <boost/uuid/uuid_generators.hpp>
 #include <boost/uuid/uuid_io.hpp>
+#include "boost/date_time/local_time/local_time.hpp"
 
-Rent::Rent(Vehicle *vehicle, Client *client) : vehicle{vehicle}, client{client}{
-    
-}
+
 
 std::string Rent::rentInfo() {
     uuid = boost::uuids::random_generator()();
@@ -23,3 +22,11 @@ Rent::~Rent() {
     std::cout << "destruktor Rent jest wywolany" << std::endl;
     //std::cout << "Koszt wypozyczenia"<< rent;
 }
+
+Rent::Rent(const boost::local_time::local_date_time &startTime, const boost::local_time::local_date_time &endTime,
+           Vehicle *vehicle, Client *client) : startTime(startTime), endTime(endTime), vehicle(vehicle),
+                                               client(client) {
+
+}
+
+
