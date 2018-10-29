@@ -11,6 +11,10 @@
 #include <boost/uuid/uuid_io.hpp>
 #include "boost/date_time/local_time/local_time.hpp"
 
+using namespace boost;
+using namespace local_time;
+using namespace gregorian;
+using posix_time::time_duration;
 
 
 std::string Rent::rentInfo() {
@@ -23,10 +27,7 @@ Rent::~Rent() {
     //std::cout << "Koszt wypozyczenia"<< rent;
 }
 
-Rent::Rent(const boost::local_time::local_date_time &startTime, const boost::local_time::local_date_time &endTime,
-           Vehicle *vehicle, Client *client) : startTime(startTime), endTime(endTime), vehicle(vehicle),
-                                               client(client) {
 
-}
+
 
 

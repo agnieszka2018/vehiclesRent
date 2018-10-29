@@ -9,6 +9,10 @@
 #include "Rent.h"
 
 using namespace std;
+using namespace boost;
+using namespace local_time;
+using namespace gregorian;
+using posix_time::time_duration;
 
 int main() {
     Address *actuall_address = new Address("Mickiewicza", "7");
@@ -26,6 +30,7 @@ int main() {
 
     Vehicle pojazd("cw12312");
     cout<<pojazd.vehicleInfo();
+    
 
     delete actuall_address;
 }

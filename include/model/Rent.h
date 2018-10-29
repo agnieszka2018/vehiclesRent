@@ -19,24 +19,16 @@ private:
     boost::local_time::time_zone_ptr startZone;
     boost::local_time::local_date_time endTime;
     boost::local_time::time_zone_ptr endZone;
-public:
-    Rent(const boost::local_time::local_date_time &startTime, const boost::local_time::local_date_time &endTime,
-         Vehicle *vehicle, Client *client);
-
-private:
     float cost;
     Vehicle *vehicle=nullptr;
-    Client *client= nullptr;
+    Client *client=nullptr;
 
 public:
-    Rent(Client *client, Vehicle *vehicle);
-
-    Rent(Vehicle *vehicle, Client *client);
 
     int rentDuration();
-        ~Rent();
-        void returnVehicle();
-        std::string rentInfo();
+    ~Rent();
+    void returnVehicle();
+    std::string rentInfo();
 
 };
 
