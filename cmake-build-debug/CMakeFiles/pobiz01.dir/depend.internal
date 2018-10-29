@@ -3,6 +3,7 @@
 
 CMakeFiles/pobiz01.dir/main.cpp.o
  ../include/model/Rent.h
+ ../include/model/Vehicle.h
  /home/pobi/CLionProjects/pobiz01/./include/model/Address.h
  /home/pobi/CLionProjects/pobiz01/./include/model/Client.h
  /home/pobi/CLionProjects/pobiz01/main.cpp
@@ -17,3 +18,6 @@ CMakeFiles/pobiz01.dir/src/model/Client.cpp.o
 CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o
  ../include/model/Rent.h
  /home/pobi/CLionProjects/pobiz01/src/model/Rent.cpp
+CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o
+ ../include/model/Vehicle.h
+ /home/pobi/CLionProjects/pobiz01/src/model/Vehicle.cpp

@@ -13,6 +13,12 @@ boost/uuid/random_generator.hpp
 -
 string
 -
+boost/date_time/local_time/local_time.hpp
+../include/model/boost/date_time/local_time/local_time.hpp
+
+../include/model/Vehicle.h
+string
+-
 
 /home/pobi/CLionProjects/pobiz01/./include/model/Address.h
 string
@@ -41,6 +47,8 @@ iostream
 /home/pobi/CLionProjects/pobiz01/./include/model/Client.h
 ./include/model/Address.h
 /home/pobi/CLionProjects/pobiz01/./include/model/Address.h
+Vehicle.h
+/home/pobi/CLionProjects/pobiz01/Vehicle.h
 Rent.h
 /home/pobi/CLionProjects/pobiz01/Rent.h
 
@@ -76,5 +84,11 @@ boost/uuid/uuid.hpp
 boost/uuid/uuid_generators.hpp
 -
 boost/uuid/uuid_io.hpp
+-
+
+/home/pobi/CLionProjects/pobiz01/src/model/Vehicle.cpp
+../../include/model/Vehicle.h
+-
+string
 -
 

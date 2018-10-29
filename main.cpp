@@ -5,6 +5,7 @@
 #include <iostream>
 #include "./include/model/Client.h"
 #include "./include/model/Address.h"
+#include "Vehicle.h"
 #include "Rent.h"
 
 using namespace std;
@@ -22,6 +23,9 @@ int main() {
     actuall_address->changeInfo("Promienna", "5");
     cout << "\nAdres  zamieszkania po zmianie: " << klient_1.clientInfo();
     cout << "\nAdres  zamieszkania po zmianie: " << klient_2.clientInfo() << endl;
+
+    Vehicle pojazd("cw12312");
+    cout<<pojazd.vehicleInfo();
 
     delete actuall_address;
 }

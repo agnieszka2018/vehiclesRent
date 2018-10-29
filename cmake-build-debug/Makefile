@@ -231,6 +231,33 @@ src/model/Rent.cpp.s:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Rent.cpp.s
 .PHONY : src/model/Rent.cpp.s
 
+src/model/Vehicle.o: src/model/Vehicle.cpp.o
+
+.PHONY : src/model/Vehicle.o
+
+# target to build an object file
+src/model/Vehicle.cpp.o:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o
+.PHONY : src/model/Vehicle.cpp.o
+
+src/model/Vehicle.i: src/model/Vehicle.cpp.i
+
+.PHONY : src/model/Vehicle.i
+
+# target to preprocess a source file
+src/model/Vehicle.cpp.i:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.i
+.PHONY : src/model/Vehicle.cpp.i
+
+src/model/Vehicle.s: src/model/Vehicle.cpp.s
+
+.PHONY : src/model/Vehicle.s
+
+# target to generate assembly for a file
+src/model/Vehicle.cpp.s:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.s
+.PHONY : src/model/Vehicle.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -252,6 +279,9 @@ help:
 	@echo "... src/model/Rent.o"
 	@echo "... src/model/Rent.i"
 	@echo "... src/model/Rent.s"
+	@echo "... src/model/Vehicle.o"
+	@echo "... src/model/Vehicle.i"
+	@echo "... src/model/Vehicle.s"
 .PHONY : help
 
 

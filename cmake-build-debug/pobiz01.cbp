@@ -97,6 +97,9 @@
 		<Unit filename="/home/pobi/CLionProjects/pobiz01/include/model/Rent.h">
 			<Option target="pobiz01"/>
 		</Unit>
+		<Unit filename="/home/pobi/CLionProjects/pobiz01/include/model/Vehicle.h">
+			<Option target="pobiz01"/>
+		</Unit>
 		<Unit filename="/home/pobi/CLionProjects/pobiz01/main.cpp">
 			<Option target="pobiz01"/>
 		</Unit>
@@ -107,6 +110,9 @@
 			<Option target="pobiz01"/>
 		</Unit>
 		<Unit filename="/home/pobi/CLionProjects/pobiz01/src/model/Rent.cpp">
+			<Option target="pobiz01"/>
+		</Unit>
+		<Unit filename="/home/pobi/CLionProjects/pobiz01/src/model/Vehicle.cpp">
 			<Option target="pobiz01"/>
 		</Unit>
 		<Unit filename="/home/pobi/CLionProjects/pobiz01/CMakeLists.txt">
