@@ -26,8 +26,6 @@ private:
 public:
     Rent(const boost::local_time::local_date_time &startTime, Vehicle *vehicle, Client *client);
 
-    Rent(const boost::local_time::local_date_time &startTime, Vehicle *vehicle);
-
     int rentDuration();
     ~Rent();
     void returnVehicle();
