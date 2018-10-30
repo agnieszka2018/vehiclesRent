@@ -9,6 +9,8 @@
 #include <boost/uuid/uuid.hpp>
 #include <boost/uuid/uuid_generators.hpp>
 #include <boost/uuid/uuid_io.hpp>
+#include <model/Rent.h>
+
 #include "boost/date_time/local_time/local_time.hpp"
 
 using namespace boost;
@@ -16,16 +18,46 @@ using namespace local_time;
 using namespace gregorian;
 using posix_time::time_duration;
 
+int Rent::rentDuration() {
+
+    time_zone_ptr zone(new posix_time_zone("UTC"));
+    local_date_time now = local_sec_clock::local_time(zone);
+
+    time_duration d = now - startTime;
+    long secs = d.total_seconds();
+    float days = ((secs/60.0)/60)/24;
+    int period;
+    if (days - int(days) != 0) period = days+1;
+    else period = days;
+
+    return period;
+}
 
 std::string Rent::rentInfo() {
-    uuid = boost::uuids::random_generator()();
-    std::cout << uuid << std::endl;
+
+    std::cout << "\nwypozyczenie:\n";
+    std::cout << "uuid: " <<uuid << std::endl;
+    std::cout << "wypozyczajacy:\n" << client->clientInfo() << std::endl;
+    std::cout << "start time: "<< startTime <<std::endl;
+    std::cout << "pojazd: "<< vehicle->vehicleInfo();
+    std::cout << "czas wypozyczenia: " << rentDuration();
 }
 
 Rent::~Rent() {
     std::cout << "destruktor Rent jest wywolany" << std::endl;
     //std::cout << "Koszt wypozyczenia"<< rent;
 }
+
+Rent::Rent(const local_date_time &startTime, Vehicle *vehicle, Client *client) : startTime(startTime), vehicle(vehicle),
+                                                                                 client(client) {
+    uuid = boost::uuids::random_generator()();
+}
+
+Rent::Rent(const local_date_time &startTime, Vehicle *vehicle) : startTime(startTime), vehicle(vehicle) {
+    uuid = boost::uuids::random_generator()();
+}
+
+
 
 
 

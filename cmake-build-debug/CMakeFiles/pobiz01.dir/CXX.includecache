@@ -97,6 +97,8 @@ boost/uuid/uuid_generators.hpp
 -
 boost/uuid/uuid_io.hpp
 -
+model/Rent.h
+-
 boost/date_time/local_time/local_time.hpp
 /home/pobi/CLionProjects/pobiz01/src/model/boost/date_time/local_time/local_time.hpp
 

@@ -17,13 +17,16 @@ private:
     boost::uuids::uuid uuid;
     boost::local_time::local_date_time startTime;
     boost::local_time::time_zone_ptr startZone;
-    boost::local_time::local_date_time endTime;
-    boost::local_time::time_zone_ptr endZone;
+    //boost::local_time::local_date_time endTime;
+    //boost::local_time::time_zone_ptr endZone;
     float cost;
     Vehicle *vehicle=nullptr;
     Client *client=nullptr;
 
 public:
+    Rent(const boost::local_time::local_date_time &startTime, Vehicle *vehicle, Client *client);
+
+    Rent(const boost::local_time::local_date_time &startTime, Vehicle *vehicle);
 
     int rentDuration();
     ~Rent();

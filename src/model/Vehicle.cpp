@@ -18,6 +18,6 @@ Vehicle::Vehicle(std::string id) : id{id}
 
 std::string Vehicle::vehicleInfo()
 {
-    string info = to_string(baseRentPrice) + " " + id + "\n";
+    string info = "\ncena: " + to_string(baseRentPrice) + "\nid: " + id + "\n";
     return info;
 }
