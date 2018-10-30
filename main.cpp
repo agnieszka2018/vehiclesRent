@@ -40,6 +40,7 @@ int main() {
     Client *klient_3 = new Client("Stefan", "Stonoga", "1029384756", actuall_address);
 
     Rent wypozyczenie(ldt, pojazd, klient_3);
+    wypozyczenie.returnVehicle();
     cout<<wypozyczenie.rentInfo()<<endl;
 
     cout<<endl;

@@ -17,7 +17,7 @@ private:
     boost::uuids::uuid uuid;
     boost::local_time::local_date_time startTime;
     boost::local_time::time_zone_ptr startZone;
-    //boost::local_time::local_date_time endTime;
+    boost::local_time::local_date_time endTime;
     //boost::local_time::time_zone_ptr endZone;
     float cost;
     Vehicle *vehicle=nullptr;

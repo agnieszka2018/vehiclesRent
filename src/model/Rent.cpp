@@ -20,10 +20,7 @@ using posix_time::time_duration;
 
 int Rent::rentDuration() {
 
-    time_zone_ptr zone(new posix_time_zone("UTC"));
-    local_date_time now = local_sec_clock::local_time(zone);
-
-    time_duration d = now - startTime;
+    time_duration d = endTime - startTime;
     long secs = d.total_seconds();
     float days = ((secs/60.0)/60)/24;
     int period;
@@ -38,8 +35,9 @@ std::string Rent::rentInfo() {
     std::cout << "\nwypozyczenie:\n";
     std::cout << "uuid: " <<uuid << std::endl;
     std::cout << "wypozyczajacy:\n" << client->clientInfo() << std::endl;
-    std::cout << "start time: "<< startTime <<std::endl;
     std::cout << "pojazd: "<< vehicle->vehicleInfo();
+    std::cout << "start time: "<< startTime <<std::endl;
+    std::cout << "end time: "<< endTime <<std::endl;
     std::cout << "czas wypozyczenia: " << rentDuration();
 }
 
@@ -49,14 +47,17 @@ Rent::~Rent() {
 }
 
 Rent::Rent(const local_date_time &startTime, Vehicle *vehicle, Client *client) : startTime(startTime), vehicle(vehicle),
-                                                                                 client(client) {
+                                                                                 client(client), endTime(startTime) {
     uuid = boost::uuids::random_generator()();
 }
 
-/*
-Rent::Rent(const local_date_time &startTime, Vehicle *vehicle) : startTime(startTime), vehicle(vehicle) {
-    uuid = boost::uuids::random_generator()();
-}*/
+void Rent::returnVehicle() {
+    time_zone_ptr zone(new posix_time_zone("UTC"));
+    local_date_time now = local_sec_clock::local_time(zone);
+    endTime = now;
+}
+
+
 
 
 
