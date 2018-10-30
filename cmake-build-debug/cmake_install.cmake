@@ -1,4 +1,4 @@
-# Install script for directory: /home/pobi/CLionProjects/pobiz01
+# Install script for directory: /home/pobi/pobiz01
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pobi/CLionProjects/pobiz01/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pobi/pobiz01/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

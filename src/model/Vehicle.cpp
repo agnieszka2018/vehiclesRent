@@ -11,10 +11,10 @@ Vehicle::Vehicle(int baseRentPrice, string id) : baseRentPrice{baseRentPrice}, i
 
 }
 
-Vehicle::Vehicle(std::string id) : id{id}
+/*Vehicle::Vehicle(std::string id) : id{id}
 {
     baseRentPrice = 100;
-}
+} */
 
 std::string Vehicle::vehicleInfo()
 {

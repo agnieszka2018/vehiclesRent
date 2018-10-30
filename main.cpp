@@ -30,7 +30,7 @@ int main() {
     cout << "\nAdres  zamieszkania po zmianie: " << klient_1.clientInfo();
     cout << "\nAdres  zamieszkania po zmianie: " << klient_2.clientInfo() << endl;
 
-    Vehicle *pojazd = new Vehicle("cw12312");
+    Vehicle *pojazd = new Vehicle(100, "cw12312");
     //cout<<pojazd->vehicleInfo();
 
     posix_time::ptime pt(date(2018,Oct,26), posix_time::hours(12));

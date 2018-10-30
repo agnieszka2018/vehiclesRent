@@ -5,6 +5,7 @@
 #include <string>
 #include "../../include/model/Client.h"
 #include "../../include/model/Address.h"
+#include "Rent.h"
 
 
 /*Client::Client() {
@@ -18,10 +19,11 @@
 using namespace std;
 
 Client::Client(std::string firstName, std::string lastName, std::string personalID, Address *address,
-               Address *registeredAddress) : firstName{firstName},
-                                             lastName{lastName},
-                                             personalID{personalID}, address{address},
-                                             registeredAddress{registeredAddress} {
+               Address *registeredAddress, Rent *actuallRent) : firstName{firstName},
+                                                                lastName{lastName},
+                                                                personalID{personalID}, address{address},
+                                                                registeredAddress{registeredAddress},
+                                                                actuallRent{actuallRent} {
 
     //this->firstName = firstName;
     //this->lastName = lastName;
@@ -31,22 +33,37 @@ Client::Client(std::string firstName, std::string lastName, std::string personal
 }
 
 
-Client::~Client() {
-    cout << "destruktor jest wywolany" << endl;
-}
+/* void Client::modifyRent(Rent *rentFromRent) 
+{
+    actuallRent = rentFromRent;
+} */
 
 
 std::string Client::clientInfo() {
 
     std::string print = firstName + " " + lastName + " " + personalID;
 
-    if (address != nullptr)
-        //address = &obiekt;
-        print += ", adres zamieszkania: " + address->displayInfo();
-    else if (registeredAddress != nullptr)
-        print += ", adres zameldowania: " + address->displayInfo();
+    if (actuallRent != 0) {
+        if (address != nullptr)
+            //address = &obiekt;
+            print += ", adres zamieszkania: " + address->displayInfo() + " " + actuallRent->rentInfo();
+        else if (registeredAddress != nullptr)
+            print += ", adres zameldowania: " + address->displayInfo() + " " + actuallRent->rentInfo();
+        else
+            print += " " + actuallRent->rentInfo();
+    } else {
+        if (address != nullptr)
+            print += ", adres zamieszkania: " + address->displayInfo();
+        else if (registeredAddress != nullptr)
+            print += ", adres zameldowania: " + address->displayInfo();
+    }
+
 
     return print;
     //return firstName + "_" + lastName + "_" + personalID + ".";
 }
 
+
+Client::~Client() {
+    cout << "destruktor jest wywolany" << endl;
+}

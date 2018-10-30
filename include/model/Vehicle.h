@@ -8,11 +8,11 @@
 #include <string>
 
 class Vehicle{
-    int baseRentPrice;
-    std::string id;
+    const int baseRentPrice;
+    const std::string id;
 public:
     Vehicle(int price, std::string idNumber);
-    Vehicle(std::string idNumber);
+    //Vehicle(std::string idNumber);
     std::string vehicleInfo();
 
 };

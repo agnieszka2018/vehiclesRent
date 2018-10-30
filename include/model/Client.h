@@ -7,6 +7,7 @@
 
 #include <string>
 #include "../../include/model/Address.h"
+#include "Rent.h"
 
 class Address;
 
@@ -18,14 +19,18 @@ private:
     const std::string personalID;
     Address *address = nullptr;
     Address *registeredAddress = nullptr;
+    Rent *actuallRent = nullptr;
 
 public:
-    std::string clientInfo();
 
     //Client();
 
     Client(std::string firstName, std::string lastName, std::string personalID, Address *address = nullptr,
-           Address *registeredAddress = nullptr);
+           Address *registeredAddress = nullptr, Rent *actuallRent = nullptr);
+    
+    // void modifyRent(Rent *rentFromRent) ;
+
+    std::string clientInfo();
 
     //Client(Address *registeredAddress);
 
