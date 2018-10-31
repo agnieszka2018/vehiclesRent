@@ -30,18 +30,18 @@ int main() {
     cout << "\nAdres  zamieszkania po zmianie: " << klient_1.clientInfo();
     cout << "\nAdres  zamieszkania po zmianie: " << klient_2.clientInfo() << endl;
 
-    Vehicle *pojazd = new Vehicle(100, "cw12312");
+    Vehicle *pojazd = new Vehicle(142, "cw12312");
     //cout<<pojazd->vehicleInfo();
 
     posix_time::ptime pt(date(2018,Oct,26), posix_time::hours(12));
-    time_zone_ptr zone(new posix_time_zone("UTC"));
+    time_zone_ptr zone(new posix_time_zone("UTC+1"));
     local_date_time ldt(pt, zone);
 
     Client *klient_3 = new Client("Stefan", "Stonoga", "1029384756", actuall_address);
 
     Rent wypozyczenie(ldt, pojazd, klient_3);
-    wypozyczenie.returnVehicle();
     cout<<wypozyczenie.rentInfo()<<endl;
+    wypozyczenie.returnVehicle();
 
     cout<<endl;
 

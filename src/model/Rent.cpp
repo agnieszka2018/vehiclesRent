@@ -32,13 +32,16 @@ int Rent::rentDuration() {
 
 std::string Rent::rentInfo() {
 
-    std::cout << "\nwypozyczenie:\n";
-    std::cout << "uuid: " <<uuid << std::endl;
-    std::cout << "wypozyczajacy:\n" << client->clientInfo() << std::endl;
-    std::cout << "pojazd: "<< vehicle->vehicleInfo();
-    std::cout << "start time: "<< startTime <<std::endl;
-    std::cout << "end time: "<< endTime <<std::endl;
-    std::cout << "czas wypozyczenia: " << rentDuration();
+    std::stringstream ss;
+    ss << "\nwypozyczenie:\n";
+    ss << "uuid: " <<uuid << std::endl;
+    ss << "wypozyczajacy:\n" << client->clientInfo() << std::endl;
+    ss << "pojazd: "<< vehicle->vehicleInfo();
+    ss << "start time: "<< startTime <<std::endl;
+    if (endTime != startTime) ss << "end time: "<< endTime <<std::endl;
+    ss << "czas wypozyczenia: " << rentDuration()<<std::endl;
+
+    return ss.str();
 }
 
 Rent::~Rent() {
@@ -52,9 +55,12 @@ Rent::Rent(const local_date_time &startTime, Vehicle *vehicle, Client *client) :
 }
 
 void Rent::returnVehicle() {
-    time_zone_ptr zone(new posix_time_zone("UTC"));
+    time_zone_ptr zone(new posix_time_zone("UTC+1"));
     local_date_time now = local_sec_clock::local_time(zone);
     endTime = now;
+
+    std::cout<<"Wypozyczenie trwalo: "<<rentDuration()<<std::endl;
+    std::cout<<"Koszt wypozyczenia: "<<rentDuration()*vehicle->getBaseRentPrice();
 }
 
 

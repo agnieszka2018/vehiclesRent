@@ -15,6 +15,8 @@ public:
     //Vehicle(std::string idNumber);
     std::string vehicleInfo();
 
+    const int getBaseRentPrice() const;
+
 };
 
 #endif //POBIZ01_VEHICLE_H

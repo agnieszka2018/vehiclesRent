@@ -18,6 +18,10 @@ Vehicle::Vehicle(int baseRentPrice, string id) : baseRentPrice{baseRentPrice}, i
 
 std::string Vehicle::vehicleInfo()
 {
-    string info = "\ncena: " + to_string(baseRentPrice) + "\nid: " + id + "\n";
+    string info = "\ncena podstawowa: " + to_string(baseRentPrice) + "\nid: " + id + "\n";
     return info;
+}
+
+const int Vehicle::getBaseRentPrice() const {
+    return baseRentPrice;
 }
