@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/pobi/pobiz01/include -I/home/pobi/pobiz01/include/model 
+CXX_INCLUDES = -I/home/pobi/CLionProjects/pobiz01bk/include -I/home/pobi/CLionProjects/pobiz01bk/include/model 
 

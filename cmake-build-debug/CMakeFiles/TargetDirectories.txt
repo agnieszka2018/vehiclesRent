@@ -1,3 +1,7 @@
-/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir
-/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/pobiz01.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/biblioteka.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/TestRent.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/check.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/test.dir
