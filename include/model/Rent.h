@@ -10,9 +10,10 @@
 #include "boost/date_time/local_time/local_time.hpp"
 
 class Client;
+
 class Vehicle;
 
-class Rent{
+class Rent {
 private:
     boost::uuids::uuid uuid;
     boost::local_time::local_date_time startTime;
@@ -20,15 +21,18 @@ private:
     boost::local_time::local_date_time endTime;
     //boost::local_time::time_zone_ptr endZone;
     float cost;
-    Vehicle *vehicle=nullptr;
-    Client *client=nullptr;
+    Vehicle *vehicle = nullptr;
+    Client *client = nullptr;
 
 public:
-    Rent(const boost::local_time::local_date_time &startTime, Vehicle *vehicle, Client *client);
+    Rent(const boost::local_time::local_date_time &startTime, Vehicle *vehicle, Client *client = nullptr);
 
     int rentDuration();
+
     ~Rent();
+
     void returnVehicle();
+
     std::string rentInfo();
 
 };

@@ -10,6 +10,7 @@
 #include "Rent.h"
 
 class Address;
+class Rent;             //???
 
 class Client {
 
@@ -27,8 +28,8 @@ public:
 
     Client(std::string firstName, std::string lastName, std::string personalID, Address *address = nullptr,
            Address *registeredAddress = nullptr, Rent *actuallRent = nullptr);
-    
-    // void modifyRent(Rent *rentFromRent) ;
+
+    void modifyRent(Rent *);
 
     std::string clientInfo();
 

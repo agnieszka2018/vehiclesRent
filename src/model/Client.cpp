@@ -33,10 +33,9 @@ Client::Client(std::string firstName, std::string lastName, std::string personal
 }
 
 
-/* void Client::modifyRent(Rent *rentFromRent) 
-{
+void Client::modifyRent(Rent *rentFromRent) {
     actuallRent = rentFromRent;
-} */
+}
 
 
 std::string Client::clientInfo() {

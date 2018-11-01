@@ -6,8 +6,7 @@
 
 using namespace std;
 
-Vehicle::Vehicle(int baseRentPrice, string id) : baseRentPrice{baseRentPrice}, id{id}
-{
+Vehicle::Vehicle(int baseRentPrice, string id) : baseRentPrice{baseRentPrice}, id{id} {
 
 }
 
@@ -16,8 +15,7 @@ Vehicle::Vehicle(int baseRentPrice, string id) : baseRentPrice{baseRentPrice}, i
     baseRentPrice = 100;
 } */
 
-std::string Vehicle::vehicleInfo()
-{
+string Vehicle::vehicleInfo() {
     string info = "\ncena podstawowa: " + to_string(baseRentPrice) + "\nid: " + id + "\n";
     return info;
 }

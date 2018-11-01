@@ -18,13 +18,15 @@ using namespace local_time;
 using namespace gregorian;
 using posix_time::time_duration;
 
+class Client;                                    //???
+
 int Rent::rentDuration() {
 
     time_duration d = endTime - startTime;
     long secs = d.total_seconds();
-    float days = ((secs/60.0)/60)/24;
+    float days = ((secs / 60.0) / 60) / 24;
     int period;
-    if (days - int(days) != 0) period = days+1;
+    if (days - int(days) != 0) period = days + 1;
     else period = days;
 
     return period;
@@ -34,12 +36,12 @@ std::string Rent::rentInfo() {
 
     std::stringstream ss;
     ss << "\nwypozyczenie:\n";
-    ss << "uuid: " <<uuid << std::endl;
+    ss << "uuid: " << uuid << std::endl;
     ss << "wypozyczajacy:\n" << client->clientInfo() << std::endl;
-    ss << "pojazd: "<< vehicle->vehicleInfo();
-    ss << "start time: "<< startTime <<std::endl;
-    if (endTime != startTime) ss << "end time: "<< endTime <<std::endl;
-    ss << "czas wypozyczenia: " << rentDuration()<<std::endl;
+    ss << "pojazd: " << vehicle->vehicleInfo();
+    ss << "start time: " << startTime << std::endl;
+    if (endTime != startTime) ss << "end time: " << endTime << std::endl;
+    ss << "czas wypozyczenia: " << rentDuration() << std::endl;
 
     return ss.str();
 }
@@ -52,6 +54,11 @@ Rent::~Rent() {
 Rent::Rent(const local_date_time &startTime, Vehicle *vehicle, Client *client) : startTime(startTime), vehicle(vehicle),
                                                                                  client(client), endTime(startTime) {
     uuid = boost::uuids::random_generator()();
+
+
+    //Rent *rent = new Rent(startTime, vehicle);              /*poprawić*/
+    //client->modifyRent(&rent);                            /*poprawić*/
+
 }
 
 void Rent::returnVehicle() {
@@ -59,8 +66,8 @@ void Rent::returnVehicle() {
     local_date_time now = local_sec_clock::local_time(zone);
     endTime = now;
 
-    std::cout<<"Wypozyczenie trwalo: "<<rentDuration()<<std::endl;
-    std::cout<<"Koszt wypozyczenia: "<<rentDuration()*vehicle->getBaseRentPrice();
+    std::cout << "Wypozyczenie trwalo: " << rentDuration() << std::endl;
+    std::cout << "Koszt wypozyczenia: " << rentDuration() * vehicle->getBaseRentPrice();
 }
 
 
