@@ -124,3 +124,17 @@ boost/date_time/local_time/local_time.hpp
 string
 -
 
+/home/pobi/pobiz01/test/RentTest.cpp
+boost/test/unit_test.hpp
+-
+Vehicle.h
+/home/pobi/pobiz01/test/Vehicle.h
+Rent.h
+/home/pobi/pobiz01/test/Rent.h
+Client.h
+/home/pobi/pobiz01/test/Client.h
+
+/home/pobi/pobiz01/test/master.cpp
+boost/test/unit_test.hpp
+-
+

@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pobi/pobiz01/src/model/Client.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Client.cpp.o"
   "/home/pobi/pobiz01/src/model/Rent.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o"
   "/home/pobi/pobiz01/src/model/Vehicle.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o"
+  "/home/pobi/pobiz01/test/RentTest.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/test/RentTest.cpp.o"
+  "/home/pobi/pobiz01/test/master.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/test/master.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

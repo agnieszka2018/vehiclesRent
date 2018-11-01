@@ -177,13 +177,63 @@ CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o.provides: CMakeFiles/pobiz01.dir/
 CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o.provides.build: CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o
 
 
+CMakeFiles/pobiz01.dir/test/master.cpp.o: CMakeFiles/pobiz01.dir/flags.make
+CMakeFiles/pobiz01.dir/test/master.cpp.o: ../test/master.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pobiz01.dir/test/master.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/test/master.cpp.o -c /home/pobi/pobiz01/test/master.cpp
+
+CMakeFiles/pobiz01.dir/test/master.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pobiz01.dir/test/master.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pobi/pobiz01/test/master.cpp > CMakeFiles/pobiz01.dir/test/master.cpp.i
+
+CMakeFiles/pobiz01.dir/test/master.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/test/master.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/pobiz01/test/master.cpp -o CMakeFiles/pobiz01.dir/test/master.cpp.s
+
+CMakeFiles/pobiz01.dir/test/master.cpp.o.requires:
+
+.PHONY : CMakeFiles/pobiz01.dir/test/master.cpp.o.requires
+
+CMakeFiles/pobiz01.dir/test/master.cpp.o.provides: CMakeFiles/pobiz01.dir/test/master.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/test/master.cpp.o.provides.build
+.PHONY : CMakeFiles/pobiz01.dir/test/master.cpp.o.provides
+
+CMakeFiles/pobiz01.dir/test/master.cpp.o.provides.build: CMakeFiles/pobiz01.dir/test/master.cpp.o
+
+
+CMakeFiles/pobiz01.dir/test/RentTest.cpp.o: CMakeFiles/pobiz01.dir/flags.make
+CMakeFiles/pobiz01.dir/test/RentTest.cpp.o: ../test/RentTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pobiz01.dir/test/RentTest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/test/RentTest.cpp.o -c /home/pobi/pobiz01/test/RentTest.cpp
+
+CMakeFiles/pobiz01.dir/test/RentTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pobiz01.dir/test/RentTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pobi/pobiz01/test/RentTest.cpp > CMakeFiles/pobiz01.dir/test/RentTest.cpp.i
+
+CMakeFiles/pobiz01.dir/test/RentTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/test/RentTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/pobiz01/test/RentTest.cpp -o CMakeFiles/pobiz01.dir/test/RentTest.cpp.s
+
+CMakeFiles/pobiz01.dir/test/RentTest.cpp.o.requires:
+
+.PHONY : CMakeFiles/pobiz01.dir/test/RentTest.cpp.o.requires
+
+CMakeFiles/pobiz01.dir/test/RentTest.cpp.o.provides: CMakeFiles/pobiz01.dir/test/RentTest.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/test/RentTest.cpp.o.provides.build
+.PHONY : CMakeFiles/pobiz01.dir/test/RentTest.cpp.o.provides
+
+CMakeFiles/pobiz01.dir/test/RentTest.cpp.o.provides.build: CMakeFiles/pobiz01.dir/test/RentTest.cpp.o
+
+
 # Object files for target pobiz01
 pobiz01_OBJECTS = \
 "CMakeFiles/pobiz01.dir/src/model/Client.cpp.o" \
 "CMakeFiles/pobiz01.dir/main.cpp.o" \
 "CMakeFiles/pobiz01.dir/src/model/Address.cpp.o" \
 "CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o" \
-"CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o"
+"CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o" \
+"CMakeFiles/pobiz01.dir/test/master.cpp.o" \
+"CMakeFiles/pobiz01.dir/test/RentTest.cpp.o"
 
 # External object files for target pobiz01
 pobiz01_EXTERNAL_OBJECTS =
@@ -193,9 +243,11 @@ pobiz01: CMakeFiles/pobiz01.dir/main.cpp.o
 pobiz01: CMakeFiles/pobiz01.dir/src/model/Address.cpp.o
 pobiz01: CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o
 pobiz01: CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o
+pobiz01: CMakeFiles/pobiz01.dir/test/master.cpp.o
+pobiz01: CMakeFiles/pobiz01.dir/test/RentTest.cpp.o
 pobiz01: CMakeFiles/pobiz01.dir/build.make
 pobiz01: CMakeFiles/pobiz01.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable pobiz01"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable pobiz01"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pobiz01.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -208,6 +260,8 @@ CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/main.cpp.o.requires
 CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/src/model/Address.cpp.o.requires
 CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o.requires
 CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o.requires
+CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/test/master.cpp.o.requires
+CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/test/RentTest.cpp.o.requires
 
 .PHONY : CMakeFiles/pobiz01.dir/requires
 

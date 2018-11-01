@@ -26,3 +26,11 @@ CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o: ../src/model/Rent.cpp
 CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o: ../include/model/Vehicle.h
 CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o: ../src/model/Vehicle.cpp
 
+CMakeFiles/pobiz01.dir/test/RentTest.cpp.o: ../include/model/Address.h
+CMakeFiles/pobiz01.dir/test/RentTest.cpp.o: ../include/model/Client.h
+CMakeFiles/pobiz01.dir/test/RentTest.cpp.o: ../include/model/Rent.h
+CMakeFiles/pobiz01.dir/test/RentTest.cpp.o: ../include/model/Vehicle.h
+CMakeFiles/pobiz01.dir/test/RentTest.cpp.o: ../test/RentTest.cpp
+
+CMakeFiles/pobiz01.dir/test/master.cpp.o: ../test/master.cpp
+

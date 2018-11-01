@@ -78,6 +78,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles /home/pobi/pobiz01/cmake-build-debug/CMakeFiles/progress.marks
@@ -258,6 +269,60 @@ src/model/Vehicle.cpp.s:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.s
 .PHONY : src/model/Vehicle.cpp.s
 
+test/RentTest.o: test/RentTest.cpp.o
+
+.PHONY : test/RentTest.o
+
+# target to build an object file
+test/RentTest.cpp.o:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/test/RentTest.cpp.o
+.PHONY : test/RentTest.cpp.o
+
+test/RentTest.i: test/RentTest.cpp.i
+
+.PHONY : test/RentTest.i
+
+# target to preprocess a source file
+test/RentTest.cpp.i:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/test/RentTest.cpp.i
+.PHONY : test/RentTest.cpp.i
+
+test/RentTest.s: test/RentTest.cpp.s
+
+.PHONY : test/RentTest.s
+
+# target to generate assembly for a file
+test/RentTest.cpp.s:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/test/RentTest.cpp.s
+.PHONY : test/RentTest.cpp.s
+
+test/master.o: test/master.cpp.o
+
+.PHONY : test/master.o
+
+# target to build an object file
+test/master.cpp.o:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/test/master.cpp.o
+.PHONY : test/master.cpp.o
+
+test/master.i: test/master.cpp.i
+
+.PHONY : test/master.i
+
+# target to preprocess a source file
+test/master.cpp.i:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/test/master.cpp.i
+.PHONY : test/master.cpp.i
+
+test/master.s: test/master.cpp.s
+
+.PHONY : test/master.s
+
+# target to generate assembly for a file
+test/master.cpp.s:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/test/master.cpp.s
+.PHONY : test/master.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -265,8 +330,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... pobiz01"
 	@echo "... edit_cache"
+	@echo "... pobiz01"
+	@echo "... test"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -282,6 +348,12 @@ help:
 	@echo "... src/model/Vehicle.o"
 	@echo "... src/model/Vehicle.i"
 	@echo "... src/model/Vehicle.s"
+	@echo "... test/RentTest.o"
+	@echo "... test/RentTest.i"
+	@echo "... test/RentTest.s"
+	@echo "... test/master.o"
+	@echo "... test/master.i"
+	@echo "... test/master.s"
 .PHONY : help
 
 

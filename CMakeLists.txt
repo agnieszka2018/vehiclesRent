@@ -15,4 +15,6 @@ add_executable(pobiz01
         src/model/Rent.cpp
         include/model/Rent.h
         include/model/Vehicle.h
-        src/model/Vehicle.cpp)
+        src/model/Vehicle.cpp test/master.cpp test/RentTest.cpp)
+
+enable_testing()
