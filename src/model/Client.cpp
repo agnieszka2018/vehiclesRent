@@ -47,10 +47,6 @@ std::string Client::clientName()
     return print;
 }
 
-std::string Client::getFirstName() {
-    return firstName;
-}
-
 
 std::string Client::clientInfo() {
 
@@ -79,6 +75,10 @@ std::string Client::clientInfo() {
 
 Client::~Client() {
     cout << "destruktor jest wywolany" << endl;
+}
+
+Rent *Client::getActuallRent() const {
+    return actuallRent;
 }
 
 

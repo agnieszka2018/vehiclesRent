@@ -8,7 +8,7 @@ include_directories(include/model)
 
 
 SET(SOURCE_FILES
-        pobiz01
+        #pobiz01
         include/model/Address.h
         include/model/Client.h
         src/model/Client.cpp

@@ -22,25 +22,26 @@ using namespace boost::uuids;
 BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
 
     BOOST_AUTO_TEST_CASE(RentTimeDurationCase) {
-        Address *actuall_address = new Address("Mickiewicza", "7");
+            Address *actuall_address = new Address("Mickiewicza", "7");
 
-        Vehicle *pojazd = new Vehicle(142, "cw12312");
+            Vehicle *pojazd = new Vehicle(142, "cw12312");
 
-        boost::posix_time::ptime pt(date(2018,Oct,26), boost::posix_time::hours(12));
-        time_zone_ptr zone(new posix_time_zone("UTC+1"));
-        local_date_time ldt(pt, zone);
-        
-        Client *klient_3 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
+            boost::posix_time::ptime pt(date(2018, Oct, 26), boost::posix_time::hours(12));
+            time_zone_ptr zone(new posix_time_zone("UTC+1"));
+            local_date_time ldt(pt, zone);
 
-        Rent *wypozyczenie = new Rent(ldt, pojazd, klient_3);
+            Client *klient_3 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
 
-        klient_3->modifyRent(wypozyczenie);
+            Rent *wypozyczenie = new Rent(ldt, pojazd, klient_3);
 
-        BOOST_REQUIRE_EQUAL(wypozyczenie->renterFirstName(), "Stefan");
+            klient_3->modifyRent(wypozyczenie);
 
-        BOOST_REQUIRE_EQUAL(wypozyczenie->rentDuration(), 0);
+            BOOST_REQUIRE_EQUAL(wypozyczenie, klient_3->getActuallRent());
 
-        wypozyczenie->returnVehicle();
-        BOOST_REQUIRE_GT(wypozyczenie->rentDuration(), 0);
+            BOOST_REQUIRE_EQUAL(wypozyczenie->rentDuration(), 0);
 
-BOOST_AUTO_TEST_SUITE_END()
+            wypozyczenie->returnVehicle();
+            BOOST_REQUIRE_GT(wypozyczenie->rentDuration(), 0);
+
+    }
+    BOOST_AUTO_TEST_SUITE_END()

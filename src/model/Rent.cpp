@@ -87,10 +87,6 @@ void Rent::returnVehicle() {
     std::cout << "Koszt wypozyczenia: " << rentDuration() * vehicle->getBaseRentPrice();
 }
 
-std::string Rent::renterFirstName() {
-    return client->getFirstName();
-}
-
 
 
 

@@ -34,7 +34,8 @@ public:
 
     std::string clientInfo();
     std::string clientName();
-    std::string getFirstName();
+
+    Rent *getActuallRent() const;
 
     //Client(Address *registeredAddress);
 

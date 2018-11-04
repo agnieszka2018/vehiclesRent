@@ -33,7 +33,6 @@ public:
 
     std::string rentInfo();
     std::string rentInfoFromClient();
-    std::string renterFirstName();
 
 };
 
