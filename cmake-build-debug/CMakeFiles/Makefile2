@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pobi/pobiz01
+CMAKE_SOURCE_DIR = /home/pobi/CLionProjects/pobiz01
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pobi/pobiz01/cmake-build-debug
+CMAKE_BINARY_DIR = /home/pobi/CLionProjects/pobiz01/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/pobiz01.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/pobi/pobiz01/cmake-build-debug
 CMakeFiles/pobiz01.dir/all:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/depend
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target pobiz01"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num=10,11,12,13,14,15 "Built target pobiz01"
 .PHONY : CMakeFiles/pobiz01.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/pobiz01.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pobiz01.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pobiz01.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/pobiz01.dir/rule
 
 # Convenience name for target.
@@ -93,6 +93,112 @@ CMakeFiles/pobiz01.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/pobiz01.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/biblioteka.dir
+
+# All Build rule for target.
+CMakeFiles/biblioteka.dir/all:
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/depend
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num=4,5,6,7,8,9 "Built target biblioteka"
+.PHONY : CMakeFiles/biblioteka.dir/all
+
+# Include target in all.
+all: CMakeFiles/biblioteka.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/biblioteka.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/biblioteka.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/biblioteka.dir/rule
+
+# Convenience name for target.
+biblioteka: CMakeFiles/biblioteka.dir/rule
+
+.PHONY : biblioteka
+
+# clean rule for target.
+CMakeFiles/biblioteka.dir/clean:
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/clean
+.PHONY : CMakeFiles/biblioteka.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/biblioteka.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/TestRent.dir
+
+# All Build rule for target.
+CMakeFiles/TestRent.dir/all: CMakeFiles/biblioteka.dir/all
+	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/depend
+	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target TestRent"
+.PHONY : CMakeFiles/TestRent.dir/all
+
+# Include target in all.
+all: CMakeFiles/TestRent.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TestRent.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 9
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestRent.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/TestRent.dir/rule
+
+# Convenience name for target.
+TestRent: CMakeFiles/TestRent.dir/rule
+
+.PHONY : TestRent
+
+# clean rule for target.
+CMakeFiles/TestRent.dir/clean:
+	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/clean
+.PHONY : CMakeFiles/TestRent.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/TestRent.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/check.dir
+
+# All Build rule for target.
+CMakeFiles/check.dir/all:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/depend
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num= "Built target check"
+.PHONY : CMakeFiles/check.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/check.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/check.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/check.dir/rule
+
+# Convenience name for target.
+check: CMakeFiles/check.dir/rule
+
+.PHONY : check
+
+# clean rule for target.
+CMakeFiles/check.dir/clean:
+	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/clean
+.PHONY : CMakeFiles/check.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/check.dir/clean
 
 .PHONY : clean
 

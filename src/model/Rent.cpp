@@ -46,6 +46,21 @@ std::string Rent::rentInfo() {
     return ss.str();
 }
 
+std::string Rent::rentInfoFromClient() {
+
+    std::stringstream ss;
+    ss << "\nwypozyczenie:\n";
+    ss << "uuid: " << uuid << std::endl;
+    //ss << "wypozyczajacy:\n" << client->clientInfo() << std::endl;
+    ss << "pojazd: " << vehicle->vehicleInfo();
+    ss << "start time: " << startTime << std::endl;
+    if (endTime != startTime) ss << "end time: " << endTime << std::endl;
+    ss << "czas wypozyczenia: " << rentDuration() << std::endl;
+
+    return ss.str();
+
+}
+
 Rent::~Rent() {
     std::cout << "destruktor Rent jest wywolany" << std::endl;
     //std::cout << "Koszt wypozyczenia"<< rent;

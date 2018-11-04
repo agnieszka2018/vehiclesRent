@@ -18,18 +18,19 @@ private:
     const std::string firstName;
     std::string lastName;
     const std::string personalID;
-    Address *address = nullptr;
-    Address *registeredAddress = nullptr;
-    Rent *actuallRent = nullptr;
+    Address *address;
+    Address *registeredAddress;
+    Rent *actuallRent;
 
 public:
 
+
     //Client();
 
-    Client(std::string firstName, std::string lastName, std::string personalID, Address *address = nullptr,
-           Address *registeredAddress = nullptr, Rent *actuallRent = nullptr);
+    Client(std::string firstName, std::string lastName, std::string personalID, Address *address,
+           Address *registeredAddress, Rent *actuallRent);
 
-    void modifyRent(Rent *);
+    void modifyRent(Rent *wypozyczenie);
 
     std::string clientInfo();
 

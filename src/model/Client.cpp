@@ -3,6 +3,8 @@
 //
 #include <iostream>
 #include <string>
+#include <model/Client.h>
+
 #include "../../include/model/Client.h"
 #include "../../include/model/Address.h"
 #include "Rent.h"
@@ -34,29 +36,31 @@ Client::Client(std::string firstName, std::string lastName, std::string personal
 
 
 void Client::modifyRent(Rent *rentFromRent) {
+    //cout<<"actrent: "<<actuallRent;
     actuallRent = rentFromRent;
+    //cout<<"actrent: "<<actuallRent;
 }
 
 
 std::string Client::clientInfo() {
 
-    std::string print = firstName + " " + lastName + " " + personalID;
-
-    if (actuallRent != 0) {
+    std::string print = firstName + " " + lastName + " " + personalID + actuallRent->rentInfoFromClient() + "\n";
+/*
+    if (&actuallRent != 0) {
         if (address != nullptr)
             //address = &obiekt;
-            print += ", adres zamieszkania: " + address->displayInfo() + " " + actuallRent->rentInfo();
+            print += ", adres zamieszkania: " + address.displayInfo() + " " + actuallRent->rentInfo();
         else if (registeredAddress != nullptr)
-            print += ", adres zameldowania: " + address->displayInfo() + " " + actuallRent->rentInfo();
+            print += ", adres zameldowania: " + address.displayInfo() + " " + actuallRent->rentInfo();
         else
             print += " " + actuallRent->rentInfo();
     } else {
         if (address != nullptr)
-            print += ", adres zamieszkania: " + address->displayInfo();
+            print += ", adres zamieszkania: " + address.displayInfo();
         else if (registeredAddress != nullptr)
-            print += ", adres zameldowania: " + address->displayInfo();
+            print += ", adres zameldowania: " + address.displayInfo();
     }
-
+*/
 
     return print;
     //return firstName + "_" + lastName + "_" + personalID + ".";
@@ -66,3 +70,5 @@ std::string Client::clientInfo() {
 Client::~Client() {
     cout << "destruktor jest wywolany" << endl;
 }
+
+

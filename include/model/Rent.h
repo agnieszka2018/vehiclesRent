@@ -10,9 +10,7 @@
 #include "boost/date_time/local_time/local_time.hpp"
 
 class Client;
-
 class Vehicle;
-
 class Rent {
 private:
     boost::uuids::uuid uuid;
@@ -34,6 +32,7 @@ public:
     void returnVehicle();
 
     std::string rentInfo();
+    std::string rentInfoFromClient();
 
 };
 
