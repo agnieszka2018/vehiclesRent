@@ -34,6 +34,7 @@ public:
 
     std::string clientInfo();
     std::string clientName();
+    std::string getFirstName();
 
     //Client(Address *registeredAddress);
 

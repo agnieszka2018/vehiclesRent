@@ -47,6 +47,10 @@ std::string Client::clientName()
     return print;
 }
 
+std::string Client::getFirstName() {
+    return firstName;
+}
+
 
 std::string Client::clientInfo() {
 

@@ -61,6 +61,8 @@ std::string Rent::rentInfoFromClient() {
 
 }
 
+
+
 Rent::~Rent() {
     std::cout << "destruktor Rent jest wywolany" << std::endl;
     //std::cout << "Koszt wypozyczenia"<< rent;
@@ -83,6 +85,10 @@ void Rent::returnVehicle() {
 
     std::cout << "Wypozyczenie trwalo: " << rentDuration() << std::endl;
     std::cout << "Koszt wypozyczenia: " << rentDuration() * vehicle->getBaseRentPrice();
+}
+
+std::string Rent::renterFirstName() {
+    return client->getFirstName();
 }
 
 

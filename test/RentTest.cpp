@@ -32,9 +32,11 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
 
         Client *klient_3 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
 
-        Rent *wypozyczenie = new Rent(ldt, pojazd);
+        Rent *wypozyczenie = new Rent(ldt, pojazd, klient_3);
 
         klient_3->modifyRent(wypozyczenie);
+
+        BOOST_REQUIRE_EQUAL(wypozyczenie->renterFirstName(), "Stefan");
 
         BOOST_REQUIRE_EQUAL(wypozyczenie->rentDuration(), 0);
 
