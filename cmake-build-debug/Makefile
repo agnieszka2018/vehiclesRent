@@ -48,10 +48,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/pobi/CLionProjects/pobiz01
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/pobi/CLionProjects/pobiz01/cmake-build-debug
+=======
+CMAKE_SOURCE_DIR = /home/pobi/CLionProjects/pobiz01bk
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,9 +98,15 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles 0
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 .PHONY : all
 
 # The main clean target

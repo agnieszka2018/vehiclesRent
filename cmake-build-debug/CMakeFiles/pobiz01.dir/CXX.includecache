@@ -30,6 +30,7 @@ boost/date_time/local_time/local_time.hpp
 string
 -
 
+<<<<<<< HEAD
 /home/pobi/CLionProjects/pobiz01/./include/model/Address.h
 string
 -
@@ -55,11 +56,39 @@ Rent.h
 /home/pobi/CLionProjects/pobiz01/include/model/Rent.h
 
 /home/pobi/CLionProjects/pobiz01/include/model/Rent.h
+=======
+/home/pobi/CLionProjects/pobiz01bk/./include/model/Address.h
+string
+-
+
+/home/pobi/CLionProjects/pobiz01bk/./include/model/Client.h
+string
+-
+../../include/model/Address.h
+/home/pobi/CLionProjects/pobiz01bk/./include/model/Address.h
+Rent.h
+/home/pobi/CLionProjects/pobiz01bk/./include/model/Rent.h
+
+/home/pobi/CLionProjects/pobiz01bk/include/model/Address.h
+string
+-
+
+/home/pobi/CLionProjects/pobiz01bk/include/model/Client.h
+string
+-
+../../include/model/Address.h
+/home/pobi/CLionProjects/pobiz01bk/include/model/Address.h
+Rent.h
+/home/pobi/CLionProjects/pobiz01bk/include/model/Rent.h
+
+/home/pobi/CLionProjects/pobiz01bk/include/model/Rent.h
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 boost/uuid/random_generator.hpp
 -
 string
 -
 boost/date_time/local_time/local_time.hpp
+<<<<<<< HEAD
 /home/pobi/CLionProjects/pobiz01/include/model/boost/date_time/local_time/local_time.hpp
 
 /home/pobi/CLionProjects/pobiz01/main.cpp
@@ -75,16 +104,41 @@ Rent.h
 /home/pobi/CLionProjects/pobiz01/Rent.h
 
 /home/pobi/CLionProjects/pobiz01/src/model/Address.cpp
+=======
+/home/pobi/CLionProjects/pobiz01bk/include/model/boost/date_time/local_time/local_time.hpp
+
+/home/pobi/CLionProjects/pobiz01bk/main.cpp
+iostream
+-
+./include/model/Client.h
+/home/pobi/CLionProjects/pobiz01bk/./include/model/Client.h
+./include/model/Address.h
+/home/pobi/CLionProjects/pobiz01bk/./include/model/Address.h
+Vehicle.h
+/home/pobi/CLionProjects/pobiz01bk/Vehicle.h
+Rent.h
+/home/pobi/CLionProjects/pobiz01bk/Rent.h
+
+/home/pobi/CLionProjects/pobiz01bk/src/model/Address.cpp
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 iostream
 -
 string
 -
 ../../include/model/Client.h
+<<<<<<< HEAD
 /home/pobi/CLionProjects/pobiz01/include/model/Client.h
 ../../include/model/Address.h
 /home/pobi/CLionProjects/pobiz01/include/model/Address.h
 
 /home/pobi/CLionProjects/pobiz01/src/model/Client.cpp
+=======
+/home/pobi/CLionProjects/pobiz01bk/include/model/Client.h
+../../include/model/Address.h
+/home/pobi/CLionProjects/pobiz01bk/include/model/Address.h
+
+/home/pobi/CLionProjects/pobiz01bk/src/model/Client.cpp
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 iostream
 -
 string
@@ -92,6 +146,7 @@ string
 model/Client.h
 -
 ../../include/model/Client.h
+<<<<<<< HEAD
 /home/pobi/CLionProjects/pobiz01/include/model/Client.h
 ../../include/model/Address.h
 /home/pobi/CLionProjects/pobiz01/include/model/Address.h
@@ -99,16 +154,33 @@ Rent.h
 /home/pobi/CLionProjects/pobiz01/src/model/Rent.h
 
 /home/pobi/CLionProjects/pobiz01/src/model/Rent.cpp
+=======
+/home/pobi/CLionProjects/pobiz01bk/include/model/Client.h
+../../include/model/Address.h
+/home/pobi/CLionProjects/pobiz01bk/include/model/Address.h
+Rent.h
+/home/pobi/CLionProjects/pobiz01bk/src/model/Rent.h
+
+/home/pobi/CLionProjects/pobiz01bk/src/model/Rent.cpp
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 iostream
 -
 string
 -
 Vehicle.h
+<<<<<<< HEAD
 /home/pobi/CLionProjects/pobiz01/src/model/Vehicle.h
 Client.h
 /home/pobi/CLionProjects/pobiz01/src/model/Client.h
 Rent.h
 /home/pobi/CLionProjects/pobiz01/src/model/Rent.h
+=======
+/home/pobi/CLionProjects/pobiz01bk/src/model/Vehicle.h
+Client.h
+/home/pobi/CLionProjects/pobiz01bk/src/model/Client.h
+Rent.h
+/home/pobi/CLionProjects/pobiz01bk/src/model/Rent.h
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 boost/uuid/uuid.hpp
 -
 boost/uuid/uuid_generators.hpp
@@ -118,9 +190,15 @@ boost/uuid/uuid_io.hpp
 model/Rent.h
 -
 boost/date_time/local_time/local_time.hpp
+<<<<<<< HEAD
 /home/pobi/CLionProjects/pobiz01/src/model/boost/date_time/local_time/local_time.hpp
 
 /home/pobi/CLionProjects/pobiz01/src/model/Vehicle.cpp
+=======
+/home/pobi/CLionProjects/pobiz01bk/src/model/boost/date_time/local_time/local_time.hpp
+
+/home/pobi/CLionProjects/pobiz01bk/src/model/Vehicle.cpp
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 ../../include/model/Vehicle.h
 -
 string

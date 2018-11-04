@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir
 /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles/edit_cache.dir
@@ -5,3 +6,12 @@
 /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles/TestRent.dir
 /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles/check.dir
 /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles/test.dir
+=======
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/pobiz01.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/biblioteka.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/TestRent.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/check.dir
+/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/test.dir
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361

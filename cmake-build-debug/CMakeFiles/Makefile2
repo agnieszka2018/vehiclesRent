@@ -54,10 +54,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/pobi/CLionProjects/pobiz01
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/pobi/CLionProjects/pobiz01/cmake-build-debug
+=======
+CMAKE_SOURCE_DIR = /home/pobi/CLionProjects/pobiz01bk
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 
 #=============================================================================
 # Target rules for target CMakeFiles/pobiz01.dir
@@ -66,7 +73,11 @@ CMAKE_BINARY_DIR = /home/pobi/CLionProjects/pobiz01/cmake-build-debug
 CMakeFiles/pobiz01.dir/all:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/depend
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/build
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num=10,11,12,13,14,15 "Built target pobiz01"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles --progress-num=10,11,12,13,14,15 "Built target pobiz01"
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 .PHONY : CMakeFiles/pobiz01.dir/all
 
 # Include target in all.
@@ -76,9 +87,15 @@ all: CMakeFiles/pobiz01.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pobiz01.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pobiz01.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pobiz01.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles 0
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 .PHONY : CMakeFiles/pobiz01.dir/rule
 
 # Convenience name for target.
@@ -103,7 +120,11 @@ clean: CMakeFiles/pobiz01.dir/clean
 CMakeFiles/biblioteka.dir/all:
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/depend
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/build
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num=4,5,6,7,8,9 "Built target biblioteka"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles --progress-num=4,5,6,7,8,9 "Built target biblioteka"
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 .PHONY : CMakeFiles/biblioteka.dir/all
 
 # Include target in all.
@@ -113,9 +134,15 @@ all: CMakeFiles/biblioteka.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/biblioteka.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/biblioteka.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/biblioteka.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles 0
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 .PHONY : CMakeFiles/biblioteka.dir/rule
 
 # Convenience name for target.
@@ -140,7 +167,11 @@ clean: CMakeFiles/biblioteka.dir/clean
 CMakeFiles/TestRent.dir/all: CMakeFiles/biblioteka.dir/all
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/depend
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/build
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target TestRent"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target TestRent"
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 .PHONY : CMakeFiles/TestRent.dir/all
 
 # Include target in all.
@@ -150,9 +181,15 @@ all: CMakeFiles/TestRent.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TestRent.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestRent.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles 9
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestRent.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles 0
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 .PHONY : CMakeFiles/TestRent.dir/rule
 
 # Convenience name for target.
@@ -177,14 +214,24 @@ clean: CMakeFiles/TestRent.dir/clean
 CMakeFiles/check.dir/all:
 	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/depend
 	$(MAKE) -f CMakeFiles/check.dir/build.make CMakeFiles/check.dir/build
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num= "Built target check"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles --progress-num= "Built target check"
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 .PHONY : CMakeFiles/check.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/check.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/check.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/check.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles 0
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 .PHONY : CMakeFiles/check.dir/rule
 
 # Convenience name for target.

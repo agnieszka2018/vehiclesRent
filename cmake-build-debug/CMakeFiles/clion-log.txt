@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/pobi/CLionProjects/pobiz01
+=======
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/pobi/CLionProjects/pobiz01bk
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 -- Boost version: 1.65.1
 -- Found the following Boost libraries:
 --   unit_test_framework
 -- Configuring done
 -- Generating done
+<<<<<<< HEAD
 -- Build files have been written to: /home/pobi/CLionProjects/pobiz01/cmake-build-debug
+=======
+-- Build files have been written to: /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361

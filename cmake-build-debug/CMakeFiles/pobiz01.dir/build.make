@@ -43,10 +43,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/pobi/CLionProjects/pobiz01
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/pobi/CLionProjects/pobiz01/cmake-build-debug
+=======
+CMAKE_SOURCE_DIR = /home/pobi/CLionProjects/pobiz01bk
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 
 # Include any dependencies generated for this target.
 include CMakeFiles/pobiz01.dir/depend.make
@@ -59,6 +66,7 @@ include CMakeFiles/pobiz01.dir/flags.make
 
 CMakeFiles/pobiz01.dir/src/model/Client.cpp.o: CMakeFiles/pobiz01.dir/flags.make
 CMakeFiles/pobiz01.dir/src/model/Client.cpp.o: ../src/model/Client.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pobiz01.dir/src/model/Client.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/Client.cpp.o -c /home/pobi/CLionProjects/pobiz01/src/model/Client.cpp
 
@@ -69,6 +77,18 @@ CMakeFiles/pobiz01.dir/src/model/Client.cpp.i: cmake_force
 CMakeFiles/pobiz01.dir/src/model/Client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/Client.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/CLionProjects/pobiz01/src/model/Client.cpp -o CMakeFiles/pobiz01.dir/src/model/Client.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pobiz01.dir/src/model/Client.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/Client.cpp.o -c /home/pobi/CLionProjects/pobiz01bk/src/model/Client.cpp
+
+CMakeFiles/pobiz01.dir/src/model/Client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pobiz01.dir/src/model/Client.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pobi/CLionProjects/pobiz01bk/src/model/Client.cpp > CMakeFiles/pobiz01.dir/src/model/Client.cpp.i
+
+CMakeFiles/pobiz01.dir/src/model/Client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/Client.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/CLionProjects/pobiz01bk/src/model/Client.cpp -o CMakeFiles/pobiz01.dir/src/model/Client.cpp.s
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 
 CMakeFiles/pobiz01.dir/src/model/Client.cpp.o.requires:
 
@@ -83,6 +103,7 @@ CMakeFiles/pobiz01.dir/src/model/Client.cpp.o.provides.build: CMakeFiles/pobiz01
 
 CMakeFiles/pobiz01.dir/main.cpp.o: CMakeFiles/pobiz01.dir/flags.make
 CMakeFiles/pobiz01.dir/main.cpp.o: ../main.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pobiz01.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/main.cpp.o -c /home/pobi/CLionProjects/pobiz01/main.cpp
 
@@ -93,6 +114,18 @@ CMakeFiles/pobiz01.dir/main.cpp.i: cmake_force
 CMakeFiles/pobiz01.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/CLionProjects/pobiz01/main.cpp -o CMakeFiles/pobiz01.dir/main.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pobiz01.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/main.cpp.o -c /home/pobi/CLionProjects/pobiz01bk/main.cpp
+
+CMakeFiles/pobiz01.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pobiz01.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pobi/CLionProjects/pobiz01bk/main.cpp > CMakeFiles/pobiz01.dir/main.cpp.i
+
+CMakeFiles/pobiz01.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/CLionProjects/pobiz01bk/main.cpp -o CMakeFiles/pobiz01.dir/main.cpp.s
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 
 CMakeFiles/pobiz01.dir/main.cpp.o.requires:
 
@@ -107,6 +140,7 @@ CMakeFiles/pobiz01.dir/main.cpp.o.provides.build: CMakeFiles/pobiz01.dir/main.cp
 
 CMakeFiles/pobiz01.dir/src/model/Address.cpp.o: CMakeFiles/pobiz01.dir/flags.make
 CMakeFiles/pobiz01.dir/src/model/Address.cpp.o: ../src/model/Address.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pobiz01.dir/src/model/Address.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/Address.cpp.o -c /home/pobi/CLionProjects/pobiz01/src/model/Address.cpp
 
@@ -117,6 +151,18 @@ CMakeFiles/pobiz01.dir/src/model/Address.cpp.i: cmake_force
 CMakeFiles/pobiz01.dir/src/model/Address.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/Address.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/CLionProjects/pobiz01/src/model/Address.cpp -o CMakeFiles/pobiz01.dir/src/model/Address.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pobiz01.dir/src/model/Address.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/Address.cpp.o -c /home/pobi/CLionProjects/pobiz01bk/src/model/Address.cpp
+
+CMakeFiles/pobiz01.dir/src/model/Address.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pobiz01.dir/src/model/Address.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pobi/CLionProjects/pobiz01bk/src/model/Address.cpp > CMakeFiles/pobiz01.dir/src/model/Address.cpp.i
+
+CMakeFiles/pobiz01.dir/src/model/Address.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/Address.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/CLionProjects/pobiz01bk/src/model/Address.cpp -o CMakeFiles/pobiz01.dir/src/model/Address.cpp.s
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 
 CMakeFiles/pobiz01.dir/src/model/Address.cpp.o.requires:
 
@@ -131,6 +177,7 @@ CMakeFiles/pobiz01.dir/src/model/Address.cpp.o.provides.build: CMakeFiles/pobiz0
 
 CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o: CMakeFiles/pobiz01.dir/flags.make
 CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o: ../src/model/Rent.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o -c /home/pobi/CLionProjects/pobiz01/src/model/Rent.cpp
 
@@ -141,6 +188,18 @@ CMakeFiles/pobiz01.dir/src/model/Rent.cpp.i: cmake_force
 CMakeFiles/pobiz01.dir/src/model/Rent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/Rent.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/CLionProjects/pobiz01/src/model/Rent.cpp -o CMakeFiles/pobiz01.dir/src/model/Rent.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o -c /home/pobi/CLionProjects/pobiz01bk/src/model/Rent.cpp
+
+CMakeFiles/pobiz01.dir/src/model/Rent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pobiz01.dir/src/model/Rent.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pobi/CLionProjects/pobiz01bk/src/model/Rent.cpp > CMakeFiles/pobiz01.dir/src/model/Rent.cpp.i
+
+CMakeFiles/pobiz01.dir/src/model/Rent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/Rent.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/CLionProjects/pobiz01bk/src/model/Rent.cpp -o CMakeFiles/pobiz01.dir/src/model/Rent.cpp.s
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 
 CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o.requires:
 
@@ -155,6 +214,7 @@ CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o.provides.build: CMakeFiles/pobiz01.d
 
 CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o: CMakeFiles/pobiz01.dir/flags.make
 CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o: ../src/model/Vehicle.cpp
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o -c /home/pobi/CLionProjects/pobiz01/src/model/Vehicle.cpp
 
@@ -165,6 +225,18 @@ CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.i: cmake_force
 CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/CLionProjects/pobiz01/src/model/Vehicle.cpp -o CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o -c /home/pobi/CLionProjects/pobiz01bk/src/model/Vehicle.cpp
+
+CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pobi/CLionProjects/pobiz01bk/src/model/Vehicle.cpp > CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.i
+
+CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/CLionProjects/pobiz01bk/src/model/Vehicle.cpp -o CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.s
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 
 CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o.requires:
 
@@ -195,7 +267,11 @@ pobiz01: CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o
 pobiz01: CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o
 pobiz01: CMakeFiles/pobiz01.dir/build.make
 pobiz01: CMakeFiles/pobiz01.dir/link.txt
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable pobiz01"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable pobiz01"
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pobiz01.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -216,6 +292,10 @@ CMakeFiles/pobiz01.dir/clean:
 .PHONY : CMakeFiles/pobiz01.dir/clean
 
 CMakeFiles/pobiz01.dir/depend:
+<<<<<<< HEAD
 	cd /home/pobi/CLionProjects/pobiz01/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pobi/CLionProjects/pobiz01 /home/pobi/CLionProjects/pobiz01 /home/pobi/CLionProjects/pobiz01/cmake-build-debug /home/pobi/CLionProjects/pobiz01/cmake-build-debug /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pobi/CLionProjects/pobiz01bk /home/pobi/CLionProjects/pobiz01bk /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/pobiz01.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> dcd537ab73aa0cff15252dcad5928971dca88361
 .PHONY : CMakeFiles/pobiz01.dir/depend
 
