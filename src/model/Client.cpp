@@ -41,26 +41,32 @@ void Client::modifyRent(Rent *rentFromRent) {
     //cout<<"actrent: "<<actuallRent;
 }
 
+std::string Client::clientName()
+{
+    std::string print = firstName + " " + lastName + " " + personalID + "\n";
+    return print;
+}
+
 
 std::string Client::clientInfo() {
 
-    std::string print = firstName + " " + lastName + " " + personalID + actuallRent->rentInfoFromClient() + "\n";
-/*
+    std::string print = firstName + " " + lastName + " " + personalID + "\n";
+
     if (&actuallRent != 0) {
         if (address != nullptr)
             //address = &obiekt;
-            print += ", adres zamieszkania: " + address.displayInfo() + " " + actuallRent->rentInfo();
+            print += "adres zamieszkania: " + address->displayInfo() + " " + actuallRent->rentInfoFromClient();
         else if (registeredAddress != nullptr)
-            print += ", adres zameldowania: " + address.displayInfo() + " " + actuallRent->rentInfo();
+            print += "adres zameldowania: " + address->displayInfo() + " " + actuallRent->rentInfoFromClient();
         else
-            print += " " + actuallRent->rentInfo();
+            print += " " + actuallRent->rentInfoFromClient();
     } else {
         if (address != nullptr)
-            print += ", adres zamieszkania: " + address.displayInfo();
+            print += "adres zamieszkania: " + address->displayInfo();
         else if (registeredAddress != nullptr)
-            print += ", adres zameldowania: " + address.displayInfo();
+            print += "adres zameldowania: " + address->displayInfo();
     }
-*/
+
 
     return print;
     //return firstName + "_" + lastName + "_" + personalID + ".";

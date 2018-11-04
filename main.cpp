@@ -48,13 +48,13 @@ int main() {
 
     //cout<<ptrRent->rentInfo();
     //cout<<"actual rent:"<<klient_3.actuallRent<<endl;
-    cout<<"ptrRent: "<<ptrRent<<endl;
+    //cout<<"ptrRent: "<<ptrRent<<endl;
     //cout<<wypozyczenie<<endl;
     klient_3->modifyRent(wypozyczenie);
     //cout<<"actual rent:"<<klient_3.actuallRent<<endl;
     //cout<<"ptrRent: "<<ptrRent<<endl;
-    cout<<"Info o client:\n"<<klient_3->clientInfo();
-    cout<<"info o rent:"<<wypozyczenie->rentInfo();
+    cout<<"Info o client:\n"<<klient_3->clientInfo()<<endl<<endl;
+    cout<<"info o rent:"<<wypozyczenie->rentInfo()<<endl<<endl;
     //klient_3.modifyRent(ptrRent);
     //cout<<klient_3.clientInfo();
     //wypozyczenie.returnVehicle();

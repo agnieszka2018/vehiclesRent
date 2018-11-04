@@ -33,6 +33,7 @@ public:
     void modifyRent(Rent *wypozyczenie);
 
     std::string clientInfo();
+    std::string clientName();
 
     //Client(Address *registeredAddress);
 

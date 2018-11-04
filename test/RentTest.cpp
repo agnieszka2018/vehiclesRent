@@ -32,12 +32,14 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
 
         Client *klient_3 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
 
-        Rent wypozyczenie(ldt, pojazd);
+        Rent *wypozyczenie = new Rent(ldt, pojazd);
 
-        BOOST_REQUIRE_EQUAL(wypozyczenie.rentDuration(), 0);
+        klient_3->modifyRent(wypozyczenie);
 
-        wypozyczenie.returnVehicle();
-        BOOST_REQUIRE_GT(wypozyczenie.rentDuration(), 0);
+        BOOST_REQUIRE_EQUAL(wypozyczenie->rentDuration(), 0);
+
+        wypozyczenie->returnVehicle();
+        BOOST_REQUIRE_GT(wypozyczenie->rentDuration(), 0);
     }
 
 BOOST_AUTO_TEST_SUITE_END()
