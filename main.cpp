@@ -17,17 +17,18 @@ using posix_time::time_duration;
 //typedef boost::shared_ptr<dst_calc_rules> local_time::dst_calc_rule_ptr;
 
 int main() {
-    Rent *ptrRent = nullptr;
     Address *actuall_address = new Address("Mickiewicza", "7");
-    Client klient_1("Jan", "Kowalski", "123456789", actuall_address, nullptr, ptrRent);
-    Client klient_2("Kamil", "Nowak", "987654321", actuall_address, nullptr, ptrRent);
+    Client *klient_1 = new Client("Jan", "Kowalski", "123456789", actuall_address, nullptr, nullptr);
+    Client *klient_2 = new Client("Kamil", "Nowak", "987654321", actuall_address, nullptr, nullptr);
 
-    //cout << klient_1.clientInfo() << endl;
+    cout << klient_1->clientInfo() << endl;
     //cout << klient_2.clientInfo();
 
     //cout << "Adres  zamieszkania przed zmianą: " << klient_1.clientInfo();
 
     actuall_address->changeInfo("Promienna", "5");
+
+
     //cout << "\nAdres  zamieszkania po zmianie: " << klient_1.clientInfo();
     //cout << "\nAdres  zamieszkania po zmianie: " << klient_2.clientInfo() << endl;
 
@@ -40,23 +41,17 @@ int main() {
 
 //  Rent *ptrRent = nullptr;
 
-    Client *klient_3 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, ptrRent);
+    Client *klient_3 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
     //klient_3.clientInfo();
 
     Rent *wypozyczenie = new Rent(ldt, pojazd, klient_3);
-    //cout<<wypozyczenie.rentInfo()<<endl;
 
-    //cout<<ptrRent->rentInfo();
-    //cout<<"actual rent:"<<klient_3.actuallRent<<endl;
-    //cout<<"ptrRent: "<<ptrRent<<endl;
-    //cout<<wypozyczenie<<endl;
-    klient_3->modifyRent(wypozyczenie);
-    //cout<<"actual rent:"<<klient_3.actuallRent<<endl;
-    //cout<<"ptrRent: "<<ptrRent<<endl;
-    cout<<"Info o client:\n"<<klient_3->clientInfo()<<endl<<endl;
-    cout<<"info o rent:"<<wypozyczenie->rentInfo()<<endl<<endl;
-    //klient_3.modifyRent(ptrRent);
-    //cout<<klient_3.clientInfo();
+    klient_1->modifyRent(wypozyczenie);
+    cout<<klient_1->clientInfo();
+
+    //cout<<"Info o client:\n"<<klient_3->clientInfo()<<endl<<endl;
+    //cout<<"info o rent:"<<wypozyczenie->rentInfo()<<endl<<endl;
+
     //wypozyczenie.returnVehicle();
 
     cout<<endl;

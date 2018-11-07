@@ -41,8 +41,7 @@ void Client::modifyRent(Rent *rentFromRent) {
     //cout<<"actrent: "<<actuallRent;
 }
 
-std::string Client::clientName()
-{
+std::string Client::clientName() {
     std::string print = firstName + " " + lastName + " " + personalID + "\n";
     return print;
 }
@@ -52,12 +51,12 @@ std::string Client::clientInfo() {
 
     std::string print = firstName + " " + lastName + " " + personalID + "\n";
 
-    if (&actuallRent != 0) {
-        if (address != nullptr)
+    /*if (&actuallRent != nullptr) { //czy jest wypozyczenie
+        if (address != nullptr) //czy jest adres
             //address = &obiekt;
-            print += "adres zamieszkania: " + address->displayInfo() + " " + actuallRent->rentInfoFromClient();
-        else if (registeredAddress != nullptr)
-            print += "adres zameldowania: " + address->displayInfo() + " " + actuallRent->rentInfoFromClient();
+            print += "adres zamieszkania: " + address->displayInfo();// + " " + actuallRent->rentInfoFromClient();
+        else if (registeredAddress != nullptr) //
+            print += "adres zameldowania: " + address->displayInfo();// + " " + actuallRent->rentInfoFromClient();
         else
             print += " " + actuallRent->rentInfoFromClient();
     } else {
@@ -65,7 +64,10 @@ std::string Client::clientInfo() {
             print += "adres zamieszkania: " + address->displayInfo();
         else if (registeredAddress != nullptr)
             print += "adres zameldowania: " + address->displayInfo();
-    }
+    }*/
+    if(address != nullptr) print += "adres zamieszkania: " + address->displayInfo();
+    if(registeredAddress != nullptr) print += "adres zameldowania: " + address->displayInfo();
+    if(actuallRent != nullptr) print += actuallRent->rentInfoFromClient();
 
 
     return print;
