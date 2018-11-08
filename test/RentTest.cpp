@@ -13,6 +13,7 @@
 #include "model/Rent.h"
 #include "model/Client.h"
 #include "model/Vehicle.h"
+#include "Car.h"
 
 using namespace boost::local_time;
 using namespace boost::posix_time;
@@ -24,7 +25,7 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
     BOOST_AUTO_TEST_CASE(RentTimeDurationCase) {
             Address *actuall_address = new Address("Mickiewicza", "7");
 
-            Vehicle *pojazd = new Vehicle(142, "cw12312");
+        Car *pojazd = new Car(100, "CW 84062", 1995, "C");
 
             boost::posix_time::ptime pt(date(2018, Oct, 26), boost::posix_time::hours(12));
             time_zone_ptr zone(new posix_time_zone("UTC+1"));

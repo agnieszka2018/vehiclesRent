@@ -12,7 +12,9 @@ private:
 //pola
 
 public:
-    Bicycle(int basePrice, std::string id);
+
+
+    Bicycle(const int baseRentPrice, const std::string &id, const double actuallRentalPrice);
 
     virtual ~Bicycle();
 };

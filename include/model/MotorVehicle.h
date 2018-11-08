@@ -9,10 +9,12 @@
 
 class MotorVehicle : public Vehicle {
 private:
-//pola
-
+    int engineDisplacement;
 public:
-    MotorVehicle(int basePrice, std::string id);
+    MotorVehicle(const int baseRentPrice, const std::string &id, const double actuallRentalPrice,
+                 int engineDisplacement);
+
+    int getEngineDisplacement() const;
 
     virtual ~MotorVehicle();
 };

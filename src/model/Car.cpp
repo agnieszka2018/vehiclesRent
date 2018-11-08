@@ -3,15 +3,42 @@
 //
 #include "Car.h"
 #include <iostream>
-
-
-Car::Car(int basePrice, std::string id) : MotorVehicle(basePrice, id) {
-
-    std::cout << "Konstruktor Car" << std::endl;
-}
+#include <model/Car.h>
 
 
 Car::~Car() {
 
     std::cout << "Destruktor Car" << std::endl;
 }
+
+
+const std::string &Car::getSegment() const {
+    return segment;
+}
+
+Car::Car(const int baseRentPrice, const std::string &id, int engineDisplacement,
+         const std::string &segment) : MotorVehicle(baseRentPrice, id,
+                                                    calculateActualRentalPrice(baseRentPrice, engineDisplacement,
+                                                                               segment),
+                                                    engineDisplacement),
+                                       segment(segment) {}
+
+double Car::calculateActualRentalPrice(int baseRentPrice, int engineDisplacement, std::string segment) {
+
+    double displacementMod = 0;
+    if (engineDisplacement < 1000) displacementMod = 1.0;
+    else if (engineDisplacement >= 1000 && engineDisplacement <= 2000) displacementMod = (1.0 *
+                                                                                          ((engineDisplacement - 1000) /
+                                                                                           2) / 1000) + 1;
+    else if (engineDisplacement > 2000) displacementMod = 1.5;
+
+    if (segment == "A") return baseRentPrice * 1.0 * displacementMod;
+    if (segment == "B") return baseRentPrice * 1.1 * displacementMod;
+    if (segment == "C") return baseRentPrice * 1.2 * displacementMod;
+    if (segment == "D") return baseRentPrice * 1.3 * displacementMod;
+    if (segment == "E") return baseRentPrice * 1.5 * displacementMod;
+    else return 0;
+
+}
+
+

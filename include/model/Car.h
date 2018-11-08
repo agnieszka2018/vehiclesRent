@@ -9,10 +9,15 @@
 
 class Car : public MotorVehicle {
 private:
-//pola
+    std::string segment;
+
+    double calculateActualRentalPrice(int baseRentPrice, int engineDisplacement, std::string segment);
 
 public:
-    Car(int basePrice, std::string id);
+    Car(const int baseRentPrice, const std::string &id, int engineDisplacement,
+        const std::string &segment);
+
+    const std::string &getSegment() const;
 
     virtual ~Car();
 };

@@ -5,13 +5,12 @@
 #include <iostream>
 
 
-Bicycle::Bicycle(int basePrice, std::string id) : Vehicle(basePrice, id) {
-
-    std::cout << "Konstruktor Bicycle" << std::endl;
-}
-
-
 Bicycle::~Bicycle() {
 
     std::cout << "Destruktor Bicycle" << std::endl;
 }
+
+Bicycle::Bicycle(const int baseRentPrice, const std::string &id, const double actuallRentalPrice) : Vehicle(
+        baseRentPrice, id, baseRentPrice) {}
+
+

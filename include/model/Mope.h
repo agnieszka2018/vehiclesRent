@@ -9,10 +9,12 @@
 
 class Mope : public MotorVehicle {
 private:
-//pola
+
+    double calculateActualRentalPrice(int baseRentPrice, int engineDisplacement);
 
 public:
-    Mope(int basePrice, std::string id);
+
+    Mope(const int baseRentPrice, const std::string &id, int engineDisplacement);
 
     virtual ~Mope();
 };

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pobi/pobiz01
+CMAKE_SOURCE_DIR = /home/pobi/CLionProjects/pobiz01
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pobi/pobiz01/cmake-build-debug
+CMAKE_BINARY_DIR = /home/pobi/CLionProjects/pobiz01/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,9 +91,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles /home/pobi/pobiz01/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -239,6 +239,7 @@ src/model/Bicycle.o: src/model/Bicycle.cpp.o
 
 # target to build an object file
 src/model/Bicycle.cpp.o:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Bicycle.cpp.o
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/Bicycle.cpp.o
 .PHONY : src/model/Bicycle.cpp.o
@@ -249,6 +250,7 @@ src/model/Bicycle.i: src/model/Bicycle.cpp.i
 
 # target to preprocess a source file
 src/model/Bicycle.cpp.i:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.i
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Bicycle.cpp.i
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/Bicycle.cpp.i
 .PHONY : src/model/Bicycle.cpp.i
@@ -259,6 +261,7 @@ src/model/Bicycle.s: src/model/Bicycle.cpp.s
 
 # target to generate assembly for a file
 src/model/Bicycle.cpp.s:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.s
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Bicycle.cpp.s
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/Bicycle.cpp.s
 .PHONY : src/model/Bicycle.cpp.s
@@ -269,6 +272,7 @@ src/model/Car.o: src/model/Car.cpp.o
 
 # target to build an object file
 src/model/Car.cpp.o:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Car.cpp.o
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Car.cpp.o
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/Car.cpp.o
 .PHONY : src/model/Car.cpp.o
@@ -279,6 +283,7 @@ src/model/Car.i: src/model/Car.cpp.i
 
 # target to preprocess a source file
 src/model/Car.cpp.i:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Car.cpp.i
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Car.cpp.i
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/Car.cpp.i
 .PHONY : src/model/Car.cpp.i
@@ -289,6 +294,7 @@ src/model/Car.s: src/model/Car.cpp.s
 
 # target to generate assembly for a file
 src/model/Car.cpp.s:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Car.cpp.s
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Car.cpp.s
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/Car.cpp.s
 .PHONY : src/model/Car.cpp.s
@@ -329,6 +335,7 @@ src/model/Mope.o: src/model/Mope.cpp.o
 
 # target to build an object file
 src/model/Mope.cpp.o:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Mope.cpp.o
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/Mope.cpp.o
 .PHONY : src/model/Mope.cpp.o
@@ -339,6 +346,7 @@ src/model/Mope.i: src/model/Mope.cpp.i
 
 # target to preprocess a source file
 src/model/Mope.cpp.i:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Mope.cpp.i
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Mope.cpp.i
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/Mope.cpp.i
 .PHONY : src/model/Mope.cpp.i
@@ -349,6 +357,7 @@ src/model/Mope.s: src/model/Mope.cpp.s
 
 # target to generate assembly for a file
 src/model/Mope.cpp.s:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Mope.cpp.s
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Mope.cpp.s
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/Mope.cpp.s
 .PHONY : src/model/Mope.cpp.s
@@ -359,6 +368,7 @@ src/model/MotorVehicle.o: src/model/MotorVehicle.cpp.o
 
 # target to build an object file
 src/model/MotorVehicle.cpp.o:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/MotorVehicle.cpp.o
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/MotorVehicle.cpp.o
 .PHONY : src/model/MotorVehicle.cpp.o
@@ -369,6 +379,7 @@ src/model/MotorVehicle.i: src/model/MotorVehicle.cpp.i
 
 # target to preprocess a source file
 src/model/MotorVehicle.cpp.i:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.i
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/MotorVehicle.cpp.i
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/MotorVehicle.cpp.i
 .PHONY : src/model/MotorVehicle.cpp.i
@@ -379,6 +390,7 @@ src/model/MotorVehicle.s: src/model/MotorVehicle.cpp.s
 
 # target to generate assembly for a file
 src/model/MotorVehicle.cpp.s:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.s
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/MotorVehicle.cpp.s
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/MotorVehicle.cpp.s
 .PHONY : src/model/MotorVehicle.cpp.s

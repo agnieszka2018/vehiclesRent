@@ -2,17 +2,20 @@
 // Created by pobi on 29.10.18.
 //
 #include <../../include/model/Vehicle.h>
+#include <Car.h>
 #include <string>
 #include <iostream>
+#include <model/Vehicle.h>
+
 
 using namespace std;
 
-Vehicle::Vehicle(int baseRentPrice, string id) : baseRentPrice{baseRentPrice}, id{id} {
-    cout << "Konstruktor Vehicle" << endl;
-}
+
 
 string Vehicle::vehicleInfo() {
-    string info = "\ncena podstawowa: " + to_string(baseRentPrice) + "\nid: " + id + "\n";
+    string info = "\ncena podstawowa: " + to_string(baseRentPrice) + "\n";
+    info += "cena wlasciwa: " + to_string(actuallRentalPrice) + "\n";
+    info += "id: " + id + "\n";
     return info;
 }
 
@@ -20,6 +23,11 @@ const int Vehicle::getBaseRentPrice() const {
     return baseRentPrice;
 }
 
+
 Vehicle::~Vehicle() {
     cout << "Destruktor Vehicle" << endl;
 }
+
+Vehicle::Vehicle(const int baseRentPrice, const string &id, const double actuallRentalPrice) : baseRentPrice(
+        baseRentPrice), id(id), actuallRentalPrice(actuallRentalPrice) {}
+
