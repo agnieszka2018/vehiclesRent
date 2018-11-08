@@ -14,7 +14,7 @@ class Rent;             //???
 
 class Client {
 
-private:
+public:
     const std::string firstName;
     std::string lastName;
     const std::string personalID;
@@ -33,9 +33,13 @@ public:
 
     std::string clientInfo();
 
+    std::string getClient();
+
     //Client(Address *registeredAddress);
 
     ~Client();
+
+    Rent *getActuallRent() const;
 };
 
 

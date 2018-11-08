@@ -16,10 +16,12 @@ class Vehicle;
 class Rent {
 private:
     boost::uuids::uuid uuid;
+
     boost::local_time::local_date_time startTime;
-    boost::local_time::time_zone_ptr startZone;
+    //boost::local_time::time_zone_ptr timeZone;        /* strefa czasowa */
     boost::local_time::local_date_time endTime;
     //boost::local_time::time_zone_ptr endZone;
+
     float cost;
     Vehicle *vehicle = nullptr;
     Client *client = nullptr;
@@ -29,12 +31,11 @@ public:
 
     int rentDuration();
 
-    ~Rent();
-
     void returnVehicle();
 
     std::string rentInfo();
 
+    ~Rent();
 };
 
 #endif //POBIZ01_RENT_H

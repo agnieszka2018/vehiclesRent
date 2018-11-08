@@ -47,7 +47,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/pobiz01.dir/DependInfo.cmake"
-  "CMakeFiles/biblioteka.dir/DependInfo.cmake"
-  "CMakeFiles/TestRent.dir/DependInfo.cmake"
+  "CMakeFiles/library.dir/DependInfo.cmake"
+  "CMakeFiles/Test_od_Rent.dir/DependInfo.cmake"
   "CMakeFiles/check.dir/DependInfo.cmake"
   )

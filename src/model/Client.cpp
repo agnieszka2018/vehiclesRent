@@ -42,7 +42,7 @@ std::string Client::clientInfo() {
 
     std::string print = firstName + " " + lastName + " " + personalID;
 
-    if (actuallRent != 0) {
+    if (actuallRent != nullptr) {
         if (address != nullptr)
             //address = &obiekt;
             print += ", adres zamieszkania: " + address->displayInfo() + " " + actuallRent->rentInfo();
@@ -62,7 +62,16 @@ std::string Client::clientInfo() {
     //return firstName + "_" + lastName + "_" + personalID + ".";
 }
 
+std::string Client::getClient(){
+
+    std::string tekst = "imie " + firstName + " nazwisko " + lastName + " pesel " + personalID + " adres: " + address->displayInfo(); //"adres zameldowania: " + registeredAddress->displayInfo();
+   return tekst;
+}
 
 Client::~Client() {
     cout << "destruktor jest wywolany" << endl;
+}
+
+Rent *Client::getActuallRent() const {
+    return actuallRent;
 }

@@ -8,144 +8,44 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug"/>
+				<Option working_dir="/home/pobi/pobiz01/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug"/>
+				<Option working_dir="/home/pobi/pobiz01/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="pobiz01">
-				<Option output="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/pobiz01" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/pobi/CLionProjects/pobiz01bk/include"/>
-					<Add directory="/home/pobi/CLionProjects/pobiz01bk/include/model"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 pobiz01"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="pobiz01/fast">
-				<Option output="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/pobiz01" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/pobi/CLionProjects/pobiz01bk/include"/>
-					<Add directory="/home/pobi/CLionProjects/pobiz01bk/include/model"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 pobiz01/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug"/>
+				<Option working_dir="/home/pobi/pobiz01/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="biblioteka">
-				<Option output="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/libbiblioteka.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/pobi/CLionProjects/pobiz01bk/include"/>
-					<Add directory="/home/pobi/CLionProjects/pobiz01bk/include/model"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 biblioteka"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="biblioteka/fast">
-				<Option output="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/libbiblioteka.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/pobi/CLionProjects/pobiz01bk/include"/>
-					<Add directory="/home/pobi/CLionProjects/pobiz01bk/include/model"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 biblioteka/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="TestRent">
-				<Option output="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/TestRent" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug"/>
+			<Target title="pobiz01">
+				<Option output="/home/pobi/pobiz01/cmake-build-debug/pobiz01" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/pobi/CLionProjects/pobiz01bk/include"/>
-					<Add directory="/home/pobi/CLionProjects/pobiz01bk/include/model"/>
+					<Add directory="/home/pobi/pobiz01/include"/>
+					<Add directory="/home/pobi/pobiz01/include/model"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -156,21 +56,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestRent"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 pobiz01"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TestRent/fast">
-				<Option output="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/TestRent" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug"/>
+			<Target title="pobiz01/fast">
+				<Option output="/home/pobi/pobiz01/cmake-build-debug/pobiz01" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/pobi/CLionProjects/pobiz01bk/include"/>
-					<Add directory="/home/pobi/CLionProjects/pobiz01bk/include/model"/>
+					<Add directory="/home/pobi/pobiz01/include"/>
+					<Add directory="/home/pobi/pobiz01/include/model"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -181,79 +81,179 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 TestRent/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 pobiz01/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="library">
+				<Option output="/home/pobi/pobiz01/cmake-build-debug/liblibrary.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pobi/pobiz01/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/pobi/pobiz01/include"/>
+					<Add directory="/home/pobi/pobiz01/include/model"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 library"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="library/fast">
+				<Option output="/home/pobi/pobiz01/cmake-build-debug/liblibrary.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/pobi/pobiz01/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/pobi/pobiz01/include"/>
+					<Add directory="/home/pobi/pobiz01/include/model"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 library/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_od_Rent">
+				<Option output="/home/pobi/pobiz01/cmake-build-debug/Test_od_Rent" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/pobi/pobiz01/include"/>
+					<Add directory="/home/pobi/pobiz01/include/model"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_od_Rent"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Test_od_Rent/fast">
+				<Option output="/home/pobi/pobiz01/cmake-build-debug/Test_od_Rent" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/pobi/pobiz01/include"/>
+					<Add directory="/home/pobi/pobiz01/include/model"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 Test_od_Rent/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="check">
-				<Option working_dir="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug"/>
+				<Option working_dir="/home/pobi/pobiz01/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 check"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 check"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test">
-				<Option working_dir="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug"/>
+				<Option working_dir="/home/pobi/pobiz01/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/pobi/pobiz01/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/pobiz01">
-			<Option target="biblioteka"/>
+		<Unit filename="/home/pobi/pobiz01/cmake-build-debug/pobiz01">
+			<Option target="library"/>
 		</Unit>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/include/model/Address.h">
+		<Unit filename="/home/pobi/pobiz01/include/model/Address.h">
 			<Option target="pobiz01"/>
-			<Option target="biblioteka"/>
+			<Option target="library"/>
 		</Unit>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/include/model/Client.h">
+		<Unit filename="/home/pobi/pobiz01/include/model/Client.h">
 			<Option target="pobiz01"/>
-			<Option target="biblioteka"/>
+			<Option target="library"/>
 		</Unit>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/include/model/Rent.h">
+		<Unit filename="/home/pobi/pobiz01/include/model/Rent.h">
 			<Option target="pobiz01"/>
-			<Option target="biblioteka"/>
+			<Option target="library"/>
 		</Unit>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/include/model/Vehicle.h">
+		<Unit filename="/home/pobi/pobiz01/include/model/Vehicle.h">
 			<Option target="pobiz01"/>
-			<Option target="biblioteka"/>
+			<Option target="library"/>
 		</Unit>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/main.cpp">
+		<Unit filename="/home/pobi/pobiz01/main.cpp">
 			<Option target="pobiz01"/>
-			<Option target="biblioteka"/>
+			<Option target="library"/>
 		</Unit>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/src/model/Address.cpp">
+		<Unit filename="/home/pobi/pobiz01/src/model/Address.cpp">
 			<Option target="pobiz01"/>
-			<Option target="biblioteka"/>
+			<Option target="library"/>
 		</Unit>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/src/model/Client.cpp">
+		<Unit filename="/home/pobi/pobiz01/src/model/Client.cpp">
 			<Option target="pobiz01"/>
-			<Option target="biblioteka"/>
+			<Option target="library"/>
 		</Unit>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/src/model/Rent.cpp">
+		<Unit filename="/home/pobi/pobiz01/src/model/Rent.cpp">
 			<Option target="pobiz01"/>
-			<Option target="biblioteka"/>
+			<Option target="library"/>
 		</Unit>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/src/model/Vehicle.cpp">
+		<Unit filename="/home/pobi/pobiz01/src/model/Vehicle.cpp">
 			<Option target="pobiz01"/>
-			<Option target="biblioteka"/>
+			<Option target="library"/>
 		</Unit>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/test/RentTest.cpp">
-			<Option target="TestRent"/>
+		<Unit filename="/home/pobi/pobiz01/test/RentTest.cpp">
+			<Option target="Test_od_Rent"/>
 		</Unit>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/test/master.cpp">
-			<Option target="TestRent"/>
+		<Unit filename="/home/pobi/pobiz01/test/master.cpp">
+			<Option target="Test_od_Rent"/>
 		</Unit>
-		<Unit filename="/home/pobi/CLionProjects/pobiz01bk/CMakeLists.txt">
+		<Unit filename="/home/pobi/pobiz01/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

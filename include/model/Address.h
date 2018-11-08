@@ -8,9 +8,10 @@
 #include <string>
 
 class Address {
-private:
+
     std::string street;
     std::string number;
+    
 public:
     Address(std::string street, std::string number);
 

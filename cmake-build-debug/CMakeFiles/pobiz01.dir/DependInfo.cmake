@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pobi/CLionProjects/pobiz01bk/main.cpp" "/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/pobiz01.dir/main.cpp.o"
-  "/home/pobi/CLionProjects/pobiz01bk/src/model/Address.cpp" "/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Address.cpp.o"
-  "/home/pobi/CLionProjects/pobiz01bk/src/model/Client.cpp" "/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Client.cpp.o"
-  "/home/pobi/CLionProjects/pobiz01bk/src/model/Rent.cpp" "/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o"
-  "/home/pobi/CLionProjects/pobiz01bk/src/model/Vehicle.cpp" "/home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o"
+  "/home/pobi/pobiz01/main.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/main.cpp.o"
+  "/home/pobi/pobiz01/src/model/Address.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Address.cpp.o"
+  "/home/pobi/pobiz01/src/model/Client.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Client.cpp.o"
+  "/home/pobi/pobiz01/src/model/Rent.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o"
+  "/home/pobi/pobiz01/src/model/Vehicle.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

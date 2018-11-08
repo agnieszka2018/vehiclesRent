@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pobi/CLionProjects/pobiz01bk
+CMAKE_SOURCE_DIR = /home/pobi/pobiz01
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug
+CMAKE_BINARY_DIR = /home/pobi/pobiz01/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,9 +91,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles /home/pobi/pobiz01/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/CLionProjects/pobiz01bk/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -135,30 +135,30 @@ pobiz01/fast:
 .PHONY : pobiz01/fast
 
 #=============================================================================
-# Target rules for targets named biblioteka
+# Target rules for targets named library
 
 # Build rule for target.
-biblioteka: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 biblioteka
-.PHONY : biblioteka
+library: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 library
+.PHONY : library
 
 # fast build rule for target.
-biblioteka/fast:
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/build
-.PHONY : biblioteka/fast
+library/fast:
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/build
+.PHONY : library/fast
 
 #=============================================================================
-# Target rules for targets named TestRent
+# Target rules for targets named Test_od_Rent
 
 # Build rule for target.
-TestRent: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestRent
-.PHONY : TestRent
+Test_od_Rent: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test_od_Rent
+.PHONY : Test_od_Rent
 
 # fast build rule for target.
-TestRent/fast:
-	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/build
-.PHONY : TestRent/fast
+Test_od_Rent/fast:
+	$(MAKE) -f CMakeFiles/Test_od_Rent.dir/build.make CMakeFiles/Test_od_Rent.dir/build
+.PHONY : Test_od_Rent/fast
 
 #=============================================================================
 # Target rules for targets named check
@@ -180,7 +180,7 @@ main.o: main.cpp.o
 # target to build an object file
 main.cpp.o:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/main.cpp.o
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -190,7 +190,7 @@ main.i: main.cpp.i
 # target to preprocess a source file
 main.cpp.i:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/main.cpp.i
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -200,7 +200,7 @@ main.s: main.cpp.s
 # target to generate assembly for a file
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/main.cpp.s
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 src/model/Address.o: src/model/Address.cpp.o
@@ -210,7 +210,7 @@ src/model/Address.o: src/model/Address.cpp.o
 # target to build an object file
 src/model/Address.cpp.o:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Address.cpp.o
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Address.cpp.o
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/model/Address.cpp.o
 .PHONY : src/model/Address.cpp.o
 
 src/model/Address.i: src/model/Address.cpp.i
@@ -220,7 +220,7 @@ src/model/Address.i: src/model/Address.cpp.i
 # target to preprocess a source file
 src/model/Address.cpp.i:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Address.cpp.i
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Address.cpp.i
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/model/Address.cpp.i
 .PHONY : src/model/Address.cpp.i
 
 src/model/Address.s: src/model/Address.cpp.s
@@ -230,7 +230,7 @@ src/model/Address.s: src/model/Address.cpp.s
 # target to generate assembly for a file
 src/model/Address.cpp.s:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Address.cpp.s
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Address.cpp.s
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/model/Address.cpp.s
 .PHONY : src/model/Address.cpp.s
 
 src/model/Client.o: src/model/Client.cpp.o
@@ -240,7 +240,7 @@ src/model/Client.o: src/model/Client.cpp.o
 # target to build an object file
 src/model/Client.cpp.o:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Client.cpp.o
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Client.cpp.o
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/model/Client.cpp.o
 .PHONY : src/model/Client.cpp.o
 
 src/model/Client.i: src/model/Client.cpp.i
@@ -250,7 +250,7 @@ src/model/Client.i: src/model/Client.cpp.i
 # target to preprocess a source file
 src/model/Client.cpp.i:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Client.cpp.i
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Client.cpp.i
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/model/Client.cpp.i
 .PHONY : src/model/Client.cpp.i
 
 src/model/Client.s: src/model/Client.cpp.s
@@ -260,7 +260,7 @@ src/model/Client.s: src/model/Client.cpp.s
 # target to generate assembly for a file
 src/model/Client.cpp.s:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Client.cpp.s
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Client.cpp.s
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/model/Client.cpp.s
 .PHONY : src/model/Client.cpp.s
 
 src/model/Rent.o: src/model/Rent.cpp.o
@@ -270,7 +270,7 @@ src/model/Rent.o: src/model/Rent.cpp.o
 # target to build an object file
 src/model/Rent.cpp.o:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Rent.cpp.o
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/model/Rent.cpp.o
 .PHONY : src/model/Rent.cpp.o
 
 src/model/Rent.i: src/model/Rent.cpp.i
@@ -280,7 +280,7 @@ src/model/Rent.i: src/model/Rent.cpp.i
 # target to preprocess a source file
 src/model/Rent.cpp.i:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Rent.cpp.i
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Rent.cpp.i
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/model/Rent.cpp.i
 .PHONY : src/model/Rent.cpp.i
 
 src/model/Rent.s: src/model/Rent.cpp.s
@@ -290,7 +290,7 @@ src/model/Rent.s: src/model/Rent.cpp.s
 # target to generate assembly for a file
 src/model/Rent.cpp.s:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Rent.cpp.s
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Rent.cpp.s
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/model/Rent.cpp.s
 .PHONY : src/model/Rent.cpp.s
 
 src/model/Vehicle.o: src/model/Vehicle.cpp.o
@@ -300,7 +300,7 @@ src/model/Vehicle.o: src/model/Vehicle.cpp.o
 # target to build an object file
 src/model/Vehicle.cpp.o:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Vehicle.cpp.o
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/model/Vehicle.cpp.o
 .PHONY : src/model/Vehicle.cpp.o
 
 src/model/Vehicle.i: src/model/Vehicle.cpp.i
@@ -310,7 +310,7 @@ src/model/Vehicle.i: src/model/Vehicle.cpp.i
 # target to preprocess a source file
 src/model/Vehicle.cpp.i:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.i
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Vehicle.cpp.i
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/model/Vehicle.cpp.i
 .PHONY : src/model/Vehicle.cpp.i
 
 src/model/Vehicle.s: src/model/Vehicle.cpp.s
@@ -320,7 +320,7 @@ src/model/Vehicle.s: src/model/Vehicle.cpp.s
 # target to generate assembly for a file
 src/model/Vehicle.cpp.s:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.s
-	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Vehicle.cpp.s
+	$(MAKE) -f CMakeFiles/library.dir/build.make CMakeFiles/library.dir/src/model/Vehicle.cpp.s
 .PHONY : src/model/Vehicle.cpp.s
 
 test/RentTest.o: test/RentTest.cpp.o
@@ -329,7 +329,7 @@ test/RentTest.o: test/RentTest.cpp.o
 
 # target to build an object file
 test/RentTest.cpp.o:
-	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/test/RentTest.cpp.o
+	$(MAKE) -f CMakeFiles/Test_od_Rent.dir/build.make CMakeFiles/Test_od_Rent.dir/test/RentTest.cpp.o
 .PHONY : test/RentTest.cpp.o
 
 test/RentTest.i: test/RentTest.cpp.i
@@ -338,7 +338,7 @@ test/RentTest.i: test/RentTest.cpp.i
 
 # target to preprocess a source file
 test/RentTest.cpp.i:
-	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/test/RentTest.cpp.i
+	$(MAKE) -f CMakeFiles/Test_od_Rent.dir/build.make CMakeFiles/Test_od_Rent.dir/test/RentTest.cpp.i
 .PHONY : test/RentTest.cpp.i
 
 test/RentTest.s: test/RentTest.cpp.s
@@ -347,7 +347,7 @@ test/RentTest.s: test/RentTest.cpp.s
 
 # target to generate assembly for a file
 test/RentTest.cpp.s:
-	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/test/RentTest.cpp.s
+	$(MAKE) -f CMakeFiles/Test_od_Rent.dir/build.make CMakeFiles/Test_od_Rent.dir/test/RentTest.cpp.s
 .PHONY : test/RentTest.cpp.s
 
 test/master.o: test/master.cpp.o
@@ -356,7 +356,7 @@ test/master.o: test/master.cpp.o
 
 # target to build an object file
 test/master.cpp.o:
-	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/test/master.cpp.o
+	$(MAKE) -f CMakeFiles/Test_od_Rent.dir/build.make CMakeFiles/Test_od_Rent.dir/test/master.cpp.o
 .PHONY : test/master.cpp.o
 
 test/master.i: test/master.cpp.i
@@ -365,7 +365,7 @@ test/master.i: test/master.cpp.i
 
 # target to preprocess a source file
 test/master.cpp.i:
-	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/test/master.cpp.i
+	$(MAKE) -f CMakeFiles/Test_od_Rent.dir/build.make CMakeFiles/Test_od_Rent.dir/test/master.cpp.i
 .PHONY : test/master.cpp.i
 
 test/master.s: test/master.cpp.s
@@ -374,7 +374,7 @@ test/master.s: test/master.cpp.s
 
 # target to generate assembly for a file
 test/master.cpp.s:
-	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/test/master.cpp.s
+	$(MAKE) -f CMakeFiles/Test_od_Rent.dir/build.make CMakeFiles/Test_od_Rent.dir/test/master.cpp.s
 .PHONY : test/master.cpp.s
 
 # Help Target
@@ -384,10 +384,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... pobiz01"
 	@echo "... edit_cache"
-	@echo "... biblioteka"
-	@echo "... TestRent"
+	@echo "... pobiz01"
+	@echo "... library"
+	@echo "... Test_od_Rent"
 	@echo "... check"
 	@echo "... test"
 	@echo "... main.o"

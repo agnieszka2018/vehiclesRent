@@ -31,19 +31,31 @@ int main() {
     cout << "\nAdres  zamieszkania po zmianie: " << klient_2.clientInfo() << endl;
 
     Vehicle *pojazd = new Vehicle(142, "cw12312");
-    //cout<<pojazd->vehicleInfo();
+    //cout << pojazd->vehicleInfo();
 
-    posix_time::ptime pt(date(2018,Oct,26), posix_time::hours(12));
+    posix_time::ptime pt(date(2018, Oct, 26), posix_time::hours(12));           //utworzenie czasu początkowego w odpowiedniej strefie
     time_zone_ptr zone(new posix_time_zone("UTC+1"));
-    local_date_time ldt(pt, zone);
+    local_date_time sTime(pt, zone);
 
     Client *klient_3 = new Client("Stefan", "Stonoga", "1029384756", actuall_address);
 
-    Rent wypozyczenie(ldt, pojazd, klient_3);
-    cout<<wypozyczenie.rentInfo()<<endl;
+    Rent wypozyczenie(sTime, pojazd, klient_3);
+    cout << "\n\nwypozyczenie info: " << wypozyczenie.rentInfo() << endl;
+
+    cout <<" \n\nklient info przed zwrotem: "<< endl;
+    cout << klient_3->clientInfo();
+
+
+    cout<< "\noddaje pojazd: " << endl;
+
     wypozyczenie.returnVehicle();
 
-    cout<<endl;
+    cout <<" \n\nklient info po zwrocie: "<< endl;
+    cout << klient_3->clientInfo();
+
+    cout << endl;
 
     delete actuall_address;
+    delete pojazd;
+    delete klient_3;
 }

@@ -7,17 +7,18 @@
 
 #include <string>
 
-class Vehicle{
-    const int baseRentPrice;
-    const std::string id;
+class Vehicle {
+    const int price;
+    const std::string idNumber;
+
 public:
     Vehicle(int price, std::string idNumber);
-    //Vehicle(std::string idNumber);
+
     std::string vehicleInfo();
 
-    const int getBaseRentPrice() const;
+    const int getPrice() const;
 
+    ~Vehicle();
 };
 
 #endif //POBIZ01_VEHICLE_H
-
