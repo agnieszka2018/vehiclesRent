@@ -10,13 +10,15 @@
 class Vehicle{
     const int baseRentPrice;
     const std::string id;
+
 public:
     Vehicle(int price, std::string idNumber);
-    //Vehicle(std::string idNumber);
+
     std::string vehicleInfo();
 
     const int getBaseRentPrice() const;
 
+    virtual ~Vehicle();
 };
 
 #endif //POBIZ01_VEHICLE_H
