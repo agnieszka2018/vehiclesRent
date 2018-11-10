@@ -11,6 +11,7 @@
 #include "Car.h"
 #include "Mope.h"
 #include "MotorVehicle.h"
+#include "CurrentRentsRepository.h"
 
 using namespace std;
 using namespace boost;
@@ -21,6 +22,7 @@ using posix_time::time_duration;
 //typedef boost::shared_ptr<dst_calc_rules> local_time::dst_calc_rule_ptr;
 
 int main() {
+    currentRentsRepository *repozytoriumWypozyczen = new currentRentsRepository();
     Address *actuall_address = new Address("Mickiewicza", "7");
     //Vehicle *pojazd = new Vehicle(142, "cw12312", 0);
     Car *samochod = new Car(100, "CW 84062", 2900, "C");
@@ -34,9 +36,14 @@ int main() {
     Client *klient_1 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
 
     Rent *wypozyczenie = new Rent(ldt, skuter, klient_1);
+    Rent *wypozyczenie_1 = new Rent(ldt,samochod,klient_1);
+    repozytoriumWypozyczen -> createRent(wypozyczenie);
+    repozytoriumWypozyczen -> createRent(wypozyczenie_1);
+    repozytoriumWypozyczen -> rentReport();
+
 
     klient_1->modifyRent(wypozyczenie);
-    cout<<klient_1->clientInfo();
+    //cout<<klient_1->clientInfo();
 
     actuall_address->changeInfo("Promienna", "5");
 

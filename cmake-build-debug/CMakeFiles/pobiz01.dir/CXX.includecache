@@ -30,6 +30,12 @@ string
 Rent.h
 ../include/model/Rent.h
 
+../include/model/CurrentRentsRepository.h
+Rent.h
+../include/model/Rent.h
+list
+-
+
 ../include/model/Mope.h
 string
 -
@@ -93,6 +99,8 @@ Mope.h
 /home/pobi/CLionProjects/pobiz01/Mope.h
 MotorVehicle.h
 /home/pobi/CLionProjects/pobiz01/MotorVehicle.h
+CurrentRentsRepository.h
+/home/pobi/CLionProjects/pobiz01/CurrentRentsRepository.h
 
 /home/pobi/CLionProjects/pobiz01/src/model/Address.cpp
 iostream
@@ -131,6 +139,12 @@ model/Client.h
 /home/pobi/CLionProjects/pobiz01/include/model/Address.h
 Rent.h
 /home/pobi/CLionProjects/pobiz01/src/model/Rent.h
+
+/home/pobi/CLionProjects/pobiz01/src/model/CurrentRentsRepository.cpp
+model/CurrentRentsRepository.h
+-
+CurrentRentsRepository.h
+/home/pobi/CLionProjects/pobiz01/src/model/CurrentRentsRepository.h
 
 /home/pobi/CLionProjects/pobiz01/src/model/Mope.cpp
 Mope.h
