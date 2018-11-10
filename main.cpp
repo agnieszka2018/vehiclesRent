@@ -40,6 +40,8 @@ int main() {
     repozytoriumWypozyczen -> createRent(wypozyczenie);
     repozytoriumWypozyczen -> createRent(wypozyczenie_1);
     repozytoriumWypozyczen -> rentReport();
+    repozytoriumWypozyczen -> removeRent(wypozyczenie);
+    repozytoriumWypozyczen -> rentReport();
 
 
     klient_1->modifyRent(wypozyczenie);

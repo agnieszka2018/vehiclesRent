@@ -6,20 +6,22 @@
 
 #include "CurrentRentsRepository.h"
 
+using namespace std;
+
 void currentRentsRepository::createRent(Rent* rent) {
- rents.push_back(rent);
+    rents.push_back(rent);
 }
 
 void currentRentsRepository::removeRent(Rent* rent) {
-
+    rents.remove(rent);
 }
 
-std::string currentRentsRepository::rentReport() {
-    std::string info;
-    info += "lista wypozyczen: \n";
+string currentRentsRepository::rentReport() {
+    //string info;
+    cout<< "lista wypozyczen: \n";
     for (Rent *rent:rents) {
-        std::cout << rent->rentInfo() << '\n';
+        cout << rent->rentInfo() << '\n';
     }
-    std::cout<<"koniec listy\n";
+    cout<<"koniec listy\n";
     return " ";
 }
