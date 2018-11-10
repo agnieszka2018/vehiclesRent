@@ -329,6 +329,39 @@ src/model/Client.cpp.s:
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Client.cpp.s
 .PHONY : src/model/Client.cpp.s
 
+src/model/CurrentRentsRepository.o: src/model/CurrentRentsRepository.cpp.o
+
+.PHONY : src/model/CurrentRentsRepository.o
+
+# target to build an object file
+src/model/CurrentRentsRepository.cpp.o:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/CurrentRentsRepository.cpp.o
+	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/CurrentRentsRepository.cpp.o
+.PHONY : src/model/CurrentRentsRepository.cpp.o
+
+src/model/CurrentRentsRepository.i: src/model/CurrentRentsRepository.cpp.i
+
+.PHONY : src/model/CurrentRentsRepository.i
+
+# target to preprocess a source file
+src/model/CurrentRentsRepository.cpp.i:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.i
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/CurrentRentsRepository.cpp.i
+	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/CurrentRentsRepository.cpp.i
+.PHONY : src/model/CurrentRentsRepository.cpp.i
+
+src/model/CurrentRentsRepository.s: src/model/CurrentRentsRepository.cpp.s
+
+.PHONY : src/model/CurrentRentsRepository.s
+
+# target to generate assembly for a file
+src/model/CurrentRentsRepository.cpp.s:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.s
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/CurrentRentsRepository.cpp.s
+	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/CurrentRentsRepository.cpp.s
+.PHONY : src/model/CurrentRentsRepository.cpp.s
+
 src/model/Mope.o: src/model/Mope.cpp.o
 
 .PHONY : src/model/Mope.o
@@ -537,6 +570,9 @@ help:
 	@echo "... src/model/Client.o"
 	@echo "... src/model/Client.i"
 	@echo "... src/model/Client.s"
+	@echo "... src/model/CurrentRentsRepository.o"
+	@echo "... src/model/CurrentRentsRepository.i"
+	@echo "... src/model/CurrentRentsRepository.s"
 	@echo "... src/model/Mope.o"
 	@echo "... src/model/Mope.i"
 	@echo "... src/model/Mope.s"

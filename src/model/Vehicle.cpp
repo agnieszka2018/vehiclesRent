@@ -23,6 +23,10 @@ const int Vehicle::getBaseRentPrice() const {
     return baseRentPrice;
 }
 
+const double Vehicle::getActuallRentalPrice() const {
+    return actuallRentalPrice;
+}
+
 
 Vehicle::~Vehicle() {
     cout << "Destruktor Vehicle" << endl;

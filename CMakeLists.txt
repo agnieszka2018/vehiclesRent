@@ -25,7 +25,7 @@ SET(SOURCE_FILES
         src/model/Mope.cpp
         include/model/Mope.h
         src/model/Bicycle.cpp
-        include/model/Bicycle.h)
+        include/model/Bicycle.h src/model/CurrentRentsRepository.cpp include/model/CurrentRentsRepository.h)
 
 add_library(biblioteka ${SOURCE_FILES})
 
@@ -45,7 +45,7 @@ include_directories(
 
 set(SOURCE_TEST_RENT_FILES
         test/master.cpp
-        test/RentTest.cpp src/model/MotorVehicle.cpp include/model/MotorVehicle.h src/model/Car.cpp include/model/Car.h src/model/Mope.cpp include/model/Mope.h src/model/Bicycle.cpp include/model/Bicycle.h)
+        test/RentTest.cpp src/model/MotorVehicle.cpp include/model/MotorVehicle.h src/model/Car.cpp include/model/Car.h src/model/Mope.cpp include/model/Mope.h src/model/Bicycle.cpp include/model/Bicycle.h src/model/CurrentRentsRepository.cpp include/model/CurrentRentsRepository.h)
 
 add_executable (TestRent ${SOURCE_TEST_RENT_FILES})
 

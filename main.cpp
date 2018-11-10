@@ -45,9 +45,13 @@ int main() {
     //cout<<"Info o client:\n"<<klient_1->clientInfo()<<endl<<endl;
     //cout<<"info o rent:"<<wypozyczenie->rentInfo()<<endl<<endl;
 
-    //wypozyczenie.returnVehicle();
+    wypozyczenie->returnVehicle();
 
     cout<<endl;
 
     delete actuall_address;
+    delete wypozyczenie;
+    delete klient_1;
+    delete samochod;
+    delete skuter;
 }

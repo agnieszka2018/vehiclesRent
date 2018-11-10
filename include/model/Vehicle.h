@@ -24,6 +24,8 @@ public:
 
     void setActuallRentalPrice(int engineDisplacement, std::string segment);
 
+    const double getActuallRentalPrice() const;
+
 };
 
 #endif //POBIZ01_VEHICLE_H

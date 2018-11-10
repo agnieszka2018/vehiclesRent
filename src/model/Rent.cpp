@@ -84,7 +84,8 @@ void Rent::returnVehicle() {
     endTime = now;
 
     std::cout << "Wypozyczenie trwalo: " << rentDuration() << std::endl;
-    std::cout << "Koszt wypozyczenia: " << rentDuration() * vehicle->getBaseRentPrice();
+    cost = rentDuration() * vehicle->getActuallRentalPrice();
+    std::cout << "Koszt wypozyczenia: " <<  cost;
 }
 
 

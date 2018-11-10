@@ -76,7 +76,7 @@ std::string Client::clientInfo() {
 
 
 Client::~Client() {
-    cout << "destruktor jest wywolany" << endl;
+    cout << "destruktor client jest wywolany" << endl;
 }
 
 Rent *Client::getActuallRent() const {

@@ -226,6 +226,11 @@
 			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
 		</Unit>
+		<Unit filename="/home/pobi/CLionProjects/pobiz01/include/model/CurrentRentsRepository.h">
+			<Option target="pobiz01"/>
+			<Option target="biblioteka"/>
+			<Option target="TestRent"/>
+		</Unit>
 		<Unit filename="/home/pobi/CLionProjects/pobiz01/include/model/Mope.h">
 			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
@@ -265,6 +270,11 @@
 		<Unit filename="/home/pobi/CLionProjects/pobiz01/src/model/Client.cpp">
 			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
+		</Unit>
+		<Unit filename="/home/pobi/CLionProjects/pobiz01/src/model/CurrentRentsRepository.cpp">
+			<Option target="pobiz01"/>
+			<Option target="biblioteka"/>
+			<Option target="TestRent"/>
 		</Unit>
 		<Unit filename="/home/pobi/CLionProjects/pobiz01/src/model/Mope.cpp">
 			<Option target="pobiz01"/>
