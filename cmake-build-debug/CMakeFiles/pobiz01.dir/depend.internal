@@ -35,6 +35,7 @@ CMakeFiles/pobiz01.dir/src/model/Client.cpp.o
 CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o
  ../include/model/CurrentRentsRepository.h
  ../include/model/Rent.h
+ ../include/model/Vehicle.h
  /home/pobi/pobiz01/src/model/CurrentRentsRepository.cpp
 CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o
  ../include/model/Mope.h
@@ -52,7 +53,10 @@ CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o
  ../include/model/Vehicle.h
  /home/pobi/pobiz01/src/model/Rent.cpp
 CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o
+ ../include/model/Address.h
  ../include/model/Car.h
+ ../include/model/Client.h
  ../include/model/MotorVehicle.h
+ ../include/model/Rent.h
  ../include/model/Vehicle.h
  /home/pobi/pobiz01/src/model/Vehicle.cpp

@@ -3,7 +3,7 @@
 //
 
 #include <model/CurrentRentsRepository.h>
-
+#include "Vehicle.h"
 #include "CurrentRentsRepository.h"
 
 using namespace std;
@@ -24,4 +24,9 @@ string currentRentsRepository::rentReport() {
     }
     cout<<"koniec listy\n";
     return " ";
+}
+
+
+string currentRentsRepository::getClientForRentedVehicle(Vehicle * vehicle){
+    return vehicle -> vehicleClientInfo();
 }

@@ -141,6 +141,8 @@ Rent.h
 /home/pobi/pobiz01/src/model/CurrentRentsRepository.cpp
 model/CurrentRentsRepository.h
 -
+Vehicle.h
+/home/pobi/pobiz01/src/model/Vehicle.h
 CurrentRentsRepository.h
 /home/pobi/pobiz01/src/model/CurrentRentsRepository.h
 
@@ -187,4 +189,6 @@ iostream
 -
 Vehicle.h
 /home/pobi/pobiz01/src/model/Vehicle.h
+Client.h
+/home/pobi/pobiz01/src/model/Client.h
 

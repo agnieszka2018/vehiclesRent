@@ -41,6 +41,9 @@ int main() {
     Rent *wypozyczenie_1 = new Rent(ldt, samochod, klient_1);
     repozytoriumWypozyczen->createRent(wypozyczenie);
     repozytoriumWypozyczen->createRent(wypozyczenie_1);
+    cout << "Sprawdzam kto wypozyczył skuter: " << endl;
+    cout << repozytoriumWypozyczen->getClientForRentedVehicle(skuter);
+    cout << "Już wiem, kto wypożyczył" << endl << endl;
     repozytoriumWypozyczen->rentReport();
     repozytoriumWypozyczen->removeRent(wypozyczenie);
     repozytoriumWypozyczen->rentReport();

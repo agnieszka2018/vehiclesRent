@@ -10,7 +10,7 @@
 #include "Rent.h"
 
 class Address;
-class Rent;             //???
+class Rent;
 
 class Client {
 

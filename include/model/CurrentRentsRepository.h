@@ -6,8 +6,9 @@
 #define POBIZ01_CURRENTRENTSREPOSITORY_H
 
 #include "Rent.h"
-
 #include <list>
+
+class Vehicle;
 
 class currentRentsRepository {
 
@@ -18,6 +19,7 @@ public:
     void createRent(Rent*);
     void removeRent(Rent*);
     std::string rentReport();
+    std::string getClientForRentedVehicle(Vehicle *);
 
 };
 

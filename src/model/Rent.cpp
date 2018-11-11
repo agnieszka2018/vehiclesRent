@@ -72,6 +72,7 @@ Rent::Rent(const local_date_time &startTime, Vehicle *vehicle, Client *client) :
     uuid = boost::uuids::random_generator()();
 
     client->modifyRent(this);
+    vehicle->modifyClient(client);
 
 }
 
