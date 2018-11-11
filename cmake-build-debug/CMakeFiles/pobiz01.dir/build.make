@@ -177,13 +177,138 @@ CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o.provides: CMakeFiles/pobiz01.dir/
 CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o.provides.build: CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o
 
 
+CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o: CMakeFiles/pobiz01.dir/flags.make
+CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o: ../src/model/MotorVehicle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o -c /home/pobi/pobiz01/src/model/MotorVehicle.cpp
+
+CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pobi/pobiz01/src/model/MotorVehicle.cpp > CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.i
+
+CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/pobiz01/src/model/MotorVehicle.cpp -o CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.s
+
+CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o.requires:
+
+.PHONY : CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o.requires
+
+CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o.provides: CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o.provides.build
+.PHONY : CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o.provides
+
+CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o.provides.build: CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o
+
+
+CMakeFiles/pobiz01.dir/src/model/Car.cpp.o: CMakeFiles/pobiz01.dir/flags.make
+CMakeFiles/pobiz01.dir/src/model/Car.cpp.o: ../src/model/Car.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pobiz01.dir/src/model/Car.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/Car.cpp.o -c /home/pobi/pobiz01/src/model/Car.cpp
+
+CMakeFiles/pobiz01.dir/src/model/Car.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pobiz01.dir/src/model/Car.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pobi/pobiz01/src/model/Car.cpp > CMakeFiles/pobiz01.dir/src/model/Car.cpp.i
+
+CMakeFiles/pobiz01.dir/src/model/Car.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/Car.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/pobiz01/src/model/Car.cpp -o CMakeFiles/pobiz01.dir/src/model/Car.cpp.s
+
+CMakeFiles/pobiz01.dir/src/model/Car.cpp.o.requires:
+
+.PHONY : CMakeFiles/pobiz01.dir/src/model/Car.cpp.o.requires
+
+CMakeFiles/pobiz01.dir/src/model/Car.cpp.o.provides: CMakeFiles/pobiz01.dir/src/model/Car.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Car.cpp.o.provides.build
+.PHONY : CMakeFiles/pobiz01.dir/src/model/Car.cpp.o.provides
+
+CMakeFiles/pobiz01.dir/src/model/Car.cpp.o.provides.build: CMakeFiles/pobiz01.dir/src/model/Car.cpp.o
+
+
+CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o: CMakeFiles/pobiz01.dir/flags.make
+CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o: ../src/model/Mope.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o -c /home/pobi/pobiz01/src/model/Mope.cpp
+
+CMakeFiles/pobiz01.dir/src/model/Mope.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pobiz01.dir/src/model/Mope.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pobi/pobiz01/src/model/Mope.cpp > CMakeFiles/pobiz01.dir/src/model/Mope.cpp.i
+
+CMakeFiles/pobiz01.dir/src/model/Mope.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/Mope.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/pobiz01/src/model/Mope.cpp -o CMakeFiles/pobiz01.dir/src/model/Mope.cpp.s
+
+CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o.requires:
+
+.PHONY : CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o.requires
+
+CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o.provides: CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o.provides.build
+.PHONY : CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o.provides
+
+CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o.provides.build: CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o
+
+
+CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o: CMakeFiles/pobiz01.dir/flags.make
+CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o: ../src/model/Bicycle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o -c /home/pobi/pobiz01/src/model/Bicycle.cpp
+
+CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pobi/pobiz01/src/model/Bicycle.cpp > CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.i
+
+CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/pobiz01/src/model/Bicycle.cpp -o CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.s
+
+CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o.requires:
+
+.PHONY : CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o.requires
+
+CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o.provides: CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o.provides.build
+.PHONY : CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o.provides
+
+CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o.provides.build: CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o
+
+
+CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o: CMakeFiles/pobiz01.dir/flags.make
+CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o: ../src/model/CurrentRentsRepository.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o -c /home/pobi/pobiz01/src/model/CurrentRentsRepository.cpp
+
+CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pobi/pobiz01/src/model/CurrentRentsRepository.cpp > CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.i
+
+CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pobi/pobiz01/src/model/CurrentRentsRepository.cpp -o CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.s
+
+CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o.requires:
+
+.PHONY : CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o.requires
+
+CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o.provides: CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o.provides.build
+.PHONY : CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o.provides
+
+CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o.provides.build: CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o
+
+
 # Object files for target pobiz01
 pobiz01_OBJECTS = \
 "CMakeFiles/pobiz01.dir/src/model/Client.cpp.o" \
 "CMakeFiles/pobiz01.dir/main.cpp.o" \
 "CMakeFiles/pobiz01.dir/src/model/Address.cpp.o" \
 "CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o" \
-"CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o"
+"CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o" \
+"CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o" \
+"CMakeFiles/pobiz01.dir/src/model/Car.cpp.o" \
+"CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o" \
+"CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o" \
+"CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o"
 
 # External object files for target pobiz01
 pobiz01_EXTERNAL_OBJECTS =
@@ -193,9 +318,14 @@ pobiz01: CMakeFiles/pobiz01.dir/main.cpp.o
 pobiz01: CMakeFiles/pobiz01.dir/src/model/Address.cpp.o
 pobiz01: CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o
 pobiz01: CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o
+pobiz01: CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o
+pobiz01: CMakeFiles/pobiz01.dir/src/model/Car.cpp.o
+pobiz01: CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o
+pobiz01: CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o
+pobiz01: CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o
 pobiz01: CMakeFiles/pobiz01.dir/build.make
 pobiz01: CMakeFiles/pobiz01.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable pobiz01"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable pobiz01"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pobiz01.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -208,6 +338,11 @@ CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/main.cpp.o.requires
 CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/src/model/Address.cpp.o.requires
 CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o.requires
 CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o.requires
+CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o.requires
+CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/src/model/Car.cpp.o.requires
+CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o.requires
+CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o.requires
+CMakeFiles/pobiz01.dir/requires: CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o.requires
 
 .PHONY : CMakeFiles/pobiz01.dir/requires
 

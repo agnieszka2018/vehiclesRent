@@ -8,11 +8,15 @@
 #include "MotorVehicle.h"
 
 class Car : public MotorVehicle {
-private:
-//pola
+
+    const std::string segment;
+
+    double calculateActualRentalPrice(int baseRentPrice, int engineDisplacement, std::string segment);
 
 public:
-    Car(int basePrice, std::string id);
+    Car(int baseRentPrice, std::string id, int engineDisplacement, std::string segment);
+
+    const std::string &getSegment() const;
 
     virtual ~Car();
 };

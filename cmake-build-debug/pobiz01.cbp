@@ -213,10 +213,12 @@
 			<Option target="biblioteka"/>
 		</Unit>
 		<Unit filename="/home/pobi/pobiz01/include/model/Bicycle.h">
+			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
 			<Option target="TestRent"/>
 		</Unit>
 		<Unit filename="/home/pobi/pobiz01/include/model/Car.h">
+			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
 			<Option target="TestRent"/>
 		</Unit>
@@ -224,11 +226,18 @@
 			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
 		</Unit>
+		<Unit filename="/home/pobi/pobiz01/include/model/CurrentRentsRepository.h">
+			<Option target="pobiz01"/>
+			<Option target="biblioteka"/>
+			<Option target="TestRent"/>
+		</Unit>
 		<Unit filename="/home/pobi/pobiz01/include/model/Mope.h">
+			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
 			<Option target="TestRent"/>
 		</Unit>
 		<Unit filename="/home/pobi/pobiz01/include/model/MotorVehicle.h">
+			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
 			<Option target="TestRent"/>
 		</Unit>
@@ -249,10 +258,12 @@
 			<Option target="biblioteka"/>
 		</Unit>
 		<Unit filename="/home/pobi/pobiz01/src/model/Bicycle.cpp">
+			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
 			<Option target="TestRent"/>
 		</Unit>
 		<Unit filename="/home/pobi/pobiz01/src/model/Car.cpp">
+			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
 			<Option target="TestRent"/>
 		</Unit>
@@ -260,11 +271,18 @@
 			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
 		</Unit>
+		<Unit filename="/home/pobi/pobiz01/src/model/CurrentRentsRepository.cpp">
+			<Option target="pobiz01"/>
+			<Option target="biblioteka"/>
+			<Option target="TestRent"/>
+		</Unit>
 		<Unit filename="/home/pobi/pobiz01/src/model/Mope.cpp">
+			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
 			<Option target="TestRent"/>
 		</Unit>
 		<Unit filename="/home/pobi/pobiz01/src/model/MotorVehicle.cpp">
+			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
 			<Option target="TestRent"/>
 		</Unit>

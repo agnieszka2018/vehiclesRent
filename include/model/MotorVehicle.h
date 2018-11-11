@@ -8,11 +8,13 @@
 #include "Vehicle.h"
 
 class MotorVehicle : public Vehicle {
-private:
-//pola
+
+    const int engineDisplacement;
 
 public:
-    MotorVehicle(int basePrice, std::string id);
+    MotorVehicle(int baseRentPrice, std::string id, double actuallRentalPrice, int engineDisplacement);
+
+    const int getEngineDisplacement() const;
 
     virtual ~MotorVehicle();
 };

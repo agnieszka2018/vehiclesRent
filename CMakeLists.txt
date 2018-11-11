@@ -17,20 +17,20 @@ SET(SOURCE_FILES
         src/model/Rent.cpp
         include/model/Rent.h
         include/model/Vehicle.h
-        src/model/Vehicle.cpp src/model/MotorVehicle.cpp include/model/MotorVehicle.h src/model/Car.cpp include/model/Car.h src/model/Mope.cpp include/model/Mope.h src/model/Bicycle.cpp include/model/Bicycle.h)
+        src/model/Vehicle.cpp
+        src/model/MotorVehicle.cpp
+        include/model/MotorVehicle.h
+        src/model/Car.cpp
+        include/model/Car.h
+        src/model/Mope.cpp
+        include/model/Mope.h
+        src/model/Bicycle.cpp
+        include/model/Bicycle.h src/model/CurrentRentsRepository.cpp include/model/CurrentRentsRepository.h)
 
 add_library(biblioteka ${SOURCE_FILES})
 
 add_executable(pobiz01
-        include/model/Address.h
-        include/model/Client.h
-        src/model/Client.cpp
-        main.cpp
-        src/model/Address.cpp
-        src/model/Rent.cpp
-        include/model/Rent.h
-        include/model/Vehicle.h
-        src/model/Vehicle.cpp)
+        ${SOURCE_FILES})
 
 #testy
 
@@ -45,7 +45,7 @@ include_directories(
 
 set(SOURCE_TEST_RENT_FILES
         test/master.cpp
-        test/RentTest.cpp src/model/MotorVehicle.cpp include/model/MotorVehicle.h src/model/Car.cpp include/model/Car.h src/model/Mope.cpp include/model/Mope.h src/model/Bicycle.cpp include/model/Bicycle.h)
+        test/RentTest.cpp src/model/MotorVehicle.cpp include/model/MotorVehicle.h src/model/Car.cpp include/model/Car.h src/model/Mope.cpp include/model/Mope.h src/model/Bicycle.cpp include/model/Bicycle.h src/model/CurrentRentsRepository.cpp include/model/CurrentRentsRepository.h)
 
 add_executable (TestRent ${SOURCE_TEST_RENT_FILES})
 

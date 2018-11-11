@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/pobi/pobiz01/cmake-build-debug
 CMakeFiles/pobiz01.dir/all:
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/depend
 	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=18,19,20,21,22,23 "Built target pobiz01"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=20,21,22,23,24,25,26,27,28,29,30 "Built target pobiz01"
 .PHONY : CMakeFiles/pobiz01.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/pobiz01.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pobiz01.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pobiz01.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/pobiz01.dir/rule
@@ -103,7 +103,7 @@ clean: CMakeFiles/pobiz01.dir/clean
 CMakeFiles/biblioteka.dir/all:
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/depend
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17 "Built target biblioteka"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=9,10,11,12,13,14,15,16,17,18,19 "Built target biblioteka"
 .PHONY : CMakeFiles/biblioteka.dir/all
 
 # Include target in all.
@@ -113,7 +113,7 @@ all: CMakeFiles/biblioteka.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/biblioteka.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/biblioteka.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/biblioteka.dir/rule
@@ -140,7 +140,7 @@ clean: CMakeFiles/biblioteka.dir/clean
 CMakeFiles/TestRent.dir/all: CMakeFiles/biblioteka.dir/all
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/depend
 	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target TestRent"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pobi/pobiz01/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target TestRent"
 .PHONY : CMakeFiles/TestRent.dir/all
 
 # Include target in all.
@@ -150,7 +150,7 @@ all: CMakeFiles/TestRent.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TestRent.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestRent.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pobi/pobiz01/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/TestRent.dir/rule

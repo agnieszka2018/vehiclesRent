@@ -8,11 +8,10 @@
 #include "Vehicle.h"
 
 class Bicycle : public Vehicle {
-private:
-//pola
 
 public:
-    Bicycle(int basePrice, std::string id);
+
+    Bicycle(int baseRentPrice, std::string &id, double actuallRentalPrice);
 
     virtual ~Bicycle();
 };

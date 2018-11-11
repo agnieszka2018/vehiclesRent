@@ -62,7 +62,6 @@ std::string Rent::rentInfoFromClient() {
 }
 
 
-
 Rent::~Rent() {
     std::cout << "destruktor Rent jest wywolany" << std::endl;
     //std::cout << "Koszt wypozyczenia"<< rent;
@@ -72,9 +71,7 @@ Rent::Rent(const local_date_time &startTime, Vehicle *vehicle, Client *client) :
                                                                                  client(client), endTime(startTime) {
     uuid = boost::uuids::random_generator()();
 
-
-    //Rent *rent = new Rent(startTime, vehicle);              /*poprawić*/
-    //client->modifyRent(&rent);                            /*poprawić*/
+    client->modifyRent(this);
 
 }
 
@@ -84,10 +81,9 @@ void Rent::returnVehicle() {
     endTime = now;
 
     std::cout << "Wypozyczenie trwalo: " << rentDuration() << std::endl;
-    std::cout << "Koszt wypozyczenia: " << rentDuration() * vehicle->getBaseRentPrice();
+    cost = rentDuration() * vehicle->getActuallRentalPrice();
+    std::cout << "Koszt wypozyczenia: " << cost;
 }
-
-
 
 
 

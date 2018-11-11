@@ -8,11 +8,12 @@
 #include "MotorVehicle.h"
 
 class Mope : public MotorVehicle {
-private:
-//pola
 
 public:
-    Mope(int basePrice, std::string id);
+
+    double calculateActualRentalPrice(int baseRentPrice, int engineDisplacement);
+
+    Mope(int baseRentPrice, std::string id, int engineDisplacement);
 
     virtual ~Mope();
 };

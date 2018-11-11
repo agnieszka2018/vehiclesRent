@@ -8,18 +8,27 @@
 #include <string>
 
 class Vehicle{
+
     const int baseRentPrice;
     const std::string id;
+    double actuallRentalPrice;
 
 public:
-    Vehicle(int price, std::string idNumber);
+
+    Vehicle(int baseRentPrice, std::string &id, double actuallRentalPrice);
 
     std::string vehicleInfo();
 
     const int getBaseRentPrice() const;
 
     virtual ~Vehicle();
+
+    double getActuallRentalPrice();
+
+    double calculateActualRentalPrice();
+
 };
 
 #endif //POBIZ01_VEHICLE_H
+
 

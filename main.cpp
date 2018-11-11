@@ -3,10 +3,15 @@
 //
 
 #include <iostream>
-#include "./include/model/Client.h"
-#include "./include/model/Address.h"
+#include "Client.h"
+#include "Address.h"
 #include "Vehicle.h"
 #include "Rent.h"
+#include "Bicycle.h"
+#include "Car.h"
+#include "Mope.h"
+#include "MotorVehicle.h"
+#include "CurrentRentsRepository.h"
 
 using namespace std;
 using namespace boost;
@@ -17,44 +22,46 @@ using posix_time::time_duration;
 //typedef boost::shared_ptr<dst_calc_rules> local_time::dst_calc_rule_ptr;
 
 int main() {
+
+    currentRentsRepository *repozytoriumWypozyczen = new currentRentsRepository();
+
     Address *actuall_address = new Address("Mickiewicza", "7");
-    Client *klient_1 = new Client("Jan", "Kowalski", "123456789", actuall_address, nullptr, nullptr);
-    Client *klient_2 = new Client("Kamil", "Nowak", "987654321", actuall_address, nullptr, nullptr);
-
-    cout << klient_1->clientInfo() << endl;
-    //cout << klient_2.clientInfo();
-
-    //cout << "Adres  zamieszkania przed zmianą: " << klient_1.clientInfo();
-
-    actuall_address->changeInfo("Promienna", "5");
-
-
-    //cout << "\nAdres  zamieszkania po zmianie: " << klient_1.clientInfo();
-    //cout << "\nAdres  zamieszkania po zmianie: " << klient_2.clientInfo() << endl;
-
-    Vehicle *pojazd = new Vehicle(142, "cw12312");
+    //Vehicle *pojazd = new Vehicle(142, "cw12312", 0);
+    Car *samochod = new Car(100, "CW 84062", 2900, "C");
+    Mope *skuter = new Mope(100, "CW 34342", 1200);
     //cout<<pojazd->vehicleInfo();
 
-    posix_time::ptime pt(date(2018,Oct,26), posix_time::hours(12));
+    posix_time::ptime pt(date(2018, Oct, 26), posix_time::hours(12));
     time_zone_ptr zone(new posix_time_zone("UTC+1"));
     local_date_time ldt(pt, zone);
 
-//  Rent *ptrRent = nullptr;
+    Client *klient_1 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
 
-    Client *klient_3 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
-    //klient_3.clientInfo();
+    Rent *wypozyczenie = new Rent(ldt, skuter, klient_1);
+    Rent *wypozyczenie_1 = new Rent(ldt, samochod, klient_1);
+    repozytoriumWypozyczen->createRent(wypozyczenie);
+    repozytoriumWypozyczen->createRent(wypozyczenie_1);
+    repozytoriumWypozyczen->rentReport();
+    repozytoriumWypozyczen->removeRent(wypozyczenie);
+    repozytoriumWypozyczen->rentReport();
 
-    Rent *wypozyczenie = new Rent(ldt, pojazd, klient_3);
 
     klient_1->modifyRent(wypozyczenie);
-    cout<<klient_1->clientInfo();
+    //cout<<klient_1->clientInfo();
 
-    //cout<<"Info o client:\n"<<klient_3->clientInfo()<<endl<<endl;
+    actuall_address->changeInfo("Promienna", "5");
+    cout << "\nAdres  zamieszkania po zmianie: " << klient_1->clientInfo();
+
+    //cout<<"Info o client:\n"<<klient_1->clientInfo()<<endl<<endl;
     //cout<<"info o rent:"<<wypozyczenie->rentInfo()<<endl<<endl;
 
-    //wypozyczenie.returnVehicle();
-
-    cout<<endl;
+    wypozyczenie->returnVehicle();
+    cout << "Oddanie pojazdu" << endl;
 
     delete actuall_address;
+    delete wypozyczenie;
+    delete wypozyczenie_1;
+    delete klient_1;
+    delete samochod;
+    delete skuter;
 }
