@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <string>
 #include "Client.h"
 #include "Address.h"
 #include "Vehicle.h"
@@ -69,13 +70,20 @@ int main() {
 
     repozytoriumWypozyczen->createRent(wypozyczenie, repozytoriumPojazdow);
     repozytoriumWypozyczen->createRent(wypozyczenie_1, repozytoriumPojazdow);
+    cout << "\nUtworzono dwa wpożyczenia. \n" << endl;
     cout << "Sprawdzam kto wypożyczył skuter: " << endl;
     cout << repozytoriumWypozyczen->getClientForRentedVehicle(skuter);
     cout << "Już wiem, kto wypożyczył" << endl << endl;
 
-    cout << "\n-> Raport wypożyczeń: \n" << repozytoriumWypozyczen->rentReport();
+    cout << "\n-> ~~~~~~~~~~~~~~~~~~~~~~Raport wypożyczeń: \n" << repozytoriumWypozyczen->rentReport();
+    cout << "\n-> ~~~~~~~~~~~~~~~~~~~~~~Raport dostępnych pojazdów w repozytorium: \n"
+         << repozytoriumPojazdow->vehicleReport();
+    cout << "\nKończę jedno wypożyczenie: \n";
     repozytoriumWypozyczen->removeRent(wypozyczenie, repozytoriumPojazdow);
-    cout << "\n-> Raport wypożyczeń po oddaniu pojazdu: \n" << repozytoriumWypozyczen->rentReport();
+    cout << "\n-> ~~~~~~~~~~~~~~~~~~~~~~Raport wypożyczeń po oddaniu pojazdu: \n"
+         << repozytoriumWypozyczen->rentReport();
+    cout << "\n-> ~~~~~~~~~~~~~~~~~~~~~~Raport dostępnych pojazdów w repozytorium po oddaniu pojazdu: \n"
+         << repozytoriumPojazdow->vehicleReport();
 
 
 
@@ -83,10 +91,10 @@ int main() {
     cout << "\nPodaj id, pojazdu, który ma być udostępniony: \n" << endl;
     std::string podajId;
     cin >> podajId;
-    Vehicle * szukany = new Vehicle(0, "0");
+    Vehicle *szukany = new Vehicle(0, "0");
     szukany = repozytoriumPojazdow->udostepnijPojazd(podajId);
-    cout << "OK, zapisałem wskaźnik do tego pojazdu! \n";
-    //cout << "\nSzukałeś następującego pojazdu: " << szukany -> vehicleInfo(); /*napisana funkcja*/
+    cout << "OK, zapisałem wskaźnik do tego pojazdu!";
+    cout << "\nSzukałeś następującego pojazdu: " << szukany -> vehicleInfo(); /*nadpisana funkcja*/
 
 
     klient_1->modifyRent(wypozyczenie);
@@ -107,4 +115,7 @@ int main() {
     delete klient_1;
     delete samochod;
     delete skuter;
+    delete repozytoriumWypozyczen;
+    delete repozytoriumPojazdow;
+    delete szukany;
 }

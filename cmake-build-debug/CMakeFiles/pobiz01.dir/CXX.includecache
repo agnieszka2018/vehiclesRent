@@ -97,6 +97,8 @@ boost/date_time/local_time/local_time.hpp
 /home/pobi/pobiz01/main.cpp
 iostream
 -
+string
+-
 Client.h
 /home/pobi/pobiz01/Client.h
 Address.h
