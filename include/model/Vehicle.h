@@ -24,11 +24,11 @@ public:
 
     const int getBaseRentPrice() const;
 
-    const std::string &getId() const;
+    const std::string getId() const;
 
     void modifyClient(Client *);
 
-    double getActuallRentalPrice();
+    virtual double getActuallRentalPrice();
 
     virtual ~Vehicle();
 

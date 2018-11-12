@@ -23,8 +23,13 @@ double Mope::calculateActualRentalPrice(int baseRentPrice, int engineDisplacemen
 
 
 std::string Mope::vehicleInfo() {
-    std::string info = "\ncena podstawowa pojazdu za dobę: " + std::to_string(getBaseRentPrice()) + "\n";
-    info += "cena aktualna pojazdu za dobę: " + std::to_string(actuallRentalPrice) + "\n";
-    info += "id pojazdu: " + getId() + "\n";
+    std::string info = "\ncena podstawowa skutera za dobę: " + std::to_string(getBaseRentPrice()) + "\n";
+    info += "cena aktualna skutera za dobę: " + std::to_string(actuallRentalPrice) + "\n";
+    info += "id skutera: " + getId() + "\n";
+    info += "pojemność silnika w skuterze: " + std::to_string(getEngineDisplacement()) + "\n";
     return info;
+}
+
+double Mope::getActuallRentalPrice() {
+    return actuallRentalPrice;
 }

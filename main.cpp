@@ -40,26 +40,6 @@ int main() {
     Bicycle *damka = new Bicycle(60, "id_damki");
     //cout<<pojazd->vehicleInfo();
 
-    posix_time::ptime pt(date(2018, Oct, 26), posix_time::hours(12));
-    time_zone_ptr zone(new posix_time_zone("UTC+1"));
-    local_date_time ldt(pt, zone);
-
-    Client *klient_1 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
-
-    //repozytozium wypożyczeń
-    Rent *wypozyczenie = new Rent(ldt, skuter, klient_1);
-    Rent *wypozyczenie_1 = new Rent(ldt, samochod, klient_1);
-
-    repozytoriumWypozyczen->createRent(wypozyczenie);
-    repozytoriumWypozyczen->createRent(wypozyczenie_1);
-    cout << "Sprawdzam kto wypożyczył skuter: " << endl;
-    cout << repozytoriumWypozyczen->getClientForRentedVehicle(skuter);
-    cout << "Już wiem, kto wypożyczył" << endl << endl;
-
-    cout << "\n-> Raport wypożyczeń: \n" << repozytoriumWypozyczen->rentReport();
-    repozytoriumWypozyczen->removeRent(wypozyczenie);
-    cout << "\n-> Raport wypożyczeń po oddaniu pojazdu: \n" << repozytoriumWypozyczen->rentReport();
-
 
     //repozytorium pojazdów
     VehicleRepository *repozytoriumPojazdow = new VehicleRepository();
@@ -73,8 +53,40 @@ int main() {
     repozytoriumPojazdow->createVehicle(osa);
     repozytoriumPojazdow->createVehicle(rower);
     repozytoriumPojazdow->createVehicle(damka);
+    cout << "\n-> Raport dostępnych pojazdów w repozytorium: \n" << repozytoriumPojazdow->vehicleReport();
 
-    cout << "\n-> Raport dostępnych samochodów w repozytorium: \n" << repozytoriumPojazdow->vehicleReport();
+
+    posix_time::ptime pt(date(2018, Oct, 26), posix_time::hours(12));
+    time_zone_ptr zone(new posix_time_zone("UTC+1"));
+    local_date_time ldt(pt, zone);
+
+    Client *klient_1 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
+
+
+    //repozytozium wypożyczeń
+    Rent *wypozyczenie = new Rent(ldt, skuter, klient_1);
+    Rent *wypozyczenie_1 = new Rent(ldt, samochod, klient_1);
+
+    repozytoriumWypozyczen->createRent(wypozyczenie, repozytoriumPojazdow);
+    repozytoriumWypozyczen->createRent(wypozyczenie_1, repozytoriumPojazdow);
+    cout << "Sprawdzam kto wypożyczył skuter: " << endl;
+    cout << repozytoriumWypozyczen->getClientForRentedVehicle(skuter);
+    cout << "Już wiem, kto wypożyczył" << endl << endl;
+
+    cout << "\n-> Raport wypożyczeń: \n" << repozytoriumWypozyczen->rentReport();
+    repozytoriumWypozyczen->removeRent(wypozyczenie, repozytoriumPojazdow);
+    cout << "\n-> Raport wypożyczeń po oddaniu pojazdu: \n" << repozytoriumWypozyczen->rentReport();
+
+
+
+    //znajdz pojazd w repozytorium pojazdów na podstawie Id:
+    cout << "\nPodaj id, pojazdu, który ma być udostępniony: \n" << endl;
+    std::string podajId;
+    cin >> podajId;
+    Vehicle * szukany = new Vehicle(0, "0");
+    szukany = repozytoriumPojazdow->udostepnijPojazd(podajId);
+    cout << "OK, zapisałem wskaźnik do tego pojazdu! \n";
+    //cout << "\nSzukałeś następującego pojazdu: " << szukany -> vehicleInfo(); /*napisana funkcja*/
 
 
     klient_1->modifyRent(wypozyczenie);

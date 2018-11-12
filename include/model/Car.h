@@ -14,15 +14,15 @@ class Car : public MotorVehicle {
 
 public:
 
-    double calculateActualRentalPrice(int baseRentPrice, int engineDisplacement, std::string segment); //a nie override?
+    double calculateActualRentalPrice(int baseRentPrice, int engineDisplacement, std::string segment);
+
+    double getActuallRentalPrice() override;
 
     Car(std::string segment, int baseRentPrice, std::string id, int engineDisplacement);
 
     const std::string &getSegment() const;
 
     std::string vehicleInfo() override;
-
- //   double getActuallRentalPrice() override;
 
     virtual ~Car();
 };

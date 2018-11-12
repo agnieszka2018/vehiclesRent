@@ -35,6 +35,8 @@ Rent.h
 ../include/model/Rent.h
 Vehicle.h
 ../include/model/Vehicle.h
+VehicleRepository.h
+../include/model/VehicleRepository.h
 list
 -
 
@@ -161,6 +163,8 @@ Rent.h
 /home/pobi/pobiz01/src/model/Rent.h
 CurrentRentsRepository.h
 /home/pobi/pobiz01/src/model/CurrentRentsRepository.h
+VehicleRepository.h
+/home/pobi/pobiz01/src/model/VehicleRepository.h
 
 /home/pobi/pobiz01/src/model/Mope.cpp
 Mope.h
@@ -213,4 +217,6 @@ string
 -
 VehicleRepository.h
 /home/pobi/pobiz01/src/model/VehicleRepository.h
+Vehicle.h
+/home/pobi/pobiz01/src/model/Vehicle.h
 

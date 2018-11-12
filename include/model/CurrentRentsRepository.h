@@ -7,6 +7,7 @@
 
 #include "Rent.h"
 #include "Vehicle.h"
+#include "VehicleRepository.h"
 #include <list>
 
 class currentRentsRepository {
@@ -15,9 +16,9 @@ class currentRentsRepository {
 
 public:
 
-    void createRent(Rent *);
+    void createRent(Rent *, VehicleRepository *);
 
-    void removeRent(Rent *);
+    void removeRent(Rent *, VehicleRepository *);
 
     std::string rentReport();
 

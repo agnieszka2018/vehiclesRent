@@ -36,6 +36,7 @@ CMakeFiles/pobiz01.dir/src/model/Client.cpp.o: ../src/model/Client.cpp
 CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o: ../include/model/CurrentRentsRepository.h
 CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o: ../include/model/Rent.h
 CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o: ../include/model/Vehicle.h
+CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o: ../include/model/VehicleRepository.h
 CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o: ../src/model/CurrentRentsRepository.cpp
 
 CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o: ../include/model/Mope.h

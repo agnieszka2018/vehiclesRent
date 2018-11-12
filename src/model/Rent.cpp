@@ -86,6 +86,10 @@ void Rent::returnVehicle() {
     std::cout << "Całkowity koszt wypozyczenia: " << cost << std::endl;
 }
 
+Vehicle *Rent::getVehicle() const {
+    return vehicle;
+}
+
 
 
 

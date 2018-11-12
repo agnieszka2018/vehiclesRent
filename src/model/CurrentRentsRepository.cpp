@@ -6,32 +6,43 @@
 #include "Vehicle.h"
 #include "Rent.h"
 #include "CurrentRentsRepository.h"
+#include "VehicleRepository.h"
 
 using namespace std;
 
-void currentRentsRepository::createRent(Rent *rent) {
-    rents.push_back(rent);
-}
+void currentRentsRepository::createRent(Rent *rent, VehicleRepository *repozytoriumPojazdow) {
 
-void currentRentsRepository::removeRent(Rent *rent) {
-    rents.remove(rent);
-    rent->returnVehicle();
-}
+    //sprawdzam czy pojazd jest dostepny?
+    //for (Vehicle *vehicle: repozytoriumPojazdow->getVehicles()) {
+        //if (rent->getVehicle() == vehicle)
+            rents.push_back(rent);
 
-string currentRentsRepository::rentReport() {
-
-    string info;
-    info += "lista wypozyczen: \n";
-
-    for (Rent *rent:rents) {
-        info += rent->rentInfo() + "\n";
+        //kasuje z repozytorium pojazdow, bo pojazd został wypożyczony
+        //repozytoriumPojazdow->removeVehicle(rent->getVehicle());
     }
 
-    info += "koniec listy.\n";
-    return info;
-}
+    void currentRentsRepository::removeRent(Rent *rent, VehicleRepository *repozytoriumPojazdow) {
+        rents.remove(rent);
+        rent->returnVehicle();
+
+        //dodaje do repozytorium pojazow, bo pojazd został oddany
+        //repozytoriumPojazdow->createVehicle(rent->getVehicle());
+    }
+
+    string currentRentsRepository::rentReport() {
+
+        string info;
+        info += "lista wypozyczen: \n";
+
+        for (Rent *rent:rents) {
+            info += rent->rentInfo() + "\n";
+        }
+
+        info += "koniec listy.\n";
+        return info;
+    }
 
 
-string currentRentsRepository::getClientForRentedVehicle(Vehicle *vehicle) {
-    return vehicle->vehicleClientInfo();
-}
+    string currentRentsRepository::getClientForRentedVehicle(Vehicle *vehicle) {
+        return vehicle->vehicleClientInfo();
+    }

@@ -37,9 +37,9 @@ void Vehicle::modifyClient(Client *client) {
 
 
 string Vehicle::vehicleInfo() {
-    string info = "\ncena podstawowa pojazdu: " + to_string(baseRentPrice) + "\n";
-    //info += "cena wlasciwa pojazdu: " + to_string(actuallRentalPrice) + "\n";
-    info += "id pojazdu: " + id + "\n";
+    string info = "\nCena podstawowa pojazdu za dobę: " + to_string(baseRentPrice) + "\n";
+    //info += "Cena aktualna pojazdu za dobę: " + to_string(actuallRentalPrice) + "\n";
+    info += "Id pojazdu: " + id + "\n";
     return info;
 }
 
@@ -51,6 +51,6 @@ string Vehicle::vehicleClientInfo() {
     return info;
 }
 
-const string &Vehicle::getId() const {
+const string Vehicle::getId() const {
     return id;
 }

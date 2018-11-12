@@ -43,10 +43,16 @@ double Car::calculateActualRentalPrice(int baseRentPrice, int engineDisplacement
 
 
 std::string Car::vehicleInfo() {
-    std::string info = "\ncena podstawowa pojazdu za dobę: " + std::to_string(getBaseRentPrice()) + "\n";
-    info += "cena wlasciwa pojazdu za dobę: " + std::to_string(actuallRentalPrice) + "\n";
-    info += "id pojazdu: " + getId() + "\n";
+    std::string info = "\ncena podstawowa samochodu za dobę: " + std::to_string(getBaseRentPrice()) + "\n";
+    info += "cena wlasciwa samochodu za dobę: " + std::to_string(actuallRentalPrice) + "\n";
+    info += "id samochodu: " + getId() + "\n";
+    info += "segment samochodu: " + segment + "\n";
+    info += "pojemność silnika w samochodzie: " + std::to_string(getEngineDisplacement()) + "\n";
     return info;
+}
+
+double Car::getActuallRentalPrice() {
+    return actuallRentalPrice;
 }
 
 /*double Car::getActuallRentalPrice() {

@@ -24,6 +24,9 @@ public:
 
     std::string vehicleReport();
 
+    Vehicle* udostepnijPojazd(std::string);
+
+    std::list<Vehicle *> getVehicles();
 };
 
 #endif //POBIZ01_VEHICLEREPOSITORY_H
