@@ -4,29 +4,34 @@
 
 #include <model/CurrentRentsRepository.h>
 #include "Vehicle.h"
+#include "Rent.h"
 #include "CurrentRentsRepository.h"
 
 using namespace std;
 
-void currentRentsRepository::createRent(Rent* rent) {
+void currentRentsRepository::createRent(Rent *rent) {
     rents.push_back(rent);
 }
 
-void currentRentsRepository::removeRent(Rent* rent) {
+void currentRentsRepository::removeRent(Rent *rent) {
     rents.remove(rent);
+    rent->returnVehicle();
 }
 
 string currentRentsRepository::rentReport() {
-    //string info;
-    cout<< "lista wypozyczen: \n";
+
+    string info;
+    info += "lista wypozyczen: \n";
+
     for (Rent *rent:rents) {
-        cout << rent->rentInfo() << '\n';
+        info += rent->rentInfo() + "\n";
     }
-    cout<<"koniec listy\n";
-    return " ";
+
+    info += "koniec listy.\n";
+    return info;
 }
 
 
-string currentRentsRepository::getClientForRentedVehicle(Vehicle * vehicle){
-    return vehicle -> vehicleClientInfo();
+string currentRentsRepository::getClientForRentedVehicle(Vehicle *vehicle) {
+    return vehicle->vehicleClientInfo();
 }

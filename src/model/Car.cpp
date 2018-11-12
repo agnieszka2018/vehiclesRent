@@ -13,8 +13,10 @@ const std::string &Car::getSegment() const {
     return segment;
 }
 
-Car::Car(int baseRentPrice, std::string id, int engineDisplacement, std::string segment) : MotorVehicle(baseRentPrice,
-                                                                                                        id, calculateActualRentalPrice(baseRentPrice, engineDisplacement, segment), engineDisplacement), segment{segment} {}
+Car::Car( std::string segment, int baseRentPrice, std::string id, int engineDisplacement) : segment{segment}, MotorVehicle(baseRentPrice,
+                                                                                                        id, engineDisplacement, calculateActualRentalPrice(baseRentPrice, engineDisplacement, segment)) {
+    this-> actuallRentalPrice = calculateActualRentalPrice(baseRentPrice, engineDisplacement, segment);
+}
 
 
 double Car::calculateActualRentalPrice(int baseRentPrice, int engineDisplacement, std::string segment) {
@@ -24,9 +26,9 @@ double Car::calculateActualRentalPrice(int baseRentPrice, int engineDisplacement
     if (engineDisplacement < 1000) displacementMod = 1.0;
 
     else if (engineDisplacement >= 1000 && engineDisplacement <= 2000)
-        displacementMod = (1.0 * ((engineDisplacement - 1000) / 2) / 1000) + 1;
+        //displacementMod = (1.0 * ((engineDisplacement - 1000) / 2) / 1000) + 1;
 
-        //displacementMod = ((1.5 - 1.0) * (engineDisplacement - 1000)) / 1000 + 1.0;
+        displacementMod = ((1.5 - 1.0) * (engineDisplacement - 1000)) / 1000 + 1.0;
 
     else if (engineDisplacement > 2000) displacementMod = 1.5;
 
@@ -40,3 +42,14 @@ double Car::calculateActualRentalPrice(int baseRentPrice, int engineDisplacement
 }
 
 
+std::string Car::vehicleInfo() {
+    std::string info = "\ncena podstawowa pojazdu za dobę: " + std::to_string(getBaseRentPrice()) + "\n";
+    info += "cena wlasciwa pojazdu za dobę: " + std::to_string(actuallRentalPrice) + "\n";
+    info += "id pojazdu: " + getId() + "\n";
+    return info;
+}
+
+/*double Car::getActuallRentalPrice() {
+    return actuallRentalPrice;
+}
+*/

@@ -488,6 +488,39 @@ src/model/Vehicle.cpp.s:
 	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/Vehicle.cpp.s
 .PHONY : src/model/Vehicle.cpp.s
 
+src/model/VehicleRepository.o: src/model/VehicleRepository.cpp.o
+
+.PHONY : src/model/VehicleRepository.o
+
+# target to build an object file
+src/model/VehicleRepository.cpp.o:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/VehicleRepository.cpp.o
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/VehicleRepository.cpp.o
+	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/VehicleRepository.cpp.o
+.PHONY : src/model/VehicleRepository.cpp.o
+
+src/model/VehicleRepository.i: src/model/VehicleRepository.cpp.i
+
+.PHONY : src/model/VehicleRepository.i
+
+# target to preprocess a source file
+src/model/VehicleRepository.cpp.i:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/VehicleRepository.cpp.i
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/VehicleRepository.cpp.i
+	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/VehicleRepository.cpp.i
+.PHONY : src/model/VehicleRepository.cpp.i
+
+src/model/VehicleRepository.s: src/model/VehicleRepository.cpp.s
+
+.PHONY : src/model/VehicleRepository.s
+
+# target to generate assembly for a file
+src/model/VehicleRepository.cpp.s:
+	$(MAKE) -f CMakeFiles/pobiz01.dir/build.make CMakeFiles/pobiz01.dir/src/model/VehicleRepository.cpp.s
+	$(MAKE) -f CMakeFiles/biblioteka.dir/build.make CMakeFiles/biblioteka.dir/src/model/VehicleRepository.cpp.s
+	$(MAKE) -f CMakeFiles/TestRent.dir/build.make CMakeFiles/TestRent.dir/src/model/VehicleRepository.cpp.s
+.PHONY : src/model/VehicleRepository.cpp.s
+
 test/RentTest.o: test/RentTest.cpp.o
 
 .PHONY : test/RentTest.o
@@ -585,6 +618,9 @@ help:
 	@echo "... src/model/Vehicle.o"
 	@echo "... src/model/Vehicle.i"
 	@echo "... src/model/Vehicle.s"
+	@echo "... src/model/VehicleRepository.o"
+	@echo "... src/model/VehicleRepository.i"
+	@echo "... src/model/VehicleRepository.s"
 	@echo "... test/RentTest.o"
 	@echo "... test/RentTest.i"
 	@echo "... test/RentTest.s"

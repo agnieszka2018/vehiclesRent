@@ -249,6 +249,11 @@
 			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
 		</Unit>
+		<Unit filename="/home/pobi/pobiz01/include/model/VehicleRepository.h">
+			<Option target="pobiz01"/>
+			<Option target="biblioteka"/>
+			<Option target="TestRent"/>
+		</Unit>
 		<Unit filename="/home/pobi/pobiz01/main.cpp">
 			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
@@ -293,6 +298,11 @@
 		<Unit filename="/home/pobi/pobiz01/src/model/Vehicle.cpp">
 			<Option target="pobiz01"/>
 			<Option target="biblioteka"/>
+		</Unit>
+		<Unit filename="/home/pobi/pobiz01/src/model/VehicleRepository.cpp">
+			<Option target="pobiz01"/>
+			<Option target="biblioteka"/>
+			<Option target="TestRent"/>
 		</Unit>
 		<Unit filename="/home/pobi/pobiz01/test/RentTest.cpp">
 			<Option target="TestRent"/>

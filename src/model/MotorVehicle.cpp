@@ -16,10 +16,19 @@ MotorVehicle::~MotorVehicle() {
     std::cout << "Destruktor MotorVehicle" << std::endl;
 }
 
-const int MotorVehicle::getEngineDisplacement() const {
+double MotorVehicle::calculateActualRentalPrice() {
+    return getBaseRentPrice() * engineDisplacement;
+};
+
+const double MotorVehicle::getEngineDisplacement() const {
     return engineDisplacement;
 }
 
-MotorVehicle::MotorVehicle(int baseRentPrice, std::string id, double actuallRentalPrice, int engineDisplacement)
-        : Vehicle(baseRentPrice, id, actuallRentalPrice), engineDisplacement{engineDisplacement} {}
+
+double MotorVehicle::getActuallRentalPrice() {
+    return actuallRentalPrice;
+}
+
+MotorVehicle::MotorVehicle(int baseRentPrice, std::string id, double engineDisplacement, double actuallRentalPrice)
+        : Vehicle(baseRentPrice, id), engineDisplacement{engineDisplacement}, actuallRentalPrice{calculateActualRentalPrice()} {}
 

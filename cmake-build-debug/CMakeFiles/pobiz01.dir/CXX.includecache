@@ -33,6 +33,8 @@ Rent.h
 ../include/model/CurrentRentsRepository.h
 Rent.h
 ../include/model/Rent.h
+Vehicle.h
+../include/model/Vehicle.h
 list
 -
 
@@ -59,6 +61,16 @@ boost/date_time/local_time/local_time.hpp
 ../include/model/Vehicle.h
 string
 -
+
+../include/model/VehicleRepository.h
+iostream
+-
+string
+-
+list
+-
+Vehicle.h
+../include/model/Vehicle.h
 
 /home/pobi/pobiz01/include/model/Address.h
 string
@@ -101,6 +113,8 @@ MotorVehicle.h
 /home/pobi/pobiz01/MotorVehicle.h
 CurrentRentsRepository.h
 /home/pobi/pobiz01/CurrentRentsRepository.h
+VehicleRepository.h
+/home/pobi/pobiz01/VehicleRepository.h
 
 /home/pobi/pobiz01/src/model/Address.cpp
 iostream
@@ -143,6 +157,8 @@ model/CurrentRentsRepository.h
 -
 Vehicle.h
 /home/pobi/pobiz01/src/model/Vehicle.h
+Rent.h
+/home/pobi/pobiz01/src/model/Rent.h
 CurrentRentsRepository.h
 /home/pobi/pobiz01/src/model/CurrentRentsRepository.h
 
@@ -191,4 +207,10 @@ Vehicle.h
 /home/pobi/pobiz01/src/model/Vehicle.h
 Client.h
 /home/pobi/pobiz01/src/model/Client.h
+
+/home/pobi/pobiz01/src/model/VehicleRepository.cpp
+string
+-
+VehicleRepository.h
+/home/pobi/pobiz01/src/model/VehicleRepository.h
 

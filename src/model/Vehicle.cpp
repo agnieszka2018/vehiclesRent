@@ -9,25 +9,26 @@
 
 using namespace std;
 
-Vehicle::Vehicle(int baseRentPrice, string &id, double actuallRentalPrice, Client *actuallClient) : baseRentPrice{
-        baseRentPrice}, id{id}, actuallRentalPrice{calculateActualRentalPrice()}, actuallClient{actuallClient} {}
+Vehicle::Vehicle(int baseRentPrice, string id, Client *actuallClient) : baseRentPrice{baseRentPrice}, id{id},
+                                                                         actuallClient{actuallClient} {}
 
 
 const int Vehicle::getBaseRentPrice() const {
     return baseRentPrice;
 }
 
-double Vehicle::getActuallRentalPrice() {
-    return actuallRentalPrice;
-}
-
 Vehicle::~Vehicle() {
     cout << "Destruktor Vehicle" << endl;
 }
 
-double Vehicle::calculateActualRentalPrice() {
+/*double Vehicle::calculateActualRentalPrice() {
     return baseRentPrice;
 };
+*/
+
+double Vehicle::getActuallRentalPrice() {
+    return actuallRentalPrice;
+}
 
 void Vehicle::modifyClient(Client *client) {
 
@@ -37,7 +38,7 @@ void Vehicle::modifyClient(Client *client) {
 
 string Vehicle::vehicleInfo() {
     string info = "\ncena podstawowa pojazdu: " + to_string(baseRentPrice) + "\n";
-    info += "cena wlasciwa pojazdu: " + to_string(actuallRentalPrice) + "\n";
+    //info += "cena wlasciwa pojazdu: " + to_string(actuallRentalPrice) + "\n";
     info += "id pojazdu: " + id + "\n";
     return info;
 }
@@ -48,4 +49,8 @@ string Vehicle::vehicleClientInfo() {
         info += "klient: " + actuallClient->clientName();         //dopisac adress!!!
 
     return info;
+}
+
+const string &Vehicle::getId() const {
+    return id;
 }

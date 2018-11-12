@@ -9,12 +9,17 @@
 
 class MotorVehicle : public Vehicle {
 
-    const int engineDisplacement;
+    const double engineDisplacement;
+    double actuallRentalPrice;
 
 public:
-    MotorVehicle(int baseRentPrice, std::string id, double actuallRentalPrice, int engineDisplacement);
+    MotorVehicle(int baseRentPrice, std::string id, double engineDisplacement, double actuallRentalPrice);
 
-    const int getEngineDisplacement() const;
+    const double getEngineDisplacement() const;
+
+    virtual double calculateActualRentalPrice();
+
+    virtual double getActuallRentalPrice();
 
     virtual ~MotorVehicle();
 };

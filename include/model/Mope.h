@@ -9,11 +9,15 @@
 
 class Mope : public MotorVehicle {
 
+    double actuallRentalPrice;
+
 public:
 
-    double calculateActualRentalPrice(int baseRentPrice, int engineDisplacement);
+    double calculateActualRentalPrice(int baseRentPrice, int engineDisplacement); //a nie override?
 
     Mope(int baseRentPrice, std::string id, int engineDisplacement);
+
+    std::string vehicleInfo() override;
 
     virtual ~Mope();
 };

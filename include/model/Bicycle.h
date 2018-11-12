@@ -11,7 +11,7 @@ class Bicycle : public Vehicle {
 
 public:
 
-    Bicycle(int baseRentPrice, std::string &id, double actuallRentalPrice);
+    Bicycle(int baseRentPrice, std::string id);
 
     virtual ~Bicycle();
 };

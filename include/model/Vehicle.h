@@ -14,23 +14,26 @@ class Vehicle{
     const int baseRentPrice;
     const std::string id;
     double actuallRentalPrice;
-    Client *actuallClient;
+    Client *actuallClient  = nullptr;
 
 public:
 
-    Vehicle(int baseRentPrice, std::string &id, double actuallRentalPrice, Client *actuallClient = nullptr);
+    Vehicle(int baseRentPrice, std::string id, Client *actuallClient = nullptr);
 
-    std::string vehicleInfo();
+    virtual std::string vehicleInfo();
 
     const int getBaseRentPrice() const;
 
-    void modifyClient(Client *);
+    const std::string &getId() const;
 
-    virtual ~Vehicle();
+    void modifyClient(Client *);
 
     double getActuallRentalPrice();
 
-    double calculateActualRentalPrice();
+    virtual ~Vehicle();
+
+
+    //double calculateActualRentalPrice();
 
     std::string vehicleClientInfo();
 

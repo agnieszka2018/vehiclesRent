@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pobi/pobiz01/src/model/MotorVehicle.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/MotorVehicle.cpp.o"
   "/home/pobi/pobiz01/src/model/Rent.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Rent.cpp.o"
   "/home/pobi/pobiz01/src/model/Vehicle.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/Vehicle.cpp.o"
+  "/home/pobi/pobiz01/src/model/VehicleRepository.cpp" "/home/pobi/pobiz01/cmake-build-debug/CMakeFiles/pobiz01.dir/src/model/VehicleRepository.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pobiz01.dir/src/model/Mope.cpp.o"
   "CMakeFiles/pobiz01.dir/src/model/Bicycle.cpp.o"
   "CMakeFiles/pobiz01.dir/src/model/CurrentRentsRepository.cpp.o"
+  "CMakeFiles/pobiz01.dir/src/model/VehicleRepository.cpp.o"
   "pobiz01.pdb"
   "pobiz01"
 )
