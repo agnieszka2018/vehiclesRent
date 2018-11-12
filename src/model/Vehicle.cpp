@@ -10,17 +10,12 @@
 using namespace std;
 
 Vehicle::Vehicle(int baseRentPrice, string id, Client *actuallClient) : baseRentPrice{baseRentPrice}, id{id},
-                                                                         actuallClient{actuallClient} {}
+                                                                        actuallClient{actuallClient} {}
 
 
 const int Vehicle::getBaseRentPrice() const {
     return baseRentPrice;
 }
-
-const double Vehicle::getActuallRentalPrice() const {
-    return actuallRentalPrice;
-}
-
 
 Vehicle::~Vehicle() {
     cout << "Destruktor Vehicle" << endl;
@@ -59,4 +54,3 @@ string Vehicle::vehicleClientInfo() {
 const string Vehicle::getId() const {
     return id;
 }
-

@@ -9,12 +9,12 @@
 
 class Client;
 
-class Vehicle {
+class Vehicle{
 
     const int baseRentPrice;
     const std::string id;
     double actuallRentalPrice;
-    Client *actuallClient = nullptr;
+    Client *actuallClient  = nullptr;
 
 public:
 
@@ -32,6 +32,7 @@ public:
 
     virtual ~Vehicle();
 
+
     //double calculateActualRentalPrice();
 
     std::string vehicleClientInfo();
@@ -39,5 +40,3 @@ public:
 };
 
 #endif //POBIZ01_VEHICLE_H
-
-
