@@ -7,26 +7,37 @@
 
 #include <string>
 
-class Vehicle{
+class Client;
+
+class Vehicle {
+
     const int baseRentPrice;
     const std::string id;
-    const double actuallRentalPrice;
+    double actuallRentalPrice;
+    Client *actuallClient = nullptr;
+
 public:
 
+    Vehicle(int baseRentPrice, std::string id, Client *actuallClient = nullptr);
 
-    Vehicle(const int baseRentPrice, const std::string &id, const double actuallRentalPrice);
-
-    std::string vehicleInfo();
+    virtual std::string vehicleInfo();
 
     const int getBaseRentPrice() const;
 
+    const std::string getId() const;
+
+    void modifyClient(Client *);
+
+    virtual double getActuallRentalPrice();
+
     virtual ~Vehicle();
 
-    void setActuallRentalPrice(int engineDisplacement, std::string segment);
+    //double calculateActualRentalPrice();
 
-    const double getActuallRentalPrice() const;
+    std::string vehicleClientInfo();
 
 };
 
 #endif //POBIZ01_VEHICLE_H
+
 

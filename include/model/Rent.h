@@ -34,6 +34,7 @@ public:
     std::string rentInfo();
     std::string rentInfoFromClient();
 
+    Vehicle *getVehicle() const;
 };
 
 #endif //POBIZ01_RENT_H

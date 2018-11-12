@@ -1,23 +1,17 @@
 //
 // Created by pobi on 29.10.18.
 //
-#include <../../include/model/Vehicle.h>
-#include <Car.h>
+#include "Car.h"
 #include <string>
 #include <iostream>
-#include <model/Vehicle.h>
-
+#include "Vehicle.h"
+#include "Client.h"
 
 using namespace std;
 
+Vehicle::Vehicle(int baseRentPrice, string id, Client *actuallClient) : baseRentPrice{baseRentPrice}, id{id},
+                                                                         actuallClient{actuallClient} {}
 
-
-string Vehicle::vehicleInfo() {
-    string info = "\ncena podstawowa: " + to_string(baseRentPrice) + "\n";
-    info += "cena wlasciwa: " + to_string(actuallRentalPrice) + "\n";
-    info += "id: " + id + "\n";
-    return info;
-}
 
 const int Vehicle::getBaseRentPrice() const {
     return baseRentPrice;
@@ -32,6 +26,37 @@ Vehicle::~Vehicle() {
     cout << "Destruktor Vehicle" << endl;
 }
 
-Vehicle::Vehicle(const int baseRentPrice, const string &id, const double actuallRentalPrice) : baseRentPrice(
-        baseRentPrice), id(id), actuallRentalPrice(actuallRentalPrice) {}
+/*double Vehicle::calculateActualRentalPrice() {
+    return baseRentPrice;
+};
+*/
+
+double Vehicle::getActuallRentalPrice() {
+    return actuallRentalPrice;
+}
+
+void Vehicle::modifyClient(Client *client) {
+
+    actuallClient = client;
+}
+
+
+string Vehicle::vehicleInfo() {
+    string info = "\nCena podstawowa pojazdu za dobę: " + to_string(baseRentPrice) + "\n";
+    //info += "Cena aktualna pojazdu za dobę: " + to_string(actuallRentalPrice) + "\n";
+    info += "Id pojazdu: " + id + "\n";
+    return info;
+}
+
+string Vehicle::vehicleClientInfo() {
+    string info;
+    if (actuallClient != nullptr)
+        info += "klient: " + actuallClient->clientName();         //dopisac adress!!!
+
+    return info;
+}
+
+const string Vehicle::getId() const {
+    return id;
+}
 

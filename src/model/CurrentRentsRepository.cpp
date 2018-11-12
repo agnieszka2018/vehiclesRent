@@ -3,25 +3,47 @@
 //
 
 #include <model/CurrentRentsRepository.h>
-
+#include "Vehicle.h"
+#include "Rent.h"
 #include "CurrentRentsRepository.h"
+#include "VehicleRepository.h"
 
 using namespace std;
 
-void currentRentsRepository::createRent(Rent* rent) {
-    rents.push_back(rent);
+void currentRentsRepository::createRent(Rent *rent, VehicleRepository *repozytoriumPojazdow) {
+
+    //sprawdzam czy pojazd jest dostepny?
+    for (Vehicle *vehicle: repozytoriumPojazdow->getVehicles()) {
+        if (rent->getVehicle() == vehicle)
+            rents.push_back(rent);
+    }
+
+    //kasuje z repozytorium pojazdow, bo pojazd został wypożyczony
+    repozytoriumPojazdow->removeVehicle(rent->getVehicle());
 }
 
-void currentRentsRepository::removeRent(Rent* rent) {
+void currentRentsRepository::removeRent(Rent *rent, VehicleRepository *repozytoriumPojazdow) {
     rents.remove(rent);
+    rent->returnVehicle();
+
+    //dodaje do repozytorium pojazow, bo pojazd został oddany
+    repozytoriumPojazdow->createVehicle(rent->getVehicle());
 }
 
 string currentRentsRepository::rentReport() {
-    //string info;
-    cout<< "lista wypozyczen: \n";
+
+    string info;
+    info += "lista wypozyczen: \n";
+
     for (Rent *rent:rents) {
-        cout << rent->rentInfo() << '\n';
+        info += rent->rentInfo() + "\n";
     }
-    cout<<"koniec listy\n";
-    return " ";
+
+    info += "koniec listy.\n";
+    return info;
+}
+
+
+string currentRentsRepository::getClientForRentedVehicle(Vehicle *vehicle) {
+    return vehicle->vehicleClientInfo();
 }

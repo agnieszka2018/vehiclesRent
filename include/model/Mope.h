@@ -8,13 +8,18 @@
 #include "MotorVehicle.h"
 
 class Mope : public MotorVehicle {
-private:
 
-    double calculateActualRentalPrice(int baseRentPrice, int engineDisplacement);
+    double actuallRentalPrice;
 
 public:
 
-    Mope(const int baseRentPrice, const std::string &id, int engineDisplacement);
+    double calculateActualRentalPrice(int baseRentPrice, int engineDisplacement);
+
+    Mope(int baseRentPrice, std::string id, int engineDisplacement);
+
+    std::string vehicleInfo() override;
+
+    double getActuallRentalPrice() override;
 
     virtual ~Mope();
 };

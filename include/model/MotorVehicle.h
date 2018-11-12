@@ -8,13 +8,18 @@
 #include "Vehicle.h"
 
 class MotorVehicle : public Vehicle {
-private:
-    int engineDisplacement;
-public:
-    MotorVehicle(const int baseRentPrice, const std::string &id, const double actuallRentalPrice,
-                 int engineDisplacement);
 
-    int getEngineDisplacement() const;
+    const int engineDisplacement;
+    double actuallRentalPrice;
+
+public:
+    MotorVehicle(int baseRentPrice, std::string id, int engineDisplacement, double actuallRentalPrice);
+
+    const double getEngineDisplacement() const;
+
+    double calculateActualRentalPrice();
+
+    virtual double getActuallRentalPrice();
 
     virtual ~MotorVehicle();
 };

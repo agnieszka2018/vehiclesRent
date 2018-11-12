@@ -8,16 +8,22 @@
 #include "MotorVehicle.h"
 
 class Car : public MotorVehicle {
-private:
-    std::string segment;
+
+    const std::string segment;
+    double actuallRentalPrice;
+
+public:
 
     double calculateActualRentalPrice(int baseRentPrice, int engineDisplacement, std::string segment);
 
-public:
-    Car(const int baseRentPrice, const std::string &id, int engineDisplacement,
-        const std::string &segment);
+    double getActuallRentalPrice() override;
+
+    Car(std::string segment, int baseRentPrice, std::string id, int engineDisplacement);
 
     const std::string &getSegment() const;
+
+    std::string vehicleInfo() override;
+
 
     virtual ~Car();
 };

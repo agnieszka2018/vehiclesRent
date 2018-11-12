@@ -6,18 +6,23 @@
 #define POBIZ01_CURRENTRENTSREPOSITORY_H
 
 #include "Rent.h"
-
+#include "Vehicle.h"
+#include "VehicleRepository.h"
 #include <list>
 
 class currentRentsRepository {
 
-    std::list<Rent*> rents;
+    std::list<Rent *> rents;
 
 public:
 
-    void createRent(Rent*);
-    void removeRent(Rent*);
+    void createRent(Rent *, VehicleRepository *);
+
+    void removeRent(Rent *, VehicleRepository *);
+
     std::string rentReport();
+
+    std::string getClientForRentedVehicle(Vehicle *);
 
 };
 
