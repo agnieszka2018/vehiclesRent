@@ -89,9 +89,8 @@ int main() {
     //znajdz pojazd w repozytorium pojazdów na podstawie Id:
     cout << "\nPodaj id, pojazdu, który ma być udostępniony: \n" << endl;
     std::string podajId;
-    cin >> podajId;
-    Vehicle *szukany = new Vehicle(0, "0");
-    szukany = repozytoriumPojazdow->udostepnijPojazd(podajId);
+
+    Vehicle *szukany  = repozytoriumPojazdow->udostepnijPojazd("CW 34342");
     cout << "OK, zapisałem wskaźnik do tego pojazdu!";
     cout << "\nSzukałeś następującego pojazdu: " << szukany -> vehicleInfo(); /*nadpisana funkcja*/
 
@@ -116,5 +115,5 @@ int main() {
     delete skuter;
     delete repozytoriumWypozyczen;
     delete repozytoriumPojazdow;
-    delete szukany;
+//    delete szukany;
 }

@@ -41,6 +41,7 @@ Vehicle *VehicleRepository::udostepnijPojazd(std::string podajId) {
         if (podajId == vehicle->getId())
             return vehicle;
     }
+    return nullptr;
 }
 
 std::list<Vehicle *> VehicleRepository::getVehicles() {
