@@ -47,3 +47,11 @@ Vehicle *VehicleRepository::udostepnijPojazd(std::string podajId) {
 std::list<Vehicle *> VehicleRepository::getVehicles() {
     return vehicles;
 }
+
+void VehicleRepository::findVehicle(int number) {
+
+    std::list<Vehicle *>::iterator iter;
+    for (iter = vehicles.begin(); iter != vehicles.end();) {
+        //znaleźć odpowiedni indeks o numerze number
+    }
+}

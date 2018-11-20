@@ -18,15 +18,17 @@ class VehicleRepository {
 
 public:
 
-    void createVehicle(Vehicle*);
+    void createVehicle(Vehicle *);
 
-    void removeVehicle(Vehicle*);
+    void removeVehicle(Vehicle *);
 
     std::string vehicleReport();
 
-    Vehicle* udostepnijPojazd(std::string);
+    Vehicle *udostepnijPojazd(std::string);
 
     std::list<Vehicle *> getVehicles();
+
+    void findVehicle(int);
 };
 
 #endif //POBIZ01_VEHICLEREPOSITORY_H
