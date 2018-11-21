@@ -24,8 +24,6 @@ public:
 
     std::string vehicleReport();
 
-    //Vehicle *udostepnijPojazd(std::string);
-
     std::list<Vehicle *> getVehicles();
 
     Vehicle *findVehicle(int);

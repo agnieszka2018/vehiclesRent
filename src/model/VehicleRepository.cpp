@@ -36,14 +36,6 @@ std::string VehicleRepository::vehicleReport() {
     return info;
 }
 
-/*Vehicle *VehicleRepository::udostepnijPojazd(std::string podajId) {
-    for (Vehicle *vehicle: vehicles) {
-        if (podajId == vehicle->getId())
-            return vehicle;
-    }
-    //return nullptr; obsłużyć przypadek, gdy nie ma pojazdu w repozytoriumPojazdów
-}*/
-
 std::list<Vehicle *> VehicleRepository::getVehicles() {
     return vehicles;
 }
