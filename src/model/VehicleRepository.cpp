@@ -36,22 +36,27 @@ std::string VehicleRepository::vehicleReport() {
     return info;
 }
 
-Vehicle *VehicleRepository::udostepnijPojazd(std::string podajId) {
+/*Vehicle *VehicleRepository::udostepnijPojazd(std::string podajId) {
     for (Vehicle *vehicle: vehicles) {
         if (podajId == vehicle->getId())
             return vehicle;
     }
-    return nullptr;
-}
+    //return nullptr; obsłużyć przypadek, gdy nie ma pojazdu w repozytoriumPojazdów
+}*/
 
 std::list<Vehicle *> VehicleRepository::getVehicles() {
     return vehicles;
 }
 
-void VehicleRepository::findVehicle(int number) {
+Vehicle *VehicleRepository::findVehicle(int number) {
+
+    int liczba = 1;
 
     std::list<Vehicle *>::iterator iter;
-    for (iter = vehicles.begin(); iter != vehicles.end();) {
+    for (iter = vehicles.begin(); iter != vehicles.end(); iter++) {
         //znaleźć odpowiedni indeks o numerze number
+        if (liczba == number)
+            return *iter;
+        liczba++;
     }
 }

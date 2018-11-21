@@ -24,11 +24,11 @@ public:
 
     std::string vehicleReport();
 
-    Vehicle *udostepnijPojazd(std::string);
+    //Vehicle *udostepnijPojazd(std::string);
 
     std::list<Vehicle *> getVehicles();
 
-    void findVehicle(int);
+    Vehicle *findVehicle(int);
 };
 
 #endif //POBIZ01_VEHICLEREPOSITORY_H

@@ -87,15 +87,19 @@ int main() {
 
 
     //znajdz pojazd w repozytorium pojazdów na podstawie Id:
-    cout << "\nPodaj id, pojazdu, który ma być udostępniony: \n" << endl;
-    std::string podajId;
-    Vehicle *szukany = repozytoriumPojazdow->udostepnijPojazd("CW 34342");
-    cout << "OK, zapisałem wskaźnik do tego pojazdu!";
-    cout << "\nSzukałeś następującego pojazdu: "
-         << szukany->vehicleInfo(); /*nie obsłużony przypadek, gdy nie ma pojazdu w repozytoriumPojazdów*/
+    //cout << "\nPodaj id, pojazdu, który ma być udostępniony: \n" << endl;
+    //std::string podajId;
+    //Vehicle *szukany = repozytoriumPojazdow->udostepnijPojazd("CW 34342");
+    //cout << "OK, zapisałem wskaźnik do tego pojazdu!";
+    //cout << "\nSzukałeś następującego pojazdu: " << szukany->vehicleInfo(); /*nie obsłużony przypadek, gdy nie ma pojazdu w repozytoriumPojazdów*/
 
 
     //znajdz pojazd na podstawie numeru indeksu
+    cout << "\nPodaj numer indeksu pojazdu z repozytorium: " << endl;
+    int number;
+    cin >> number;
+    Vehicle *poszukiwany = repozytoriumPojazdow->findVehicle(number);
+    cout << "\nSzukałeś następującego pojazdu: " << poszukiwany->vehicleInfo();
 
 
     klient_1->modifyRent(wypozyczenie);
