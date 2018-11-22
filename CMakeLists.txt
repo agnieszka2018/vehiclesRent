@@ -25,9 +25,9 @@ SET(SOURCE_FILES
         src/model/Mope.cpp
         include/model/Mope.h
         src/model/Bicycle.cpp
-        include/model/Bicycle.h src/model/CurrentRentsRepository.cpp include/model/CurrentRentsRepository.h include/model/VehicleRepository.h src/model/VehicleRepository.cpp)
+        include/model/Bicycle.h src/model/CurrentRentsRepository.cpp include/model/CurrentRentsRepository.h include/model/VehicleRepository.h src/model/VehicleRepository.cpp include/model/ClientType.h src/model/ClientType.cpp)
 
-add_library(biblioteka ${SOURCE_FILES} src/model/VehicleRepository.cpp)
+add_library(biblioteka ${SOURCE_FILES} src/model/VehicleRepository.cpp src/model/ClientType.cpp)
 
 add_executable(pobiz01
         ${SOURCE_FILES})
@@ -45,7 +45,7 @@ include_directories(
 
 set(SOURCE_TEST_RENT_FILES
         test/master.cpp
-        test/RentTest.cpp src/model/MotorVehicle.cpp include/model/MotorVehicle.h src/model/Car.cpp include/model/Car.h src/model/Mope.cpp include/model/Mope.h src/model/Bicycle.cpp include/model/Bicycle.h src/model/CurrentRentsRepository.cpp include/model/CurrentRentsRepository.h include/model/VehicleRepository.h src/model/VehicleRepository.cpp)
+        test/RentTest.cpp src/model/MotorVehicle.cpp include/model/MotorVehicle.h src/model/Car.cpp include/model/Car.h src/model/Mope.cpp include/model/Mope.h src/model/Bicycle.cpp include/model/Bicycle.h src/model/CurrentRentsRepository.cpp include/model/CurrentRentsRepository.h include/model/VehicleRepository.h src/model/VehicleRepository.cpp include/model/ClientType.h src/model/ClientType.cpp)
 
 add_executable (TestRent ${SOURCE_TEST_RENT_FILES})
 

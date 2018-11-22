@@ -9,15 +9,6 @@
 #include "../../include/model/Address.h"
 #include "Rent.h"
 
-
-/*Client::Client() {
-    //firstName = "Imię";
-    //lastName = "Nazwisko";
-    //personalID = "111111111";
-
-    std::cout << "konstruktor bezparametrowy jest wywolany" << std::endl;
-}*/
-
 using namespace std;
 
 Client::Client(std::string firstName, std::string lastName, std::string personalID, Address *address,

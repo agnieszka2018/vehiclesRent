@@ -16,7 +16,7 @@ class Client {
 
 private:
     const std::string firstName;
-    std::string lastName;
+    const std::string lastName;
     const std::string personalID;
     Address *address;
     Address *registeredAddress;
