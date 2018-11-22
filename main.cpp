@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <memory>
 #include "Client.h"
 #include "Address.h"
 #include "Vehicle.h"
@@ -21,23 +22,22 @@ using namespace local_time;
 using namespace gregorian;
 using posix_time::time_duration;
 
-//typedef boost::shared_ptr<dst_calc_rules> local_time::dst_calc_rule_ptr;
 
 int main() {
 
-    Car *samochod = new Car("C", 100, "CW 84062", 2900);
-    Car *fiat = new Car("A", 80, "CW 11162", 900);
-    Car *volvo = new Car("B", 150, "WK 67890", 1400);
-    Car *porsche = new Car("D", 275, "WL 12345", 3500);
-    Mope *skuter = new Mope(100, "CW 34342", 1200);
-    Mope *vespa = new Mope(120, "WW 88842", 800);
-    Mope *osa = new Mope(90, "CW 99942", 1000);
-    Mope *piaggio = new Mope(95, "WE 222842", 900);
-    Bicycle *rower = new Bicycle(50, "id_roweru");
-    Bicycle *damka = new Bicycle(60, "id_damki");
+    std::shared_ptr<Car> samochod = std::make_shared<Car>("C", 100, "CW 84062", 2900);
+    std::shared_ptr<Car> fiat = std::make_shared<Car>("A", 80, "CW 11162", 900);
+    std::shared_ptr<Car> volvo = std::make_shared<Car>("B", 150, "WK 67890", 1400);
+    std::shared_ptr<Car> porsche = std::make_shared<Car>("D", 275, "WL 12345", 3500);
+    std::shared_ptr<Mope> skuter = std::make_shared<Mope>(100, "CW 34342", 1200);
+    std::shared_ptr<Mope> vespa = std::make_shared<Mope>(120, "WW 88842", 800);
+    std::shared_ptr<Mope> osa = std::make_shared<Mope>(90, "CW 99942", 1000);
+    std::shared_ptr<Mope> piaggio = std::make_shared<Mope>(95, "WE 222842", 900);
+    std::shared_ptr<Bicycle> rower = std::make_shared<Bicycle>(50, "id_roweru");
+    std::shared_ptr<Bicycle> damka = std::make_shared<Bicycle>(60, "id_damki");
 
     //repozytorium pojazdów
-    VehicleRepository *repozytoriumPojazdow = new VehicleRepository();
+    std::shared_ptr<VehicleRepository> repozytoriumPojazdow = std::make_shared<VehicleRepository>();
     repozytoriumPojazdow->createVehicle(samochod);
     repozytoriumPojazdow->createVehicle(volvo);
     repozytoriumPojazdow->createVehicle(fiat);
@@ -51,16 +51,4 @@ int main() {
 
     cout << "\n-> Raport dostępnych pojazdów w repozytorium: \n" << repozytoriumPojazdow->vehicleReport();
 
-
-    delete repozytoriumPojazdow;
-    delete damka;
-    delete rower;
-    delete piaggio;
-    delete osa;
-    delete vespa;
-    delete skuter;
-    delete porsche;
-    delete volvo;
-    delete fiat;
-    delete samochod;
- }
+}
