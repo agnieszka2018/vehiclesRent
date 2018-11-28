@@ -12,11 +12,12 @@
 using namespace std;
 
 Client::Client(std::string firstName, std::string lastName, std::string personalID, Address *address,
-               Address *registeredAddress, Rent *actuallRent) : firstName{firstName},
-                                                                lastName{lastName},
-                                                                personalID{personalID}, address{address},
-                                                                registeredAddress{registeredAddress},
-                                                                actuallRent{actuallRent} {
+               Address *registeredAddress, Rent *actuallRent, ClientType *clientType) : firstName{firstName},
+                                                                                        lastName{lastName},
+                                                                                        personalID{personalID}, address{address},
+                                                                                        registeredAddress{registeredAddress},
+                                                                                        actuallRent{actuallRent},
+                                                                                        clientType{clientType}{
 
     //this->firstName = firstName;
     //this->lastName = lastName;

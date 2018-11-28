@@ -8,9 +8,11 @@
 #include <string>
 #include "../../include/model/Address.h"
 #include "Rent.h"
+#include "ClientType.h"
 
 class Address;
 class Rent;
+class ClientType;
 
 class Client {
 
@@ -21,6 +23,7 @@ private:
     Address *address;
     Address *registeredAddress;
     Rent *actuallRent;
+    ClientType *clientType;
 
 public:
 
@@ -28,7 +31,7 @@ public:
     //Client();
 
     Client(std::string firstName, std::string lastName, std::string personalID, Address *address,
-           Address *registeredAddress, Rent *actuallRent);
+               Address *registeredAddress, Rent *actuallRent, ClientType *clientType);
 
     void modifyRent(Rent *wypozyczenie);
 

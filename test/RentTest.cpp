@@ -40,8 +40,9 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
         boost::posix_time::ptime pt(date(2018, Oct, 26), boost::posix_time::hours(12));
         time_zone_ptr zone(new posix_time_zone("UTC+1"));
         local_date_time ldt(pt, zone);
+        
 
-        Client *klient_3 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
+        Client *klient_3 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr, nullptr);
 
         Rent *wypozyczenie = new Rent(ldt, pojazd, klient_3);
 
@@ -116,7 +117,7 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
 
         Address *actuall_address = new Address("Mickiewicza", "7");
 
-        Client *klient_1 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
+        Client *klient_1 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr, nullptr);
 
         Rent *wypozyczenie = new Rent(ldt, skuter, klient_1);
         Rent *wypozyczenie_1 = new Rent(ldt, samochod, klient_1);

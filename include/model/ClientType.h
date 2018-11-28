@@ -7,13 +7,15 @@
 
 
 class ClientType {
-    const int maxVehicle;
-    const int discount;
-
+    const int maxRentedCarAmount;
+    int clientTypeDiscount;
+protected:
+    ClientType(const int maxRentedCarAmount, int clientTypeDiscount);
+    virtual double calculateClientTypeDiscount();
 public:
-    const int getMaxVehicle(int) const;
+    const int getMaxRentedCarAmount() const;
+    int getClientTypeDiscount() const;
 
-    const int getDiscount(int) const;
 };
 
 #endif //POBIZ01_CLIENTTYPE_H

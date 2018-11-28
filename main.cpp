@@ -14,6 +14,8 @@
 #include "MotorVehicle.h"
 #include "CurrentRentsRepository.h"
 #include "VehicleRepository.h"
+#include "ClientType.h"
+#include "RegularType.h"
 
 using namespace std;
 using namespace boost;
@@ -36,6 +38,13 @@ int main() {
     boost::shared_ptr<Mope> piaggio(new Mope(95, "WE 222842", 900));
     boost::shared_ptr<Bicycle> rower(new Bicycle(50, "id_roweru"));
     boost::shared_ptr<Bicycle> damka(new Bicycle(60, "id_damki"));
+
+    boost::shared_ptr<RegularType> regulartype(new RegularType());
+    boost::shared_ptr<Address> actuall_address(new Address("Mickiewicza", "7"));
+
+    boost::shared_ptr<Client> klient(new Client("Stefan", "Stonoga", "1029384756", actuall_address.get(), nullptr, nullptr, regulartype.get()));
+
+
 
     //repozytorium pojazdów
     boost::shared_ptr<VehicleRepository> repozytoriumPojazdow(new VehicleRepository());
