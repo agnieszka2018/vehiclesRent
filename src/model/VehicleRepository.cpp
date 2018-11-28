@@ -52,3 +52,7 @@ Vehicle *VehicleRepository::findVehicle(int number) {
         liczba++;
     }
 }
+
+VehicleRepository::~VehicleRepository() {
+    std::cout<<"Destruktor VehicleRepository"<<std::endl;
+}

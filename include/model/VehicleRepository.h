@@ -27,6 +27,8 @@ public:
     std::list<Vehicle *> getVehicles();
 
     Vehicle *findVehicle(int);
+
+    virtual ~VehicleRepository();
 };
 
 #endif //POBIZ01_VEHICLEREPOSITORY_H
