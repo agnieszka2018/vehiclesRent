@@ -44,7 +44,7 @@ int main() {
 
     boost::shared_ptr<Client> klient(new Client("Stefan", "Stonoga", "1029384756", actuall_address.get(), nullptr, nullptr, regulartype.get()));
 
-
+    cout<<klient->clientInfo();
 
     //repozytorium pojazdów
     boost::shared_ptr<VehicleRepository> repozytoriumPojazdow(new VehicleRepository());

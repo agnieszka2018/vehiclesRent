@@ -11,7 +11,7 @@ RegularType::~RegularType() {
 
 }
 
-RegularType::RegularType() : ClientType(5, calculateClientTypeDiscount()) {
+RegularType::RegularType() : ClientType(5, calculateClientTypeDiscount(), "Klient zwykly") {
 
 }
 

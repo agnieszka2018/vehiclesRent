@@ -26,7 +26,7 @@ private:
     ClientType *clientType;
 
 public:
-
+    void setClientType(ClientType *clientType);
 
     //Client();
 
