@@ -2,10 +2,10 @@
 // Created by pobi on 09.11.18.
 //
 
-#include <model/CurrentRentsRepository.h>
+#include <model/RentsRepository.h>
 #include "Vehicle.h"
 #include "Rent.h"
-#include "CurrentRentsRepository.h"
+#include "RentsRepository.h"
 #include "VehicleRepository.h"
 
 using namespace std;

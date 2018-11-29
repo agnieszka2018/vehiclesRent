@@ -20,7 +20,7 @@
 #include "Car.h"
 #include "Mope.h"
 #include "MotorVehicle.h"
-#include "CurrentRentsRepository.h"
+#include "RentsRepository.h"
 #include "VehicleRepository.h"
 
 using namespace boost::local_time;
