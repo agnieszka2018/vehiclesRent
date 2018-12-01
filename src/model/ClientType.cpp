@@ -6,16 +6,7 @@
 
 const int ClientType::getMaxVehicle(int type) const {
 
-    if (type == 1)
-        return 1;
-    else if (type == 2)
-        return 2;
-    else if (type == 3)
-        return 3;
-    else if (type == 4)
-        return 4;
-    else
-        return 0;
+    return 0;
 }
 
 const int ClientType::getDiscount(int type) const {
