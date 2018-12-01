@@ -2,7 +2,6 @@
 // Created by pobi on 09.11.18.
 //
 
-#include <model/RentsRepository.h>
 #include "Vehicle.h"
 #include "Rent.h"
 #include "RentsRepository.h"

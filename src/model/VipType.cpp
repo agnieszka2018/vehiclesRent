@@ -11,5 +11,5 @@ VipType::~VipType() {
 }
 
 double VipType::calculateClientTypeDiscount() {
-    return 2;
+    return 2;   //zmodyfikować
 }

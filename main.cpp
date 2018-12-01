@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <memory>
 #include "Client.h"
 #include "Address.h"
 #include "Vehicle.h"
@@ -16,6 +17,7 @@
 #include "VehicleRepository.h"
 #include "ClientType.h"
 #include "RegularType.h"
+#include "RentsManager.h"
 
 using namespace std;
 using namespace boost;

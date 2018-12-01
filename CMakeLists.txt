@@ -25,9 +25,9 @@ SET(SOURCE_FILES
         src/model/Mope.cpp
         include/model/Mope.h
         src/model/Bicycle.cpp
-        include/model/Bicycle.h src/model/RentsRepository.cpp include/model/RentsRepository.h include/model/VehicleRepository.h src/model/VehicleRepository.cpp include/model/ClientType.h src/model/ClientType.cpp src/model/RegularType.cpp include/model/RegularType.h src/model/BusinessType.cpp include/model/BusinessType.h src/model/VipType.cpp include/model/VipType.h src/model/ClientRepository.cpp include/model/ClientRepository.h)
+        include/model/Bicycle.h src/model/RentsRepository.cpp include/model/RentsRepository.h include/model/VehicleRepository.h src/model/VehicleRepository.cpp include/model/ClientType.h src/model/ClientType.cpp src/model/RegularType.cpp include/model/RegularType.h src/model/BusinessType.cpp include/model/BusinessType.h src/model/VipType.cpp include/model/VipType.h src/model/ClientRepository.cpp include/model/ClientRepository.h include/model/RentsManager.h src/model/RentsManager.cpp)
 
-add_library(biblioteka ${SOURCE_FILES} src/model/VehicleRepository.cpp src/model/ClientType.cpp)
+add_library(biblioteka ${SOURCE_FILES} src/model/VehicleRepository.cpp src/model/ClientType.cpp src/model/RentsManager.cpp)
 
 add_executable(pobiz01
         ${SOURCE_FILES})
@@ -45,7 +45,7 @@ include_directories(
 
 set(SOURCE_TEST_RENT_FILES
         test/master.cpp
-        test/RentTest.cpp src/model/MotorVehicle.cpp include/model/MotorVehicle.h src/model/Car.cpp include/model/Car.h src/model/Mope.cpp include/model/Mope.h src/model/Bicycle.cpp include/model/Bicycle.h src/model/RentsRepository.cpp include/model/RentsRepository.h include/model/VehicleRepository.h src/model/VehicleRepository.cpp include/model/ClientType.h src/model/ClientType.cpp src/model/RegularType.cpp include/model/RegularType.h src/model/BusinessType.cpp include/model/BusinessType.h src/model/VipType.cpp include/model/VipType.h src/model/ClientRepository.cpp include/model/ClientRepository.h)
+        test/RentTest.cpp src/model/MotorVehicle.cpp include/model/MotorVehicle.h src/model/Car.cpp include/model/Car.h src/model/Mope.cpp include/model/Mope.h src/model/Bicycle.cpp include/model/Bicycle.h src/model/RentsRepository.cpp include/model/RentsRepository.h include/model/VehicleRepository.h src/model/VehicleRepository.cpp include/model/ClientType.h src/model/ClientType.cpp src/model/RegularType.cpp include/model/RegularType.h src/model/BusinessType.cpp include/model/BusinessType.h src/model/VipType.cpp include/model/VipType.h src/model/ClientRepository.cpp include/model/ClientRepository.h include/model/RentsManager.h src/model/RentsManager.cpp)
 
 add_executable (TestRent ${SOURCE_TEST_RENT_FILES})
 

@@ -6,7 +6,7 @@
 #define ZAJECIA_2_CLIENT_H
 
 #include <string>
-#include "../../include/model/Address.h"
+#include "Address.h"
 #include "Rent.h"
 #include "ClientType.h"
 
@@ -24,6 +24,7 @@ private:
     Address *registeredAddress;
     Rent *actuallRent;
     ClientType *clientType;
+    int allClientRents; //zakończone wypożyczenia klienta
 
 public:
     void setClientType(ClientType *clientType);

@@ -13,5 +13,5 @@ BusinessType::~BusinessType() {
 }
 
 double BusinessType::calculateClientTypeDiscount() {
-    return 1;
+    return 1;   //zmodyfikować
 }
