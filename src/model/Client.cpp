@@ -16,7 +16,8 @@ Client::Client(std::string firstName, std::string lastName, std::string personal
                                                                                         lastName{lastName},
                                                                                         personalID{personalID},
                                                                                         address{address},
-                                                                                        registeredAddress{registeredAddress},
+                                                                                        registeredAddress{
+                                                                                                registeredAddress},
                                                                                         actuallRent{actuallRent},
                                                                                         clientType{clientType} {
     static int i = 0;
@@ -63,7 +64,7 @@ Rent *Client::getActuallRent() const {
 }
 
 void Client::setClientType(ClientType *clientType) {
-    Client::clientType = clientType;
+    this->clientType = clientType;
 }
 
 

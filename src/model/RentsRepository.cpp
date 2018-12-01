@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void currentRentsRepository::createRent(Rent *rent, VehicleRepository *repozytoriumPojazdow) {
+void RentsRepository::createRent(Rent *rent, VehicleRepository *repozytoriumPojazdow) {
 
     //sprawdzam czy pojazd jest dostepny?
     for (Vehicle *vehicle: repozytoriumPojazdow->getVehicles()) {
@@ -22,7 +22,7 @@ void currentRentsRepository::createRent(Rent *rent, VehicleRepository *repozytor
     repozytoriumPojazdow->removeVehicle(rent->getVehicle());
 }
 
-void currentRentsRepository::removeRent(Rent *rent, VehicleRepository *repozytoriumPojazdow) {
+void RentsRepository::removeRent(Rent *rent, VehicleRepository *repozytoriumPojazdow) {
     rents.remove(rent);
     rent->returnVehicle();
 
@@ -30,7 +30,7 @@ void currentRentsRepository::removeRent(Rent *rent, VehicleRepository *repozytor
     repozytoriumPojazdow->createVehicle(rent->getVehicle());
 }
 
-string currentRentsRepository::rentReport() {
+string RentsRepository::rentReport() {
 
     string info;
     info += "lista wypozyczen: \n";
@@ -44,6 +44,6 @@ string currentRentsRepository::rentReport() {
 }
 
 
-string currentRentsRepository::getClientForRentedVehicle(Vehicle *vehicle) {
+string RentsRepository::getClientForRentedVehicle(Vehicle *vehicle) {
     return vehicle->vehicleClientInfo();
 }

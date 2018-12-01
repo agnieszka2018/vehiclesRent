@@ -24,30 +24,33 @@ using namespace gregorian;
 using posix_time::time_duration;
 
 //typedef boost::shared_ptr<dst_calc_rules> local_time::dst_calc_rule_ptr;
+typedef std::shared_ptr<Car> CarPtr;
+typedef std::shared_ptr<Mope> MopePtr;
+typedef std::shared_ptr<Bicycle> BicyclePtr;
 
 int main() {
 
     //Car *samochod = new Car("C", 100, "CW 84062", 2900);
-    boost::shared_ptr<Car> samochod(new Car("C", 100, "CW 84062", 2900));
-    boost::shared_ptr<Car> fiat(new Car("A", 80, "CW 11162", 900));
-    boost::shared_ptr<Car> volvo(new Car("B", 150, "WK 67890", 1400));
-    boost::shared_ptr<Car> porsche(new Car("D", 275, "WL 12345", 3500));
-    boost::shared_ptr<Mope> skuter(new Mope(100, "CW 34342", 1200));
-    boost::shared_ptr<Mope> vespa(new Mope(120, "WW 88842", 800));
-    boost::shared_ptr<Mope> osa(new Mope(90, "CW 99942", 1000));
-    boost::shared_ptr<Mope> piaggio(new Mope(95, "WE 222842", 900));
-    boost::shared_ptr<Bicycle> rower(new Bicycle(50, "id_roweru"));
-    boost::shared_ptr<Bicycle> damka(new Bicycle(60, "id_damki"));
+    CarPtr samochod = make_shared <Car>("C", 100, "CW 84062", 2900);
+    CarPtr fiat = make_shared <Car> ("A", 80, "CW 11162", 900);
+    CarPtr volvo = make_shared <Car> ("B", 150, "WK 67890", 1400);
+    CarPtr porsche = make_shared <Car> ("D", 275, "WL 12345", 3500);
+    MopePtr skuter = make_shared <Mope> (100, "CW 34342", 1200);
+    MopePtr vespa = make_shared <Mope> (120, "WW 88842", 800);
+    MopePtr osa = make_shared <Mope> (90, "CW 99942", 1000);
+    MopePtr piaggio = make_shared <Mope> (95, "WE 222842", 900);
+    BicyclePtr rower = make_shared <Bicycle> (50, "id_roweru");
+    BicyclePtr damka = make_shared <Bicycle> (60, "id_damki");
 
-    boost::shared_ptr<RegularType> regulartype(new RegularType());
-    boost::shared_ptr<Address> actuall_address(new Address("Mickiewicza", "7"));
+    std::shared_ptr<RegularType> regulartype = make_shared <RegularType>();
+    std::shared_ptr<Address> actuall_address = make_shared <Address>("Mickiewicza", "7");
 
-    boost::shared_ptr<Client> klient(new Client("Stefan", "Stonoga", "1029384756", actuall_address.get(), nullptr, nullptr, regulartype.get()));
+    std::shared_ptr<Client> klient = make_shared<Client>("Stefan", "Stonoga", "1029384756", actuall_address.get(), nullptr, nullptr, regulartype.get());
 
     cout<<klient->clientInfo();
 
     //repozytorium pojazdów
-    boost::shared_ptr<VehicleRepository> repozytoriumPojazdow(new VehicleRepository());
+    std::shared_ptr<VehicleRepository> repozytoriumPojazdow = make_shared<VehicleRepository>();
     repozytoriumPojazdow->createVehicle(samochod.get());
     repozytoriumPojazdow->createVehicle(volvo.get());
     repozytoriumPojazdow->createVehicle(fiat.get());

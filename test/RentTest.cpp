@@ -130,7 +130,7 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
         repozytoriumPojazdow->createVehicle(skuter);
 
         //repozytozium wypożyczeń
-        currentRentsRepository *repozytoriumWypozyczen = new currentRentsRepository();
+        RentsRepository *repozytoriumWypozyczen = new RentsRepository();
         repozytoriumWypozyczen->createRent(wypozyczenie, repozytoriumPojazdow);
         repozytoriumWypozyczen->createRent(wypozyczenie_1, repozytoriumPojazdow);
 

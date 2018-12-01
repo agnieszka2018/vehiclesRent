@@ -2,15 +2,15 @@
 // Created by pobi on 09.11.18.
 //
 
-#ifndef POBIZ01_CURRENTRENTSREPOSITORY_H
-#define POBIZ01_CURRENTRENTSREPOSITORY_H
+#ifndef POBIZ01_RENTSREPOSITORY_H
+#define POBIZ01_RENTSREPOSITORY_H
 
 #include "Rent.h"
 #include "Vehicle.h"
 #include "VehicleRepository.h"
 #include <list>
 
-class currentRentsRepository {
+class RentsRepository {
 
     std::list<Rent *> rents;
 
@@ -27,4 +27,4 @@ public:
 };
 
 
-#endif //POBIZ01_CURRENTRENTSREPOSITORY_H
+#endif //POBIZ01_RENTSREPOSITORY_H

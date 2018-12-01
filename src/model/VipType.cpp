@@ -4,7 +4,7 @@
 
 #include "VipType.h"
 
-VipType::VipType() : ClientType(10, calculateClientTypeDiscount(), "Klient VIP") {}
+VipType::VipType() : ClientType(15, calculateClientTypeDiscount(), "Klient VIP") {}
 
 VipType::~VipType() {
 
