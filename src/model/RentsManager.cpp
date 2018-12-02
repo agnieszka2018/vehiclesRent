@@ -8,14 +8,14 @@ RentsManager::RentsManager() {}
 
 RentsManager::~RentsManager() {}
 
-void RentsManager::rentVehicle(Vehicle *vehicle, Client *client, VehicleRepository *vehicleRepo) {
+void RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepoPtr vehicleRepo, RentsRepoPtr rentsRepo) {
 
-    //sprawdź czy vehicle jest w rentsRepository
-    bool jest;
+    //sprawdź czy vehicle jest w VehicleRepository
+    bool jest = false;
 
-    std::list<Vehicle *> vehicles = vehicleRepo->getVehicles();
+    std::list<VehiclePtr> vehicles = vehicleRepo->getVehicles();
 
-    std::list<Vehicle *>::iterator iter;
+    std::list<VehiclePtr>::iterator iter;
     for (iter = vehicles.begin(); iter != vehicles.end(); iter++) {
         if (vehicle == *iter)
             jest = true;
@@ -24,10 +24,16 @@ void RentsManager::rentVehicle(Vehicle *vehicle, Client *client, VehicleReposito
 
     //sprawdź czy klient nie wypożyczył za dużo
     int numberPossible = client->getClientType()->getMaxRentedCarAmount();    //liczba przysługujących wypożyczeń
-    int numberActuall = client->getClientActuallRents().size();    //liczba aktualnych wypożyczeń
+    int numberActuall = static_cast<int>(client->getClientActuallRents().size());    //liczba aktualnych wypożyczeń
 
     if ((numberActuall < numberPossible) && (jest)) {
-        //wypożycz pojazd
+
+        posix_time::ptime pt(date(2018, Dec, 02), posix_time::hours(12));
+        time_zone_ptr zone(new posix_time_zone("UTC+1"));
+        local_date_time ldt(pt, zone);
+
+        RentPtr rent = std::make_shared<Rent>(ldt, vehicle, client);
+        rentsRepo->createRent(rent, vehicleRepo);
     }
 }
 
@@ -35,6 +41,6 @@ void RentsManager::returnVehicle() {}
 
 void RentsManager::getAllClientRents() {}
 
-void RentsManager::checkClientRentBallance(Client *client) {}
+void RentsManager::checkClientRentBallance(ClientPtr client) {}
 
 void RentsManager::changeClientType() {}

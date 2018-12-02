@@ -50,23 +50,22 @@ int main() {
     std::shared_ptr<RegularType> regulartype = make_shared<RegularType>();
     AddressPtr actuall_address = make_shared<Address>("Mickiewicza", "7");
 
-    ClientPtr klient = make_shared<Client>("Stefan", "Stonoga", "1029384756", actuall_address.get(), nullptr,
-                                           regulartype.get());
+    ClientPtr klient = make_shared<Client>("Stefan", "Stonoga", "1029384756", regulartype, actuall_address);
 
     cout << klient->clientInfo();
 
     //repozytorium pojazdów
     VehicleRepoPtr repozytoriumPojazdow = make_shared<VehicleRepository>();
-    repozytoriumPojazdow->createVehicle(samochod.get());
-    repozytoriumPojazdow->createVehicle(volvo.get());
-    repozytoriumPojazdow->createVehicle(fiat.get());
-    repozytoriumPojazdow->createVehicle(porsche.get());
-    repozytoriumPojazdow->createVehicle(skuter.get());
-    repozytoriumPojazdow->createVehicle(vespa.get());
-    repozytoriumPojazdow->createVehicle(piaggio.get());
-    repozytoriumPojazdow->createVehicle(osa.get());
-    repozytoriumPojazdow->createVehicle(rower.get());
-    repozytoriumPojazdow->createVehicle(damka.get());
+    repozytoriumPojazdow->createVehicle(samochod);
+    repozytoriumPojazdow->createVehicle(volvo);
+    repozytoriumPojazdow->createVehicle(fiat);
+    repozytoriumPojazdow->createVehicle(porsche);
+    repozytoriumPojazdow->createVehicle(skuter);
+    repozytoriumPojazdow->createVehicle(vespa);
+    repozytoriumPojazdow->createVehicle(piaggio);
+    repozytoriumPojazdow->createVehicle(osa);
+    repozytoriumPojazdow->createVehicle(rower);
+    repozytoriumPojazdow->createVehicle(damka);
 
     cout << "\n-> Raport dostępnych pojazdów w repozytorium: \n" << repozytoriumPojazdow->vehicleReport();
 

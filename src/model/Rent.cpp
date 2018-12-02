@@ -3,13 +3,10 @@
 //
 #include <iostream>
 #include <string>
-#include "Vehicle.h"
-#include "Client.h"
 #include "Rent.h"
 #include <boost/uuid/uuid.hpp>
 #include <boost/uuid/uuid_generators.hpp>
 #include <boost/uuid/uuid_io.hpp>
-#include <model/Rent.h>
 
 #include "boost/date_time/local_time/local_time.hpp"
 
@@ -18,7 +15,6 @@ using namespace local_time;
 using namespace gregorian;
 using posix_time::time_duration;
 
-class Client;                                    //???
 
 int Rent::rentDuration() {
 
@@ -66,12 +62,13 @@ Rent::~Rent() {
     //std::cout << "Koszt wypozyczenia"<< rent;
 }
 
-Rent::Rent(const local_date_time &startTime, Vehicle *vehicle, Client *client) : startTime(startTime), vehicle(vehicle),
+Rent::Rent(local_date_time &startTime, VehiclePtr vehicle, ClientPtr client) : startTime(startTime), vehicle(vehicle),
                                                                                  client(client), endTime(startTime) {
     uuid = boost::uuids::random_generator()();
 
     client->addRent(this);   //dodajemy wypożyczenie do listy wypożyczeń klienta
     vehicle->modifyClient(client);
+
 
 }
 
@@ -86,7 +83,7 @@ void Rent::returnVehicle() {
     std::cout << "Całkowity koszt wypozyczenia: " << cost << std::endl;
 }
 
-Vehicle *Rent::getVehicle() const {
+VehiclePtr Rent::getVehicle() {
     return vehicle;
 }
 

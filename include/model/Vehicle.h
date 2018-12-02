@@ -6,19 +6,20 @@
 #define POBIZ01_VEHICLE_H
 
 #include <string>
+#include <memory>
+#include "Client.h"
+#include "Car.h"
 
-class Client;
+typedef std::shared_ptr<Client> ClientPtr;
 
-class Vehicle{
+class Vehicle {
 
     const int baseRentPrice;
     const std::string id;
     double actuallRentalPrice;
-    Client *actuallClient  = nullptr;
+    ClientPtr actuallClient;
 
 public:
-
-    Vehicle(int baseRentPrice, std::string id, Client *actuallClient = nullptr);
 
     virtual std::string vehicleInfo();
 
@@ -26,9 +27,9 @@ public:
 
     const std::string getId() const;
 
-    void modifyClient(Client *);
+    void modifyClient(ClientPtr);
 
-    virtual double getActuallRentalPrice();
+    double getActuallRentalPrice();
 
     virtual ~Vehicle();
 
@@ -37,6 +38,7 @@ public:
 
     std::string vehicleClientInfo();
 
+    Vehicle(int baseRentPrice, std::string id, ClientPtr actuallClient);
 };
 
 #endif //POBIZ01_VEHICLE_H

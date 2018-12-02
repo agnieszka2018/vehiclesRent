@@ -3,32 +3,24 @@
 //
 #include <iostream>
 #include <string>
-#include <model/Client.h>
-
-#include "../../include/model/Client.h"
-#include "../../include/model/Address.h"
-#include "Rent.h"
+#include "Client.h"
 
 using namespace std;
 
-Client::Client(std::string firstName, std::string lastName, std::string personalID, Address *address,
-               Address *registeredAddress, ClientType *clientType) : firstName{firstName},
-                                                                     lastName{lastName},
-                                                                     personalID{personalID},
-                                                                     address{address},
-                                                                     registeredAddress{registeredAddress},
-                                                                     clientType{clientType} {
-    static int i = 0;
-    cout << "konstruktor parametrowy nr: " << ++i << " jest wywolany" << endl << endl;
+Client::Client(std::string firstName, std::string lastName, std::string personalID, ClientTypePtr clientType, AddressPtr address, AddressPtr registeredAddress) :
+firstName{firstName},lastName{lastName},personalID{personalID},clientType{clientType}, address{address}, registeredAddress{registeredAddress}
+{
+static int i = 0;
+cout << "konstruktor parametrowy nr: " << ++i << " jest wywolany" << endl << endl;
 }
 
 
-void Client::addRent(Rent *rentFromRent) {
+void Client::addRent(RentPtr rentFromRent) {
     clientActuallRents.push_back(rentFromRent); //dodaje wypożyczenie do listy wypożyczeń klienta
 }
 
-void Client::deleteRent(Rent *rentFromRent) {
-    vector<Rent *>::iterator it;
+void Client::deleteRent(RentPtr rentFromRent) {
+    vector<RentPtr>::iterator it;
     for (it = clientActuallRents.begin(); it != clientActuallRents.end(); ++it) {
         if (rentFromRent == *it)
             clientActuallRents.erase(it); //usuwa wypożyczenie z listy wypożyczeń klienta
@@ -51,7 +43,7 @@ std::string Client::clientInfo() {
     if (registeredAddress != nullptr) print += "adres zameldowania: " + address->displayInfo();
 
     if (!clientActuallRents.empty()) {
-        vector<Rent *>::iterator it;
+        vector<RentPtr>::iterator it;
         for (it = clientActuallRents.begin(); it != clientActuallRents.end(); ++it) {
             print += (*it)->rentInfoFromClient();
         }
@@ -70,21 +62,19 @@ std::string Client::clientInfo() {
 }
 
 
-std::vector<Rent *> Client::getClientActuallRents() {
+std::vector<RentPtr> Client::getClientActuallRents() {
 
     return clientActuallRents;
 }
 
-void Client::setClientType(ClientType *clientType) {
+void Client::setClientType(ClientTypePtr clientType) {
     this->clientType = clientType;
 }
 
-ClientType * Client::getClientType() {
+ClientTypePtr Client::getClientType() {
     return clientType;
 }
 
 Client::~Client() {
     cout << "destruktor client jest wywolany" << endl;
-    vector<Rent *>::iterator it;
-    for (it = clientActuallRents.begin(); it != clientActuallRents.end(); ++it) { delete *it; }
 }

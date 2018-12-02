@@ -10,6 +10,7 @@
 
 class RegularType : public ClientType {
     double calculateClientTypeDiscount() override;
+
 public:
     RegularType();
     virtual ~RegularType();

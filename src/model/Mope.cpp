@@ -4,7 +4,6 @@
 #include "Mope.h"
 #include <iostream>
 
-
 Mope::~Mope() {
 
     std::cout << "Destruktor Mope" << std::endl;
@@ -20,14 +19,14 @@ Mope::Mope(int baseRentPrice, std::string id, int engineDisplacement) : MotorVeh
 
 double Mope::calculateActualRentalPrice(int baseRentPrice, int engineDisplacement) {
 
-    if (engineDisplacement < 1000) return 1.0 * baseRentPrice;
+    if (engineDisplacement < 1000)
+        return 1.0 * baseRentPrice;
     else if (engineDisplacement >= 1000 && engineDisplacement <= 2000)
-        return baseRentPrice * ((1.0 *
-                                 ((engineDisplacement -
-                                   1000) / 2) / 1000) +
-                                1);
-    else if (engineDisplacement > 2000) return baseRentPrice * 1.5;
-    else return 0;
+        return baseRentPrice * ((1.0 *((engineDisplacement -1000) / 2) / 1000) + 1);
+    else if (engineDisplacement > 2000)
+        return baseRentPrice * 1.5;
+    else
+        return 0;
 }
 
 
@@ -39,7 +38,8 @@ std::string Mope::vehicleInfo() {
     return info;
 }
 
-double Mope::getActuallRentalPrice() {
+
+/*double Mope::getActuallRentalPrice() {
     return actuallRentalPrice;
-}
+}*/
 

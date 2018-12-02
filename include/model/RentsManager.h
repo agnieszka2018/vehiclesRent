@@ -8,6 +8,20 @@
 #include "Client.h"
 #include "Vehicle.h"
 #include "VehicleRepository.h"
+#include "RentsRepository.h"
+#include <memory>
+
+using namespace boost;
+using namespace local_time;
+using namespace gregorian;
+using posix_time::time_duration;
+
+typedef std::shared_ptr<Rent> RentPtr;
+typedef std::shared_ptr<Client> ClientPtr;
+typedef std::shared_ptr<Vehicle> VehiclePtr;
+typedef std::shared_ptr<VehicleRepository> VehicleRepoPtr;
+typedef std::shared_ptr<RentsRepository> RentsRepoPtr;
+
 
 class RentsManager {
 private:
@@ -17,13 +31,13 @@ public:
 
     virtual ~RentsManager();
 
-    void rentVehicle(Vehicle *, Client *, VehicleRepository *);
+    void rentVehicle(VehiclePtr, ClientPtr, VehicleRepoPtr, RentsRepoPtr);
 
     void returnVehicle();
 
     void getAllClientRents();
 
-    void checkClientRentBallance(Client *);
+    void checkClientRentBallance(ClientPtr);
 
     void changeClientType();
 

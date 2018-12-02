@@ -19,7 +19,7 @@ public:
 
     double calculateActualRentalPrice();
 
-    virtual double getActuallRentalPrice();
+    //double getActuallRentalPrice();
 
     virtual ~MotorVehicle();
 };

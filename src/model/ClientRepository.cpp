@@ -2,18 +2,16 @@
 // Created by pobi on 29.11.18.
 //
 
-#include <model/ClientRepository.h>
-
 #include "ClientRepository.h"
 
-void ClientRepository::addClient(Client *client) {
+void ClientRepository::addClient(ClientPtr client) {
     clients.push_back(client);
 }
 
-void ClientRepository::removeClient(Client *client) {
+void ClientRepository::removeClient(ClientPtr client) {
     clients.remove(client);
 }
 
-void ClientRepository::modifyClientType(Client *client, ClientType *clientType) {
+void ClientRepository::modifyClientType(ClientPtr client, ClientTypePtr clientType) {
     client->setClientType(clientType);
 }

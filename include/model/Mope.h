@@ -19,7 +19,7 @@ public:
 
     std::string vehicleInfo() override;
 
-    double getActuallRentalPrice() override;
+    //double getActuallRentalPrice();
 
     virtual ~Mope();
 };

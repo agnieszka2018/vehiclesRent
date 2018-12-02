@@ -4,15 +4,15 @@
 
 #include <string>
 #include "VehicleRepository.h"
-#include "Vehicle.h"
+
 //using namespace std;
 
-void VehicleRepository::createVehicle(Vehicle *vehicle) {
+void VehicleRepository::createVehicle(VehiclePtr vehicle) {
 
     vehicles.push_back(vehicle);
 }
 
-void VehicleRepository::removeVehicle(Vehicle *vehicle) {
+void VehicleRepository::removeVehicle(VehiclePtr vehicle) {
 
     vehicles.remove(vehicle);
 }
@@ -26,7 +26,7 @@ std::string VehicleRepository::vehicleReport() {
 
     int i = 0;
 
-    for (Vehicle *vehicle: vehicles) {
+    for (VehiclePtr vehicle: vehicles) {
         ++i;
         info += "pojazd nr:" + std::to_string(i) + " " + vehicle->vehicleInfo() + "\n";
     }
@@ -36,15 +36,15 @@ std::string VehicleRepository::vehicleReport() {
     return info;
 }
 
-std::list<Vehicle *> VehicleRepository::getVehicles() {
+std::list<VehiclePtr> VehicleRepository::getVehicles() {
     return vehicles;
 }
 
-Vehicle *VehicleRepository::findVehicle(int number) {
+VehiclePtr VehicleRepository::findVehicle(int number) {
 
     int liczba = 1;
 
-    std::list<Vehicle *>::iterator iter;
+    std::list<VehiclePtr>::iterator iter;
     for (iter = vehicles.begin(); iter != vehicles.end(); iter++) {
         //znaleźć odpowiedni indeks o numerze number
         if (liczba == number)

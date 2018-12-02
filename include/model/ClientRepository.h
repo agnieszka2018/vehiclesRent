@@ -6,18 +6,21 @@
 #define POBIZ01_CLIENTREPOSITORY_H
 
 #include <list>
+#include <memory>
 #include "Client.h"
 #include "ClientType.h"
 
+typedef std::shared_ptr<Client> ClientPtr;
+
 class ClientRepository {
 
-    std::list <Client *> clients;
+    std::list <ClientPtr> clients;
 
 public:
 
-    void addClient(Client *);
-    void removeClient(Client *);
-    void modifyClientType(Client *, ClientType *);
+    void addClient(ClientPtr);
+    void removeClient(ClientPtr);
+    void modifyClientType(ClientPtr, ClientTypePtr);
 };
 
 

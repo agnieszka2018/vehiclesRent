@@ -5,8 +5,8 @@
 #ifndef POBIZ01_BUSINESSTYPE_H
 #define POBIZ01_BUSINESSTYPE_H
 
-
 #include "ClientType.h"
+
 
 class BusinessType : public ClientType{
     double calculateClientTypeDiscount() override;

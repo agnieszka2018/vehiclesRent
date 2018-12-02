@@ -9,20 +9,25 @@
 #include "Vehicle.h"
 #include "VehicleRepository.h"
 #include <list>
+#include <memory>
+
+typedef std::shared_ptr<VehicleRepository> VehicleRepoPtr;
+typedef std::shared_ptr<Vehicle> VehiclePtr;
+typedef std::shared_ptr<Rent> RentPtr;
 
 class RentsRepository {
 
-    std::list<Rent *> rents;
+    std::list<RentPtr> rents;
 
 public:
 
-    void createRent(Rent *, VehicleRepository *);
+    void createRent(RentPtr, VehicleRepoPtr);
 
-    void removeRent(Rent *, VehicleRepository *);
+    void removeRent(RentPtr, VehicleRepoPtr);
 
     std::string rentReport();
 
-    std::string getClientForRentedVehicle(Vehicle *);
+    std::string getClientForRentedVehicle(VehiclePtr);
 
 };
 

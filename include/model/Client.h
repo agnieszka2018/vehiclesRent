@@ -6,16 +6,16 @@
 #define ZAJECIA_2_CLIENT_H
 
 #include <string>
+#include <memory>
 #include "Address.h"
 #include "Rent.h"
 #include "ClientType.h"
 #include <vector>
 
-class Address;
+typedef std::shared_ptr<Address> AddressPtr;
+typedef std::shared_ptr<Rent> RentPtr;
+typedef std::shared_ptr<ClientType> ClientTypePtr;
 
-class Rent;
-
-class ClientType;
 
 class Client {
 
@@ -23,34 +23,34 @@ private:
     const std::string firstName;
     const std::string lastName;
     const std::string personalID;
-    Address *address;
-    Address *registeredAddress;
-    //Rent *actuallRent;
-    std::vector<Rent *> clientActuallRents;  //aktualne wypożyczenia klienta
-    std::vector<Rent *> allClientRents; //zakończone wypożyczenia klienta
-    ClientType *clientType;
+    AddressPtr address;
+    AddressPtr registeredAddress;
+    //RentPtr actuallRent;
+    std::vector<RentPtr> clientActuallRents;  //aktualne wypożyczenia klienta
+    std::vector<RentPtr> allClientRents; //zakończone wypożyczenia klienta
+    ClientTypePtr clientType;
 
 public:
-    void setClientType(ClientType *clientType);
+    void setClientType(ClientTypePtr clientType);
 
-    ClientType *getClientType();
+    ClientTypePtr getClientType();
 
     //Client();
 
-    Client(std::string firstName, std::string lastName, std::string personalID, Address *address,
-           Address *registeredAddress, ClientType *clientType);
+    Client(std::string firstName, std::string lastName, std::string personalID, ClientTypePtr clientType, AddressPtr address,
+           AddressPtr registeredAddress);
 
-    void addRent(Rent *rentFromRent);
+    void addRent(RentPtr rentFromRent);
 
-    void deleteRent(Rent *);
+    void deleteRent(RentPtr);
 
     std::string clientInfo();
 
     std::string clientName();
 
-    std::vector<Rent *> getClientActuallRents();
+    std::vector<RentPtr> getClientActuallRents();
 
-    //Client(Address *registeredAddress);
+    //Client(AddressPtr registeredAddress);
 
     ~Client();
 };

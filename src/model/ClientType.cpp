@@ -2,7 +2,7 @@
 // Created by pobi on 22.11.18.
 //
 
-#include <model/ClientType.h>
+#include "ClientType.h"
 
 const int ClientType::getMaxRentedCarAmount() const {
     return maxRentedCarAmount;
@@ -15,7 +15,7 @@ int ClientType::getClientTypeDiscount() const {
 
 double ClientType::calculateClientTypeDiscount(){}
 
-ClientType::ClientType(const int maxRentedCarAmount, int clientTypeDiscount, std::string typeName) : maxRentedCarAmount(maxRentedCarAmount),
+ClientType::ClientType(int maxRentedCarAmount, int clientTypeDiscount, std::string typeName) : maxRentedCarAmount(maxRentedCarAmount),
                                                                                clientTypeDiscount(clientTypeDiscount), typeName(typeName) {}
 
 std::string ClientType::getTypeName() const {

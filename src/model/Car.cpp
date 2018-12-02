@@ -15,14 +15,9 @@ const std::string &Car::getSegment() const {
     return segment;
 }
 
-Car::Car(std::string segment, int baseRentPrice, std::string id, int engineDisplacement) : segment{segment},
-                                                                                           MotorVehicle(baseRentPrice,
-                                                                                                        id,
-                                                                                                        engineDisplacement,
-                                                                                                        calculateActualRentalPrice(
-                                                                                                                baseRentPrice,
-                                                                                                                engineDisplacement,
-                                                                                                                segment)) {
+Car::Car(std::string segment, int baseRentPrice, std::string id, int engineDisplacement) :
+segment{segment}, MotorVehicle(baseRentPrice, id, engineDisplacement, calculateActualRentalPrice(baseRentPrice, engineDisplacement, segment))
+{
     this->actuallRentalPrice = calculateActualRentalPrice(baseRentPrice, engineDisplacement, segment);
 }
 
@@ -59,11 +54,10 @@ std::string Car::vehicleInfo() {
     return info;
 }
 
-double Car::getActuallRentalPrice() {
+/*double Car::getActuallRentalPrice() {
     return actuallRentalPrice;
-}
+}*/
 
 /*double Car::getActuallRentalPrice() {
     return actuallRentalPrice;
-}
-*/
+}*/

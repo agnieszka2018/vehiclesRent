@@ -7,26 +7,29 @@
 
 #include <iostream>
 #include <string>
+#include <memory>
 #include <list>
 #include "Vehicle.h"
+
+typedef std::shared_ptr<Vehicle> VehiclePtr;
 
 
 class VehicleRepository {
 
-    std::list<Vehicle *> vehicles;
+    std::list<VehiclePtr> vehicles;
 
 
 public:
 
-    void createVehicle(Vehicle *);
+    void createVehicle(VehiclePtr);
 
-    void removeVehicle(Vehicle *);
+    void removeVehicle(VehiclePtr);
 
     std::string vehicleReport();
 
-    std::list<Vehicle *> getVehicles();
+    std::list<VehiclePtr> getVehicles();
 
-    Vehicle *findVehicle(int);
+    VehiclePtr findVehicle(int);
 
     virtual ~VehicleRepository();
 };

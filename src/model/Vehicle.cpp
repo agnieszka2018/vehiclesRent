@@ -1,15 +1,14 @@
 //
 // Created by pobi on 29.10.18.
 //
-#include "Car.h"
+
 #include <string>
 #include <iostream>
 #include "Vehicle.h"
-#include "Client.h"
 
 using namespace std;
 
-Vehicle::Vehicle(int baseRentPrice, string id, Client *actuallClient) : baseRentPrice{baseRentPrice}, id{id},
+Vehicle::Vehicle(int baseRentPrice, string id, ClientPtr actuallClient) : baseRentPrice{baseRentPrice}, id{id},
                                                                         actuallClient{actuallClient} {}
 
 
@@ -30,7 +29,7 @@ double Vehicle::getActuallRentalPrice() {
     return actuallRentalPrice;
 }
 
-void Vehicle::modifyClient(Client *client) {
+void Vehicle::modifyClient(ClientPtr client) {
 
     actuallClient = client;
 }
