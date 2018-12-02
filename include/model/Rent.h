@@ -32,6 +32,7 @@ public:
     void returnVehicle();
 
     std::string rentInfo();
+
     std::string rentInfoFromClient();
 
     Vehicle *getVehicle() const;

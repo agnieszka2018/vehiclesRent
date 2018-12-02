@@ -12,21 +12,29 @@
 using namespace std;
 
 Client::Client(std::string firstName, std::string lastName, std::string personalID, Address *address,
-               Address *registeredAddress, Rent *actuallRent, ClientType *clientType) : firstName{firstName},
-                                                                                        lastName{lastName},
-                                                                                        personalID{personalID},
-                                                                                        address{address},
-                                                                                        registeredAddress{
-                                                                                                registeredAddress},
-                                                                                        actuallRent{actuallRent},
-                                                                                        clientType{clientType} {
+               Address *registeredAddress, ClientType *clientType) : firstName{firstName},
+                                                                     lastName{lastName},
+                                                                     personalID{personalID},
+                                                                     address{address},
+                                                                     registeredAddress{registeredAddress},
+                                                                     clientType{clientType} {
     static int i = 0;
     cout << "konstruktor parametrowy nr: " << ++i << " jest wywolany" << endl << endl;
 }
 
 
-void Client::modifyRent(Rent *rentFromRent) {
-    actuallRent = rentFromRent;
+void Client::addRent(Rent *rentFromRent) {
+    clientActuallRents.push_back(rentFromRent); //dodaje wypożyczenie do listy wypożyczeń klienta
+}
+
+void Client::deleteRent(Rent *rentFromRent) {
+    vector<Rent *>::iterator it;
+    for (it = clientActuallRents.begin(); it != clientActuallRents.end(); ++it) {
+        if (rentFromRent == *it)
+            clientActuallRents.erase(it); //usuwa wypożyczenie z listy wypożyczeń klienta
+    }
+
+    allClientRents.push_back(rentFromRent); //dodaje wypożyczenie do listy wszystkich zakończonych wypożyczeń (discount)
 }
 
 std::string Client::clientName() {
@@ -41,7 +49,14 @@ std::string Client::clientInfo() {
 
     if (address != nullptr) print += "adres zamieszkania: " + address->displayInfo();
     if (registeredAddress != nullptr) print += "adres zameldowania: " + address->displayInfo();
-    if (actuallRent != nullptr) print += actuallRent->rentInfoFromClient();
+
+    if (!clientActuallRents.empty()) {
+        vector<Rent *>::iterator it;
+        for (it = clientActuallRents.begin(); it != clientActuallRents.end(); ++it) {
+            print += (*it)->rentInfoFromClient();
+        }
+    }
+
     if (clientType != nullptr) {
         print += "\nTyp klienta: ";
         print += clientType->getTypeName();
@@ -55,16 +70,17 @@ std::string Client::clientInfo() {
 }
 
 
-Client::~Client() {
-    cout << "destruktor client jest wywolany" << endl;
-}
+std::vector<Rent *> Client::getClientActuallRents() {
 
-Rent *Client::getActuallRent() const {
-    return actuallRent;
+    return clientActuallRents;
 }
 
 void Client::setClientType(ClientType *clientType) {
     this->clientType = clientType;
 }
 
-
+Client::~Client() {
+    cout << "destruktor client jest wywolany" << endl;
+    vector<Rent *>::iterator it;
+    for (it = clientActuallRents.begin(); it != clientActuallRents.end(); ++it) { delete *it; }
+}

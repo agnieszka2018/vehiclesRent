@@ -12,7 +12,9 @@
 #include <vector>
 
 class Address;
+
 class Rent;
+
 class ClientType;
 
 class Client {
@@ -23,10 +25,10 @@ private:
     const std::string personalID;
     Address *address;
     Address *registeredAddress;
-    Rent *actuallRent;
-    //vector<*Rent> clientRents;
+    //Rent *actuallRent;      //???
+    std::vector<Rent *> clientActuallRents;  //aktualne wypożyczenia klienta
+    std::vector<Rent *> allClientRents; //zakończone wypożyczenia klienta
     ClientType *clientType;
-    int allClientRents; //zakończone wypożyczenia klienta
 
 public:
     void setClientType(ClientType *clientType);
@@ -34,14 +36,17 @@ public:
     //Client();
 
     Client(std::string firstName, std::string lastName, std::string personalID, Address *address,
-               Address *registeredAddress, Rent *actuallRent, ClientType *clientType);
+           Address *registeredAddress, ClientType *clientType);
 
-    void modifyRent(Rent *wypozyczenie);
+    void addRent(Rent *rentFromRent);
+
+    void deleteRent(Rent *);
 
     std::string clientInfo();
+
     std::string clientName();
 
-    Rent *getActuallRent() const;
+    std::vector<Rent *> getClientActuallRents();
 
     //Client(Address *registeredAddress);
 
