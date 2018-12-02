@@ -25,13 +25,15 @@ private:
     const std::string personalID;
     Address *address;
     Address *registeredAddress;
-    //Rent *actuallRent;      //???
+    //Rent *actuallRent;
     std::vector<Rent *> clientActuallRents;  //aktualne wypożyczenia klienta
     std::vector<Rent *> allClientRents; //zakończone wypożyczenia klienta
     ClientType *clientType;
 
 public:
     void setClientType(ClientType *clientType);
+
+    ClientType *getClientType();
 
     //Client();
 

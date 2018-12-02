@@ -79,6 +79,10 @@ void Client::setClientType(ClientType *clientType) {
     this->clientType = clientType;
 }
 
+ClientType * Client::getClientType() {
+    return clientType;
+}
+
 Client::~Client() {
     cout << "destruktor client jest wywolany" << endl;
     vector<Rent *>::iterator it;

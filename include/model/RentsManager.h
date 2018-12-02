@@ -6,6 +6,8 @@
 #define POBIZ01_RENTSMANAGER_H
 
 #include "Client.h"
+#include "Vehicle.h"
+#include "VehicleRepository.h"
 
 class RentsManager {
 private:
@@ -15,13 +17,13 @@ public:
 
     virtual ~RentsManager();
 
-    void rentVehicle();
+    void rentVehicle(Vehicle *, Client *, VehicleRepository *);
 
     void returnVehicle();
 
     void getAllClientRents();
 
-    void checkClientRentBallance(Client*);
+    void checkClientRentBallance(Client *);
 
     void changeClientType();
 

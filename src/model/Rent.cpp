@@ -51,14 +51,12 @@ std::string Rent::rentInfoFromClient() {
     std::stringstream ss;
     ss << "\nwypozyczenie:\n";
     ss << "uuid: " << uuid;
-    //ss << "wypozyczajacy:\n" << client->clientInfo() << std::endl;
     ss << "\npojazd: " << vehicle->vehicleInfo();
     ss << "start time: " << startTime << std::endl;
     if (endTime != startTime) ss << "end time: " << endTime << std::endl;
     ss << "czas wypozyczenia: " << rentDuration() << std::endl;
 
     return ss.str();
-
 }
 
 
