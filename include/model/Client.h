@@ -9,6 +9,7 @@
 #include "Address.h"
 #include "Rent.h"
 #include "ClientType.h"
+#include <vector>
 
 class Address;
 class Rent;
@@ -23,6 +24,7 @@ private:
     Address *address;
     Address *registeredAddress;
     Rent *actuallRent;
+    //vector<*Rent> clientRents;
     ClientType *clientType;
     int allClientRents; //zakończone wypożyczenia klienta
 
