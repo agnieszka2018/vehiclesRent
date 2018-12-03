@@ -30,10 +30,10 @@ private:
     ClientPtr client;
 
 public:
-    void deleteRentInClient();
+    /*void deleteRentInClient();
 
     void addRentInClient();
-
+    */
     int rentDuration();
 
     ~Rent();

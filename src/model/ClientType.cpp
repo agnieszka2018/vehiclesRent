@@ -15,8 +15,7 @@ int ClientType::getClientTypeDiscount() const {
 
 double ClientType::calculateClientTypeDiscount(){}
 
-ClientType::ClientType(int maxRentedCarAmount, int clientTypeDiscount, std::string typeName) : maxRentedCarAmount(maxRentedCarAmount),
-                                                                               clientTypeDiscount(clientTypeDiscount), typeName(typeName) {}
+ClientType::ClientType(int maxRentedCarAmount, std::string typeName) : maxRentedCarAmount{maxRentedCarAmount}, typeName{typeName} {}
 
 std::string ClientType::getTypeName() const {
     return typeName;

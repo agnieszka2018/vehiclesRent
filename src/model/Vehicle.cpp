@@ -45,7 +45,7 @@ string Vehicle::vehicleInfo() {
 string Vehicle::vehicleClientInfo() {
     string info;
     if (actuallClient != nullptr)
-        info += "klient: " + actuallClient->clientName();         //dopisac adress!!!
+//        info += "klient: " + actuallClient->clientName();         //dopisac adress!!!
 
     return info;
 }

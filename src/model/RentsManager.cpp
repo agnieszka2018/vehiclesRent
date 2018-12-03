@@ -8,7 +8,8 @@ RentsManager::RentsManager() {}
 
 RentsManager::~RentsManager() {}
 
-void RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepoPtr vehicleRepo, RentsRepoPtr rentsRepo) {
+void
+RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepoPtr vehicleRepo, RentsRepoPtr rentsRepo) {
 
     //sprawdź czy vehicle jest w VehicleRepository
     bool jest = false;
@@ -37,9 +38,31 @@ void RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepo
     }
 }
 
-void RentsManager::returnVehicle() {}
+void RentsManager::returnVehicle(ClientPtr client, RentsRepoPtr rentsRepo, RentPtr rent, VehicleRepoPtr vehicleRepo) {
+    //usuwa klientowi wypożyczenie z listy aktualnych
+    client->deleteRent(rent);
 
-void RentsManager::getAllClientRents() {}
+    //przenosi wypożyczenie z curent do archive
+    rentsRepo->removeRent(rent, vehicleRepo);
+
+    //zmiana typu klienta
+    int allFinishedClientRents = static_cast<int>(client->getAllClientRents().size());
+    if (allFinishedClientRents <= 5) {
+        RegularTypePtr regularType = std::make_shared<RegularType>();
+        client->setClientType(regularType);
+    } else if (allFinishedClientRents > 5) {
+        BusinessTypePtr businessType = std::make_shared<BusinessType>();
+        client->setClientType(businessType);
+    } else if (allFinishedClientRents > 10) {
+        VipTypePtr vipType = std::make_shared<VipType>();
+        client->setClientType(vipType);
+    }
+}
+
+void RentsManager::getAllClientRents(ClientPtr client) {
+    //pobiera wszystkie zakończone wypożyczenia klienta
+    std::vector<RentPtr> finishedClientRents = client->getAllClientRents();
+}
 
 void RentsManager::checkClientRentBallance(ClientPtr client) {}
 

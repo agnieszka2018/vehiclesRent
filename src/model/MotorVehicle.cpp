@@ -30,6 +30,6 @@ const double MotorVehicle::getEngineDisplacement() const {
 }*/
 
 MotorVehicle::MotorVehicle(int baseRentPrice, std::string id, int engineDisplacement, double actuallRentalPrice)
-        : Vehicle(baseRentPrice, id), engineDisplacement{engineDisplacement}, actuallRentalPrice{calculateActualRentalPrice()} {}
+        : Vehicle(baseRentPrice, id, actuallClient), engineDisplacement{engineDisplacement}, actuallRentalPrice{calculateActualRentalPrice()} {}
 
 

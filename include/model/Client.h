@@ -53,6 +53,8 @@ public:
 
     std::vector<RentPtr> getClientActuallRents();
 
+    std::vector<RentPtr> getAllClientRents();
+
     //Client(AddressPtr registeredAddress);
 
     ~Client();

@@ -11,7 +11,7 @@ void RentsRepository::createRent(RentPtr rent, VehicleRepoPtr repozytoriumPojazd
     //sprawdzam czy pojazd jest dostepny?
     //for (Vehicle *vehicle: repozytoriumPojazdow->getVehicles()) {
     //    if (rent->getVehicle() == vehicle)
-            rents.push_back(rent);
+            currentRents.push_back(rent);
     //}
 
     //kasuje z repozytorium pojazdow, bo pojazd został wypożyczony
@@ -19,7 +19,8 @@ void RentsRepository::createRent(RentPtr rent, VehicleRepoPtr repozytoriumPojazd
 }
 
 void RentsRepository::removeRent(RentPtr rent, VehicleRepoPtr repozytoriumPojazdow) {
-    rents.remove(rent);
+    currentRents.remove(rent);
+    archiveRents.push_back(rent);
     rent->returnVehicle();
 
     //dodaje do repozytorium pojazow, bo pojazd został oddany
@@ -29,9 +30,9 @@ void RentsRepository::removeRent(RentPtr rent, VehicleRepoPtr repozytoriumPojazd
 string RentsRepository::rentReport() {
 
     string info;
-    info += "lista wypozyczen: \n";
+    info += "lista aktualnych wypozyczen: \n";
 
-    for (RentPtr rent:rents) {
+    for (RentPtr rent:currentRents) {
         info += rent->rentInfo() + "\n";
     }
 

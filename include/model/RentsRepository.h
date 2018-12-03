@@ -17,7 +17,8 @@ typedef std::shared_ptr<Rent> RentPtr;
 
 class RentsRepository {
 
-    std::list<RentPtr> rents;
+    std::list<RentPtr> currentRents;
+    std::list<RentPtr> archiveRents;
 
 public:
 

@@ -6,7 +6,7 @@
 
 #include "BusinessType.h"
 
-BusinessType::BusinessType() : ClientType(10, calculateClientTypeDiscount(), "Klient biznesowy") {}
+BusinessType::BusinessType() : ClientType(10, "Klient biznesowy") {}
 
 BusinessType::~BusinessType() {
 

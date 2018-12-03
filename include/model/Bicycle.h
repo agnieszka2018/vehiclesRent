@@ -9,6 +9,8 @@
 
 class Bicycle : public Vehicle {
 
+    ClientPtr actuallClient;    //nadpisane pole z Vehicle
+
 public:
 
     Bicycle(int baseRentPrice, std::string id);

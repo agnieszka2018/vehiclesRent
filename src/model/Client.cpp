@@ -78,3 +78,7 @@ ClientTypePtr Client::getClientType() {
 Client::~Client() {
     cout << "destruktor client jest wywolany" << endl;
 }
+
+vector<RentPtr> Client::getAllClientRents() {
+    return allClientRents;
+}

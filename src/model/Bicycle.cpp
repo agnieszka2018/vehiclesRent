@@ -10,5 +10,5 @@ Bicycle::~Bicycle() {
     std::cout << "Destruktor Bicycle" << std::endl;
 }
 
-Bicycle::Bicycle(int baseRentPrice, std::string id) : Vehicle(baseRentPrice, id) {}
+Bicycle::Bicycle(int baseRentPrice, std::string id) : Vehicle(baseRentPrice, id, actuallClient) {}
 

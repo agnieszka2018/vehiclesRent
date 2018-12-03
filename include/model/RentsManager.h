@@ -9,7 +9,11 @@
 #include "Vehicle.h"
 #include "VehicleRepository.h"
 #include "RentsRepository.h"
+#include "BusinessType.h"
+#include "VipType.h"
+#include "RegularType.h"
 #include <memory>
+#include <vector>
 
 using namespace boost;
 using namespace local_time;
@@ -21,6 +25,9 @@ typedef std::shared_ptr<Client> ClientPtr;
 typedef std::shared_ptr<Vehicle> VehiclePtr;
 typedef std::shared_ptr<VehicleRepository> VehicleRepoPtr;
 typedef std::shared_ptr<RentsRepository> RentsRepoPtr;
+typedef std::shared_ptr<BusinessType> BusinessTypePtr;
+typedef std::shared_ptr<VipType> VipTypePtr;
+typedef std::shared_ptr<RegularType> RegularTypePtr;
 
 
 class RentsManager {
@@ -33,9 +40,9 @@ public:
 
     void rentVehicle(VehiclePtr, ClientPtr, VehicleRepoPtr, RentsRepoPtr);
 
-    void returnVehicle();
+    void returnVehicle(ClientPtr, RentsRepoPtr, RentPtr, VehicleRepoPtr);
 
-    void getAllClientRents();
+    void getAllClientRents(ClientPtr);
 
     void checkClientRentBallance(ClientPtr);
 

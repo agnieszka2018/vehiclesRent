@@ -13,6 +13,7 @@ class MotorVehicle : public Vehicle {
 
     const int engineDisplacement;
     double actuallRentalPrice;
+    ClientPtr actuallClient;    //nadpisane pole z Vehicle
 
 public:
     MotorVehicle(int baseRentPrice, std::string id, int engineDisplacement, double actuallRentalPrice);
