@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include <memory>
 #include "Client.h"
 #include "Address.h"
@@ -23,6 +24,7 @@
 #include "MotorVehicle.h"
 #include "RentsRepository.h"
 #include "VehicleRepository.h"
+#include "RegularType.h"
 
 using namespace boost::local_time;
 using namespace boost::posix_time;
@@ -36,15 +38,15 @@ typedef std::shared_ptr<Address> AddressPtr;
 typedef std::shared_ptr<Client> ClientPtr;
 typedef std::shared_ptr<VehicleRepository> VehicleRepoPtr;
 typedef std::shared_ptr<Rent> RentPtr;
+typedef std::shared_ptr<RegularType> RegularTypePtr;
 
 
 BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
 
-/*
 
     BOOST_AUTO_TEST_CASE(RentTimeDurationCase) {
-        AddressPtr actuall_address = std::make_shared<Address>("Mickiewicza", "7");
-
+        AddressPtr actuallAddress = std::make_shared<Address>("Mickiewicza", "7");
+        AddressPtr actuallRegAddress = std::make_shared<Address>("Redutowa", "744");
 
         CarPtr pojazd = std::make_shared<Car>("C", 100, "CW 84062", 1995);
 
@@ -52,15 +54,20 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
         time_zone_ptr zone(new posix_time_zone("UTC+1"));
         local_date_time ldt(pt, zone);
 
+        std::shared_ptr<RegularType> regulartype = std::make_shared<RegularType>();
 
-        ClientPtr klient_3 = std::make_shared<Client>("Stefan", "Stonoga", "1029384756", actuall_address, nullptr,
-                                                      nullptr);
+        ClientPtr klient_3 = std::make_shared<Client>("Stefan", "Stonoga", "1029384756", regulartype, actuallAddress,
+                                                      actuallRegAddress);
 
         RentPtr wypozyczenie = std::make_shared<Rent>(ldt, pojazd, klient_3);
 
         klient_3->addRent(wypozyczenie);
+        std::vector<RentPtr> actuallRents = klient_3->getClientActuallRents();
+        RentPtr fromVector = actuallRents.back();
 
-        BOOST_REQUIRE_EQUAL(wypozyczenie, klient_3->getActuallRent());
+
+        //test
+        BOOST_REQUIRE_EQUAL(wypozyczenie, fromVector);
 
         BOOST_REQUIRE_EQUAL(wypozyczenie->rentDuration(), 0);
 
@@ -72,35 +79,38 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
     BOOST_AUTO_TEST_CASE(VehicleRepositoryCase) {
 
         CarPtr samochod = std::make_shared<Car>("C", 100, "CW 84062", 2900);
-        CarPtr fiat = std::make_shared<Car>("A", 80, "CW 11162", 900);
         CarPtr volvo = std::make_shared<Car>("B", 150, "WK 67890", 1400);
+        CarPtr fiat = std::make_shared<Car>("A", 80, "CW 11162", 900);
         CarPtr porsche = std::make_shared<Car>("D", 275, "WL 12345", 3500);
-        MopePtr skuter = std::make_shared<Mope>(100, "CW 34342", 1200);
-        MopePtr vespa = std::make_shared<Mope>(120, "WW 88842", 800);
-        MopePtr osa = std::make_shared<Mope>(90, "CW 99942", 1000);
-        MopePtr piaggio = std::make_shared<Mope>(95, "WE 222842", 900);
         BicyclePtr rower = std::make_shared<Bicycle>(50, "id_roweru");
         BicyclePtr damka = std::make_shared<Bicycle>(60, "id_damki");
+        //MopePtr skuter = std::make_shared<Mope>(100, "CW 34342", 1200);
+        //MopePtr vespa = std::make_shared<Mope>(120, "WW 88842", 800);
+        //MopePtr osa = std::make_shared<Mope>(90, "CW 99942", 1000);
+        //MopePtr piaggio = std::make_shared<Mope>(95, "WE 222842", 900);
+
 
         //repozytorium pojazdów
         VehicleRepoPtr repozytoriumPojazdow = std::make_shared<VehicleRepository>();
+        //repozytoriumPojazdow->createVehicle(skuter);
+        //repozytoriumPojazdow->createVehicle(vespa);
+        //repozytoriumPojazdow->createVehicle(osa);
+        //repozytoriumPojazdow->createVehicle(piaggio);
+        repozytoriumPojazdow->createVehicle(rower);
+        repozytoriumPojazdow->createVehicle(damka);
+        repozytoriumPojazdow->createVehicle(samochod);
+        repozytoriumPojazdow->createVehicle(volvo);
+        repozytoriumPojazdow->createVehicle(fiat);
+        repozytoriumPojazdow->createVehicle(porsche);
 
-        repozytoriumPojazdow->createVehicle(samochod.get());
-        repozytoriumPojazdow->createVehicle(volvo.get());
-        repozytoriumPojazdow->createVehicle(fiat.get());
-        repozytoriumPojazdow->createVehicle(porsche.get());
-        repozytoriumPojazdow->createVehicle(skuter.get());
-        repozytoriumPojazdow->createVehicle(vespa.get());
-        repozytoriumPojazdow->createVehicle(piaggio.get());
-        repozytoriumPojazdow->createVehicle(osa.get());
-        repozytoriumPojazdow->createVehicle(rower.get());
-        repozytoriumPojazdow->createVehicle(damka.get());
 
 
-        //znajdz pojazd na podstawie numeru indeksu
-        BOOST_REQUIRE_EQUAL(samochod, repozytoriumPojazdow->findVehicle(1));
+        //test: znajdz pojazd na podstawie numeru indeksu
+        BOOST_REQUIRE_EQUAL(rower, repozytoriumPojazdow->findVehicle(1));
+        //BOOST_TEST_MESSAGE("Raport: " << repozytoriumPojazdow->vehicleReport());
     }
 
+/*
 
     BOOST_AUTO_TEST_CASE(CurrentRentsRepositoryCase) {
 
@@ -133,25 +143,15 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
         repozytoriumWypozyczen->createRent(wypozyczenie_1, repozytoriumPojazdow);
 
 
-        // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+        // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~ ~ ~
         // test ile wypozyczeń w repozytoriumWypozyczen, a ile samochodów w repozytoriumPojazdow
         // test kto wypozyczył pojazd; cout << repozytoriumWypozyczen->getClientForRentedVehicle(skuter);
         // test raport z repozytoriumWypozyczen oraz repozytoriumPojazdow: przed i po oddaniu
         // test zmodyfikuj wypozyczenie
+        //cout << klient->clientInfo();
 
-
-        delete repozytoriumWypozyczen;
-        delete repozytoriumPojazdow;
-        delete wypozyczenie_1;
-        delete wypozyczenie;
-        delete klient_1;
-        delete actuall_address;
-        delete volvo;
-        delete fiat;
-        delete samochod;
-        delete skuter;
     }
 
-*/
+    */
 
 BOOST_AUTO_TEST_SUITE_END()
