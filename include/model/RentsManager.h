@@ -38,15 +38,16 @@ public:
 
     virtual ~RentsManager();
 
+    std::vector<RentPtr> getAllClientRents(ClientPtr);
+
+    double checkClientRentBallance(ClientPtr);
+
+    void changeClientType(ClientPtr);
+
     void rentVehicle(VehiclePtr, ClientPtr, VehicleRepoPtr, RentsRepoPtr);
 
     void returnVehicle(ClientPtr, RentsRepoPtr, RentPtr, VehicleRepoPtr);
 
-    void getAllClientRents(ClientPtr);
-
-    void checkClientRentBallance(ClientPtr);
-
-    void changeClientType();
 
 };
 

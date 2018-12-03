@@ -4,12 +4,12 @@
 
 #include "VipType.h"
 
-VipType::VipType() : ClientType(15, "Klient VIP") {}
+VipType::VipType() : ClientType(12, "Klient VIP") {}
 
 VipType::~VipType() {
 
 }
 
 double VipType::calculateClientTypeDiscount() {
-    return 2;   //zmodyfikować
+    return (0.01 * getMaxRentedCarAmount() * getMaxRentedCarAmount()) - 0.6;   //stały rabat = 0.84
 }

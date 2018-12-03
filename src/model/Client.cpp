@@ -26,7 +26,7 @@ void Client::deleteRent(RentPtr rentFromRent) {
             clientActuallRents.erase(it); //usuwa wypożyczenie z listy wypożyczeń klienta
     }
 
-    allClientRents.push_back(rentFromRent); //dodaje wypożyczenie do listy wszystkich zakończonych wypożyczeń (discount)
+    allClientRents.push_back(rentFromRent); //dodaje wypożyczenie do listy wszystkich zakończonych wypożyczeń
 }
 
 std::string Client::clientName() {
@@ -81,4 +81,11 @@ Client::~Client() {
 
 vector<RentPtr> Client::getAllClientRents() {
     return allClientRents;
+}
+
+double Client::calculatePriceWithDiscount(RentPtr rent){
+    double cost = rent->getCost();
+    double discount = clientType->getClientTypeDiscount();
+
+return cost - (cost * discount);
 }

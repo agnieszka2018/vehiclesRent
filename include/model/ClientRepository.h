@@ -20,6 +20,7 @@ public:
 
     void addClient(ClientPtr);
     void removeClient(ClientPtr);
+    void removeClient(int);
     void modifyClientType(ClientPtr, ClientTypePtr);
 };
 

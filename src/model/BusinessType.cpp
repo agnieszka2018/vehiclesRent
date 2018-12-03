@@ -6,12 +6,12 @@
 
 #include "BusinessType.h"
 
-BusinessType::BusinessType() : ClientType(10, "Klient biznesowy") {}
+BusinessType::BusinessType() : ClientType(7, "Klient biznesowy") {}
 
 BusinessType::~BusinessType() {
 
 }
 
 double BusinessType::calculateClientTypeDiscount() {
-    return 1;   //zmodyfikować
+    return 0.1 * getMaxRentedCarAmount(); //stały rabat dla klientów biznesowych = 0.7
 }

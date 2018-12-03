@@ -55,6 +55,8 @@ public:
 
     std::vector<RentPtr> getAllClientRents();
 
+    double calculatePriceWithDiscount(RentPtr);
+
     //Client(AddressPtr registeredAddress);
 
     ~Client();

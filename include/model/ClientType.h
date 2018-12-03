@@ -9,14 +9,14 @@
 
 class ClientType {
     const int maxRentedCarAmount;
-    int clientTypeDiscount;
+    double clientTypeDiscount;
     const std::string typeName;
 
 public:
     ClientType(int maxRentedCarAmount, std::string typeName);
     virtual double calculateClientTypeDiscount();
     const int getMaxRentedCarAmount() const;
-    int getClientTypeDiscount() const;
+    double getClientTypeDiscount() const;
     std::string getTypeName() const;
 };
 

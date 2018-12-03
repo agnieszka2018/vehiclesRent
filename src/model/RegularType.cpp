@@ -10,7 +10,7 @@ RegularType::~RegularType() {}
 RegularType::RegularType() : ClientType(5, "Klient zwykly") {}
 
 double RegularType::calculateClientTypeDiscount() {
-    return 0;
+    return 0.0;
 }
 
 

@@ -8,7 +8,7 @@ const int ClientType::getMaxRentedCarAmount() const {
     return maxRentedCarAmount;
 }
 
-int ClientType::getClientTypeDiscount() const {
+double ClientType::getClientTypeDiscount() const {
     return clientTypeDiscount;
 }
 

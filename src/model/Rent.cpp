@@ -93,9 +93,8 @@ VehiclePtr Rent::getVehicle() {
     return vehicle;
 }
 
-
-
-
-
+double Rent::getCost() {
+    return cost;
+}
 
 
