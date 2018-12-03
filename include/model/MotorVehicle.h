@@ -7,6 +7,8 @@
 #include <string>
 #include "Vehicle.h"
 
+class Vehicle;
+
 class MotorVehicle : public Vehicle {
 
     const int engineDisplacement;

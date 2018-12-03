@@ -10,15 +10,15 @@
 #include "boost/date_time/local_time/local_time.hpp"
 #include <memory>
 #include "Vehicle.h"
-#include "Client.h"
+
+class Client;
+//class Vehicle;
 
 typedef std::shared_ptr<Vehicle> VehiclePtr;
 typedef std::shared_ptr<Client> ClientPtr;
 
-class Client;
-class Vehicle;
 
-class Rent {
+class Rent : public std::enable_shared_from_this<Rent> {
 private:
     boost::uuids::uuid uuid;
     boost::local_time::local_date_time startTime;
@@ -30,6 +30,9 @@ private:
     ClientPtr client;
 
 public:
+    void deleteRentInClient();
+
+    void addRentInClient();
 
     int rentDuration();
 
@@ -44,6 +47,7 @@ public:
     VehiclePtr getVehicle();
 
     Rent(boost::local_time::local_date_time &startTime, VehiclePtr vehicle, ClientPtr client);
+
 };
 
 #endif //POBIZ01_RENT_H

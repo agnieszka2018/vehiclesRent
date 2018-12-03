@@ -48,9 +48,10 @@ int main() {
     BicyclePtr damka = make_shared<Bicycle>(60, "id_damki");
 
     std::shared_ptr<RegularType> regulartype = make_shared<RegularType>();
-    AddressPtr actuall_address = make_shared<Address>("Mickiewicza", "7");
+    AddressPtr actuallAddress = make_shared<Address>("Mickiewicza", "7");
+    AddressPtr actuallRegAddress = make_shared<Address>("Sienkiewicza", "88");
 
-    ClientPtr klient = make_shared<Client>("Stefan", "Stonoga", "1029384756", regulartype, actuall_address);
+    ClientPtr klient = make_shared<Client>("Stefan", "Stonoga", "1029384756", regulartype, actuallAddress, actuallRegAddress);
 
     cout << klient->clientInfo();
 

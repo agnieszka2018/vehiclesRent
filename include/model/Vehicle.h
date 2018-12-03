@@ -7,8 +7,8 @@
 
 #include <string>
 #include <memory>
-#include "Client.h"
-#include "Car.h"
+
+class Client;
 
 typedef std::shared_ptr<Client> ClientPtr;
 

@@ -12,6 +12,9 @@
 #include "ClientType.h"
 #include <vector>
 
+class Vehicle;
+class Rent;
+
 typedef std::shared_ptr<Address> AddressPtr;
 typedef std::shared_ptr<Rent> RentPtr;
 typedef std::shared_ptr<ClientType> ClientTypePtr;
