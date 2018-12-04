@@ -6,10 +6,12 @@
 #define POBIZ01_CLIENTEXCEPTION_H
 
 #include <stdexcept>
+#include <string>
 
-class ClientException : public std::logic_error{
-
-
+class ClientException : public std::logic_error {
+public:
+    std::string message;
+    ClientException(std::string);
 };
 
 #endif //POBIZ01_CLIENTEXCEPTION_H

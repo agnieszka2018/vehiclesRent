@@ -1,6 +1,9 @@
 //
-// Created by pobi on 14.10.18.
+// Created by pobi on 04.12.18.
 //
+
+#ifndef POBIZ01_INTERFACE_H
+#define POBIZ01_INTERFACE_H
 
 #include <iostream>
 #include <string>
@@ -9,10 +12,7 @@
 #include "Address.h"
 #include "Vehicle.h"
 #include "Rent.h"
-#include "Bicycle.h"
 #include "Car.h"
-#include "Mope.h"
-#include "MotorVehicle.h"
 #include "RentsRepository.h"
 #include "VehicleRepository.h"
 #include "ClientType.h"
@@ -28,16 +28,18 @@ using namespace local_time;
 using namespace gregorian;
 using posix_time::time_duration;
 
-//typedef boost::shared_ptr<dst_calc_rules> local_time::dst_calc_rule_ptr;
 typedef std::shared_ptr<Car> CarPtr;
-typedef std::shared_ptr<Mope> MopePtr;
-typedef std::shared_ptr<Bicycle> BicyclePtr;
 typedef std::shared_ptr<Address> AddressPtr;
 typedef std::shared_ptr<Client> ClientPtr;
 typedef std::shared_ptr<VehicleRepository> VehicleRepoPtr;
+typedef std::shared_ptr<RentsRepository> RentsRepoPtr;
 
-int main() {
+class Interface {
 
-    //Interface interface;
-    //cout << interface.rentExceptionMessage() << endl;
-}
+public:
+
+    std::string rentExceptionMessage();
+
+};
+
+#endif //POBIZ01_INTERFACE_H

@@ -9,7 +9,6 @@ RentsManager::RentsManager() {}
 RentsManager::~RentsManager() {}
 
 
-
 std::vector<RentPtr> RentsManager::getAllClientRents(ClientPtr client) {
     //pobiera wszystkie zakończone wypożyczenia klienta
     std::vector<RentPtr> finishedClientRents = client->getAllClientRents();
@@ -21,7 +20,8 @@ double RentsManager::checkClientRentBallance(ClientPtr client) {
     std::vector<RentPtr> allRents = getAllClientRents(client);
     std::vector<RentPtr>::iterator iter;
     for (iter = allRents.begin(); iter != allRents.end(); iter++) {
-        priceWithDiscount += client->calculatePriceWithDiscount(*iter); //sumowana cena każdego wypożyczenia po uzględnieniu rabatu
+        priceWithDiscount += client->calculatePriceWithDiscount(
+                *iter); //sumowana cena każdego wypożyczenia po uzględnieniu rabatu
     }
 
     //int allFinishedClientRents = static_cast<int>(client->getAllClientRents().size());
@@ -58,6 +58,18 @@ void RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepo
             jest = true;
         else jest = false;
     }
+
+    //obsługa wyjątku (RentException) - brak pojazdu w VehicleRepository
+    try {
+        if (jest != true) {
+            RentException brakPojazdu("Brak pojazdu w Repozytorium Pojazdów");
+            throw brakPojazdu;
+        }
+    }
+    catch (RentException brakPoj) {
+        std::cout << brakPoj.what(); //returns an explanatory string
+    }
+
 
     //sprawdź czy klient nie wypożyczył za dużo
     int numberPossible = client->getClientType()->getMaxRentedCarAmount();    //liczba przysługujących wypożyczeń

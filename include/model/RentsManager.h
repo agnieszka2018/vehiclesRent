@@ -12,6 +12,7 @@
 #include "BusinessType.h"
 #include "VipType.h"
 #include "RegularType.h"
+#include "RentException.h"
 #include <memory>
 #include <vector>
 
@@ -29,6 +30,7 @@ typedef std::shared_ptr<BusinessType> BusinessTypePtr;
 typedef std::shared_ptr<VipType> VipTypePtr;
 typedef std::shared_ptr<RegularType> RegularTypePtr;
 
+//class RentException;
 
 class RentsManager {
 private:
