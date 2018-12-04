@@ -6,6 +6,8 @@
 #define POBIZ01_CLIENTTYPE_H
 
 #include <string>
+#include "DiscountException.h"
+#include <iostream>
 
 class ClientType {
     const int maxRentedCarAmount;
@@ -14,10 +16,11 @@ class ClientType {
 
 public:
     ClientType(int maxRentedCarAmount, std::string typeName);
-    virtual double calculateClientTypeDiscount();
     const int getMaxRentedCarAmount() const;
     double getClientTypeDiscount() const;
     std::string getTypeName() const;
+    void checkDiscount(double);
+    virtual double calculateClientTypeDiscount();
 };
 
 #endif //POBIZ01_CLIENTTYPE_H

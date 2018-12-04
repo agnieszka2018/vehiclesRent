@@ -8,8 +8,19 @@
 
 using namespace std;
 
-Vehicle::Vehicle(int baseRentPrice, string id, ClientPtr actuallClient) : baseRentPrice{baseRentPrice}, id{id},
-                                                                        actuallClient{actuallClient} {}
+Vehicle::Vehicle(int baseRentPrice, string id, ClientPtr actuallClient) : baseRentPrice{baseRentPrice}, id{id}, actuallClient{actuallClient} {
+
+  //obsługa wyjątku (VehicleException) - cena bazowa wypożyczenia nie może być ujemna
+    try {
+        if (baseRentPrice < 0) {
+            VehicleException tooLowPrice("Bazowa cena nie może być ujemna!");
+            throw tooLowPrice;
+        }
+    }
+    catch (VehicleException tooLowPrice) {
+        std::cout << tooLowPrice.what();
+    }
+}
 
 
 const int Vehicle::getBaseRentPrice() const {
@@ -47,7 +58,7 @@ string Vehicle::vehicleClientInfo() {
     if (actuallClient != nullptr)
 //        info += "klient: " + actuallClient->clientName();         //dopisac adress!!!
 
-    return info;
+        return info;
 }
 
 const string Vehicle::getId() const {

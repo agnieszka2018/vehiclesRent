@@ -7,11 +7,12 @@
 
 using namespace std;
 
-Client::Client(std::string firstName, std::string lastName, std::string personalID, ClientTypePtr clientType, AddressPtr address, AddressPtr registeredAddress) :
-firstName{firstName},lastName{lastName},personalID{personalID},clientType{clientType}, address{address}, registeredAddress{registeredAddress}
-{
-static int i = 0;
-cout << "konstruktor parametrowy nr: " << ++i << " jest wywolany" << endl << endl;
+Client::Client(std::string firstName, std::string lastName, std::string personalID, ClientTypePtr clientType,
+               AddressPtr address, AddressPtr registeredAddress) :
+        firstName{firstName}, lastName{lastName}, personalID{personalID}, clientType{clientType}, address{address},
+        registeredAddress{registeredAddress} {
+    static int i = 0;
+    cout << "konstruktor parametrowy nr: " << ++i << " jest wywolany" << endl << endl;
 }
 
 
@@ -20,6 +21,19 @@ void Client::addRent(RentPtr rentFromRent) {
 }
 
 void Client::deleteRent(RentPtr rentFromRent) {
+
+    //obsługa wyjątku - sprawdzam czy klient ma aktualnie przynajmniej jedno wypożyczenie
+    try {
+        if (clientActuallRents.size() < 1) {
+            ClientException brakWypozyczen("Klient aktualnie nie posiada wypożyczeń!");
+            throw brakWypozyczen;
+        }
+    }
+    catch (ClientException brakWypoz) {
+        std::cout << brakWypoz.what();
+    }
+
+
     vector<RentPtr>::iterator it;
     for (it = clientActuallRents.begin(); it != clientActuallRents.end(); ++it) {
         if (rentFromRent == *it)
@@ -83,9 +97,9 @@ vector<RentPtr> Client::getAllClientRents() {
     return allClientRents;
 }
 
-double Client::calculatePriceWithDiscount(RentPtr rent){
+double Client::calculatePriceWithDiscount(RentPtr rent) {
     double cost = rent->getCost();
     double discount = clientType->getClientTypeDiscount();
 
-return cost - (cost * discount);
+    return cost - (cost * discount);
 }

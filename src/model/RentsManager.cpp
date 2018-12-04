@@ -75,15 +75,27 @@ void RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepo
     int numberPossible = client->getClientType()->getMaxRentedCarAmount();    //liczba przysługujących wypożyczeń
     int numberActuall = static_cast<int>(client->getClientActuallRents().size());    //liczba aktualnych wypożyczeń
 
-    if ((numberActuall < numberPossible) && (jest)) {
 
-        posix_time::ptime pt(date(2018, Dec, 02), posix_time::hours(12));
-        time_zone_ptr zone(new posix_time_zone("UTC+1"));
-        local_date_time ldt(pt, zone);
-
-        RentPtr rent = std::make_shared<Rent>(ldt, vehicle, client);
-        rentsRepo->createRent(rent, vehicleRepo);
+    //obsługa wyjątku (RentException) - klient wykorzystał limit samochodów, które może wypożyczyć jednocześnie
+    try {
+        if (numberActuall == numberPossible) {
+            RentException limitWyczerpany("Klient wykorzystal limit jednocześnie wypożyczonych pojazdów");
+            throw limitWyczerpany;
+        }
     }
+    catch (RentException limitWyczerpany) {
+        std::cout << limitWyczerpany.what();
+    }
+
+
+    //utwórz wypożyczenie
+    posix_time::ptime pt(date(2018, Dec, 02), posix_time::hours(12));
+    time_zone_ptr zone(new posix_time_zone("UTC+1"));
+    local_date_time ldt(pt, zone);
+
+    RentPtr rent = std::make_shared<Rent>(ldt, vehicle, client);
+    rentsRepo->createRent(rent, vehicleRepo);
+
 }
 
 void RentsManager::returnVehicle(ClientPtr client, RentsRepoPtr rentsRepo, RentPtr rent, VehicleRepoPtr vehicleRepo) {

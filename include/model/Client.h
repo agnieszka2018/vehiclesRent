@@ -10,6 +10,7 @@
 #include "Address.h"
 #include "Rent.h"
 #include "ClientType.h"
+#include "ClientException.h"
 #include <vector>
 
 class Vehicle;

@@ -13,5 +13,9 @@ BusinessType::~BusinessType() {
 }
 
 double BusinessType::calculateClientTypeDiscount() {
-    return 0.1 * getMaxRentedCarAmount(); //stały rabat dla klientów biznesowych = 0.7
+    double discount = 0.1 * getMaxRentedCarAmount(); //stały rabat dla klientów biznesowych = 0.7
+
+    checkDiscount(discount); //sprawdzam czy rabat nie jest zbyt wysoki
+
+    return discount;
 }
