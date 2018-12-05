@@ -40,6 +40,8 @@ public:
 
     std::string vehicleClientInfo();
 
+    ClientPtr getActuallClient();
+
     Vehicle(int baseRentPrice, std::string id, ClientPtr actuallClient);
 };
 

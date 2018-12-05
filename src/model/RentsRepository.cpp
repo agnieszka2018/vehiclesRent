@@ -11,7 +11,7 @@ void RentsRepository::createRent(RentPtr rent, VehicleRepoPtr repozytoriumPojazd
     //sprawdzam czy pojazd jest dostepny?
     //for (Vehicle *vehicle: repozytoriumPojazdow->getVehicles()) {
     //    if (rent->getVehicle() == vehicle)
-            currentRents.push_back(rent);
+    currentRents.push_back(rent);
     //}
 
     //kasuje z repozytorium pojazdow, bo pojazd został wypożyczony
@@ -42,5 +42,26 @@ string RentsRepository::rentReport() {
 
 
 string RentsRepository::getClientForRentedVehicle(VehiclePtr vehicle) {
-    return vehicle->vehicleClientInfo();
+    string info = (vehicle->vehicleClientInfo()) + " " + (vehicle->getActuallClient()->getAddress()->displayInfo()) + " " +
+            (vehicle->getActuallClient()->getRegisteredAddress()->displayInfo());
+
+    return info;
+}
+
+RentPtr RentsRepository::findRent(int number) {
+
+    int liczba = 1;
+
+    std::list<RentPtr>::iterator iter;
+    for (iter = currentRents.begin(); iter != currentRents.end(); iter++) {
+        if (liczba == number)
+            return *iter;
+        liczba++;
+    }
+}
+
+RentPtr RentsRepository::operator()(int number) {
+
+    //metoda zwraca wskaźnik do wypożyczenia o danym indeksie
+    return findRent(number);
 }

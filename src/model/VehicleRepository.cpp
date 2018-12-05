@@ -53,6 +53,35 @@ VehiclePtr VehicleRepository::findVehicle(int number) {
     }
 }
 
+VehiclePtr VehicleRepository::operator()(int number) {
+
+    //metoda zwraca wskaźnik do pojazdu o danym indeksie
+    return findVehicle(number);
+}
+
+/*
+VehiclePtr VehicleRepository::operator()(Vehicle vehicle) {
+
+//metoda wyszukuje pojazd identyczny do zadanego
+    std::list<VehiclePtr>::iterator iter;
+
+    iter = std::find(vehicles.begin(), vehicles.end(), vehicle);
+    if (iter != vehicles.end()) //gdy nie znaleziono elementu, metoda zwraca ostatni element z kontenera
+        return (*iter);
+
+    try {
+        if ((*vehicles.back()) != vehicle) {
+            VehicleException vehicleNotFound("Nie znaleziono pojazdu w Repozytorium Pojazdów!");
+            throw vehicleNotFound;
+        }
+    }
+    catch (VehicleException vehicleNotFound) {
+        std::cout << vehicleNotFound.what();
+    }
+
+//return ???
+} */
+
 VehicleRepository::~VehicleRepository() {
-    std::cout<<"Destruktor VehicleRepository"<<std::endl;
+    std::cout << "Destruktor VehicleRepository" << std::endl;
 }

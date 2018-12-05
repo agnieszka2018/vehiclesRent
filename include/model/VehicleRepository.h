@@ -9,7 +9,11 @@
 #include <string>
 #include <memory>
 #include <list>
+#include <algorithm>
 #include "Vehicle.h"
+#include "VehicleException.h"
+
+//class Vehicle;
 
 typedef std::shared_ptr<Vehicle> VehiclePtr;
 
@@ -28,6 +32,10 @@ public:
     std::list<VehiclePtr> getVehicles();
 
     VehiclePtr findVehicle(int);
+
+    VehiclePtr operator()(int);
+
+    //VehiclePtr operator()(Vehicle);
 
     virtual ~VehicleRepository();
 };

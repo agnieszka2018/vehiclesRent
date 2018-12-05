@@ -6,6 +6,7 @@
 #define POBIZ01_CLIENTREPOSITORY_H
 
 #include <list>
+#include <algorithm>
 #include <memory>
 #include "Client.h"
 #include "ClientType.h"
@@ -23,6 +24,8 @@ public:
     void removeClient(int);
     void modifyClientType(ClientPtr, ClientTypePtr);
     std::list<ClientPtr> getClients();
+    ClientPtr findClient(int);
+    ClientPtr operator()(int);
 };
 
 

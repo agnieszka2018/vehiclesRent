@@ -8,12 +8,18 @@
 #include "Rent.h"
 #include "Vehicle.h"
 #include "VehicleRepository.h"
+#include "Address.h"
+#include "Client.h"
+#include <algorithm>
 #include <list>
 #include <memory>
+#include <string>
 
 typedef std::shared_ptr<VehicleRepository> VehicleRepoPtr;
 typedef std::shared_ptr<Vehicle> VehiclePtr;
 typedef std::shared_ptr<Rent> RentPtr;
+typedef std::shared_ptr<Address> AddressPtr;
+typedef std::shared_ptr<Client> ClientPtr;
 
 class RentsRepository {
 
@@ -29,6 +35,10 @@ public:
     std::string rentReport();
 
     std::string getClientForRentedVehicle(VehiclePtr);
+
+    RentPtr findRent(int);
+
+    RentPtr operator()(int);
 
 };
 

@@ -32,3 +32,21 @@ void ClientRepository::modifyClientType(ClientPtr client, ClientTypePtr clientTy
 std::list<ClientPtr> ClientRepository::getClients() {
     return clients;
 }
+
+ClientPtr ClientRepository::findClient(int number) {
+
+    int liczba = 1;
+
+    std::list<ClientPtr>::iterator iter;
+    for (iter = clients.begin(); iter != clients.end(); iter++) {
+        if (liczba == number)
+            return *iter;
+        liczba++;
+    }
+}
+
+ClientPtr ClientRepository::operator()(int number) {
+
+    //metoda zwraca wskaźnik do klienta o danym indeksie
+    return findClient(number);
+}

@@ -4,8 +4,6 @@
 
 #include <string>
 #include <iostream>
-#include <model/Vehicle.h>
-
 #include "Vehicle.h"
 
 using namespace std;
@@ -76,4 +74,8 @@ bool Vehicle::operator==(Vehicle vehicle2) {
         return true;
     else
         return false;
+}
+
+ClientPtr Vehicle::getActuallClient() {
+    return actuallClient;
 }
