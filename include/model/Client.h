@@ -58,6 +58,12 @@ public:
 
     double calculatePriceWithDiscount(RentPtr);
 
+    AddressPtr getAddress();
+
+    AddressPtr getRegisteredAddress();
+
+    bool operator==(Client);
+
     //Client(AddressPtr registeredAddress);
 
     ~Client();

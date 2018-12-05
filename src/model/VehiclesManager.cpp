@@ -14,9 +14,9 @@ void VehiclesManager::addVehicleToRepository(VehicleRepoPtr vehicleRepo, Vehicle
     for (iter = vehicleRepoList.begin(); iter != vehicleRepoList.end(); iter++) {
         //sprawdź czy nie ma już takiego pojazdu w Repozytorium Pojazdów
         if ((((*iter)->getId()) == (vehicle->getId())) &&
-        (((*iter)->getBaseRentPrice()) == (vehicle->getBaseRentPrice()))
-        && (((*iter)->getActuallRentalPrice()) == (vehicle->getActuallRentalPrice())))
-        duplicate = true; //jeśli spełnione wszystkie warunki jednocześnie, to znaczy, że jest to dokładnie ten sam pojazd!
+            (((*iter)->getBaseRentPrice()) == (vehicle->getBaseRentPrice()))
+            && (((*iter)->getActuallRentalPrice()) == (vehicle->getActuallRentalPrice())))
+            duplicate = true; //jeśli spełnione wszystkie warunki jednocześnie, to znaczy, że jest to dokładnie ten sam pojazd!
     }
 
     try {
@@ -36,5 +36,6 @@ void VehiclesManager::addVehicleToRepository(VehicleRepoPtr vehicleRepo, Vehicle
 
 void VehiclesManager::deleteVehicleFromRepository(VehicleRepoPtr vehicleRepo, VehiclePtr vehicle) {
 
-vehicleRepo->removeVehicle(vehicle);}
+    vehicleRepo->removeVehicle(vehicle);
+}
 

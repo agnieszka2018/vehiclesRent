@@ -7,6 +7,8 @@
 #include <boost/uuid/uuid.hpp>
 #include <boost/uuid/uuid_generators.hpp>
 #include <boost/uuid/uuid_io.hpp>
+#include <model/Rent.h>
+
 #include "boost/date_time/local_time/local_time.hpp"
 
 using namespace boost;
@@ -70,7 +72,7 @@ Rent::~Rent() {
 }
 
 Rent::Rent(local_date_time &startTime, VehiclePtr vehicle, ClientPtr client) : startTime(startTime), vehicle(vehicle),
-                                                                                 client(client), endTime(startTime) {
+                                                                               client(client), endTime(startTime) {
     uuid = boost::uuids::random_generator()();
 
     //this->addRentInClient();   //dodajemy wypożyczenie do listy wypożyczeń klienta
@@ -95,6 +97,15 @@ VehiclePtr Rent::getVehicle() {
 
 double Rent::getCost() {
     return cost;
+}
+
+bool Rent::operator==(Rent rent2) {
+
+    if (((this->uuid) == (rent2.uuid)) && ((this->client) == (rent2.client)) && ((this->vehicle) == (rent2.vehicle)) &&
+        ((this->cost) == (rent2.cost)))
+        return true;
+    else
+        return false;
 }
 
 

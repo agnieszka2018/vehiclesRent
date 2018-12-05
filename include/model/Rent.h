@@ -48,6 +48,8 @@ public:
 
     double getCost();
 
+    bool operator==(Rent);
+
     Rent(boost::local_time::local_date_time &startTime, VehiclePtr vehicle, ClientPtr client);
 
 };

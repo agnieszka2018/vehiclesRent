@@ -4,13 +4,16 @@
 
 #include <string>
 #include <iostream>
+#include <model/Vehicle.h>
+
 #include "Vehicle.h"
 
 using namespace std;
 
-Vehicle::Vehicle(int baseRentPrice, string id, ClientPtr actuallClient) : baseRentPrice{baseRentPrice}, id{id}, actuallClient{actuallClient} {
+Vehicle::Vehicle(int baseRentPrice, string id, ClientPtr actuallClient) : baseRentPrice{baseRentPrice}, id{id},
+                                                                          actuallClient{actuallClient} {
 
-  //obsługa wyjątku (VehicleException) - cena bazowa wypożyczenia nie może być ujemna
+    //obsługa wyjątku (VehicleException) - cena bazowa wypożyczenia nie może być ujemna
     try {
         if (baseRentPrice < 0) {
             VehicleException tooLowPrice("Bazowa cena nie może być ujemna!");
@@ -63,4 +66,14 @@ string Vehicle::vehicleClientInfo() {
 
 const string Vehicle::getId() const {
     return id;
+}
+
+bool Vehicle::operator==(Vehicle vehicle2) {
+
+    if (((this->id) == (vehicle2.id)) &&
+        ((this->baseRentPrice) == (vehicle2.baseRentPrice))
+        && ((this->actuallRentalPrice) == (vehicle2.actuallRentalPrice)))
+        return true;
+    else
+        return false;
 }

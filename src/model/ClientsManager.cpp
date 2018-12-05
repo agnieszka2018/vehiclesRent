@@ -13,7 +13,9 @@ void ClientsManager::addClientToRepository(ClientRepoPtr clientRepo, ClientPtr c
     for (iter = clientRepoList.begin(); iter != clientRepoList.end(); iter++) {
         //sprawdź czy nie ma już takiego klienta w Repozytorium Klientów
         if ((((*iter)->clientName()) == (client->clientName())) &&
-            (((*iter)->getClientType()) == (client->getClientType())))
+            (((*iter)->getClientType()) == (client->getClientType())) &&
+            (((*iter)->getAddress()) == (client->getAddress())) &&
+            (((*iter)->getRegisteredAddress()) == (client->getRegisteredAddress())))
             duplicate = true; //jeśli spełnione wszystkie warunki jednocześnie, to znaczy, że jest to dokładnie ten sam klient!
     }
 

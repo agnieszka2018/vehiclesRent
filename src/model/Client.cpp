@@ -89,10 +89,6 @@ ClientTypePtr Client::getClientType() {
     return clientType;
 }
 
-Client::~Client() {
-    cout << "destruktor client jest wywolany" << endl;
-}
-
 vector<RentPtr> Client::getAllClientRents() {
     return allClientRents;
 }
@@ -103,3 +99,25 @@ double Client::calculatePriceWithDiscount(RentPtr rent) {
 
     return cost - (cost * discount);
 }
+
+bool Client::operator==(Client client2) {
+    if (((this->clientName()) == (client2.clientName())) &&
+        ((this->clientType) == (client2.clientType)) && ((this->address) == (client2.address)) &&
+        ((this->registeredAddress) == (client2.registeredAddress)))
+        return true;
+    else
+        return false;
+}
+
+Client::~Client() {
+    cout << "destruktor client jest wywolany" << endl;
+}
+
+AddressPtr Client::getAddress() {
+    return address;
+}
+
+AddressPtr Client::getRegisteredAddress() {
+    return registeredAddress;
+}
+
