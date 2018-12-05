@@ -28,3 +28,7 @@ void ClientRepository::removeClient(int clientIndex) {
 void ClientRepository::modifyClientType(ClientPtr client, ClientTypePtr clientType) {
     client->setClientType(clientType);
 }
+
+std::list<ClientPtr> ClientRepository::getClients() {
+    return clients;
+}

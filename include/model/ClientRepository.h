@@ -22,6 +22,7 @@ public:
     void removeClient(ClientPtr);
     void removeClient(int);
     void modifyClientType(ClientPtr, ClientTypePtr);
+    std::list<ClientPtr> getClients();
 };
 
 

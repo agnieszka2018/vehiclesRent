@@ -20,8 +20,7 @@ double RentsManager::checkClientRentBallance(ClientPtr client) {
     std::vector<RentPtr> allRents = getAllClientRents(client);
     std::vector<RentPtr>::iterator iter;
     for (iter = allRents.begin(); iter != allRents.end(); iter++) {
-        priceWithDiscount += client->calculatePriceWithDiscount(
-                *iter); //sumowana cena każdego wypożyczenia po uzględnieniu rabatu
+        priceWithDiscount += client->calculatePriceWithDiscount(*iter); //sumowana cena każdego wypożyczenia po uzględnieniu rabatu
     }
 
     //int allFinishedClientRents = static_cast<int>(client->getAllClientRents().size());

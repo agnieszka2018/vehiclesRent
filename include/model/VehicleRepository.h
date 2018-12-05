@@ -13,14 +13,12 @@
 
 typedef std::shared_ptr<Vehicle> VehiclePtr;
 
-
 class VehicleRepository {
 
     std::list<VehiclePtr> vehicles;
 
 
 public:
-
     void createVehicle(VehiclePtr);
 
     void removeVehicle(VehiclePtr);
