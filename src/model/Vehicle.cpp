@@ -14,7 +14,7 @@ Vehicle::Vehicle(int baseRentPrice, string id, ClientPtr actuallClient) : baseRe
     //obsługa wyjątku (VehicleException) - cena bazowa wypożyczenia nie może być ujemna
     try {
         if (baseRentPrice < 0) {
-            VehicleException tooLowPrice("Bazowa cena nie może być ujemna!");
+            VehicleException tooLowPrice("Bazowa cena nie może być ujemna!\n");
             throw tooLowPrice;
         }
     }

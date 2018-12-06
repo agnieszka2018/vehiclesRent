@@ -8,25 +8,41 @@
 #include <list>
 #include <memory>
 
-class Repository;
-
-typedef std::shared_ptr<Repository> RepositoryPtr;
+template<typename T>
 
 class Repository {
-    std::list<RepositoryPtr> repository;
+    std::list<std::shared_ptr<T>> repository;
 
 public:
-    virtual void create(RepositoryPtr);
+    virtual void create(std::shared_ptr<T> singleRepo) {
+        repository.push_back(singleRepo);
+    }
 
-    virtual void remove(RepositoryPtr);
+    virtual void remove(std::shared_ptr<T> singleRepo) {
+        repository.remove(singleRepo);
+    }
 
     //virtual void update();
 
-    virtual std::list<RepositoryPtr> getAll();
+    virtual std::list<std::shared_ptr<T>> getAll() {
+        return repository;
+    }
 
-    virtual RepositoryPtr find(int);
+    virtual std::shared_ptr<T> find(int number) {
 
-    virtual RepositoryPtr operator()(int);
+        int liczba = 1;
+
+        typename std::list<std::shared_ptr<T>>::iterator iter;
+        for (iter = repository.begin(); iter != repository.end(); iter++) {
+            if (liczba == number)
+                return (*iter);
+            liczba++;
+        }
+    }
+
+    virtual std::shared_ptr<T> operator()(int number) {
+        return find(number);
+    }
 };
 
 #endif //POBIZ01_REPOSITORY_H

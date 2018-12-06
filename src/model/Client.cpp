@@ -35,7 +35,7 @@ void Client::deleteRent(RentPtr rentFromRent) {
 
 
     vector<RentPtr>::iterator it;
-    for (it = clientActuallRents.begin(); it != clientActuallRents.end(); ++it) {
+    for (it = clientActuallRents.begin(); it != clientActuallRents.end(); it++) {
         if (rentFromRent == *it)
             clientActuallRents.erase(it); //usuwa wypożyczenie z listy wypożyczeń klienta
     }
