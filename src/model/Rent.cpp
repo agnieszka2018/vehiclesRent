@@ -101,6 +101,7 @@ double Rent::getCost() {
 
 bool Rent::operator==(Rent rent2) {
 
+    //sprawdzam czy dwa obiekty są sobie równe
     if (((this->uuid) == (rent2.uuid)) && ((this->client) == (rent2.client)) && ((this->vehicle) == (rent2.vehicle)) &&
         ((this->cost) == (rent2.cost)))
         return true;

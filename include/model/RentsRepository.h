@@ -40,6 +40,7 @@ public:
 
     RentPtr operator()(int);
 
+    bool operator==(Rent);
 };
 
 

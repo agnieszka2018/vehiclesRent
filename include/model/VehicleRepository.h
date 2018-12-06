@@ -37,6 +37,8 @@ public:
 
     //VehiclePtr operator()(Vehicle);
 
+    bool operator==(Vehicle);
+
     virtual ~VehicleRepository();
 };
 

@@ -42,7 +42,8 @@ string RentsRepository::rentReport() {
 
 
 string RentsRepository::getClientForRentedVehicle(VehiclePtr vehicle) {
-    string info = (vehicle->vehicleClientInfo()) + " " + (vehicle->getActuallClient()->getAddress()->displayInfo()) + " " +
+    string info =
+            (vehicle->vehicleClientInfo()) + " " + (vehicle->getActuallClient()->getAddress()->displayInfo()) + " " +
             (vehicle->getActuallClient()->getRegisteredAddress()->displayInfo());
 
     return info;
@@ -64,4 +65,14 @@ RentPtr RentsRepository::operator()(int number) {
 
     //metoda zwraca wskaźnik do wypożyczenia o danym indeksie
     return findRent(number);
+}
+
+bool RentsRepository::operator==(Rent rent2) {
+
+    RentPtr rent3 = std::make_shared<Rent>(rent2);
+
+    //if (std::any_of(currentRents.begin(), currentRents.end(), rent3))   //test if any element in range fulfills condition
+    //    return true;
+    //else
+        return false;
 }

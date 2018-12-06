@@ -15,17 +15,25 @@ typedef std::shared_ptr<Client> ClientPtr;
 
 class ClientRepository {
 
-    std::list <ClientPtr> clients;
+    std::list<ClientPtr> clients;
 
 public:
 
     void addClient(ClientPtr);
+
     void removeClient(ClientPtr);
+
     void removeClient(int);
+
     void modifyClientType(ClientPtr, ClientTypePtr);
+
     std::list<ClientPtr> getClients();
+
     ClientPtr findClient(int);
+
     ClientPtr operator()(int);
+
+    bool operator==(Client);
 };
 
 

@@ -101,6 +101,8 @@ double Client::calculatePriceWithDiscount(RentPtr rent) {
 }
 
 bool Client::operator==(Client client2) {
+
+    //sprawdzam czy dwa obiekty są sobie równe
     if (((this->clientName()) == (client2.clientName())) &&
         ((this->clientType) == (client2.clientType)) && ((this->address) == (client2.address)) &&
         ((this->registeredAddress) == (client2.registeredAddress)))

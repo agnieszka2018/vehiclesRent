@@ -82,6 +82,16 @@ VehiclePtr VehicleRepository::operator()(Vehicle vehicle) {
 //return ???
 } */
 
+bool VehicleRepository::operator==(Vehicle vehicle2) {
+
+    VehiclePtr vehicle3 = std::make_shared<Vehicle>(vehicle2);
+
+    //if (std::any_of(vehicles.begin(), vehicles.end(), vehicle3))   //test if any element in range fulfills condition
+    //    return true;
+    //else
+    return false;
+}
+
 VehicleRepository::~VehicleRepository() {
     std::cout << "Destruktor VehicleRepository" << std::endl;
 }

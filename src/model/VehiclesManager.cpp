@@ -13,10 +13,12 @@ void VehiclesManager::addVehicleToRepository(VehicleRepoPtr vehicleRepo, Vehicle
     std::list<VehiclePtr>::iterator iter;
     for (iter = vehicleRepoList.begin(); iter != vehicleRepoList.end(); iter++) {
         //sprawdź czy nie ma już takiego pojazdu w Repozytorium Pojazdów
-        if ((((*iter)->getId()) == (vehicle->getId())) &&
-            (((*iter)->getBaseRentPrice()) == (vehicle->getBaseRentPrice()))
-            && (((*iter)->getActuallRentalPrice()) == (vehicle->getActuallRentalPrice())))
-            duplicate = true; //jeśli spełnione wszystkie warunki jednocześnie, to znaczy, że jest to dokładnie ten sam pojazd!
+        //if ((((*iter)->getId()) == (vehicle->getId())) &&
+        //   (((*iter)->getBaseRentPrice()) == (vehicle->getBaseRentPrice()))
+        //   && (((*iter)->getActuallRentalPrice()) == (vehicle->getActuallRentalPrice())))
+        //   duplicate = true; //jeśli spełnione wszystkie warunki jednocześnie, to znaczy, że jest to dokładnie ten sam pojazd!
+        if ((**iter) == (*vehicle))
+            duplicate = true;
     }
 
     try {

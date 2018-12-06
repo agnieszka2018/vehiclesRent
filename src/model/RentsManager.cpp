@@ -20,7 +20,8 @@ double RentsManager::checkClientRentBallance(ClientPtr client) {
     std::vector<RentPtr> allRents = getAllClientRents(client);
     std::vector<RentPtr>::iterator iter;
     for (iter = allRents.begin(); iter != allRents.end(); iter++) {
-        priceWithDiscount += client->calculatePriceWithDiscount(*iter); //sumowana cena każdego wypożyczenia po uzględnieniu rabatu
+        priceWithDiscount += client->calculatePriceWithDiscount(
+                *iter); //sumowana cena każdego wypożyczenia po uzględnieniu rabatu
     }
 
     //int allFinishedClientRents = static_cast<int>(client->getAllClientRents().size());
@@ -85,7 +86,6 @@ void RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepo
     catch (RentException limitWyczerpany) {
         std::cout << limitWyczerpany.what();
     }
-
 
     //utwórz wypożyczenie
     posix_time::ptime pt(date(2018, Dec, 02), posix_time::hours(12));
