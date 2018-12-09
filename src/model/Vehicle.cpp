@@ -8,18 +8,11 @@
 
 using namespace std;
 
-Vehicle::Vehicle(int baseRentPrice, string id, ClientPtr actuallClient) : baseRentPrice{baseRentPrice}, id{id},
-                                                                          actuallClient{actuallClient} {
+Vehicle::Vehicle(int baseRentPrice, string id) : baseRentPrice{baseRentPrice}, id{id} {
 
     //obsługa wyjątku (VehicleException) - cena bazowa wypożyczenia nie może być ujemna
-    try {
-        if (baseRentPrice < 0) {
-            VehicleException tooLowPrice("Bazowa cena nie może być ujemna!\n");
-            throw tooLowPrice;
-        }
-    }
-    catch (VehicleException tooLowPrice) {
-        std::cout << tooLowPrice.what();
+    if (baseRentPrice < 0) {
+        throw VehicleException("Bazowa cena nie może być ujemna!\n");
     }
 }
 

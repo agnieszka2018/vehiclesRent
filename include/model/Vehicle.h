@@ -42,7 +42,7 @@ public:
 
     ClientPtr getActuallClient();
 
-    Vehicle(int baseRentPrice, std::string id, ClientPtr actuallClient);
+    Vehicle(int, std::string);
 };
 
 #endif //POBIZ01_VEHICLE_H

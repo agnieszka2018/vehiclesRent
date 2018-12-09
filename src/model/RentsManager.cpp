@@ -45,7 +45,8 @@ void RentsManager::changeClientType(ClientPtr client) {
 }
 
 
-void RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepoPtr vehicleRepo, RentsRepoPtr rentsRepo) {
+void
+RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepoPtr vehicleRepo, RentsRepoPtr rentsRepo) {
 
     //sprawdź czy vehicle jest w VehicleRepository
     bool jest = false;
@@ -60,15 +61,10 @@ void RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepo
     }
 
     //obsługa wyjątku (RentException) - brak pojazdu w VehicleRepository
-    try {
-        if (jest != true) {
-            RentException brakPojazdu("Brak pojazdu w Repozytorium Pojazdów");
-            throw brakPojazdu;
-        }
+    if (jest != true) {
+        throw RentException("Brak pojazdu w Repozytorium Pojazdów");
     }
-    catch (RentException brakPoj) {
-        std::cout << brakPoj.what(); //returns an explanatory string
-    }
+
 
 
     //sprawdź czy klient nie wypożyczył za dużo

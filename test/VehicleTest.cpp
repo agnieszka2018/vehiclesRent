@@ -58,7 +58,7 @@ BOOST_AUTO_TEST_SUITE(ClientSuiteCorrect)
                                                       actuallRegAddress);
 
         //test VehicleException
-        VehiclePtr mustang = std::make_shared<Vehicle>(-80, "CW 11162", klient_3);
+        VehiclePtr mustang = std::make_shared<Vehicle>(80, "CW 11162");
         //std::cout << mustang->getBaseRentPrice() << std::endl;
 
     }

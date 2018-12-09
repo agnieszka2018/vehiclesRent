@@ -76,7 +76,7 @@ include_directories(
 set(SOURCE_TEST_FILES
         test/master.cpp
         test/RentTest.cpp
-        test/ClientTest.cpp
+        #test/ClientTest.cpp
         test/VehicleTest.cpp)
 
 add_executable (AllTests ${SOURCE_TEST_FILES})

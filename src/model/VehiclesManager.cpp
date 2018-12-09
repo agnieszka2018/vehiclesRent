@@ -13,21 +13,13 @@ void VehiclesManager::addVehicleToRepository(VehicleRepoPtr vehicleRepo, Vehicle
     std::list<VehiclePtr>::iterator iter;
     for (iter = vehicleRepoList.begin(); iter != vehicleRepoList.end(); iter++) {
         //sprawdź czy nie ma już takiego pojazdu w Repozytorium Pojazdów
-        //if ((((*iter)->getId()) == (vehicle->getId())) &&
-        //   (((*iter)->getBaseRentPrice()) == (vehicle->getBaseRentPrice()))
-        //   && (((*iter)->getActuallRentalPrice()) == (vehicle->getActuallRentalPrice())))
-        //   duplicate = true; //jeśli spełnione wszystkie warunki jednocześnie, to znaczy, że jest to dokładnie ten sam pojazd!
         if ((**iter) == (*vehicle))
             duplicate = true;
     }
 
-    try {
-        if (duplicate == true) {
-            VehicleException duplicatedVehicle("Pojazd już istnieje w Repozytorium Pojazdów!");
-            throw duplicatedVehicle;
-        }
-    } catch (VehicleException duplicatedVeh) {
-        std::cout << duplicatedVeh.what();
+    //wyjątek
+    if (duplicate == true) {
+        throw VehicleException("Pojazd już istnieje w Repozytorium Pojazdów!");
     }
 
     //dodawanie pojazdu do Repozytorium Pojazdów, jeśli nie ma jeszcze takiego w Repo

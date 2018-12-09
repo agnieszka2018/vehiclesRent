@@ -92,22 +92,22 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
 
         //repozytorium pojazdów
         VehicleRepoPtr repozytoriumPojazdow = std::make_shared<VehicleRepository>();
-        //repozytoriumPojazdow->createVehicle(skuter);
-        //repozytoriumPojazdow->createVehicle(vespa);
-        //repozytoriumPojazdow->createVehicle(osa);
-        //repozytoriumPojazdow->createVehicle(piaggio);
         repozytoriumPojazdow->createVehicle(rower);
         repozytoriumPojazdow->createVehicle(damka);
         repozytoriumPojazdow->createVehicle(samochod);
         repozytoriumPojazdow->createVehicle(volvo);
         repozytoriumPojazdow->createVehicle(fiat);
         repozytoriumPojazdow->createVehicle(porsche);
+        //repozytoriumPojazdow->createVehicle(skuter);
+        //repozytoriumPojazdow->createVehicle(vespa);
+        //repozytoriumPojazdow->createVehicle(osa);
+        //repozytoriumPojazdow->createVehicle(piaggio);
 
 
 
         //test: znajdz pojazd na podstawie numeru indeksu
         BOOST_REQUIRE_EQUAL(rower, repozytoriumPojazdow->findVehicle(1));
-        //BOOST_TEST_MESSAGE("Raport: " << repozytoriumPojazdow->vehicleReport());
+        BOOST_TEST_MESSAGE("Raport: " + repozytoriumPojazdow->vehicleReport());
     }
 
 /*

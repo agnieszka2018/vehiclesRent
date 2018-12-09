@@ -24,16 +24,9 @@ std::string ClientType::getTypeName() const {
 
 void ClientType::checkDiscount(double discount) {
 
-    try {
-        if (discount >= 1.0) {
-            DiscountException tooHighDiscount("Zniżka wynosi 100% lub więcej!");
-            throw tooHighDiscount;
-        }
+    if (discount >= 1.0) {
+        throw DiscountException("Zniżka wynosi 100% lub więcej!");
     }
-    catch (DiscountException tooHigh) {
-        std::cout << tooHigh.what();
-    }
-
 }
 
 double ClientType::calculateClientTypeDiscount() {}

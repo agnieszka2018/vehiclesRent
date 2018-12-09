@@ -6,43 +6,24 @@
 #define POBIZ01_REPOSITORY_H
 
 #include <list>
-#include <memory>
 
 template<typename T>
 
 class Repository {
-    std::list<std::shared_ptr<T>> repository;
+    std::list<T> repository;
 
 public:
-    virtual void create(std::shared_ptr<T> singleRepo) {
-        repository.push_back(singleRepo);
-    }
+    virtual void create(T singleRepo);
 
-    virtual void remove(std::shared_ptr<T> singleRepo) {
-        repository.remove(singleRepo);
-    }
+    virtual void remove(T singleRepo);
 
-    //virtual void update();
+    virtual void update();
 
-    virtual std::list<std::shared_ptr<T>> getAll() {
-        return repository;
-    }
+    virtual std::list<T> getAll();
 
-    virtual std::shared_ptr<T> find(int number) {
+    virtual T find(int number);
 
-        int liczba = 1;
-
-        typename std::list<std::shared_ptr<T>>::iterator iter;
-        for (iter = repository.begin(); iter != repository.end(); iter++) {
-            if (liczba == number)
-                return (*iter);
-            liczba++;
-        }
-    }
-
-    virtual std::shared_ptr<T> operator()(int number) {
-        return find(number);
-    }
+    virtual T operator()(int);
 };
 
 #endif //POBIZ01_REPOSITORY_H
