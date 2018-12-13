@@ -7,8 +7,6 @@
 #include <boost/uuid/uuid.hpp>
 #include <boost/uuid/uuid_generators.hpp>
 #include <boost/uuid/uuid_io.hpp>
-#include <model/Rent.h>
-
 #include "boost/date_time/local_time/local_time.hpp"
 
 using namespace boost;
@@ -16,15 +14,7 @@ using namespace local_time;
 using namespace gregorian;
 using posix_time::time_duration;
 
-/*
-void Rent::deleteRentInClient() {
-    client->deleteRent(shared_from_this());   //usuwamy wypożyczenie z listy wypożyczeń klienta
-}
 
-void Rent::addRentInClient() {
-    client->addRent(shared_from_this());   //dodajemy wypożyczenie do listy wypożyczeń klienta
-}
-*/
 int Rent::rentDuration() {
 
     time_duration d = endTime - startTime;
@@ -42,7 +32,7 @@ std::string Rent::rentInfo() {
     std::stringstream ss;
     ss << "\nwypozyczenie:\n";
     ss << "uuid: " << uuid << std::endl;
-//    ss << "wypozyczajacy:\n" << client->clientName() << std::endl;
+    ss << "wypozyczajacy:\n" << client->getFirstName() << std::endl;
     ss << "pojazd: " << vehicle->vehicleInfo();
     ss << "start time: " << startTime << std::endl;
     if (endTime != startTime) ss << "end time: " << endTime << std::endl;
@@ -67,15 +57,11 @@ std::string Rent::rentInfoFromClient() {
 
 Rent::~Rent() {
     std::cout << "destruktor Rent jest wywolany" << std::endl;
-
-    //this->deleteRentInClient();   //usuwamy wypożyczenie z listy wypożyczeń klienta
 }
 
 Rent::Rent(local_date_time &startTime, VehiclePtr vehicle, ClientPtr client) : startTime(startTime), vehicle(vehicle),
                                                                                client(client), endTime(startTime) {
     uuid = boost::uuids::random_generator()();
-
-    //this->addRentInClient();   //dodajemy wypożyczenie do listy wypożyczeń klienta
 
     vehicle->modifyClient(client);
 }
@@ -107,6 +93,10 @@ bool Rent::operator==(Rent rent2) {
         return true;
     else
         return false;
+}
+
+ClientPtr Rent::getClient() {
+    return client;
 }
 
 

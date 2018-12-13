@@ -5,6 +5,7 @@
 #define POBIZ01_CAR_H
 
 #include <string>
+#include <iostream>
 #include "MotorVehicle.h"
 
 class Car : public MotorVehicle {

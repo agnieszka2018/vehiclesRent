@@ -38,7 +38,9 @@ typedef std::shared_ptr<VehicleRepository> VehicleRepoPtr;
 
 int main() {
 
-    try {}
+   /* try {
+
+    }
     catch (VehicleException vehicle) {
         std::cout << vehicle.what();
     }
@@ -50,6 +52,6 @@ int main() {
     }
     catch (DiscountException tooHigh) {
         std::cout << tooHigh.what();
-    }
-  
+    }*/
+
 }

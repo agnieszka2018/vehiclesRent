@@ -1,17 +1,15 @@
 //
 // Created by pobi on 20.10.18.
 //
-#include <iostream>
-#include <string>
-#include "../../include/model/Client.h"
-#include "../../include/model/Address.h"
+
+#include "Address.h"
 
 Address::Address(std::string street, std::string number) {
     this->street = street;
     this->number = number;
 }
 
-void Address::changeInfo(std::string ulica, std::string numer) {
+void Address::setAddress(std::string ulica, std::string numer) {
     street = ulica;
     number = numer;
 }

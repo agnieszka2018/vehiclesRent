@@ -41,7 +41,7 @@ BOOST_AUTO_TEST_SUITE(ClientSuiteCorrect)
                                                       actuallRegAddress);
 
         //test
-        BOOST_REQUIRE_EQUAL("Stefan Stonoga 1029384756\n", klient_3->clientName());
+        BOOST_REQUIRE_EQUAL("Stefan", klient_3->getFirstName());
         BOOST_REQUIRE_EQUAL(regulartype, klient_3->getClientType());
         BOOST_REQUIRE_EQUAL(actuallAddress, klient_3->getAddress());
         BOOST_REQUIRE_EQUAL(actuallRegAddress, klient_3->getRegisteredAddress());
@@ -77,11 +77,6 @@ BOOST_AUTO_TEST_SUITE(ClientSuiteCorrect)
         klient_3->deleteRent(wypozyczenie);   //oddaje pojazd
         actuallRents = klient_3->getClientActuallRents();
         BOOST_REQUIRE_EQUAL(wypozyczenie_2, actuallRents.back());
-
-
-        //klient_3->deleteRent(wypozyczenie_2);   //oddaje volvo
-        //actuallRents = klient_3->getClientActuallRents();
-        //BOOST_REQUIRE_EQUAL(wypozyczenie, actuallRents.back());
 
     }
 

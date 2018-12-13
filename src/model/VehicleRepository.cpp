@@ -5,7 +5,6 @@
 #include <string>
 #include "VehicleRepository.h"
 
-//using namespace std;
 
 void VehicleRepository::createVehicle(VehiclePtr vehicle) {
 

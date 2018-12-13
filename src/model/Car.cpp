@@ -1,13 +1,10 @@
 //
 // Created by pobi on 08.11.18.
 //
-#include "Car.h"
-#include <iostream>
-#include <model/Car.h>
 
+#include "Car.h"
 
 Car::~Car() {
-
     std::cout << "Destruktor Car" << std::endl;
 }
 
@@ -29,9 +26,8 @@ double Car::calculateActualRentalPrice(int baseRentPrice, int engineDisplacement
     if (engineDisplacement < 1000) displacementMod = 1.0;
 
     else if (engineDisplacement >= 1000 && engineDisplacement <= 2000)
-        //displacementMod = (1.0 * ((engineDisplacement - 1000) / 2) / 1000) + 1;
 
-        displacementMod = ((1.5 - 1.0) * (engineDisplacement - 1000)) / 1000 + 1.0;
+        displacementMod = ( 0.5 * (engineDisplacement - 1000)) / 1000 + 1.0;
 
     else if (engineDisplacement > 2000) displacementMod = 1.5;
 
@@ -53,10 +49,6 @@ std::string Car::vehicleInfo() {
     info += "pojemność silnika w samochodzie: " + std::to_string(getEngineDisplacement()) + "\n";
     return info;
 }
-
-/*double Car::getActuallRentalPrice() {
-    return actuallRentalPrice;
-}*/
 
 /*double Car::getActuallRentalPrice() {
     return actuallRentalPrice;

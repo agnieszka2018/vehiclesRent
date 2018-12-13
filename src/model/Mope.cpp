@@ -22,7 +22,7 @@ double Mope::calculateActualRentalPrice(int baseRentPrice, int engineDisplacemen
     if (engineDisplacement < 1000)
         return 1.0 * baseRentPrice;
     else if (engineDisplacement >= 1000 && engineDisplacement <= 2000)
-        return baseRentPrice * ((1.0 *((engineDisplacement -1000) / 2) / 1000) + 1);
+        return baseRentPrice * (((0.5 * (engineDisplacement - 1000)) / 1000) + 1.0);
     else if (engineDisplacement > 2000)
         return baseRentPrice * 1.5;
     else

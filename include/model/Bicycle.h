@@ -15,7 +15,6 @@ public:
 
     Bicycle(int baseRentPrice, std::string id);
 
-
     virtual ~Bicycle();
 };
 

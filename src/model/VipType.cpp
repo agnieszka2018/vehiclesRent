@@ -6,9 +6,7 @@
 
 VipType::VipType() : ClientType(12, "Klient VIP") {}
 
-VipType::~VipType() {
-
-}
+VipType::~VipType() {}
 
 double VipType::calculateClientTypeDiscount() {
     double discount = (0.01 * getMaxRentedCarAmount() * getMaxRentedCarAmount()) - 0.6;   //stały rabat = 0.84

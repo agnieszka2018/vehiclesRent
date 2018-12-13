@@ -9,11 +9,12 @@
 #include <memory>
 #include "Address.h"
 #include "Rent.h"
+#include "Vehicle.h"
 #include "ClientType.h"
 #include "ClientException.h"
 #include <vector>
 
-class Vehicle;
+//class Vehicle;
 class Rent;
 
 typedef std::shared_ptr<Address> AddressPtr;
@@ -29,7 +30,6 @@ private:
     const std::string personalID;
     AddressPtr address;
     AddressPtr registeredAddress;
-    //RentPtr actuallRent;
     std::vector<RentPtr> clientActuallRents;  //aktualne wypożyczenia klienta
     std::vector<RentPtr> allClientRents; //zakończone wypożyczenia klienta
     ClientTypePtr clientType;
@@ -38,8 +38,6 @@ public:
     void setClientType(ClientTypePtr clientType);
 
     ClientTypePtr getClientType();
-
-    //Client();
 
     Client(std::string firstName, std::string lastName, std::string personalID, ClientTypePtr clientType, AddressPtr address,
            AddressPtr registeredAddress);
@@ -50,7 +48,11 @@ public:
 
     std::string clientInfo();
 
-    std::string clientName();
+    std::string getFirstName();
+
+    std::string getLastName();
+
+    std::string getPersonalID();
 
     std::vector<RentPtr> getClientActuallRents();
 
@@ -63,8 +65,6 @@ public:
     AddressPtr getRegisteredAddress();
 
     bool operator==(Client);
-
-    //Client(AddressPtr registeredAddress);
 
     ~Client();
 };

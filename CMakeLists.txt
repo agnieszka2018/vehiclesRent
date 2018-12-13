@@ -56,9 +56,9 @@ SET(SOURCE_FILES
         src/model/VehiclesManager.cpp
         include/model/VehiclesManager.h
         include/model/ClientsManager.h
-        include/model/Repository.h)
+        include/model/Repository.h include/model/SearchEngine.h src/model/SearchEngine.cpp)
 
-add_library(biblioteka ${SOURCE_FILES})
+add_library(biblioteka ${SOURCE_FILES} src/model/SearchEngine.cpp)
 
 add_executable(pobiz01 ${SOURCE_FILES})
 
@@ -76,8 +76,8 @@ include_directories(
 set(SOURCE_TEST_FILES
         test/master.cpp
         test/RentTest.cpp
-        #test/ClientTest.cpp
-        test/VehicleTest.cpp)
+        test/ClientTest.cpp
+        test/VehicleTest.cpp test/TestRentsManager.cpp test/TestVehiclesManager.cpp test/TestClientsManager.cpp)
 
 add_executable (AllTests ${SOURCE_TEST_FILES})
 

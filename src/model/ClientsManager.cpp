@@ -7,7 +7,7 @@ void ClientsManager::addClientToRepository(ClientRepoPtr clientRepo, ClientPtr c
 
     bool duplicate = false;
 
-    std::list <ClientPtr> clientRepoList = clientRepo->getClients();
+    std::list<ClientPtr> clientRepoList = clientRepo->getClients();
 
     std::list<ClientPtr>::iterator iter;
     for (iter = clientRepoList.begin(); iter != clientRepoList.end(); iter++) {
@@ -15,7 +15,7 @@ void ClientsManager::addClientToRepository(ClientRepoPtr clientRepo, ClientPtr c
         if ((**iter) == (*client))
             duplicate = true;
     }
-    
+
     //wyjątek
     if (duplicate == true)
         throw ClientException("Klient już istnieje w Repozytorium Klientów!");
@@ -23,7 +23,6 @@ void ClientsManager::addClientToRepository(ClientRepoPtr clientRepo, ClientPtr c
 
     //dodawanie klienta do Repozytorium Klientów, jeśli nie ma jeszcze takiego w Repo
     clientRepo->addClient(client);
-
 }
 
 void ClientsManager::deleteClientFromRepository(ClientRepoPtr clientRepo, ClientPtr client) {

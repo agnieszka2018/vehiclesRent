@@ -57,10 +57,11 @@ BOOST_AUTO_TEST_SUITE(ClientSuiteCorrect)
         ClientPtr klient_3 = std::make_shared<Client>("Stefan", "Stonoga", "1029384756", regulartype, actuallAddress,
                                                       actuallRegAddress);
 
-        //test VehicleException
-        VehiclePtr mustang = std::make_shared<Vehicle>(80, "CW 11162");
-        //std::cout << mustang->getBaseRentPrice() << std::endl;
 
+        VehiclePtr mustang = std::make_shared<Vehicle>(80, "CW 11162");
+        BOOST_REQUIRE_EQUAL(mustang->getBaseRentPrice(), 80);
+
+        //test VehicleException napisać!
     }
 
 BOOST_AUTO_TEST_SUITE_END()

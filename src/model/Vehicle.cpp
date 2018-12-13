@@ -42,7 +42,7 @@ void Vehicle::modifyClient(ClientPtr client) {
 
 string Vehicle::vehicleInfo() {
     string info = "\nCena podstawowa pojazdu za dobę: " + to_string(baseRentPrice) + "\n";
-    //info += "Cena aktualna pojazdu za dobę: " + to_string(actuallRentalPrice) + "\n";
+    info += "Cena aktualna pojazdu za dobę: " + to_string(actuallRentalPrice) + "\n";
     info += "Id pojazdu: " + id + "\n";
     return info;
 }
@@ -50,7 +50,7 @@ string Vehicle::vehicleInfo() {
 string Vehicle::vehicleClientInfo() {
     string info;
     if (actuallClient != nullptr)
-//        info += "klient: " + actuallClient->clientName();         //dopisac adress!!!
+//        info += "klient: " + actuallClient->getFirstName();         //dopisac adress!!!
 
         return info;
 }

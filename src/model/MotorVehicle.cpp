@@ -5,14 +5,7 @@
 #include <iostream>
 
 
-/*MotorVehicle::MotorVehicle(int engineDisplacement) : engineDisplacement(engineDisplacement), Vehicle(baseRentPrice, id) {
-
-    std::cout << "Konstruktor MotorVehicle" << std::endl;
-}*/
-
-
 MotorVehicle::~MotorVehicle() {
-
     std::cout << "Destruktor MotorVehicle" << std::endl;
 }
 
@@ -24,12 +17,13 @@ const double MotorVehicle::getEngineDisplacement() const {
     return engineDisplacement;
 }
 
+MotorVehicle::MotorVehicle(int baseRentPrice, std::string id, int engineDisplacement, double actuallRentalPrice)
+        : Vehicle(baseRentPrice, id), engineDisplacement{engineDisplacement},
+          actuallRentalPrice{calculateActualRentalPrice()} {
+    std::cout << "Konstruktor MotorVehicle" << std::endl;
+}
 
 /*double MotorVehicle::getActuallRentalPrice() {
     return actuallRentalPrice;
 }*/
-
-MotorVehicle::MotorVehicle(int baseRentPrice, std::string id, int engineDisplacement, double actuallRentalPrice)
-        : Vehicle(baseRentPrice, id), engineDisplacement{engineDisplacement}, actuallRentalPrice{calculateActualRentalPrice()} {}
-
 

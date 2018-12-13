@@ -7,18 +7,17 @@
 
 #include <boost/uuid/random_generator.hpp>
 #include <string>
+#include "Client.h"
 #include "boost/date_time/local_time/local_time.hpp"
 #include <memory>
 #include "Vehicle.h"
 
-class Client;
-//class Vehicle;
 
 typedef std::shared_ptr<Vehicle> VehiclePtr;
 typedef std::shared_ptr<Client> ClientPtr;
 
 
-class Rent : public std::enable_shared_from_this<Rent> {
+class Rent {
 private:
     boost::uuids::uuid uuid;
     boost::local_time::local_date_time startTime;
@@ -30,10 +29,7 @@ private:
     ClientPtr client;
 
 public:
-    /*void deleteRentInClient();
 
-    void addRentInClient();
-    */
     int rentDuration();
 
     ~Rent();
@@ -51,6 +47,8 @@ public:
     bool operator==(Rent);
 
     Rent(boost::local_time::local_date_time &startTime, VehiclePtr vehicle, ClientPtr client);
+
+    ClientPtr getClient();
 
 };
 

@@ -17,7 +17,7 @@ Client::Client(std::string firstName, std::string lastName, std::string personal
 
 
 void Client::addRent(RentPtr rentFromRent) {
-    clientActuallRents.push_back(rentFromRent); //dodaje wypożyczenie do listy wypożyczeń klienta
+    clientActuallRents.push_back(rentFromRent); //dodaje wypożyczenie do aktualnej listy wypożyczeń klienta
 }
 
 void Client::deleteRent(RentPtr rentFromRent) {
@@ -43,9 +43,8 @@ void Client::deleteRent(RentPtr rentFromRent) {
     allClientRents.push_back(rentFromRent); //dodaje wypożyczenie do listy wszystkich zakończonych wypożyczeń
 }
 
-std::string Client::clientName() {
-    std::string print = firstName + " " + lastName + " " + personalID + "\n";
-    return print;
+std::string Client::getFirstName() {
+    return firstName;
 }
 
 
@@ -77,7 +76,6 @@ std::string Client::clientInfo() {
 
 
 std::vector<RentPtr> Client::getClientActuallRents() {
-
     return clientActuallRents;
 }
 
@@ -103,7 +101,7 @@ double Client::calculatePriceWithDiscount(RentPtr rent) {
 bool Client::operator==(Client client2) {
 
     //sprawdzam czy dwa obiekty są sobie równe
-    if (((this->clientName()) == (client2.clientName())) &&
+    if (((this->getFirstName()) == (client2.getFirstName())) &&
         ((this->clientType) == (client2.clientType)) && ((this->address) == (client2.address)) &&
         ((this->registeredAddress) == (client2.registeredAddress)))
         return true;
@@ -121,5 +119,13 @@ AddressPtr Client::getAddress() {
 
 AddressPtr Client::getRegisteredAddress() {
     return registeredAddress;
+}
+
+string Client::getLastName() {
+    return lastName;
+}
+
+string Client::getPersonalID() {
+    return personalID;
 }
 
