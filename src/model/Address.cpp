@@ -9,9 +9,9 @@ Address::Address(std::string street, std::string number) {
     this->number = number;
 }
 
-void Address::setAddress(std::string ulica, std::string numer) {
-    street = ulica;
-    number = numer;
+void Address::setAddress(std::string streetNew, std::string numberNew) {
+    street = streetNew;
+    number = numberNew;
 }
 
 std::string Address::displayInfo() {
@@ -20,4 +20,12 @@ std::string Address::displayInfo() {
     print += street + " " + number;
 
     return print;
+}
+
+std::string Address::getStreet() {
+    return street;
+}
+
+std::string Address::getNumber() {
+    return number;
 }

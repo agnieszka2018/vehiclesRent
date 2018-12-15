@@ -17,8 +17,6 @@ public:
 
     double calculateActualRentalPrice(int baseRentPrice, int engineDisplacement, std::string segment);
 
-    //double getActuallRentalPrice();
-
     Car(std::string segment, int baseRentPrice, std::string id, int engineDisplacement);
 
     const std::string &getSegment() const;

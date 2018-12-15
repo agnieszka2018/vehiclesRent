@@ -49,10 +49,16 @@ string Vehicle::vehicleInfo() {
 
 string Vehicle::vehicleClientInfo() {
     string info;
-    if (actuallClient != nullptr)
-//        info += "klient: " + actuallClient->getFirstName();         //dopisac adress!!!
 
-        return info;
+    if (actuallClient != nullptr)
+        info += "klient: " + actuallClient->getFirstName() + " " + actuallClient->getLastName();
+    if (actuallClient->getAddress() != nullptr)
+        info += " " + actuallClient->getAddress()->getStreet() + " " +
+                actuallClient->getAddress()->getNumber();
+    if (actuallClient->getRegisteredAddress() != nullptr)
+        info += " " + actuallClient->getRegisteredAddress()->getStreet() + " " +
+                actuallClient->getRegisteredAddress()->getNumber();
+    return info;
 }
 
 const string Vehicle::getId() const {
@@ -62,9 +68,7 @@ const string Vehicle::getId() const {
 bool Vehicle::operator==(Vehicle vehicle2) {
 
     //sprawdzam czy dwa obiekty są sobie równe
-    if (((this->id) == (vehicle2.id)) &&
-        ((this->baseRentPrice) == (vehicle2.baseRentPrice))
-        && ((this->actuallRentalPrice) == (vehicle2.actuallRentalPrice)))
+    if ((*this) == vehicle2)
         return true;
     else
         return false;

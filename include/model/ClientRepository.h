@@ -33,7 +33,7 @@ public:
 
     ClientPtr operator()(int);
 
-    bool operator==(Client);
+    bool checkIfIsInRepo(Client);
 };
 
 

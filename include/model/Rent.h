@@ -12,6 +12,8 @@
 #include <memory>
 #include "Vehicle.h"
 
+class Client;
+class Vehicle;
 
 typedef std::shared_ptr<Vehicle> VehiclePtr;
 typedef std::shared_ptr<Client> ClientPtr;

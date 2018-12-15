@@ -21,7 +21,7 @@ void ClientRepository::removeClient(int clientIndex) {
         //znaleźć odpowiedni indeks klienta
         if (liczba == clientIndex)
             removeClient(*iter);
-            liczba ++;
+        liczba++;
     }
 }
 
@@ -35,6 +35,7 @@ std::list<ClientPtr> ClientRepository::getClients() {
 
 ClientPtr ClientRepository::findClient(int number) {
 
+    //szukanie klienta po numerze indeksu
     int liczba = 1;
 
     std::list<ClientPtr>::iterator iter;
@@ -51,12 +52,22 @@ ClientPtr ClientRepository::operator()(int number) {
     return findClient(number);
 }
 
-bool ClientRepository::operator==(Client client2) {
+//TODO
+bool ClientRepository::checkIfIsInRepo(Client client2) {
 
-    ClientPtr client3 = std::make_shared<Client>(client2);
+    //ClientPtr client3 = std::make_shared<Client>(client2);
 
     //if (std::any_of(clients.begin(), clients.end(), client3))   //test if any element in range fulfills condition
     //    return true;
     //else
+
+    std::list<ClientPtr>::iterator iter;
+
+    for (iter = clients.begin(); iter != clients.end(); iter++) {
+        //korzystam z operator== zaimplementowanego w Client.cpp
+        if (client2 == (**iter))
+            return true;
+    }
+
     return false;
 }

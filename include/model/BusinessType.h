@@ -8,8 +8,9 @@
 #include "ClientType.h"
 
 
-class BusinessType : public ClientType{
+class BusinessType : public ClientType {
     double calculateClientTypeDiscount() override;
+
 public:
     BusinessType();
 

@@ -35,7 +35,7 @@ public:
 
     VehiclePtr operator()(int);
 
-    //VehiclePtr operator()(Vehicle);
+    VehiclePtr operator()(VehiclePtr);
 
     bool operator==(Vehicle);
 

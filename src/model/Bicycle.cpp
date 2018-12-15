@@ -1,9 +1,9 @@
 //
 // Created by pobi on 08.11.18.
 //
+
 #include "Bicycle.h"
 #include <iostream>
-
 
 Bicycle::~Bicycle() {
 

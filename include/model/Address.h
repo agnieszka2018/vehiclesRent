@@ -13,11 +13,15 @@ private:
     std::string number;
 
 public:
-    Address(std::string street, std::string number);
+    Address(std::string, std::string);
 
-    void setAddress(std::string ulica, std::string numer);
+    void setAddress(std::string, std::string);
 
     std::string displayInfo();
+
+    std::string getStreet();
+
+    std::string getNumber();
 };
 
 #endif //ZAJECIA_2_ADDRESS_H

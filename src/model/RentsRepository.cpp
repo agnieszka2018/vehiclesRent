@@ -67,6 +67,8 @@ RentPtr RentsRepository::operator()(int number) {
     return findRent(number);
 }
 
+
+
 bool RentsRepository::operator==(Rent rent2) {
 
     RentPtr rent3 = std::make_shared<Rent>(rent2);

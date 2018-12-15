@@ -49,7 +49,3 @@ std::string Car::vehicleInfo() {
     info += "pojemność silnika w samochodzie: " + std::to_string(getEngineDisplacement()) + "\n";
     return info;
 }
-
-/*double Car::getActuallRentalPrice() {
-    return actuallRentalPrice;
-}*/

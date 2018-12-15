@@ -20,7 +20,8 @@ double RentsManager::checkClientRentBallance(ClientPtr client) {
     std::vector<RentPtr> allRents = getAllClientRents(client);
     std::vector<RentPtr>::iterator iter;
     for (iter = allRents.begin(); iter != allRents.end(); iter++) {
-        priceWithDiscount += client->calculatePriceWithDiscount(*iter); //sumowana cena każdego wypożyczenia po uwzględnieniu rabatu
+        priceWithDiscount += client->calculatePriceWithDiscount(
+                *iter); //sumowana cena każdego wypożyczenia po uwzględnieniu rabatu
     }
 
     //int allFinishedClientRents = static_cast<int>(client->getAllClientRents().size());
@@ -44,7 +45,8 @@ void RentsManager::changeClientType(ClientPtr client) {
 }
 
 
-void RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepoPtr vehicleRepo, RentsRepoPtr rentsRepo) {
+void
+RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepoPtr vehicleRepo, RentsRepoPtr rentsRepo) {
 
     //sprawdź czy vehicle jest w VehicleRepository
     bool jest = false;
@@ -93,8 +95,12 @@ void RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepo
 }
 
 void RentsManager::returnVehicle(ClientPtr client, RentsRepoPtr rentsRepo, RentPtr rent, VehicleRepoPtr vehicleRepo) {
+
     //usuwa klientowi wypożyczenie z listy aktualnych
-    client->deleteRent(rent);
+    try { client->deleteRent(rent); }
+    catch (ClientException noCar) {
+        std::cout << noCar.what();
+    }
 
     //przenosi wypożyczenie z curent do archive
     rentsRepo->removeRent(rent, vehicleRepo);

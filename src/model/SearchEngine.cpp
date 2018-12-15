@@ -4,6 +4,16 @@
 
 #include "SearchEngine.h"
 
+void SearchEngine::setName(std::string name) {
+    this->name = name;
+    byName = true;
+}
+
+void SearchEngine::setCarId(std::string carId) {
+    this->carId = carId;
+    byCarId = true;
+}
+
 bool SearchEngine::operator()(RentPtr rent) {
     bool output = true;
 

@@ -22,15 +22,10 @@ void Client::addRent(RentPtr rentFromRent) {
 
 void Client::deleteRent(RentPtr rentFromRent) {
 
-    //obsługa wyjątku - sprawdzam czy klient ma aktualnie przynajmniej jedno wypożyczenie
-    try {
-        if (clientActuallRents.size() < 1) {
-            ClientException brakWypozyczen("Klient aktualnie nie posiada wypożyczeń!");
-            throw brakWypozyczen;
-        }
-    }
-    catch (ClientException brakWypoz) {
-        std::cout << brakWypoz.what();
+    //wyjątek - sprawdzam czy klient ma aktualnie przynajmniej jedno wypożyczenie
+    if (clientActuallRents.size() < 1) {
+        ClientException noCar("Klient aktualnie nie posiada wypożyczeń!");
+        throw noCar;
     }
 
 
@@ -42,6 +37,7 @@ void Client::deleteRent(RentPtr rentFromRent) {
 
     allClientRents.push_back(rentFromRent); //dodaje wypożyczenie do listy wszystkich zakończonych wypożyczeń
 }
+
 
 std::string Client::getFirstName() {
     return firstName;
@@ -101,9 +97,7 @@ double Client::calculatePriceWithDiscount(RentPtr rent) {
 bool Client::operator==(Client client2) {
 
     //sprawdzam czy dwa obiekty są sobie równe
-    if (((this->getFirstName()) == (client2.getFirstName())) &&
-        ((this->clientType) == (client2.clientType)) && ((this->address) == (client2.address)) &&
-        ((this->registeredAddress) == (client2.registeredAddress)))
+    if ((*this) == client2)
         return true;
     else
         return false;
