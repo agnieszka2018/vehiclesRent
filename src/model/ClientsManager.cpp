@@ -35,4 +35,3 @@ void ClientsManager::deleteClientFromRepository(ClientRepoPtr clientRepo, int nu
 
     clientRepo->removeClient(number);
 }
-

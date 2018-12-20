@@ -1,6 +1,7 @@
 //
 // Created by pobi on 29.11.18.
 //
+
 #include "ClientRepository.h"
 
 void ClientRepository::addClient(ClientPtr client) {
@@ -70,4 +71,5 @@ bool ClientRepository::checkIfIsInRepo(Client client2) {
     }
 
     return false;
+    //wskaźnik
 }

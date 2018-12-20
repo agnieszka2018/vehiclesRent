@@ -107,8 +107,10 @@ bool Rent::operator==(Rent rent2) {
         return false;
 } */
 
+
+
+//referencja zamiast obiektu
+
 ClientPtr Rent::getClient() {
     return client;
 }
-
-

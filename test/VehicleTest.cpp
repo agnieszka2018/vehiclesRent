@@ -34,34 +34,34 @@ typedef std::shared_ptr<Vehicle> VehiclePtr;
 
 BOOST_AUTO_TEST_SUITE(ClientSuiteCorrect)
 
-    BOOST_AUTO_TEST_CASE(VehicleBaseRentalPriceCase) {
+BOOST_AUTO_TEST_CASE(VehicleBaseRentalPriceCase) {
         //data
         CarPtr fiat = std::make_shared<Car>("A", 80, "CW 11162", 900);
 
         //test
         BOOST_REQUIRE_EQUAL(80, fiat->getBaseRentPrice());  //cena bazowa
-    }
+}
 
-    BOOST_AUTO_TEST_CASE(VehActRenPriCase) {
+BOOST_AUTO_TEST_CASE(VehActRenPriCase) {
         //data
         CarPtr bugatti = std::make_shared<Car>("E", 100, "CW 11162", 3000);
 
         BOOST_REQUIRE_EQUAL(225, bugatti->calculateActualRentalPrice(100, 3000, "E"));
-    }
+}
 
-    BOOST_AUTO_TEST_CASE(VehicleExceptionCase) {
+BOOST_AUTO_TEST_CASE(VehicleExceptionCase) {
         //data
         std::shared_ptr<RegularType> regulartype = std::make_shared<RegularType>();
         AddressPtr actuallAddress = std::make_shared<Address>("Mickiewicza", "7");
         AddressPtr actuallRegAddress = std::make_shared<Address>("Redutowa", "744");
         ClientPtr klient_3 = std::make_shared<Client>("Stefan", "Stonoga", "1029384756", regulartype, actuallAddress,
-                                                      actuallRegAddress);
+        actuallRegAddress);
 
 
         VehiclePtr mustang = std::make_shared<Vehicle>(80, "CW 11162");
         BOOST_REQUIRE_EQUAL(mustang->getBaseRentPrice(), 80);
 
         //test VehicleException napisać!
-    }
+}
 
 BOOST_AUTO_TEST_SUITE_END()

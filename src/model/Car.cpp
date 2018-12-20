@@ -13,7 +13,7 @@ const std::string &Car::getSegment() const {
 }
 
 Car::Car(std::string segment, int baseRentPrice, std::string id, int engineDisplacement) :
-segment{segment}, MotorVehicle(baseRentPrice, id, engineDisplacement, calculateActualRentalPrice(baseRentPrice, engineDisplacement, segment))
+        segment{segment}, MotorVehicle(baseRentPrice, id, engineDisplacement, calculateActualRentalPrice(baseRentPrice, engineDisplacement, segment))
 {
     this->actuallRentalPrice = calculateActualRentalPrice(baseRentPrice, engineDisplacement, segment);
 }

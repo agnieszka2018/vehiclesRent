@@ -49,8 +49,23 @@ string RentsRepository::getClientForRentedVehicle(VehiclePtr vehicle) {
     return info;
 }
 
-RentPtr RentsRepository::findRent(int number) {
+RentPtr RentsRepository::findRent(SearchEngine se) {
 
+    std::list<RentPtr>::iterator iter;
+
+    iter = std::find_if(currentRents.begin(), currentRents.end(), se); // se(element); funkcja lub funktor
+
+    if (iter != currentRents.end()) //gdy nie znaleziono elementu, metoda zwraca ostatni element z kontenera
+        return (*iter);
+    else {
+        RentException rentNotFound("Nie znaleziono pojazdu w Repozytorium Pojazdów!");
+        throw rentNotFound;
+    }
+}
+
+RentPtr RentsRepository::operator()(int number) {
+
+    //metoda zwraca wskaźnik do wypożyczenia o danym indeksie
     int liczba = 1;
 
     std::list<RentPtr>::iterator iter;
@@ -59,14 +74,8 @@ RentPtr RentsRepository::findRent(int number) {
             return *iter;
         liczba++;
     }
+
 }
-
-RentPtr RentsRepository::operator()(int number) {
-
-    //metoda zwraca wskaźnik do wypożyczenia o danym indeksie
-    return findRent(number);
-}
-
 
 
 bool RentsRepository::operator==(Rent rent2) {
@@ -76,5 +85,5 @@ bool RentsRepository::operator==(Rent rent2) {
     //if (std::any_of(currentRents.begin(), currentRents.end(), rent3))   //test if any element in range fulfills condition
     //    return true;
     //else
-        return false;
+    return false;
 }

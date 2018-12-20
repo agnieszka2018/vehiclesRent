@@ -67,13 +67,12 @@ VehiclePtr VehicleRepository::operator()(VehiclePtr vehicle) {
     iter = std::find(vehicles.begin(), vehicles.end(), vehicle);
     if (iter != vehicles.end()) //gdy nie znaleziono elementu, metoda zwraca ostatni element z kontenera
         return (*iter);
-
-    if ((*iter) != vehicle) {
+    else {
         VehicleException vehicleNotFound("Nie znaleziono pojazdu w Repozytorium Pojazdów!");
-        throw vehicleNotFound;
-    } else
-        return (*iter);
+        throw vehicleNotFound;}
 }
+
+//pobrac po numerze indeksu
 /*
 bool VehicleRepository::operator==(Vehicle vehicle2) {
 

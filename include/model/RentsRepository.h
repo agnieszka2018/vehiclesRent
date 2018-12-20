@@ -14,6 +14,8 @@
 #include <list>
 #include <memory>
 #include <string>
+#include "SearchEngine.h"
+#include "RentException.h"
 
 typedef std::shared_ptr<VehicleRepository> VehicleRepoPtr;
 typedef std::shared_ptr<Vehicle> VehiclePtr;
@@ -36,7 +38,7 @@ public:
 
     std::string getClientForRentedVehicle(VehiclePtr);
 
-    RentPtr findRent(int);
+    RentPtr findRent(SearchEngine);
 
     RentPtr operator()(int);
 

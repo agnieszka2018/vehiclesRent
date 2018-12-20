@@ -19,9 +19,8 @@ class SearchEngine {
     std::string carId;
 
 public:
-    void setName(std::string);
 
-    void setCarId(std::string);
+    SearchEngine(std::string name = "0", std::string carId = "0");  //w konstruktorze przekazać wartości, a nie w setterze
 
     bool operator()(RentPtr);
 
