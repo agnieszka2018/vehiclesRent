@@ -4,16 +4,9 @@
 #include "Mope.h"
 #include <iostream>
 
-Mope::~Mope() {
+Mope::~Mope() {}
 
-    std::cout << "Destruktor Mope" << std::endl;
-}
-
-Mope::Mope(int baseRentPrice, std::string id, int engineDisplacement) : MotorVehicle(baseRentPrice, id,
-                                                                                     engineDisplacement,
-                                                                                     calculateActualRentalPrice(
-                                                                                             baseRentPrice,
-                                                                                             engineDisplacement)) {
+Mope::Mope(int baseRentPrice, std::string id, int engineDisplacement) : MotorVehicle(baseRentPrice, id, engineDisplacement, calculateActualRentalPrice(baseRentPrice, engineDisplacement)) {
     this->actuallRentalPrice = calculateActualRentalPrice(baseRentPrice, engineDisplacement);
 }
 

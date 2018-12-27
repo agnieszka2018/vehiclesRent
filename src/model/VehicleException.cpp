@@ -4,7 +4,5 @@
 
 #include "VehicleException.h"
 
-VehicleException::VehicleException(std::string message) : logic_error(message){
-
-}
+VehicleException::VehicleException(std::string message) : logic_error(message){}
 

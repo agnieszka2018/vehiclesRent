@@ -3,6 +3,4 @@
 //
 #include "ClientException.h"
 
-ClientException::ClientException(std::string message) : logic_error(message){
-
-};
+ClientException::ClientException(std::string message) : logic_error(message){}

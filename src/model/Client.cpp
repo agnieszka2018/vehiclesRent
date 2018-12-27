@@ -7,13 +7,8 @@
 
 using namespace std;
 
-Client::Client(std::string firstName, std::string lastName, std::string personalID, ClientTypePtr clientType,
-               AddressPtr address, AddressPtr registeredAddress) :
-        firstName{firstName}, lastName{lastName}, personalID{personalID}, clientType{clientType}, address{address},
-        registeredAddress{registeredAddress} {
-    static int i = 0;
-    cout << "konstruktor parametrowy nr: " << ++i << " jest wywolany" << endl << endl;
-}
+Client::Client(std::string firstName, std::string lastName, std::string personalID, ClientTypePtr clientType, AddressPtr address, AddressPtr registeredAddress) :
+        firstName{firstName}, lastName{lastName}, personalID{personalID}, clientType{clientType}, address{address}, registeredAddress{registeredAddress} {}
 
 
 void Client::addRent(RentPtr rentFromRent) {
@@ -103,9 +98,7 @@ bool Client::operator==(Client client2) {
         return false;
 }
 
-Client::~Client() {
-    cout << "destruktor client jest wywolany" << endl;
-}
+Client::~Client() {}
 
 AddressPtr Client::getAddress() {
     return address;

@@ -55,12 +55,9 @@ std::string Rent::rentInfoFromClient() {
 }
 
 
-Rent::~Rent() {
-    std::cout << "destruktor Rent jest wywolany" << std::endl;
-}
+Rent::~Rent() {}
 
-Rent::Rent(local_date_time &startTime, VehiclePtr vehicle, ClientPtr client) : startTime(startTime), vehicle(vehicle),
-                                                                               client(client), endTime(startTime) {
+Rent::Rent(local_date_time &startTime, VehiclePtr vehicle, ClientPtr client) : startTime(startTime), vehicle(vehicle), client(client), endTime(startTime) {
     uuid = boost::uuids::random_generator()();
 
     vehicle->modifyClient(client);

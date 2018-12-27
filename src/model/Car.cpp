@@ -4,17 +4,14 @@
 
 #include "Car.h"
 
-Car::~Car() {
-    std::cout << "Destruktor Car" << std::endl;
-}
+Car::~Car() {}
 
 const std::string &Car::getSegment() const {
     return segment;
 }
 
 Car::Car(std::string segment, int baseRentPrice, std::string id, int engineDisplacement) :
-        segment{segment}, MotorVehicle(baseRentPrice, id, engineDisplacement, calculateActualRentalPrice(baseRentPrice, engineDisplacement, segment))
-{
+        segment{segment}, MotorVehicle(baseRentPrice, id, engineDisplacement, calculateActualRentalPrice(baseRentPrice, engineDisplacement, segment)) {
     this->actuallRentalPrice = calculateActualRentalPrice(baseRentPrice, engineDisplacement, segment);
 }
 
@@ -27,7 +24,7 @@ double Car::calculateActualRentalPrice(int baseRentPrice, int engineDisplacement
 
     else if (engineDisplacement >= 1000 && engineDisplacement <= 2000)
 
-        displacementMod = ( 0.5 * (engineDisplacement - 1000)) / 1000 + 1.0;
+        displacementMod = (0.5 * (engineDisplacement - 1000)) / 1000 + 1.0;
 
     else if (engineDisplacement > 2000) displacementMod = 1.5;
 

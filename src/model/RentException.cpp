@@ -4,6 +4,4 @@
 
 #include "RentException.h"
 
-RentException::RentException(std::string message) : logic_error(message){
-
-};
+RentException::RentException(std::string message) : logic_error(message){}

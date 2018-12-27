@@ -84,6 +84,4 @@ bool VehicleRepository::operator==(Vehicle vehicle2) {
     return false;
 }*/
 
-VehicleRepository::~VehicleRepository() {
-    std::cout << "Destruktor VehicleRepository" << std::endl;
-}
+VehicleRepository::~VehicleRepository() {}

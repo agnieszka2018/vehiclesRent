@@ -20,7 +20,6 @@
 #include "RentsManager.h"
 #include "RentException.h"
 #include "ClientException.h"
-#include "Interface.h"
 
 using namespace std;
 using namespace boost;

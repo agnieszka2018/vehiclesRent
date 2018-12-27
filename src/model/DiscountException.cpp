@@ -3,6 +3,4 @@
 //
 #include "DiscountException.h"
 
-DiscountException::DiscountException(std::string message) : logic_error(message){
-
-};
+DiscountException::DiscountException(std::string message) : logic_error(message){}

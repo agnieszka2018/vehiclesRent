@@ -5,10 +5,7 @@
 #include "Bicycle.h"
 #include <iostream>
 
-Bicycle::~Bicycle() {
-
-    std::cout << "Destruktor Bicycle" << std::endl;
-}
+Bicycle::~Bicycle() {}
 
 Bicycle::Bicycle(int baseRentPrice, std::string id) : Vehicle(baseRentPrice, id) {}
 

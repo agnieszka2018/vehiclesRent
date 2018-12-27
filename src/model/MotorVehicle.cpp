@@ -5,9 +5,7 @@
 #include <iostream>
 
 
-MotorVehicle::~MotorVehicle() {
-    std::cout << "Destruktor MotorVehicle" << std::endl;
-}
+MotorVehicle::~MotorVehicle() {}
 
 double MotorVehicle::calculateActualRentalPrice() {
     return getBaseRentPrice() * engineDisplacement;

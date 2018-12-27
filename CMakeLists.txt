@@ -46,8 +46,6 @@ SET(SOURCE_FILES
         include/model/ClientException.h
         include/model/RentException.h
         src/model/RentException.cpp
-        src/model/Interface.cpp
-        include/model/Interface.h
         src/model/VehicleException.cpp
         include/model/VehicleException.h
         include/model/DiscountException.h
@@ -83,7 +81,7 @@ set(SOURCE_TEST_FILES
         test/TestRentsManager.cpp
         test/TestVehiclesManager.cpp
         test/TestClientsManager.cpp
-        test/TestVehicleRepository.cpp test/TestVehicleRepository.cpp)
+        test/TestVehicleRepository.cpp)
 
 add_executable (AllTests ${SOURCE_TEST_FILES})
 
