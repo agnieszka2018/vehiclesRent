@@ -21,6 +21,7 @@ public:
     std::string getTypeName() const;
     void checkDiscount(double);
     virtual double calculateClientTypeDiscount();
+    virtual ~ClientType();
 };
 
 #endif //POBIZ01_CLIENTTYPE_H

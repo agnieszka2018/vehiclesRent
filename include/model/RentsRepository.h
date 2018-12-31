@@ -41,8 +41,6 @@ public:
     RentPtr findRent(SearchEngine);
 
     RentPtr operator()(int);
-
-    bool operator==(Rent);
 };
 
 

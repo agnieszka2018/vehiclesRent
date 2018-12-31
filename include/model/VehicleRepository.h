@@ -35,10 +35,6 @@ public:
 
     VehiclePtr operator()(int);
 
-    VehiclePtr operator()(VehiclePtr);
-
-    bool operator==(Vehicle);
-
     virtual ~VehicleRepository();
 };
 

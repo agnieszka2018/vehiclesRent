@@ -37,20 +37,20 @@ typedef std::shared_ptr<VehicleRepository> VehicleRepoPtr;
 
 int main() {
 
-    /* try {
+    try {   //TODO
 
-     }
-     catch (VehicleException vehicle) {
-         std::cout << vehicle.what();
-     }
-     catch (RentException brakPoj) {
-         std::cout << brakPoj.what();
-     }
-     catch (ClientException duplicatedCli) {
-         std::cout << duplicatedCli.what();
-     }
-     catch (DiscountException tooHigh) {
-         std::cout << tooHigh.what();
-     }*/
+    }
+    catch (VehicleException vehicle) {
+        std::cout << vehicle.what();
+    }
+    catch (RentException brakPoj) {
+        std::cout << brakPoj.what();
+    }
+    catch (ClientException duplicatedCli) {
+        std::cout << duplicatedCli.what();
+    }
+    catch (DiscountException tooHigh) {
+        std::cout << tooHigh.what();
+    }
 
 }

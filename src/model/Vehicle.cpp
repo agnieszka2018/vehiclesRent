@@ -63,7 +63,7 @@ const string Vehicle::getId() const {
     return id;
 }
 
-bool Vehicle::operator==(Vehicle vehicle2) {
+bool Vehicle::operator==(Vehicle & vehicle2) {
 
     //sprawdzam czy dwa obiekty są sobie równe
     if ((*this) == vehicle2)

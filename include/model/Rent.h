@@ -13,6 +13,7 @@
 #include "Vehicle.h"
 
 class Client;
+
 class Vehicle;
 
 typedef std::shared_ptr<Vehicle> VehiclePtr;
@@ -46,7 +47,9 @@ public:
 
     double getCost();
 
-    bool operator==(Rent);
+    bool operator==(Rent &);
+
+    //bool operator==(Rent &);  wersja alternatywna
 
     Rent(boost::local_time::local_date_time &startTime, VehiclePtr vehicle, ClientPtr client);
 

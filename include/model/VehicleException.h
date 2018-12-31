@@ -7,7 +7,6 @@
 
 #include <string>
 #include <stdexcept>
-//#include <exception>
 
 class VehicleException : public std::logic_error {
 public:

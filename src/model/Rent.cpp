@@ -57,7 +57,8 @@ std::string Rent::rentInfoFromClient() {
 
 Rent::~Rent() {}
 
-Rent::Rent(local_date_time &startTime, VehiclePtr vehicle, ClientPtr client) : startTime(startTime), vehicle(vehicle), client(client), endTime(startTime) {
+Rent::Rent(local_date_time &startTime, VehiclePtr vehicle, ClientPtr client) : startTime(startTime), vehicle(vehicle),
+                                                                               client(client), endTime(startTime) {
     uuid = boost::uuids::random_generator()();
 
     vehicle->modifyClient(client);
@@ -82,7 +83,7 @@ double Rent::getCost() {
     return cost;
 }
 
-bool Rent::operator==(Rent rent2) {
+bool Rent::operator==(Rent &rent2) {
 
     //sprawdzam czy dwa obiekty są sobie równe
     if ((*this) == rent2)
@@ -91,10 +92,8 @@ bool Rent::operator==(Rent rent2) {
         return false;
 }
 
-//TODO
-//wersja alternatywna
 /*
-bool Rent::operator==(Rent rent2) {
+bool Rent::operator==(Rent &rent2) {
 
     //sprawdzam czy dwa obiekty są sobie równe
     if (((this->uuid) == (rent2.uuid)) && ((this->client) == (rent2.client)) && ((this->vehicle) == (rent2.vehicle)) &&
@@ -103,10 +102,6 @@ bool Rent::operator==(Rent rent2) {
     else
         return false;
 } */
-
-
-
-//referencja zamiast obiektu
 
 ClientPtr Rent::getClient() {
     return client;

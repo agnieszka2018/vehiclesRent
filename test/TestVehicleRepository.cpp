@@ -50,9 +50,7 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
         repozytoriumPojazdow->createVehicle(osa);
         repozytoriumPojazdow->createVehicle(piaggio);
 
-        //TODO
-        //funktor test: wyszukaj dany pojazd w repozytorium albo rzuć wyjątek
-        //BOOST_REQUIRE_EQUAL(porsche, repozytoriumPojazdow(porsche));
+
     }
 
 BOOST_AUTO_TEST_SUITE_END()

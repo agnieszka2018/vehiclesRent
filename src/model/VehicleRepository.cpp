@@ -58,30 +58,4 @@ VehiclePtr VehicleRepository::operator()(int number) {
     return findVehicle(number);
 }
 
-//TODO
-VehiclePtr VehicleRepository::operator()(VehiclePtr vehicle) {
-
-//metoda wyszukuje pojazd identyczny do zadanego albo rzuca wyjątek, gdy nie ma takiego pojazdu
-    std::list<VehiclePtr>::iterator iter;
-
-    iter = std::find(vehicles.begin(), vehicles.end(), vehicle);
-    if (iter != vehicles.end()) //gdy nie znaleziono elementu, metoda zwraca ostatni element z kontenera
-        return (*iter);
-    else {
-        VehicleException vehicleNotFound("Nie znaleziono pojazdu w Repozytorium Pojazdów!");
-        throw vehicleNotFound;}
-}
-
-//pobrac po numerze indeksu
-/*
-bool VehicleRepository::operator==(Vehicle vehicle2) {
-
-    VehiclePtr vehicle3 = std::make_shared<Vehicle>(vehicle2);
-
-    //if (std::any_of(vehicles.begin(), vehicles.end(), vehicle3))   //test if any element in range fulfills condition
-    //    return true;
-    //else
-    return false;
-}*/
-
 VehicleRepository::~VehicleRepository() {}

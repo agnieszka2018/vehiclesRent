@@ -53,23 +53,14 @@ ClientPtr ClientRepository::operator()(int number) {
     return findClient(number);
 }
 
-//TODO
-bool ClientRepository::checkIfIsInRepo(Client client2) {
-
-    //ClientPtr client3 = std::make_shared<Client>(client2);
-
-    //if (std::any_of(clients.begin(), clients.end(), client3))   //test if any element in range fulfills condition
-    //    return true;
-    //else
+bool ClientRepository::checkIfIsInRepo(ClientPtr client2) {
 
     std::list<ClientPtr>::iterator iter;
 
     for (iter = clients.begin(); iter != clients.end(); iter++) {
-        //korzystam z operator== zaimplementowanego w Client.cpp
-        if (client2 == (**iter))
+        if (client2 == (*iter))
             return true;
     }
 
     return false;
-    //wskaźnik
 }

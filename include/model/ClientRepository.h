@@ -10,6 +10,7 @@
 #include <memory>
 #include "Client.h"
 #include "ClientType.h"
+#include "ClientException.h"
 
 typedef std::shared_ptr<Client> ClientPtr;
 
@@ -33,7 +34,7 @@ public:
 
     ClientPtr operator()(int);
 
-    bool checkIfIsInRepo(Client);
+    bool checkIfIsInRepo(ClientPtr);
 };
 
 

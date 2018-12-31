@@ -89,7 +89,7 @@ double Client::calculatePriceWithDiscount(RentPtr rent) {
     return cost - (cost * discount);
 }
 
-bool Client::operator==(Client client2) {
+bool Client::operator==(Client & client2) {
 
     //sprawdzam czy dwa obiekty są sobie równe
     if ((*this) == client2)

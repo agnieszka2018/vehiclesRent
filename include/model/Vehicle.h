@@ -35,7 +35,7 @@ public:
 
     virtual ~Vehicle();
 
-    bool operator==(Vehicle);
+    bool operator==(Vehicle &);
 
     //double calculateActualRentalPrice();
 

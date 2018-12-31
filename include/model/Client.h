@@ -64,7 +64,7 @@ public:
 
     AddressPtr getRegisteredAddress();
 
-    bool operator==(Client);
+    bool operator==(Client &);
 
     ~Client();
 };
