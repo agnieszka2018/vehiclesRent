@@ -75,13 +75,14 @@ include_directories(
 
 set(SOURCE_TEST_FILES
         test/master.cpp
-        test/RentTest.cpp
-        test/ClientTest.cpp
-        test/VehicleTest.cpp
+        test/TestRent.cpp
+        test/TestClient.cpp
+        test/TestVehicle.cpp
         test/TestRentsManager.cpp
         test/TestVehiclesManager.cpp
         test/TestClientsManager.cpp
-        test/TestVehicleRepository.cpp test/TestRentsRepository.cpp)
+        test/TestVehicleRepository.cpp
+        test/TestRentsRepository.cpp)
 
 add_executable (AllTests ${SOURCE_TEST_FILES})
 

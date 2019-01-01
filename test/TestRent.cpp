@@ -112,7 +112,7 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
 
 /*
 
-    BOOST_AUTO_TEST_CASE(CurrentRentsRepositoryCase) {
+    BOOST_AUTO_TEST_CASE(CurrentRentsRepositoryCase) {  //TODO
 
         boost::posix_time::ptime pt(date(2018, Oct, 26), boost::posix_time::hours(12));
         time_zone_ptr zone(new posix_time_zone("UTC+1"));

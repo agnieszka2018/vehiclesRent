@@ -61,7 +61,7 @@ BOOST_AUTO_TEST_CASE(VehicleExceptionCase) {
         VehiclePtr mustang = std::make_shared<Vehicle>(80, "CW 11162");
         BOOST_REQUIRE_EQUAL(mustang->getBaseRentPrice(), 80);
 
-        //test VehicleException napisać!
+        // TODO test VehicleException napisać!
 }
 
 BOOST_AUTO_TEST_SUITE_END()

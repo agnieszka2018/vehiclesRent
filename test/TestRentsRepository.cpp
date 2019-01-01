@@ -79,7 +79,7 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
         std::shared_ptr<RegularType> regulartype = std::make_shared<RegularType>();
 
         ClientPtr klient = std::make_shared<Client>("Stefan", "Stonoga", "1029384756", regulartype, actuallAddress,
-                                                      actuallRegAddress);
+                                                    actuallRegAddress);
 
         RentPtr wypozyczenie = std::make_shared<Rent>(ldt, samochod, klient);
 
@@ -89,13 +89,14 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
 
         //test
 
-        SearchEngine se("Stefan");
         //funktor test: wyszukaj wypożyczenie osoby o imieniu Stefan lub rzuć wyjątek
+        SearchEngine se("Stefan");
         BOOST_REQUIRE_EQUAL(wypozyczenie, repozytoriumWypozyczen->findRent(se));
 
-        SearchEngine sese("0", "CW 84062");
+
         //funktor test: wyszukaj wypożyczenie o ID równym "CW 84062" lub rzuć wyjątek
+        SearchEngine sese("0", "CW 84062");
         BOOST_REQUIRE_EQUAL(wypozyczenie, repozytoriumWypozyczen->findRent(sese));
-        }
+    }
 
 BOOST_AUTO_TEST_SUITE_END()
