@@ -72,11 +72,27 @@ BOOST_AUTO_TEST_SUITE(ClientSuiteCorrect)
 
         //test
         BOOST_REQUIRE_EQUAL(2, actuallRents.size());    //oba pojazdy zostały dodane
-        BOOST_REQUIRE_EQUAL(wypozyczenie_2, actuallRents.back());
+        BOOST_REQUIRE_EQUAL(wypozyczenie_2, actuallRents.back());   //ostatnim wypozyczeniem jest wypozyczenie_2
 
         klient_3->deleteRent(wypozyczenie);   //oddaje pojazd
         actuallRents = klient_3->getClientActuallRents();
         BOOST_REQUIRE_EQUAL(wypozyczenie_2, actuallRents.back());
+
+    }
+
+    BOOST_AUTO_TEST_CASE(CheckIfEqualCase) {
+
+        std::shared_ptr<RegularType> regulartype = std::make_shared<RegularType>();
+        AddressPtr actuallAddress = std::make_shared<Address>("Mickiewicza", "7");
+        AddressPtr actuallRegAddress = std::make_shared<Address>("Redutowa", "744");
+        Client klient("Stefan", "Stonoga", "1029384756", regulartype, actuallAddress,
+                      actuallRegAddress);
+        Client klientTwo("Stefan", "Stonoga", "1029384756", regulartype, actuallAddress,
+                         actuallRegAddress);
+
+        bool test = (klient.operator==(klientTwo));
+
+        BOOST_REQUIRE_EQUAL(true, test);
 
     }
 

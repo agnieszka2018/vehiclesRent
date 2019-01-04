@@ -56,7 +56,7 @@ RentPtr RentsRepository::findRent(SearchEngine se) {
     iter = std::find_if(currentRents.begin(), currentRents.end(), se); // se(element); funkcja lub funktor
 
     if (iter != currentRents.end()) //gdy nie znaleziono elementu, metoda ustawia wskaźnik za ostatnim elementem kontenera
-        return (*iter); //TODO
+        return (*iter);
     else {
         RentException rentNotFound("Nie znaleziono wypożyczenia w Repozytorium Wypożyczeń!");
         throw rentNotFound;

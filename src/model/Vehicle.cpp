@@ -63,10 +63,12 @@ const string Vehicle::getId() const {
     return id;
 }
 
-bool Vehicle::operator==(Vehicle & vehicle2) {
+bool Vehicle::operator==(Vehicle &vehicle2) {
 
     //sprawdzam czy dwa obiekty są sobie równe
-    if ((*this) == vehicle2)
+    if (((this->id) == (vehicle2.id)) &&
+        ((this->baseRentPrice) == (vehicle2.baseRentPrice))
+        && ((this->actuallRentalPrice) == (vehicle2.actuallRentalPrice)))
         return true;
     else
         return false;

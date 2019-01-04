@@ -39,7 +39,8 @@ public:
 
     ClientTypePtr getClientType();
 
-    Client(std::string firstName, std::string lastName, std::string personalID, ClientTypePtr clientType, AddressPtr address,
+    Client(std::string firstName, std::string lastName, std::string personalID, ClientTypePtr clientType,
+           AddressPtr address,
            AddressPtr registeredAddress);
 
     void addRent(RentPtr rentFromRent);

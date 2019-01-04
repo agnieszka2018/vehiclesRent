@@ -7,8 +7,10 @@
 
 using namespace std;
 
-Client::Client(std::string firstName, std::string lastName, std::string personalID, ClientTypePtr clientType, AddressPtr address, AddressPtr registeredAddress) :
-        firstName{firstName}, lastName{lastName}, personalID{personalID}, clientType{clientType}, address{address}, registeredAddress{registeredAddress} {}
+Client::Client(std::string firstName, std::string lastName, std::string personalID, ClientTypePtr clientType,
+               AddressPtr address, AddressPtr registeredAddress) :
+        firstName{firstName}, lastName{lastName}, personalID{personalID}, clientType{clientType}, address{address},
+        registeredAddress{registeredAddress} {}
 
 
 void Client::addRent(RentPtr rentFromRent) {
@@ -89,10 +91,12 @@ double Client::calculatePriceWithDiscount(RentPtr rent) {
     return cost - (cost * discount);
 }
 
-bool Client::operator==(Client & client2) {
+bool Client::operator==(Client &client2) {
 
     //sprawdzam czy dwa obiekty są sobie równe
-    if ((*this) == client2)
+    if (((this->getFirstName()) == (client2.getFirstName())) &&
+        ((this->clientType) == (client2.clientType)) && ((this->address) == (client2.address)) &&
+        ((this->registeredAddress) == (client2.registeredAddress)))
         return true;
     else
         return false;

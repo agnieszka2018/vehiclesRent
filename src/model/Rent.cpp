@@ -64,15 +64,17 @@ Rent::Rent(local_date_time &startTime, VehiclePtr vehicle, ClientPtr client) : s
     vehicle->modifyClient(client);
 }
 
-void Rent::returnVehicle() {
+std::string Rent::returnVehicle() {
     time_zone_ptr zone(new posix_time_zone("UTC+1"));
     local_date_time now = local_sec_clock::local_time(zone);
     endTime = now;
 
-    std::cout << "Wypozyczenie trwalo: " << rentDuration() << std::endl;
+    std::string print = "Wypozyczenie trwalo: " + std::to_string(this->rentDuration()) + " \n";
     cost = rentDuration() * vehicle->getActuallRentalPrice();
 
-    std::cout << "Całkowity koszt wypozyczenia (bez rabatu): " << cost << std::endl;
+    print += "Całkowity koszt wypozyczenia (bez rabatu): " + std::to_string(cost) + " \n";
+
+    return print;
 }
 
 VehiclePtr Rent::getVehicle() {
@@ -86,22 +88,12 @@ double Rent::getCost() {
 bool Rent::operator==(Rent &rent2) {
 
     //sprawdzam czy dwa obiekty są sobie równe
-    if ((*this) == rent2)
-        return true;
-    else
-        return false;
-}
-
-/*
-bool Rent::operator==(Rent &rent2) {
-
-    //sprawdzam czy dwa obiekty są sobie równe
     if (((this->uuid) == (rent2.uuid)) && ((this->client) == (rent2.client)) && ((this->vehicle) == (rent2.vehicle)) &&
         ((this->cost) == (rent2.cost)))
         return true;
     else
         return false;
-} */
+}
 
 ClientPtr Rent::getClient() {
     return client;

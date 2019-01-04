@@ -50,7 +50,7 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
 
         CarPtr pojazd = std::make_shared<Car>("C", 100, "CW 84062", 1995);
 
-        boost::posix_time::ptime pt(date(2018, Oct, 26), boost::posix_time::hours(12));
+        boost::posix_time::ptime pt(date(2018, Dec, 26), boost::posix_time::hours(12));
         time_zone_ptr zone(new posix_time_zone("UTC+1"));
         local_date_time ldt(pt, zone);
 
@@ -69,10 +69,10 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
         //test
         BOOST_REQUIRE_EQUAL(wypozyczenie, fromVector);
 
-        BOOST_REQUIRE_EQUAL(wypozyczenie->rentDuration(), 0);
+        BOOST_REQUIRE_EQUAL(wypozyczenie->rentDuration(), 0);   //przed oddaniem czas zawsze wynosi 0
 
         wypozyczenie->returnVehicle();
-        BOOST_REQUIRE_GT(wypozyczenie->rentDuration(), 0);
+        BOOST_REQUIRE_GT(wypozyczenie->rentDuration(), 0);  //po oddaniu
     }
 
 
@@ -109,6 +109,32 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
         BOOST_REQUIRE_EQUAL(rower, repozytoriumPojazdow->findVehicle(1));
         BOOST_TEST_MESSAGE("Raport: " + repozytoriumPojazdow->vehicleReport());
     }
+
+
+
+    BOOST_AUTO_TEST_CASE(CheckIfEqualCase) {
+
+        AddressPtr actuallAddress = std::make_shared<Address>("Mickiewicza", "7");
+        AddressPtr actuallRegAddress = std::make_shared<Address>("Redutowa", "744");
+
+        CarPtr pojazd = std::make_shared<Car>("C", 100, "CW 84062", 1995);
+
+        boost::posix_time::ptime pt(date(2018, Oct, 26), boost::posix_time::hours(12));
+        time_zone_ptr zone(new posix_time_zone("UTC+1"));
+        local_date_time ldt(pt, zone);
+
+        std::shared_ptr<RegularType> regulartype = std::make_shared<RegularType>();
+
+        ClientPtr klient_3 = std::make_shared<Client>("Stefan", "Stonoga", "1029384756", regulartype, actuallAddress,
+                                                      actuallRegAddress);
+
+        Rent wypozyczenie(ldt, pojazd, klient_3);
+
+        bool test = (wypozyczenie.operator==(wypozyczenie));
+
+        BOOST_REQUIRE_EQUAL(true, test);    //sprawdzam czy dwa obiekty są sobie równe
+
+}
 
 /*
 

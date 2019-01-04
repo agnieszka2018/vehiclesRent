@@ -37,7 +37,7 @@ public:
 
     ~Rent();
 
-    void returnVehicle();
+    std::string returnVehicle();
 
     std::string rentInfo();
 
