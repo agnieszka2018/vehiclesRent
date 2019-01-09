@@ -83,7 +83,7 @@ set(SOURCE_TEST_FILES
         test/TestClientsManager.cpp
         test/TestVehicleRepository.cpp
         test/TestRentsRepository.cpp
-        test/TestAddress.cpp)
+        test/TestAddress.cpp test/TestClientRepository.cpp)
 
 add_executable (AllTests ${SOURCE_TEST_FILES})
 

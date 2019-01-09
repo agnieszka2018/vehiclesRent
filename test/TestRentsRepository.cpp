@@ -87,7 +87,6 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
         RentsRepoPtr repozytoriumWypozyczen = std::make_shared<RentsRepository>();
         repozytoriumWypozyczen->createRent(wypozyczenie, repozytoriumPojazdow);
 
-        //test
 
         //funktor test: wyszukaj wypożyczenie osoby o imieniu Stefan lub rzuć wyjątek
         SearchEngine se("Stefan");

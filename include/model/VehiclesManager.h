@@ -16,6 +16,8 @@ typedef std::shared_ptr<VehicleRepository> VehicleRepoPtr;
 
 class VehiclesManager {
 
+public:
+
     void addVehicleToRepository(VehicleRepoPtr, VehiclePtr);
 
     void deleteVehicleFromRepository(VehicleRepoPtr, VehiclePtr);

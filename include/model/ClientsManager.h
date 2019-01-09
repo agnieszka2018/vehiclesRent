@@ -16,6 +16,8 @@ typedef std::shared_ptr<Client> ClientPtr;
 
 class ClientsManager {
 
+public:
+
     void addClientToRepository(ClientRepoPtr, ClientPtr);
 
     void deleteClientFromRepository(ClientRepoPtr, ClientPtr);

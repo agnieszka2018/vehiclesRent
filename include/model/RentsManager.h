@@ -33,7 +33,6 @@ typedef std::shared_ptr<RegularType> RegularTypePtr;
 
 
 class RentsManager {
-private:
 
 public:
     RentsManager();
