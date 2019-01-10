@@ -8,12 +8,12 @@
 #include <string>
 #include <list>
 #include <memory>
-#include "Client.h"
-#include "ClientRepository.h"
-#include "Address.h"
-#include "RegularType.h"
-#include "VipType.h"
-#include "ClientsManager.h"
+#include "model/client/Client.h"
+#include "model/repositories/ClientRepository.h"
+#include "model/client/Address.h"
+#include "model/client/RegularType.h"
+#include "model/client/VipType.h"
+#include "model/manegers/ClientsManager.h"
 
 typedef std::shared_ptr<ClientRepository> ClientRepoPtr;
 typedef std::shared_ptr<Address> AddressPtr;

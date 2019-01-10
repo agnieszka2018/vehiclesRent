@@ -5,21 +5,21 @@
 #include <iostream>
 #include <string>
 #include <memory>
-#include "Client.h"
-#include "Address.h"
-#include "Vehicle.h"
-#include "Rent.h"
-#include "Bicycle.h"
-#include "Car.h"
-#include "Mope.h"
-#include "MotorVehicle.h"
-#include "RentsRepository.h"
-#include "VehicleRepository.h"
-#include "ClientType.h"
-#include "RegularType.h"
-#include "RentsManager.h"
-#include "RentException.h"
-#include "ClientException.h"
+#include "model/client/Client.h"
+#include "model/client/Address.h"
+#include "vehicle/Vehicle.h"
+#include "model/rent/Rent.h"
+#include "vehicle/Bicycle.h"
+#include "vehicle/Car.h"
+#include "vehicle/Mope.h"
+#include "vehicle/MotorVehicle.h"
+#include "model/repositories/RentsRepository.h"
+#include "model/repositories/VehicleRepository.h"
+#include "model/client/ClientType.h"
+#include "model/client/RegularType.h"
+#include "model/manegers/RentsManager.h"
+#include "model/exceptions/RentException.h"
+#include "model/exceptions/ClientException.h"
 
 using namespace std;
 using namespace boost;

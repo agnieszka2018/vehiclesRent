@@ -8,13 +8,13 @@
 #include <string>
 #include <vector>
 #include <memory>
-#include "Vehicle.h"
-#include "Bicycle.h"
-#include "Car.h"
-#include "Mope.h"
-#include "MotorVehicle.h"
-#include "VehicleRepository.h"
-#include "VehiclesManager.h"
+#include "vehicle/Vehicle.h"
+#include "vehicle/Bicycle.h"
+#include "vehicle/Car.h"
+#include "vehicle/Mope.h"
+#include "vehicle/MotorVehicle.h"
+#include "model/repositories/VehicleRepository.h"
+#include "model/manegers/VehiclesManager.h"
 
 typedef std::shared_ptr<Car> CarPtr;
 typedef std::shared_ptr<Mope> MopePtr;

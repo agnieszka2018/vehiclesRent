@@ -7,11 +7,11 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include "Client.h"
-#include "Car.h"
-#include "RegularType.h"
-#include "Address.h"
-#include "Rent.h"
+#include "model/client/Client.h"
+#include "vehicle/Car.h"
+#include "model/client/RegularType.h"
+#include "model/client/Address.h"
+#include "model/rent/Rent.h"
 
 #include <chrono>
 #include <thread>

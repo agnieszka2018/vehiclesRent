@@ -15,19 +15,19 @@
 #include <vector>
 #include <list>
 #include <memory>
-#include "Client.h"
-#include "Address.h"
-#include "Vehicle.h"
-#include "Rent.h"
-#include "Bicycle.h"
-#include "Car.h"
-#include "Mope.h"
-#include "MotorVehicle.h"
-#include "RentsRepository.h"
-#include "VehicleRepository.h"
-#include "RegularType.h"
-#include "SearchEngine.h"
-#include "RentsManager.h"
+#include "model/client/Client.h"
+#include "model/client/Address.h"
+#include "vehicle/Vehicle.h"
+#include "model/rent/Rent.h"
+#include "vehicle/Bicycle.h"
+#include "vehicle/Car.h"
+#include "vehicle/Mope.h"
+#include "vehicle/MotorVehicle.h"
+#include "model/repositories/RentsRepository.h"
+#include "model/repositories/VehicleRepository.h"
+#include "model/client/RegularType.h"
+#include "model/searchEngine/SearchEngine.h"
+#include "model/manegers/RentsManager.h"
 
 using namespace boost::local_time;
 using namespace boost::posix_time;

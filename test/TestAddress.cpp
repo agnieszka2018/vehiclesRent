@@ -3,7 +3,7 @@
 //
 
 #include <boost/test/unit_test.hpp>
-#include <Address.h>
+#include <model/client/Address.h>
 
 
 BOOST_AUTO_TEST_SUITE(AddressSuiteCorrect)
