@@ -41,6 +41,8 @@ public:
     RentPtr findRent(SearchEngine);
 
     RentPtr operator()(int);
+
+    std::list<RentPtr> getCurrentRents();
 };
 
 

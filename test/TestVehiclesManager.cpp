@@ -24,7 +24,7 @@ typedef std::shared_ptr<VehicleRepository> VehicleRepoPtr;
 
 BOOST_AUTO_TEST_SUITE(ClientSuiteCorrect)
 
-    BOOST_AUTO_TEST_CASE(VehicleManagerDeleteCase) {
+    BOOST_AUTO_TEST_CASE(VehicleManagerDeleteVehicleCase) {
 
         CarPtr samochod = std::make_shared<Car>("C", 100, "CW 84062", 2900);
         CarPtr volvo = std::make_shared<Car>("B", 150, "WK 67890", 1400);
@@ -65,7 +65,7 @@ BOOST_AUTO_TEST_SUITE(ClientSuiteCorrect)
         BOOST_REQUIRE_GT(sizeBefore, sizeAfter);
     }
 
-    BOOST_AUTO_TEST_CASE(VehicleManagerAddCase) {
+    BOOST_AUTO_TEST_CASE(VehicleManagerAddVehicleCase) {
 
         CarPtr samochod = std::make_shared<Car>("C", 100, "CW 84062", 2900);
         CarPtr volvo = std::make_shared<Car>("B", 150, "WK 67890", 1400);
