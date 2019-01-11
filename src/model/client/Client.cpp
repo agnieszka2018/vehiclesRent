@@ -1,8 +1,7 @@
 //
 // Created by pobi on 14.10.18.
 //
-#include <iostream>
-#include <string>
+
 #include "model/client/Client.h"
 
 using namespace std;
@@ -27,10 +26,14 @@ void Client::deleteRent(RentPtr rentFromRent) {
 
 
     vector<RentPtr>::iterator it;
-    for (it = clientActuallRents.begin(); it != clientActuallRents.end(); it++) {
+
+    for (it = clientActuallRents.begin(); it != clientActuallRents.end();) {
         if (rentFromRent == *it)
-            clientActuallRents.erase(it); //usuwa wypożyczenie z listy wypożyczeń klienta
+            it = clientActuallRents.erase(it); //usuwa wypożyczenie z listy wypożyczeń klienta
+        else
+            ++it;   //żeby nie wyjść poza zakres (metoda erase przesuwa iterator na następny element)
     }
+
 
     allClientRents.push_back(rentFromRent); //dodaje wypożyczenie do listy wszystkich zakończonych wypożyczeń
 }
@@ -119,4 +122,3 @@ string Client::getLastName() {
 string Client::getPersonalID() {
     return personalID;
 }
-

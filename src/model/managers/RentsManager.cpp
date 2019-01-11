@@ -1,6 +1,7 @@
 //
 // Created by pobi on 01.12.18.
 //
+
 #include <list>
 #include "model/manegers/RentsManager.h"
 
@@ -15,16 +16,21 @@ std::vector<RentPtr> RentsManager::getAllClientRents(ClientPtr client) {
 }
 
 double RentsManager::checkClientRentBallance(ClientPtr client) {
-    double priceWithDiscount;
+    double sumPriceWithDiscount = 0;
+
     //pobieram wszystkie zakończone wypożyczenia klienta
-    std::vector<RentPtr> allRents = getAllClientRents(client);
-    std::vector<RentPtr>::iterator iter;
-    for (iter = allRents.begin(); iter != allRents.end(); iter++) {
-        priceWithDiscount += client->calculatePriceWithDiscount(*iter); //sumowana cena każdego wypożyczenia po uwzględnieniu rabatu
+    std::vector<RentPtr> allRents = client->getAllClientRents();
+
+    if ((allRents.size()) != 0) {
+        std::vector<RentPtr>::iterator iter;
+        for (iter = allRents.begin(); iter != allRents.end(); iter++) {
+            sumPriceWithDiscount += client->calculatePriceWithDiscount(
+                    *iter); //sumowana cena każdego wypożyczenia po uwzględnieniu rabatu
+        }
     }
 
     //int allFinishedClientRents = static_cast<int>(client->getAllClientRents().size());
-    return priceWithDiscount;
+    return sumPriceWithDiscount;
 }
 
 void RentsManager::changeClientType(ClientPtr client) {
@@ -53,16 +59,17 @@ void RentsManager::rentVehicle(VehiclePtr vehicle, ClientPtr client, VehicleRepo
 
     std::list<VehiclePtr>::iterator iter;
     for (iter = vehicles.begin(); iter != vehicles.end(); iter++) {
-        if (vehicle == (*iter))
+        if ((*iter) == vehicle) {
             jest = true;
-        else jest = false;
+            break;
+        } else jest = false;
     }
 
     //obsługa wyjątku (RentException) - brak pojazdu w VehicleRepository
     if (jest != true) {
-        throw RentException("Brak pojazdu w Repozytorium Pojazdów");
+        RentException noCar("Brak pojazdu w Repozytorium Pojazdów");
+        throw noCar;
     }
-
 
 
     //sprawdź czy klient nie wypożyczył za dużo
@@ -100,10 +107,9 @@ void RentsManager::returnVehicle(ClientPtr client, RentsRepoPtr rentsRepo, RentP
         std::cout << noCar.what();
     }
 
-    //przenosi wypożyczenie z curent do archive
+    //przenosi wypożyczenie z curent do archive w Repozytorium
     rentsRepo->removeRent(rent, vehicleRepo);
 
     //sprawdza bilans klienta i ewentualnie zmienia jego typ
     changeClientType(client);
 }
-

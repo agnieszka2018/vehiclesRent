@@ -111,7 +111,6 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
     }
 
 
-
     BOOST_AUTO_TEST_CASE(CheckIfEqualCase) {
 
         AddressPtr actuallAddress = std::make_shared<Address>("Mickiewicza", "7");
@@ -134,50 +133,6 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
 
         BOOST_REQUIRE_EQUAL(true, test);    //sprawdzam czy dwa obiekty są sobie równe
 
-}
-
-/*
-
-    BOOST_AUTO_TEST_CASE(CurrentRentsRepositoryCase) {  //TODO
-
-        boost::posix_time::ptime pt(date(2018, Oct, 26), boost::posix_time::hours(12));
-        time_zone_ptr zone(new posix_time_zone("UTC+1"));
-        local_date_time ldt(pt, zone);
-
-        Mope *skuter = new Mope(100, "CW 34342", 1200);
-        Car *samochod = new Car("C", 100, "CW 84062", 2900);
-        Car *fiat = new Car("A", 80, "CW 11162", 900);
-        Car *volvo = new Car("B", 150, "WK 67890", 1400);
-
-        Address *actuall_address = new Address("Mickiewicza", "7");
-
-        Client *klient_1 = new Client("Stefan", "Stonoga", "1029384756", actuall_address, nullptr, nullptr);
-
-        Rent *wypozyczenie = new Rent(ldt, skuter, klient_1);
-        Rent *wypozyczenie_1 = new Rent(ldt, samochod, klient_1);
-
-        //repozytorium pojazdów
-        VehicleRepository *repozytoriumPojazdow = new VehicleRepository();
-        repozytoriumPojazdow->createVehicle(samochod);
-        repozytoriumPojazdow->createVehicle(volvo);
-        repozytoriumPojazdow->createVehicle(fiat);
-        repozytoriumPojazdow->createVehicle(skuter);
-
-        //repozytozium wypożyczeń
-        RentsRepository *repozytoriumWypozyczen = new RentsRepository();
-        repozytoriumWypozyczen->createRent(wypozyczenie, repozytoriumPojazdow);
-        repozytoriumWypozyczen->createRent(wypozyczenie_1, repozytoriumPojazdow);
-
-
-        // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~ ~ ~
-        // test ile wypozyczeń w repozytoriumWypozyczen, a ile samochodów w repozytoriumPojazdow
-        // test kto wypozyczył pojazd; cout << repozytoriumWypozyczen->getClientForRentedVehicle(skuter);
-        // test raport z repozytoriumWypozyczen oraz repozytoriumPojazdow: przed i po oddaniu
-        // test zmodyfikuj wypozyczenie
-        //cout << klient->clientInfo();
-
     }
-
-    */
 
 BOOST_AUTO_TEST_SUITE_END()

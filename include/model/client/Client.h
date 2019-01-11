@@ -7,6 +7,7 @@
 
 #include <string>
 #include <memory>
+#include <iostream>
 #include "Address.h"
 #include "model/rent/Rent.h"
 #include "vehicle/Vehicle.h"
@@ -14,7 +15,6 @@
 #include "model/exceptions/ClientException.h"
 #include <vector>
 
-//class Vehicle;
 class Rent;
 
 typedef std::shared_ptr<Address> AddressPtr;

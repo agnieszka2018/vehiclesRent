@@ -35,6 +35,7 @@ using namespace boost::gregorian;
 using namespace boost::uuids;
 
 typedef std::shared_ptr<Car> CarPtr;
+typedef std::shared_ptr<Rent> RentPtr;
 typedef std::shared_ptr<Mope> MopePtr;
 typedef std::shared_ptr<Bicycle> BicyclePtr;
 typedef std::shared_ptr<VehicleRepository> VehicleRepoPtr;
@@ -43,7 +44,7 @@ typedef std::shared_ptr<RentsRepository> RentsRepoPtr;
 
 BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
 
-    BOOST_AUTO_TEST_CASE(RentManagerConstrutorCase) {
+    BOOST_AUTO_TEST_CASE(RentManagerAddDeleteRentCase) {
 
         CarPtr samochod = std::make_shared<Car>("C", 100, "CW 84062", 2900);
         CarPtr volvo = std::make_shared<Car>("B", 150, "WK 67890", 1400);
@@ -88,13 +89,25 @@ BOOST_AUTO_TEST_SUITE(RentSuiteCorrect)
 
         RentsManager manager;
 
-        //TODO
-        //manager.rentVehicle(porsche, klient, repozytoriumPojazdow, repozytoriumWypozyczen); //utworzono wypozyczenie przez managera
+        //wypozyczenie
+        manager.rentVehicle(porsche, klient, repozytoriumPojazdow,
+                            repozytoriumWypozyczen); //utworzono 1 wypozyczenie przez managera
 
-        //std::list<RentPtr> rentList = repozytoriumWypozyczen->getCurrentRents();
-        //size_t rozmiar = rentList.size();
+        std::list<RentPtr> rentList = repozytoriumWypozyczen->getCurrentRents();
+        size_t rozmiar = rentList.size();
 
-        //BOOST_REQUIRE_EQUAL(1, rozmiar);
+        BOOST_REQUIRE_EQUAL(1, rozmiar);
+
+        //zwrot
+        SearchEngine se("Stefan");
+        RentPtr rent = repozytoriumWypozyczen->findRent(se);
+
+        manager.returnVehicle(klient, repozytoriumWypozyczen, rent, repozytoriumPojazdow);
+
+        rentList = repozytoriumWypozyczen->getCurrentRents();
+        rozmiar = rentList.size();
+
+        BOOST_REQUIRE_EQUAL(0, rozmiar);
     }
 
 BOOST_AUTO_TEST_SUITE_END()
